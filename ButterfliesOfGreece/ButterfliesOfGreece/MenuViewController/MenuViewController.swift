@@ -13,7 +13,7 @@ class MenuViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		ButtonField.setTitle(Translations.Field, for: .normal)
         // Do any additional setup after loading the view.
     }
     

@@ -14,6 +14,9 @@
 		FEAB9B9724B2027800A5D178 /* ButterfliesOfGreeceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */; };
 		FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9BA224B2033F00A5D178 /* Menu.storyboard */; };
 		FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BA424B2041800A5D178 /* MenuViewController.swift */; };
+		FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9BA824B2069200A5D178 /* Localizable.strings */; };
+		FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */; };
+		FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB024B2099200A5D178 /* Translations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,11 @@
 		FEAB9B9824B2027800A5D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAB9BA224B2033F00A5D178 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		FEAB9BA424B2041800A5D178 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FEAB9BA724B205B800A5D178 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FEAB9BA924B2069200A5D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FEAB9BAC24B206AF00A5D178 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsExtensions.swift; sourceTree = "<group>"; };
+		FEAB9BB024B2099200A5D178 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 				FEAB9B8824B2027800A5D178 /* Assets.xcassets */,
 				FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */,
 				FEAB9B8D24B2027800A5D178 /* Info.plist */,
+				FEAB9BA824B2069200A5D178 /* Localizable.strings */,
 			);
 			path = ButterfliesOfGreece;
 			sourceTree = "<group>";
@@ -111,6 +120,8 @@
 		FEAB9BA624B204AE00A5D178 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */,
+				FEAB9BB024B2099200A5D178 /* Translations.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			knownRegions = (
 				en,
 				Base,
+				el,
 			);
 			mainGroup = FEAB9B7324B2027000A5D178;
 			productRefGroup = FEAB9B7D24B2027000A5D178 /* Products */;
@@ -197,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
+				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
 			);
@@ -216,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
+				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
@@ -245,8 +260,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				FEAB9B8B24B2027800A5D178 /* Base */,
+				FEAB9BA724B205B800A5D178 /* el */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FEAB9BA824B2069200A5D178 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEAB9BA924B2069200A5D178 /* Base */,
+				FEAB9BAC24B206AF00A5D178 /* el */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -256,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -316,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
