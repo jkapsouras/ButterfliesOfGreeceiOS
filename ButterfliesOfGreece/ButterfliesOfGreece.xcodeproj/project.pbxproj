@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
 		FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */; };
-		FEAB9B8424B2027000A5D178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8324B2027000A5D178 /* ViewController.swift */; };
-		FEAB9B8724B2027000A5D178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8524B2027000A5D178 /* Main.storyboard */; };
 		FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8824B2027800A5D178 /* Assets.xcassets */; };
 		FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */; };
 		FEAB9B9724B2027800A5D178 /* ButterfliesOfGreeceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */; };
@@ -30,8 +28,6 @@
 		FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterfliesOfGreece.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEAB9B8324B2027000A5D178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FEAB9B8624B2027000A5D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEAB9B8824B2027800A5D178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEAB9B8B24B2027800A5D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEAB9B8D24B2027800A5D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,8 +77,6 @@
 			children = (
 				FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */,
 				FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */,
-				FEAB9B8324B2027000A5D178 /* ViewController.swift */,
-				FEAB9B8524B2027000A5D178 /* Main.storyboard */,
 				FEAB9B8824B2027800A5D178 /* Assets.xcassets */,
 				FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */,
 				FEAB9B8D24B2027800A5D178 /* Info.plist */,
@@ -182,7 +176,6 @@
 			files = (
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
-				FEAB9B8724B2027000A5D178 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +193,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEAB9B8424B2027000A5D178 /* ViewController.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
 			);
@@ -225,14 +217,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FEAB9B8524B2027000A5D178 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FEAB9B8624B2027000A5D178 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
