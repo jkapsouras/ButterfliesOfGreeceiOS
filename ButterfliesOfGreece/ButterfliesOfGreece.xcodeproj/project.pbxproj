@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
+		FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */; };
+		FEAB9B8424B2027000A5D178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8324B2027000A5D178 /* ViewController.swift */; };
+		FEAB9B8724B2027000A5D178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8524B2027000A5D178 /* Main.storyboard */; };
+		FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8824B2027800A5D178 /* Assets.xcassets */; };
+		FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */; };
+		FEAB9B9724B2027800A5D178 /* ButterfliesOfGreeceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEAB9B9324B2027800A5D178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEAB9B7424B2027000A5D178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEAB9B7B24B2027000A5D178;
+			remoteInfo = ButterfliesOfGreece;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterfliesOfGreece.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FEAB9B8324B2027000A5D178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEAB9B8624B2027000A5D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEAB9B8824B2027800A5D178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEAB9B8B24B2027800A5D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEAB9B8D24B2027800A5D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEAB9B9224B2027800A5D178 /* ButterfliesOfGreeceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButterfliesOfGreeceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterfliesOfGreeceTests.swift; sourceTree = "<group>"; };
+		FEAB9B9824B2027800A5D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEAB9B7924B2027000A5D178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEAB9B8F24B2027800A5D178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEAB9B7324B2027000A5D178 = {
+			isa = PBXGroup;
+			children = (
+				FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */,
+				FEAB9B9524B2027800A5D178 /* ButterfliesOfGreeceTests */,
+				FEAB9B7D24B2027000A5D178 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEAB9B7D24B2027000A5D178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */,
+				FEAB9B9224B2027800A5D178 /* ButterfliesOfGreeceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */ = {
+			isa = PBXGroup;
+			children = (
+				FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */,
+				FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */,
+				FEAB9B8324B2027000A5D178 /* ViewController.swift */,
+				FEAB9B8524B2027000A5D178 /* Main.storyboard */,
+				FEAB9B8824B2027800A5D178 /* Assets.xcassets */,
+				FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */,
+				FEAB9B8D24B2027800A5D178 /* Info.plist */,
+			);
+			path = ButterfliesOfGreece;
+			sourceTree = "<group>";
+		};
+		FEAB9B9524B2027800A5D178 /* ButterfliesOfGreeceTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */,
+				FEAB9B9824B2027800A5D178 /* Info.plist */,
+			);
+			path = ButterfliesOfGreeceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEAB9B7B24B2027000A5D178 /* ButterfliesOfGreece */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEAB9B9B24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreece" */;
+			buildPhases = (
+				FEAB9B7824B2027000A5D178 /* Sources */,
+				FEAB9B7924B2027000A5D178 /* Frameworks */,
+				FEAB9B7A24B2027000A5D178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ButterfliesOfGreece;
+			productName = ButterfliesOfGreece;
+			productReference = FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEAB9B9124B2027800A5D178 /* ButterfliesOfGreeceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEAB9B9E24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreeceTests" */;
+			buildPhases = (
+				FEAB9B8E24B2027800A5D178 /* Sources */,
+				FEAB9B8F24B2027800A5D178 /* Frameworks */,
+				FEAB9B9024B2027800A5D178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEAB9B9424B2027800A5D178 /* PBXTargetDependency */,
+			);
+			name = ButterfliesOfGreeceTests;
+			productName = ButterfliesOfGreeceTests;
+			productReference = FEAB9B9224B2027800A5D178 /* ButterfliesOfGreeceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEAB9B7424B2027000A5D178 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Ioannis Kapsouras";
+				TargetAttributes = {
+					FEAB9B7B24B2027000A5D178 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					FEAB9B9124B2027800A5D178 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = FEAB9B7B24B2027000A5D178;
+					};
+				};
+			};
+			buildConfigurationList = FEAB9B7724B2027000A5D178 /* Build configuration list for PBXProject "ButterfliesOfGreece" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEAB9B7324B2027000A5D178;
+			productRefGroup = FEAB9B7D24B2027000A5D178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEAB9B7B24B2027000A5D178 /* ButterfliesOfGreece */,
+				FEAB9B9124B2027800A5D178 /* ButterfliesOfGreeceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEAB9B7A24B2027000A5D178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
+				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
+				FEAB9B8724B2027000A5D178 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEAB9B9024B2027800A5D178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEAB9B7824B2027000A5D178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEAB9B8424B2027000A5D178 /* ViewController.swift in Sources */,
+				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
+				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEAB9B8E24B2027800A5D178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEAB9B9724B2027800A5D178 /* ButterfliesOfGreeceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEAB9B9424B2027800A5D178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEAB9B7B24B2027000A5D178 /* ButterfliesOfGreece */;
+			targetProxy = FEAB9B9324B2027800A5D178 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FEAB9B8524B2027000A5D178 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEAB9B8624B2027000A5D178 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEAB9B8B24B2027800A5D178 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEAB9B9924B2027800A5D178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEAB9B9A24B2027800A5D178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEAB9B9C24B2027800A5D178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NX28QX29VR;
+				INFOPLIST_FILE = ButterfliesOfGreece/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gr.jkapsi.ButterfliesOfGreece;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FEAB9B9D24B2027800A5D178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NX28QX29VR;
+				INFOPLIST_FILE = ButterfliesOfGreece/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gr.jkapsi.ButterfliesOfGreece;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FEAB9B9F24B2027800A5D178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NX28QX29VR;
+				INFOPLIST_FILE = ButterfliesOfGreeceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gr.jkapsi.ButterfliesOfGreeceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButterfliesOfGreece.app/ButterfliesOfGreece";
+			};
+			name = Debug;
+		};
+		FEAB9BA024B2027800A5D178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NX28QX29VR;
+				INFOPLIST_FILE = ButterfliesOfGreeceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gr.jkapsi.ButterfliesOfGreeceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButterfliesOfGreece.app/ButterfliesOfGreece";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEAB9B7724B2027000A5D178 /* Build configuration list for PBXProject "ButterfliesOfGreece" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEAB9B9924B2027800A5D178 /* Debug */,
+				FEAB9B9A24B2027800A5D178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEAB9B9B24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreece" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEAB9B9C24B2027800A5D178 /* Debug */,
+				FEAB9B9D24B2027800A5D178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEAB9B9E24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreeceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEAB9B9F24B2027800A5D178 /* Debug */,
+				FEAB9BA024B2027800A5D178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEAB9B7424B2027000A5D178 /* Project object */;
+}
