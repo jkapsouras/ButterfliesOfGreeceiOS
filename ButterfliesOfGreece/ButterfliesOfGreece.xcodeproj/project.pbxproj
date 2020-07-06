@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AC7581F5B3C7633FC804B97 /* Pods_ButterfliesOfGreeceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */; };
+		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
 		FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */; };
 		FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8824B2027800A5D178 /* Assets.xcassets */; };
@@ -17,6 +19,7 @@
 		FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9BA824B2069200A5D178 /* Localizable.strings */; };
 		FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */; };
 		FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB024B2099200A5D178 /* Translations.swift */; };
+		FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
+		3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.release.xcconfig"; sourceTree = "<group>"; };
+		9F6073BB6689962BD678E999 /* Pods-ButterfliesOfGreeceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreeceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterfliesOfGreece.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 		FEAB9BAC24B206AF00A5D178 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsExtensions.swift; sourceTree = "<group>"; };
 		FEAB9BB024B2099200A5D178 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
+		FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +71,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC7581F5B3C7633FC804B97 /* Pods_ButterfliesOfGreeceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		809AF22E013484F40A66D5A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */,
+				C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C98AD50B5ADE41BADF4A7E43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */,
+				3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */,
+				9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */,
+				9F6073BB6689962BD678E999 /* Pods-ButterfliesOfGreeceTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FEAB9B7324B2027000A5D178 = {
 			isa = PBXGroup;
 			children = (
 				FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */,
 				FEAB9B9524B2027800A5D178 /* ButterfliesOfGreeceTests */,
 				FEAB9B7D24B2027000A5D178 /* Products */,
+				C98AD50B5ADE41BADF4A7E43 /* Pods */,
+				809AF22E013484F40A66D5A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +122,7 @@
 		FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */ = {
 			isa = PBXGroup;
 			children = (
+				FEAB9BB224B26CFD00A5D178 /* Base */,
 				FEAB9BA624B204AE00A5D178 /* Utilities */,
 				FEAB9BA124B2031600A5D178 /* MenuViewController */,
 				FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */,
@@ -126,6 +162,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		FEAB9BB224B26CFD00A5D178 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEAB9B9B24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreece" */;
 			buildPhases = (
+				8BFBB0F31DB9497A1699C094 /* [CP] Check Pods Manifest.lock */,
 				FEAB9B7824B2027000A5D178 /* Sources */,
 				FEAB9B7924B2027000A5D178 /* Frameworks */,
 				FEAB9B7A24B2027000A5D178 /* Resources */,
+				A32CF040FA1502B2D1F52868 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEAB9B9E24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreeceTests" */;
 			buildPhases = (
+				9B8D528CD067B093579737BF /* [CP] Check Pods Manifest.lock */,
 				FEAB9B8E24B2027800A5D178 /* Sources */,
 				FEAB9B8F24B2027800A5D178 /* Frameworks */,
 				FEAB9B9024B2027800A5D178 /* Resources */,
+				141400DF1886A347C374A013 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,12 +272,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		141400DF1886A347C374A013 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BFBB0F31DB9497A1699C094 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ButterfliesOfGreece-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B8D528CD067B093579737BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ButterfliesOfGreeceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A32CF040FA1502B2D1F52868 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FEAB9B7824B2027000A5D178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
+				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
@@ -395,6 +525,7 @@
 		};
 		FEAB9B9C24B2027800A5D178 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -413,6 +544,7 @@
 		};
 		FEAB9B9D24B2027800A5D178 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,6 +563,7 @@
 		};
 		FEAB9B9F24B2027800A5D178 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -453,6 +586,7 @@
 		};
 		FEAB9BA024B2027800A5D178 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6073BB6689962BD678E999 /* Pods-ButterfliesOfGreeceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

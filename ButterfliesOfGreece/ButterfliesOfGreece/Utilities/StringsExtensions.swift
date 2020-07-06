@@ -11,7 +11,7 @@ import Foundation
 extension String{
 	
 	func Localise()->String{
-		return Translations.AppBundle.localizedString(forKey: self, value: self, table: nil)
+		return Bundle.main.localizedString(forKey: self, value: self, table: nil)
 	}
 	
 }
