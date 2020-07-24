@@ -23,6 +23,8 @@
 		FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB024B2099200A5D178 /* Translations.swift */; };
 		FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */; };
 		FEB3520824CB13ED0040313D /* IOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520724CB13ED0040313D /* IOC.swift */; };
+		FEB3520A24CB16930040313D /* UiEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520924CB16930040313D /* UiEvent.swift */; };
+		FEB3520C24CB16C70040313D /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520B24CB16C70040313D /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		FEAB9BB024B2099200A5D178 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		FEB3520724CB13ED0040313D /* IOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOC.swift; sourceTree = "<group>"; };
+		FEB3520924CB16930040313D /* UiEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvent.swift; sourceTree = "<group>"; };
+		FEB3520B24CB16C70040313D /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 				FEB3520624CB13DB0040313D /* DI */,
 				FE1FBE8F24CB110B008D0EA1 /* Schedulers */,
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
+				FEB3520924CB16930040313D /* UiEvent.swift */,
+				FEB3520B24CB16C70040313D /* ViewState.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -385,9 +391,11 @@
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
+				FEB3520C24CB16C70040313D /* ViewState.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
+				FEB3520A24CB16930040313D /* UiEvent.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
