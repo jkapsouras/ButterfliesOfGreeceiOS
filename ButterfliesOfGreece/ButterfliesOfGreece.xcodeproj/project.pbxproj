@@ -25,6 +25,9 @@
 		FEB3520824CB13ED0040313D /* IOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520724CB13ED0040313D /* IOC.swift */; };
 		FEB3520A24CB16930040313D /* UiEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520924CB16930040313D /* UiEvent.swift */; };
 		FEB3520C24CB16C70040313D /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520B24CB16C70040313D /* ViewState.swift */; };
+		FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520D24CB17640040313D /* ButtonExtensions.swift */; };
+		FEB3521024CB19620040313D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520F24CB19620040313D /* BaseViewController.swift */; };
+		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		FEB3520724CB13ED0040313D /* IOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOC.swift; sourceTree = "<group>"; };
 		FEB3520924CB16930040313D /* UiEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvent.swift; sourceTree = "<group>"; };
 		FEB3520B24CB16C70040313D /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		FEB3520D24CB17640040313D /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		FEB3520F24CB19620040313D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FEB3521124CB199C0040313D /* UiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 			children = (
 				FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */,
 				FEAB9BB024B2099200A5D178 /* Translations.swift */,
+				FEB3520D24CB17640040313D /* ButtonExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -188,6 +195,8 @@
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
 				FEB3520924CB16930040313D /* UiEvent.swift */,
 				FEB3520B24CB16C70040313D /* ViewState.swift */,
+				FEB3520F24CB19620040313D /* BaseViewController.swift */,
+				FEB3521124CB199C0040313D /* UiComponent.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -388,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
@@ -397,6 +407,8 @@
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3520A24CB16930040313D /* UiEvent.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
+				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
+				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
 			);
