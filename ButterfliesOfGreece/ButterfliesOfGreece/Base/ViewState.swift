@@ -8,6 +8,8 @@
 
 import Foundation
 
-public protocol ViewState {}
+protocol ViewState {}
 
-public protocol StateTransition : ViewState { }
+protocol StateTransition : ViewState { }
+
+class IdleState:ViewState{}

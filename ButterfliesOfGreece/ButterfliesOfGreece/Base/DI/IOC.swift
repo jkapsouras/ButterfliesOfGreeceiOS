@@ -50,7 +50,7 @@ struct IOC:IOCInjectable
 //    }
     
      static func RegisterPresenters(container: Container) {
-//        container.autoregister(SplashPresenter.self, initializer: SplashPresenter.init)
+        container.autoregister(MenuPresenter.self, initializer: MenuPresenter.init)
 //        container.autoregister(LoginPresenter.self, initializer: LoginPresenter.init)
 //		container.autoregister(SettingsPresenter.self, initializer: SettingsPresenter.init)
     }

@@ -28,6 +28,9 @@
 		FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520D24CB17640040313D /* ButtonExtensions.swift */; };
 		FEB3521024CB19620040313D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520F24CB19620040313D /* BaseViewController.swift */; };
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
+		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
+		FEB3521824CB21160040313D /* FieldClicked.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521724CB21160040313D /* FieldClicked.swift */; };
+		FEB3521A24CB21440040313D /* NavigateToField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521924CB21440040313D /* NavigateToField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		FEB3520D24CB17640040313D /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		FEB3520F24CB19620040313D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FEB3521124CB199C0040313D /* UiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiComponent.swift; sourceTree = "<group>"; };
+		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		FEB3521724CB21160040313D /* FieldClicked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldClicked.swift; sourceTree = "<group>"; };
+		FEB3521924CB21440040313D /* NavigateToField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateToField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +177,11 @@
 		FEAB9BA124B2031600A5D178 /* MenuViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FEB3521624CB20F80040313D /* ViewStates */,
+				FEB3521524CB20F00040313D /* UiEvents */,
 				FEAB9BA224B2033F00A5D178 /* Menu.storyboard */,
 				FEAB9BA424B2041800A5D178 /* MenuViewController.swift */,
+				FEB3521324CB20210040313D /* MenuPresenter.swift */,
 			);
 			path = MenuViewController;
 			sourceTree = "<group>";
@@ -207,6 +216,22 @@
 				FEB3520724CB13ED0040313D /* IOC.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		FEB3521524CB20F00040313D /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				FEB3521724CB21160040313D /* FieldClicked.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		FEB3521624CB20F80040313D /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FEB3521924CB21440040313D /* NavigateToField.swift */,
+			);
+			path = ViewStates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,12 +424,15 @@
 			files = (
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
+				FEB3521A24CB21440040313D /* NavigateToField.swift in Sources */,
+				FEB3521824CB21160040313D /* FieldClicked.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				FEB3520C24CB16C70040313D /* ViewState.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
+				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
 				FEB3520A24CB16930040313D /* UiEvent.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
