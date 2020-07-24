@@ -22,6 +22,7 @@
 		FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */; };
 		FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB024B2099200A5D178 /* Translations.swift */; };
 		FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */; };
+		FEB3520824CB13ED0040313D /* IOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520724CB13ED0040313D /* IOC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsExtensions.swift; sourceTree = "<group>"; };
 		FEAB9BB024B2099200A5D178 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		FEB3520724CB13ED0040313D /* IOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +179,19 @@
 		FEAB9BB224B26CFD00A5D178 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FEB3520624CB13DB0040313D /* DI */,
 				FE1FBE8F24CB110B008D0EA1 /* Schedulers */,
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		FEB3520624CB13DB0040313D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				FEB3520724CB13ED0040313D /* IOC.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
+				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
