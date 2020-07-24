@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		IQKeyboardManager.shared.shouldToolbarUsesTextFieldTintColor = true;
 		IQKeyboardManager.shared.toolbarDoneBarButtonItemText = Translations.Done
 		
+		IOC.container = IOC.RegisterElements()
 		return true
 	}
 

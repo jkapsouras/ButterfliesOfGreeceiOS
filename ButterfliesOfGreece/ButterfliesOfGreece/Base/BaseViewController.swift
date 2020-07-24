@@ -36,13 +36,13 @@ class BaseController<P> : UIViewController where P : BasePresenter
             events = Observable<UiEvent>.empty()
             
             Components?.forEach{component in
-                events=Observable.merge(events!,component.UiEvents)
+                events=Observable.merge(events!,component.uiEvents)
             }
             
             let state = Presenter?.Subscribe(events: events!).publish()
             
             Components?.forEach{component in
-                state?.subscribe(onNext: { viewState in component.RenderViewState(viewState: viewState)}).disposed(by: Presenter!.disposeBag)
+                state?.subscribe(onNext: { viewState in component.renderViewState(viewState: viewState)}).disposed(by: Presenter!.disposeBag)
             }
             
             state?.filter{viewState in viewState is StateTransition}.subscribe(onNext: {viewState in self.TransitionStateReceived(viewState: viewState)}).disposed(by: Presenter!.disposeBag)
@@ -63,7 +63,16 @@ class BaseController<P> : UIViewController where P : BasePresenter
     
     func TransitionStateReceived(viewState:ViewState)->()
     {
-        
+        switch viewState {
+        case is NavigateToField:
+//			let story = UIStoryboard.init(name: "Login", bundle: nil)
+//			let ct = story.instantiateInitialViewController()
+//			self.modalPresentationStyle = .fullScreen
+//			self.present(ct!, animated: true, completion: nil)
+			print("navigate to fields")
+        default:
+            print("default")
+        }
     }
     
     func  InitializeComponents()->Array<UiComponent>

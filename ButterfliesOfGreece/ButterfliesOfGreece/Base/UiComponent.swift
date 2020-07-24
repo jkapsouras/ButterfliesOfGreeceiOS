@@ -9,8 +9,8 @@
 import Foundation
 import RxSwift
 
-public protocol UiComponent
+protocol UiComponent
 {
-     var  UiEvents:Observable<UiEvent> {get}
-     func RenderViewState(viewState:ViewState)
+     var  uiEvents:Observable<UiEvent> {get}
+     func renderViewState(viewState:ViewState)
 }

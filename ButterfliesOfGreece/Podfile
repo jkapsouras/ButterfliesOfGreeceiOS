@@ -6,17 +6,18 @@ target 'ButterfliesOfGreece' do
   use_frameworks!
 
   # Pods for ButterfliesOfGreece
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
   pod 'IQKeyboardManagerSwift'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
-
-  target 'ButterfliesOfGreeceTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
-  end
-
 end
+
+target 'ButterfliesOfGreeceTests' do
+  inherit! :search_paths
+  # Pods for testing
+  pod 'RxBlocking', '~> 5.1.1'
+  pod 'RxTest', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
+end
+

@@ -26,8 +26,8 @@ struct IOC:IOCInjectable
      static func RegisterElements() -> Container {
         container=Container()
         
-		RegisterDataSources(container: (container!))
-        RegisterDataSources(container: container!)
+//		RegisterDataSources(container: (container!))
+        RegisterSchedulers(container: container!)
 //        RegisterUseCases(container: container!)
         RegisterPresenters(container: container!)
         return container!

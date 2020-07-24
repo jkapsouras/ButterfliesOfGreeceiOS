@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AC7581F5B3C7633FC804B97 /* Pods_ButterfliesOfGreeceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */; };
+		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
+		FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B040B24CB2AD6002F180F /* MenuComponent.swift */; };
 		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
 		FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */; };
 		FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8824B2027800A5D178 /* Assets.xcassets */; };
 		FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8A24B2027800A5D178 /* LaunchScreen.storyboard */; };
-		FEAB9B9724B2027800A5D178 /* ButterfliesOfGreeceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */; };
 		FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9BA224B2033F00A5D178 /* Menu.storyboard */; };
 		FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BA424B2041800A5D178 /* MenuViewController.swift */; };
 		FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9BA824B2069200A5D178 /* Localizable.strings */; };
@@ -31,6 +31,7 @@
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
 		FEB3521824CB21160040313D /* FieldClicked.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521724CB21160040313D /* FieldClicked.swift */; };
 		FEB3521A24CB21440040313D /* NavigateToField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521924CB21440040313D /* NavigateToField.swift */; };
+		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +47,14 @@
 /* Begin PBXFileReference section */
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.release.xcconfig"; sourceTree = "<group>"; };
+		62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButterfliesOfGreeceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6073BB6689962BD678E999 /* Pods-ButterfliesOfGreeceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreeceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
+		FE8B040924CB2919002F180F /* ButterfliesOfGreeceTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ButterfliesOfGreeceTests.xctestplan; sourceTree = "<group>"; };
+		FE8B040B24CB2AD6002F180F /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComponent.swift; sourceTree = "<group>"; };
 		FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterfliesOfGreece.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		FEAB9B8B24B2027800A5D178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEAB9B8D24B2027800A5D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAB9B9224B2027800A5D178 /* ButterfliesOfGreeceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButterfliesOfGreeceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterfliesOfGreeceTests.swift; sourceTree = "<group>"; };
 		FEAB9B9824B2027800A5D178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAB9BA224B2033F00A5D178 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		FEAB9BA424B2041800A5D178 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		FEB3521724CB21160040313D /* FieldClicked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldClicked.swift; sourceTree = "<group>"; };
 		FEB3521924CB21440040313D /* NavigateToField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateToField.swift; sourceTree = "<group>"; };
+		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC7581F5B3C7633FC804B97 /* Pods_ButterfliesOfGreeceTests.framework in Frameworks */,
+				9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */,
-				C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */,
+				62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +131,14 @@
 				FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */,
 			);
 			path = Schedulers;
+			sourceTree = "<group>";
+		};
+		FE8B040A24CB2AC0002F180F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE8B040B24CB2AD6002F180F /* MenuComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FEAB9B7324B2027000A5D178 = {
@@ -168,8 +180,10 @@
 		FEAB9B9524B2027800A5D178 /* ButterfliesOfGreeceTests */ = {
 			isa = PBXGroup;
 			children = (
-				FEAB9B9624B2027800A5D178 /* ButterfliesOfGreeceTests.swift */,
 				FEAB9B9824B2027800A5D178 /* Info.plist */,
+				FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */,
+				FE8B040924CB2919002F180F /* ButterfliesOfGreeceTests.xctestplan */,
+				FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */,
 			);
 			path = ButterfliesOfGreeceTests;
 			sourceTree = "<group>";
@@ -177,6 +191,7 @@
 		FEAB9BA124B2031600A5D178 /* MenuViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FE8B040A24CB2AC0002F180F /* Components */,
 				FEB3521624CB20F80040313D /* ViewStates */,
 				FEB3521524CB20F00040313D /* UiEvents */,
 				FEAB9BA224B2033F00A5D178 /* Menu.storyboard */,
@@ -264,7 +279,6 @@
 				FEAB9B8E24B2027800A5D178 /* Sources */,
 				FEAB9B8F24B2027800A5D178 /* Frameworks */,
 				FEAB9B9024B2027800A5D178 /* Resources */,
-				141400DF1886A347C374A013 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,6 +305,7 @@
 					};
 					FEAB9B9124B2027800A5D178 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1160;
 						TestTargetID = FEAB9B7B24B2027000A5D178;
 					};
 				};
@@ -337,23 +352,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		141400DF1886A347C374A013 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8BFBB0F31DB9497A1699C094 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +432,7 @@
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
 				FEB3520A24CB16930040313D /* UiEvent.swift in Sources */,
+				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
@@ -446,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEAB9B9724B2027800A5D178 /* ButterfliesOfGreeceTests.swift in Sources */,
+				FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +641,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NX28QX29VR;
 				INFOPLIST_FILE = ButterfliesOfGreeceTests/Info.plist;
@@ -653,6 +653,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gr.jkapsi.ButterfliesOfGreeceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ButterfliesOfGreeceTests/ButterfliesOfGreeceTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButterfliesOfGreece.app/ButterfliesOfGreece";
@@ -665,6 +667,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NX28QX29VR;
 				INFOPLIST_FILE = ButterfliesOfGreeceTests/Info.plist;
@@ -676,6 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gr.jkapsi.ButterfliesOfGreeceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ButterfliesOfGreeceTests/ButterfliesOfGreeceTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButterfliesOfGreece.app/ButterfliesOfGreece";
