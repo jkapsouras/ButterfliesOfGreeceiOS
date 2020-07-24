@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5AC7581F5B3C7633FC804B97 /* Pods_ButterfliesOfGreeceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
+		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
+		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
 		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
 		FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */; };
 		FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8824B2027800A5D178 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3110A71CD2DC17493F6DB24 /* Pods_ButterfliesOfGreeceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreeceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
+		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
 		FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterfliesOfGreece.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,8 +99,16 @@
 				9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */,
 				9F6073BB6689962BD678E999 /* Pods-ButterfliesOfGreeceTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE1FBE8F24CB110B008D0EA1 /* Schedulers */ = {
+			isa = PBXGroup;
+			children = (
+				FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */,
+				FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */,
+			);
+			path = Schedulers;
 			sourceTree = "<group>";
 		};
 		FEAB9B7324B2027000A5D178 = {
@@ -165,6 +177,7 @@
 		FEAB9BB224B26CFD00A5D178 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FE1FBE8F24CB110B008D0EA1 /* Schedulers */,
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
 			);
 			path = Base;
@@ -358,7 +371,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
+				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
