@@ -14,8 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build in folder
-      run: swift build -v
-      working-directory: ButterfliesOfGreece/ButterfliesOfGreece
+      run: xcodebuild -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme 'ButterfliesOfGreece' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
     - name: Run tests
-      run: ButterfliesOfGreece/swift test -v
-      working-directory: ButterfliesOfGreeceTests/ButterfliesOfGreeceTests
+      run: xcodebuild clean test -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme "ButterfliesOfGreeceTests" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+
+
+
