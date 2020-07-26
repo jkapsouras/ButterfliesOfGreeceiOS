@@ -7,25 +7,31 @@
 //
 
 import UIKit
+import RxCocoa
 
-class MenuViewController: UIViewController {
+class MenuViewController: BaseController<MenuPresenter> {
 	@IBOutlet weak var ButtonField: UIButton!
+	
+	var menuComponent:MenuComponent?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		ButtonField.setTitle(Translations.Field, for: .normal)
-        // Do any additional setup after loading the view.
+    }
+	
+	override func viewWillLayoutSubviews() {
+		ButtonField.centerVerticallyWithPadding(padding: 8)
+	}
+    
+	override func InitViews() {
+        ButtonField.setTitleColor(UIColor.black, for: .normal)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func LocalizeViews() {
+        ButtonField.setTitle(Translations.Field, for: .normal)
+	}
+    
+    override func InitializeComponents() -> Array<UiComponent> {
+        menuComponent = MenuComponent(field: ButtonField)
+        return [menuComponent!]
     }
-    */
-
 }

@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "F6A8854F-EC90-4B0C-BB0C-BAEB0A6C7B23",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ButterfliesOfGreece.xcodeproj",
+        "identifier" : "FEAB9B9124B2027800A5D178",
+        "name" : "ButterfliesOfGreeceTests"
+      }
+    }
+  ],
+  "version" : 1
+}

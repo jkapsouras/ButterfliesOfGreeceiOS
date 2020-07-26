@@ -1,0 +1,6 @@
+module Pods_ButterfliesOfGreeceTests {
+  umbrella header "Pods-ButterfliesOfGreeceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

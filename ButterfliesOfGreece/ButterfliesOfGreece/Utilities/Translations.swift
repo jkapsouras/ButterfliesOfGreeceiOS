@@ -20,6 +20,12 @@ struct Translations {
 		}
 	}
 		
+	static var Done:String {
+		get{
+			"done".Localise()
+		}
+	}
+		
 		static func FindLanguage(language:String? = nil)->Bundle
         {
 			guard language != nil
