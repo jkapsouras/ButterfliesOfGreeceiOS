@@ -1,0 +1,21 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build in folder
+      run: swift build -v
+      working-directory: ButterfliesOfGreece/ButterfliesOfGreece
+    - name: Run tests
+      run: ButterfliesOfGreece/swift test -v
+      working-directory: ButterfliesOfGreeceTests/ButterfliesOfGreeceTests

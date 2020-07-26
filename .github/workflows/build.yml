@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: GitHub Action for SwiftLint
+      uses: norio-nomura/action-swiftlint@3.1.0
+    - name: Build in folder
+      run: ButterfliesOfGreece/swift build -v
+    - name: Run tests
+      run: ButterfliesOfGreece/swift test -v
