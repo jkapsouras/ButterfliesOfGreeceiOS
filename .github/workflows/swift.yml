@@ -14,6 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build in folder
-      run: ButterfliesOfGreece/swift build -v
+      run: swift build -v
+      working-directory: ButterfliesOfGreece
     - name: Run tests
       run: ButterfliesOfGreece/swift test -v
+      working-directory: ButterfliesOfGreeceTests
