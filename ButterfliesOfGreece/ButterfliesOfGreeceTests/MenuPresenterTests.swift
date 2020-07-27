@@ -64,8 +64,55 @@ class MenuPresenterTests: XCTestCase {
         
         scheduler.start()
         
-         XCTAssert(observer.events.first?.value.element is MenuViewState)
+		XCTAssert(observer.events.first?.value.element?.isTransition ?? false)
+		XCTAssert(observer.events.first?.value.element != nil &&
+			observer.events.first?.value.element is MenuViewState &&
+			(observer.events.first!.value.element as! MenuViewState) == MenuViewState.toField)
     }
+	
+	func testShouldNavigateToIntordutionOnClick()
+	{
+		let observer = scheduler.createObserver(ViewState.self)
+		
+		scheduler
+			.createHotObservable([
+				Recorded.next(200, (MenuEvent.introductionClicked) as UiEvent)
+			])
+			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
+			.disposed(by: presenter!.disposeBag)
+		
+		presenter.state.bind(to: observer)
+			.disposed(by: disposeBag)
+		
+		scheduler.start()
+		
+		XCTAssert(observer.events.first?.value.element is MenuViewState)
+		XCTAssert(observer.events.first?.value.element != nil &&
+			observer.events.first?.value.element is MenuViewState &&
+			(observer.events.first!.value.element as! MenuViewState) == MenuViewState.toIntroduction)
+	}
+	
+	func testShouldNavigateToAboutOnClick()
+	{
+		let observer = scheduler.createObserver(ViewState.self)
+		
+		scheduler
+			.createHotObservable([
+				Recorded.next(200, (MenuEvent.aboutClicked) as UiEvent)
+			])
+			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
+			.disposed(by: presenter!.disposeBag)
+		
+		presenter.state.bind(to: observer)
+			.disposed(by: disposeBag)
+		
+		scheduler.start()
+		
+		XCTAssert(observer.events.first?.value.element is MenuViewState)
+		XCTAssert(observer.events.first?.value.element != nil &&
+			observer.events.first?.value.element is MenuViewState &&
+			(observer.events.first!.value.element as! MenuViewState) == MenuViewState.toAbout)
+	}
     
     func testShouldNotReceiveTransitionStateOnUnexpectedEvent()
     {
