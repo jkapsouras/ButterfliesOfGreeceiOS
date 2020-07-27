@@ -9,18 +9,31 @@
 import Foundation
 
 class MenuPresenter:BasePresenter{
+	let responseMessages: [MenuEvent:MenuViewState] = [.fieldClicked: .toField,
+												  .introductionClicked: .toIntroduction,
+												  .aboutClicked:.toAbout,
+												  .contributeClicked:.toContribute,
+												  .endangeredSpeciesClicked:.toEndangered,
+												  .legalClicked:.toLegal,
+												  .offlineRecognitionClicked:.toOfflineRecognition,
+												  .onlineRecognitionClicked:.toOnlineRecognition]
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol)
 	{
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
-	override func HandleEvent(uiEvent: UiEvent) {
+	override func HandleEvent(uiEvents uiEvent: UiEvent) {
 		switch uiEvent {
-		case is FieldClicked:
-			state.onNext(NavigateToField())
-		default:
-			state.onNext(IdleState())
+			case let menuEvent as MenuEvent:
+				guard let certainEvent = responseMessages[menuEvent] else{
+					state.onNext(GeneralViewState.idle)
+					return
+				}
+				state.onNext(certainEvent)
+			default:
+			state.onNext(GeneralViewState.idle)
 		}
 	}
 }
+

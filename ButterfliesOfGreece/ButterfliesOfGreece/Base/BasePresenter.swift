@@ -21,7 +21,7 @@ class BasePresenter{
 			mainThreadScheduler=mainScheduler
 		}
 
-		func HandleEvent(uiEvent:UiEvent)
+		func HandleEvent(uiEvents:UiEvent)
 		{
 
 		}
@@ -29,7 +29,7 @@ class BasePresenter{
 		public func Subscribe(events:Observable<UiEvent>)->Observable<ViewState>
 		{
 			events
-				.subscribe(onNext: { event in self.HandleEvent(uiEvent: event)})
+				.subscribe(onNext: { event in self.HandleEvent(uiEvents: event)})
 				.disposed(by: disposeBag)
 
 			return state.asObservable().observeOn(mainThreadScheduler.scheduler)

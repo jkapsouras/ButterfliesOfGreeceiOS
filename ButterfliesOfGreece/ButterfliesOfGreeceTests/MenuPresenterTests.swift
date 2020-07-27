@@ -54,9 +54,9 @@ class MenuPresenterTests: XCTestCase {
         
         scheduler
         .createHotObservable([
-            Recorded.next(200, (FieldClicked()) as UiEvent)
+			Recorded.next(200, (MenuEvent.fieldClicked) as UiEvent)
 			])
-            .bind(onNext: {event in self.presenter?.HandleEvent(uiEvent: event)})
+			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
             .disposed(by: presenter!.disposeBag)
         
         presenter.state.bind(to: observer)
@@ -64,7 +64,7 @@ class MenuPresenterTests: XCTestCase {
         
         scheduler.start()
         
-         XCTAssert(observer.events.first?.value.element is NavigateToField)
+         XCTAssert(observer.events.first?.value.element is MenuViewState)
     }
     
     func testShouldNotReceiveTransitionStateOnUnexpectedEvent()
@@ -73,9 +73,9 @@ class MenuPresenterTests: XCTestCase {
         
 		scheduler
         .createHotObservable([
-            Recorded.next(200, (Idle()) as UiEvent)
+			Recorded.next(200, (GeneralEvents.idle) as UiEvent)
         ])
-            .bind(onNext: {event in self.presenter?.HandleEvent(uiEvent: event)})
+            .bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
             .disposed(by: presenter!.disposeBag)
         
         presenter.state.bind(to: observer)
@@ -83,6 +83,6 @@ class MenuPresenterTests: XCTestCase {
         
         scheduler.start()
         
-        XCTAssert(!(observer.events.first?.value.element is StateTransition))
+		XCTAssert(!(observer.events.first?.value.element?.isTransition ?? false))
     }
 }

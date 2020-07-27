@@ -16,7 +16,7 @@ jobs:
     - name: Build in folder
       run: xcodebuild -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme 'ButterfliesOfGreece' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
     - name: Run tests
-      run: xcodebuild clean test -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme "ButterfliesOfGreeceTests" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+      run: xcodebuild clean test -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme "ButterfliesOfGreece" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
 
 
 

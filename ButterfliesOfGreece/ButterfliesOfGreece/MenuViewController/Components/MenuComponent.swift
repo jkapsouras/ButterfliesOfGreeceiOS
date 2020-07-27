@@ -20,7 +20,7 @@ class MenuComponent : UiComponent
         FieldButton=field
         
         let fieldObs = FieldButton.rx.tap.map{tap in
-			FieldClicked() as UiEvent}
+			MenuEvent.fieldClicked as UiEvent}
         
         uiEvents = fieldObs
     }

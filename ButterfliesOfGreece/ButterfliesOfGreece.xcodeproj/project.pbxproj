@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
+		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
@@ -23,14 +25,10 @@
 		FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB024B2099200A5D178 /* Translations.swift */; };
 		FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */; };
 		FEB3520824CB13ED0040313D /* IOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520724CB13ED0040313D /* IOC.swift */; };
-		FEB3520A24CB16930040313D /* UiEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520924CB16930040313D /* UiEvent.swift */; };
-		FEB3520C24CB16C70040313D /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520B24CB16C70040313D /* ViewState.swift */; };
 		FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520D24CB17640040313D /* ButtonExtensions.swift */; };
 		FEB3521024CB19620040313D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520F24CB19620040313D /* BaseViewController.swift */; };
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
-		FEB3521824CB21160040313D /* FieldClicked.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521724CB21160040313D /* FieldClicked.swift */; };
-		FEB3521A24CB21440040313D /* NavigateToField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521924CB21440040313D /* NavigateToField.swift */; };
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
+		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.release.xcconfig"; sourceTree = "<group>"; };
 		62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButterfliesOfGreeceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,14 +72,10 @@
 		FEAB9BB024B2099200A5D178 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		FEB3520724CB13ED0040313D /* IOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOC.swift; sourceTree = "<group>"; };
-		FEB3520924CB16930040313D /* UiEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvent.swift; sourceTree = "<group>"; };
-		FEB3520B24CB16C70040313D /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		FEB3520D24CB17640040313D /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		FEB3520F24CB19620040313D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FEB3521124CB199C0040313D /* UiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiComponent.swift; sourceTree = "<group>"; };
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
-		FEB3521724CB21160040313D /* FieldClicked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldClicked.swift; sourceTree = "<group>"; };
-		FEB3521924CB21440040313D /* NavigateToField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateToField.swift; sourceTree = "<group>"; };
 		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +100,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC7BAFD24CF012E000908B9 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		0AC7BB0024CF0246000908B9 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7BB0124CF0251000908B9 /* ViewStates.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		809AF22E013484F40A66D5A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +176,8 @@
 		FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */ = {
 			isa = PBXGroup;
 			children = (
+				0AC7BB0024CF0246000908B9 /* States */,
+				0AC7BAFD24CF012E000908B9 /* Events */,
 				FEAB9BB224B26CFD00A5D178 /* Base */,
 				FEAB9BA624B204AE00A5D178 /* Utilities */,
 				FEAB9BA124B2031600A5D178 /* MenuViewController */,
@@ -192,8 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				FE8B040A24CB2AC0002F180F /* Components */,
-				FEB3521624CB20F80040313D /* ViewStates */,
-				FEB3521524CB20F00040313D /* UiEvents */,
 				FEAB9BA224B2033F00A5D178 /* Menu.storyboard */,
 				FEAB9BA424B2041800A5D178 /* MenuViewController.swift */,
 				FEB3521324CB20210040313D /* MenuPresenter.swift */,
@@ -217,8 +229,6 @@
 				FEB3520624CB13DB0040313D /* DI */,
 				FE1FBE8F24CB110B008D0EA1 /* Schedulers */,
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
-				FEB3520924CB16930040313D /* UiEvent.swift */,
-				FEB3520B24CB16C70040313D /* ViewState.swift */,
 				FEB3520F24CB19620040313D /* BaseViewController.swift */,
 				FEB3521124CB199C0040313D /* UiComponent.swift */,
 			);
@@ -231,22 +241,6 @@
 				FEB3520724CB13ED0040313D /* IOC.swift */,
 			);
 			path = DI;
-			sourceTree = "<group>";
-		};
-		FEB3521524CB20F00040313D /* UiEvents */ = {
-			isa = PBXGroup;
-			children = (
-				FEB3521724CB21160040313D /* FieldClicked.swift */,
-			);
-			path = UiEvents;
-			sourceTree = "<group>";
-		};
-		FEB3521624CB20F80040313D /* ViewStates */ = {
-			isa = PBXGroup;
-			children = (
-				FEB3521924CB21440040313D /* NavigateToField.swift */,
-			);
-			path = ViewStates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,20 +415,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
+				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
-				FEB3521A24CB21440040313D /* NavigateToField.swift in Sources */,
-				FEB3521824CB21160040313D /* FieldClicked.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
-				FEB3520C24CB16C70040313D /* ViewState.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
-				FEB3520A24CB16930040313D /* UiEvent.swift in Sources */,
 				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
+				0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */,
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,

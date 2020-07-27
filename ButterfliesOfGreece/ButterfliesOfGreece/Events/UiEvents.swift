@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+protocol UiEvent{}
+
+enum GeneralEvents:UiEvent{
+	case idle
+}
+
+enum MenuEvent:UiEvent{
+	case fieldClicked
+	case introductionClicked
+	case legalClicked
+	case aboutClicked
+	case contributeClicked
+	case endangeredSpeciesClicked
+	case onlineRecognitionClicked
+	case offlineRecognitionClicked
+}
