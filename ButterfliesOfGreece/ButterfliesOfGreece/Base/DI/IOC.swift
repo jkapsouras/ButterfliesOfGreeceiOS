@@ -51,8 +51,7 @@ struct IOC:IOCInjectable
     
      static func RegisterPresenters(container: Container) {
         container.autoregister(MenuPresenter.self, initializer: MenuPresenter.init)
-//        container.autoregister(LoginPresenter.self, initializer: LoginPresenter.init)
-//		container.autoregister(SettingsPresenter.self, initializer: SettingsPresenter.init)
+        container.autoregister(FamiliesPresenter.self, initializer: FamiliesPresenter.init)
     }
     
     public static var container: Container?

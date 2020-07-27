@@ -19,28 +19,3 @@ enum GeneralViewState:ViewState{
 		return false
 	}
 }
-
-enum MenuViewState:ViewState {
-	case toField
-	case toIntroduction
-	case toEndangered
-	case toLegal
-	case toAbout
-	case toContribute
-	case toOnlineRecognition
-	case toOfflineRecognition
-	
-	var isTransition:Bool{
-		switch self {
-			case .toField,
-			 .toIntroduction,
-			 .toEndangered,
-			 .toLegal,
-			 .toAbout,
-			 .toContribute,
-			 .toOnlineRecognition,
-			 .toOfflineRecognition:
-				return true
-		}
-	}
-}
