@@ -1,11 +1,9 @@
 //
-//  NavigateToField.swift
+//  ViewStates.swift
 //  ButterfliesOfGreece
 //
-//  Created by Ioannis Kapsouras on 24/7/20.
+//  Created by Apprecot on 27/7/20.
 //  Copyright © 2020 Ioannis Kapsouras. All rights reserved.
 //
 
 import Foundation
-
-class NavigateToField:StateTransition{}
