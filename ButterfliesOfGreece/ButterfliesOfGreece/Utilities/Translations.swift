@@ -19,6 +19,42 @@ struct Translations {
 			"field_photos".Localise()
 		}
 	}
+	
+	static var Introduction:String {
+		get{
+			"introduction".Localise()
+		}
+	}
+	
+	static var About:String {
+		get{
+			"about".Localise()
+		}
+	}
+	
+	static var Contribute:String {
+		get{
+			"contribute".Localise()
+		}
+	}
+	
+	static var Legal:String {
+		get{
+			"legal".Localise()
+		}
+	}
+	
+	static var Recognition:String {
+		get{
+			"recognition".Localise()
+		}
+	}
+	
+	static var Endangered:String {
+		get{
+			"endangered".Localise()
+		}
+	}
 		
 	static var Done:String {
 		get{

@@ -11,6 +11,8 @@
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
+		FE10425124D4B7230075D027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425024D4B7230075D027 /* Constants.swift */; };
+		FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425224D4B7ED0075D027 /* ColorsExtension.swift */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
 		FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B3924CF68A300F47717 /* MenuUiEvents.swift */; };
@@ -58,6 +60,8 @@
 		9F6073BB6689962BD678E999 /* Pods-ButterfliesOfGreeceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F8CEBE0B2C512BF4BF81547 /* Pods-ButterfliesOfGreeceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreeceTests.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreeceTests/Pods-ButterfliesOfGreeceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE10425024D4B7230075D027 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE10425224D4B7ED0075D027 /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
 		FE389B3924CF68A300F47717 /* MenuUiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUiEvents.swift; sourceTree = "<group>"; };
@@ -280,6 +284,8 @@
 				FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */,
 				FEAB9BB024B2099200A5D178 /* Translations.swift */,
 				FEB3520D24CB17640040313D /* ButtonExtensions.swift */,
+				FE10425024D4B7230075D027 /* Constants.swift */,
+				FE10425224D4B7ED0075D027 /* ColorsExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -476,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
+				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
@@ -496,6 +503,7 @@
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
+				FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
