@@ -23,6 +23,15 @@ class MenuViewController: BaseController<MenuPresenter> {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		let path = Bundle.main.path(forResource: "data", ofType: "json")
+		let st = try? String(contentsOfFile: path!)
+		 let jsonData = try? String(contentsOfFile: path!).data(using: .utf8)
+				   
+		let decoder = JSONDecoder()
+		
+		var x = try? decoder.decode([Family].self, from: jsonData!)
+		print(jsonData!)
     }
 	
 	override func viewWillLayoutSubviews() {
@@ -44,6 +53,11 @@ class MenuViewController: BaseController<MenuPresenter> {
 	}
     
 	override func InitViews() {
+		if let nav = navigationController{
+			nav.setNavigationBarHidden(true, animated: true)
+		}
+		
+		
         ButtonField.setTitleColor(UIColor.white, for: .normal)
 		ButtonIntroduction.setTitleColor(UIColor.white, for: .normal)
 		ButtonAbout.setTitleColor(UIColor.white, for: .normal)

@@ -10,7 +10,7 @@
         <!--Menu View Controller-->
         <scene sceneID="bm9-3t-6Eb">
             <objects>
-                <viewController id="WIg-bu-RtO" customClass="MenuViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIg-bu-RtO" customClass="MenuViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2tF-wQ-IYy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

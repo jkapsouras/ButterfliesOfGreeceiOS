@@ -13,6 +13,10 @@
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE10425124D4B7230075D027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425024D4B7230075D027 /* Constants.swift */; };
 		FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425224D4B7ED0075D027 /* ColorsExtension.swift */; };
+		FE10425624D5A6380075D027 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FE10425524D5A6380075D027 /* data.json */; };
+		FE10425924D5AB030075D027 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425824D5AB030075D027 /* Family.swift */; };
+		FE10425B24D5AB920075D027 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425A24D5AB920075D027 /* Specie.swift */; };
+		FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
 		FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B3924CF68A300F47717 /* MenuUiEvents.swift */; };
@@ -23,6 +27,9 @@
 		FE389B4724CF707900F47717 /* FamiliesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */; };
 		FE389B4924CF70BD00F47717 /* TestSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B4824CF70BD00F47717 /* TestSchedulers.swift */; };
 		FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B040B24CB2AD6002F180F /* MenuComponent.swift */; };
+		FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA57F3824DD8B8300A66871 /* Families.storyboard */; };
+		FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */; };
+		FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */; };
 		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
 		FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */; };
 		FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAB9B8824B2027800A5D178 /* Assets.xcassets */; };
@@ -39,6 +46,8 @@
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
+		FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */; };
+		FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +71,10 @@
 		A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterfliesOfGreece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE10425024D4B7230075D027 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE10425224D4B7ED0075D027 /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
+		FE10425524D5A6380075D027 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FE10425824D5AB030075D027 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
+		FE10425A24D5AB920075D027 /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
+		FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhoto.swift; sourceTree = "<group>"; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
 		FE389B3924CF68A300F47717 /* MenuUiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUiEvents.swift; sourceTree = "<group>"; };
@@ -73,6 +86,9 @@
 		FE389B4824CF70BD00F47717 /* TestSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulers.swift; sourceTree = "<group>"; };
 		FE8B040924CB2919002F180F /* ButterfliesOfGreeceTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ButterfliesOfGreeceTests.xctestplan; sourceTree = "<group>"; };
 		FE8B040B24CB2AD6002F180F /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComponent.swift; sourceTree = "<group>"; };
+		FEA57F3824DD8B8300A66871 /* Families.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Families.storyboard; sourceTree = "<group>"; };
+		FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesViewController.swift; sourceTree = "<group>"; };
+		FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		FEAB9B7C24B2027000A5D178 /* ButterfliesOfGreece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterfliesOfGreece.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +112,8 @@
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
+		FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
+		FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +172,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FE10425424D5A6130075D027 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE10425724D5AAF10075D027 /* DTO */,
+				FE10425524D5A6380075D027 /* data.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FE10425724D5AAF10075D027 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				FE10425824D5AB030075D027 /* Family.swift */,
+				FE10425A24D5AB920075D027 /* Specie.swift */,
+				FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		FE1FBE8F24CB110B008D0EA1 /* Schedulers */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +206,8 @@
 				FE389B4324CF6A5D00F47717 /* ViewStates */,
 				FE389B4024CF698400F47717 /* UiEvents */,
 				FE389B3E24CF68F400F47717 /* FamiliesPresenter.swift */,
+				FEA57F3824DD8B8300A66871 /* Families.storyboard */,
+				FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */,
 			);
 			path = FamiliesViewController;
 			sourceTree = "<group>";
@@ -213,6 +252,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FEA57F3C24DD8E2600A66871 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		FEAB9B7324B2027000A5D178 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +283,9 @@
 		FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */ = {
 			isa = PBXGroup;
 			children = (
+				FEA57F3C24DD8E2600A66871 /* Managers */,
+				FEEEEEDB24D6EF7100C9655B /* NavigationViewController */,
+				FE10425424D5A6130075D027 /* Data */,
 				FE389B3724CF686900F47717 /* FamiliesViewController */,
 				0AC7BB0024CF0246000908B9 /* States */,
 				0AC7BAFD24CF012E000908B9 /* Events */,
@@ -308,6 +358,15 @@
 				FEB3520724CB13ED0040313D /* IOC.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		FEEEEEDB24D6EF7100C9655B /* NavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */,
+				FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */,
+			);
+			path = NavigationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,10 +455,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */,
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
+				FE10425624D5A6380075D027 /* data.json in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
+				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,25 +543,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
+				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
+				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
+				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,
 				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
 				0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */,
 				FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */,
+				FE10425924D5AB030075D027 /* Family.swift in Sources */,
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
+				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
