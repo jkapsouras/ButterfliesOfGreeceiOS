@@ -18,11 +18,18 @@ class MenuViewController: BaseController<MenuPresenter> {
 	@IBOutlet weak var ButtonEndangered: UIButton!
 	@IBOutlet weak var ButtonRecognition: UIButton!
 	
+	let imageSize = CGSize(width: 32,height: 32)
+	let buttonPadding:CGFloat = 16
 	
 	var menuComponent:MenuComponent?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		for family in UIFont.familyNames.sorted() {
+			let names = UIFont.fontNames(forFamilyName: family)
+			print("Family: \(family) Font names: \(names)")
+		}
 		
 		let path = Bundle.main.path(forResource: "data", ofType: "json")
 		let st = try? String(contentsOfFile: path!)
@@ -35,21 +42,21 @@ class MenuViewController: BaseController<MenuPresenter> {
     }
 	
 	override func viewWillLayoutSubviews() {
-		ButtonEndangered.centerVerticallyWithPadding(padding: 8)
-		ButtonField.centerVerticallyWithPadding(padding: 8)
-		ButtonIntroduction.centerVerticallyWithPadding(padding: 8)
-		ButtonAbout.centerVerticallyWithPadding(padding: 8)
-		ButtonLegal.centerVerticallyWithPadding(padding: 8)
-		ButtonContribute.centerVerticallyWithPadding(padding: 8)
-		ButtonRecognition.centerVerticallyWithPadding(padding: 8)
+		ButtonEndangered.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonField.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonIntroduction.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonAbout.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonLegal.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonContribute.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonRecognition.centerVerticallyWithPadding(padding: buttonPadding)
 		
-		ButtonField.layer.cornerRadius = 10
-		ButtonIntroduction.layer.cornerRadius = 10
-		ButtonAbout.layer.cornerRadius = 10
-		ButtonLegal.layer.cornerRadius = 10
-		ButtonContribute.layer.cornerRadius = 10
-		ButtonEndangered.layer.cornerRadius = 10
-		ButtonRecognition.layer.cornerRadius = 10
+		ButtonField.layer.cornerRadius = 16
+		ButtonIntroduction.layer.cornerRadius = 16
+		ButtonAbout.layer.cornerRadius = 16
+		ButtonLegal.layer.cornerRadius = 16
+		ButtonContribute.layer.cornerRadius = 16
+		ButtonEndangered.layer.cornerRadius = 16
+		ButtonRecognition.layer.cornerRadius = 16
 	}
     
 	override func InitViews() {
@@ -57,39 +64,59 @@ class MenuViewController: BaseController<MenuPresenter> {
 			nav.setNavigationBarHidden(true, animated: true)
 		}
 		
+		ButtonField.layer.borderWidth=4
+		ButtonField.layer.borderColor = Constants.Colors.field(darkMode: true).color.cgColor
+		ButtonIntroduction.layer.borderWidth=4
+		ButtonIntroduction.layer.borderColor = Constants.Colors.introduction(darkMode: true).color.cgColor
+		ButtonAbout.layer.borderWidth=4
+		ButtonAbout.layer.borderColor = Constants.Colors.about(darkMode: true).color.cgColor
+		ButtonLegal.layer.borderWidth=4
+		ButtonLegal.layer.borderColor = Constants.Colors.legal(darkMode: true).color.cgColor
+		ButtonContribute.layer.borderWidth=4
+		ButtonContribute.layer.borderColor = Constants.Colors.contribute(darkMode: true).color.cgColor
+		ButtonEndangered.layer.borderWidth=4
+		ButtonEndangered.layer.borderColor = Constants.Colors.endangered(darkMode: true).color.cgColor
+		ButtonRecognition.layer.borderWidth=4
+		ButtonRecognition.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
 		
-        ButtonField.setTitleColor(UIColor.white, for: .normal)
-		ButtonIntroduction.setTitleColor(UIColor.white, for: .normal)
-		ButtonAbout.setTitleColor(UIColor.white, for: .normal)
-		ButtonLegal.setTitleColor(UIColor.white, for: .normal)
-		ButtonContribute.setTitleColor(UIColor.white, for: .normal)
-		ButtonEndangered.setTitleColor(UIColor.white, for: .normal)
-		ButtonRecognition.setTitleColor(UIColor.white, for: .normal)
+		ButtonField.setTitleColor(Constants.Colors.field(darkMode: true).color, for: .normal)
+		ButtonIntroduction.setTitleColor(Constants.Colors.introduction(darkMode: true).color, for: .normal)
+		ButtonAbout.setTitleColor(Constants.Colors.about(darkMode: true).color, for: .normal)
+		ButtonLegal.setTitleColor(Constants.Colors.legal(darkMode: true).color, for: .normal)
+		ButtonContribute.setTitleColor(Constants.Colors.contribute(darkMode: true).color, for: .normal)
+		ButtonEndangered.setTitleColor(Constants.Colors.endangered(darkMode: true).color, for: .normal)
+		ButtonRecognition.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
 		
-		ButtonField.backgroundColor = Constants.Colors.field.color
-		ButtonIntroduction.backgroundColor = Constants.Colors.introduction.color
-		ButtonAbout.backgroundColor = Constants.Colors.about.color
-		ButtonLegal.backgroundColor = Constants.Colors.legal.color
-		ButtonContribute.backgroundColor = Constants.Colors.contribute.color
-		ButtonEndangered.backgroundColor = Constants.Colors.endangered.color
-		ButtonRecognition.backgroundColor = Constants.Colors.recognition.color
+		ButtonField.backgroundColor = Constants.Colors.field(darkMode: false).color
+		ButtonIntroduction.backgroundColor = Constants.Colors.introduction(darkMode: false).color
+		ButtonAbout.backgroundColor = Constants.Colors.about(darkMode: false).color
+		ButtonLegal.backgroundColor = Constants.Colors.legal(darkMode: false).color
+		ButtonContribute.backgroundColor = Constants.Colors.contribute(darkMode: false).color
+		ButtonEndangered.backgroundColor = Constants.Colors.endangered(darkMode: false).color
+		ButtonRecognition.backgroundColor = Constants.Colors.recognition(darkMode: false).color
 		
 		
 		ButtonField.setImage(#imageLiteral(resourceName: "butterflyIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonField.tintColor = UIColor.white
+		ButtonField.tintColor = Constants.Colors.field(darkMode: true).color
+		ButtonField.imageView?.contentMode = .scaleAspectFit
 		ButtonIntroduction.setImage(#imageLiteral(resourceName: "introIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonIntroduction.tintColor = UIColor.white
+		ButtonIntroduction.tintColor = Constants.Colors.introduction(darkMode: true).color
+		ButtonIntroduction.imageView?.contentMode = .scaleAspectFit
 		ButtonAbout.setImage(#imageLiteral(resourceName: "aboutIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonAbout.tintColor = UIColor.white
+		ButtonAbout.tintColor = Constants.Colors.about(darkMode: true).color
+		ButtonAbout.imageView?.contentMode = .scaleAspectFit
 		ButtonLegal.setImage(#imageLiteral(resourceName: "legalIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonLegal.tintColor = UIColor.white
+		ButtonLegal.tintColor = Constants.Colors.legal(darkMode: true).color
+		ButtonLegal.imageView?.contentMode = .scaleAspectFit
 		ButtonContribute.setImage(#imageLiteral(resourceName: "contributeIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonContribute.tintColor = UIColor.white
+		ButtonContribute.tintColor = Constants.Colors.contribute(darkMode: true).color
+		ButtonContribute.imageView?.contentMode = .scaleAspectFit
 		ButtonEndangered.setImage(#imageLiteral(resourceName: "endangeredIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonEndangered.tintColor = UIColor.white
-		ButtonRecognition.setImage(#imageLiteral(resourceName: "searchIcon").withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonRecognition.tintColor = UIColor.white
-		
+		ButtonEndangered.tintColor = Constants.Colors.endangered(darkMode: true).color
+		ButtonEndangered.imageView?.contentMode = .scaleAspectFit
+		ButtonRecognition.setImage(#imageLiteral(resourceName: "recognitionIcon").withRenderingMode(.alwaysTemplate), for: .normal)
+		ButtonRecognition.tintColor = Constants.Colors.recognition(darkMode: true).color
+		ButtonRecognition.imageView?.contentMode = .scaleAspectFit
     }
     
     override func LocalizeViews() {
@@ -100,6 +127,14 @@ class MenuViewController: BaseController<MenuPresenter> {
 		ButtonContribute.setTitle(Translations.Contribute, for: .normal)
 		ButtonEndangered.setTitle(Translations.Endangered, for: .normal)
 		ButtonRecognition.setTitle(Translations.Recognition, for: .normal)
+		
+		ButtonField.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonIntroduction.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonAbout.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonLegal.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonContribute.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonEndangered.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonRecognition.setFont(size: Constants.Fonts.fontMenuSize)
 	}
     
     override func InitializeComponents() -> Array<UiComponent> {

@@ -12,13 +12,20 @@ import UIKit
 struct Constants {
 	
 	enum Colors {
-		case field
-		case introduction
-		case legal
-		case about
-		case contribute
-		case endangered
-		case recognition
+		case field(darkMode:Bool)
+		case introduction(darkMode:Bool)
+		case legal(darkMode:Bool)
+		case about(darkMode:Bool)
+		case contribute(darkMode:Bool)
+		case endangered(darkMode:Bool)
+		case recognition(darkMode:Bool)
+	}
+	
+	struct Fonts
+	{
+		static let notchTop = 44
+		static let appFont = "Aka-Acid-TypoGrotesk"
+		static let fontMenuSize:CGFloat = 14
 	}
 	
 }
@@ -26,20 +33,20 @@ extension Constants.Colors {
 	var color: UIColor {
 		get {
 			switch self {
-			case .field:
-				return UIColor(hex: "#1f5faaff") ?? UIColor.white
-			case .introduction:
-				return UIColor(hex: "#3F220Fff") ?? UIColor.green
-			case .legal:
-				return UIColor(hex: "#E4572EFF") ?? UIColor.red
-			case .about:
-				return UIColor(hex: "#607466FF") ?? UIColor.gray
-			case .contribute:
-				return UIColor(hex: "#320E3BFF") ?? UIColor.blue
-			case .endangered:
-				return UIColor(hex: "#8EA604FF") ?? UIColor.yellow
-			case .recognition:
-				return UIColor(hex: "#48A9A6FF") ?? UIColor.brown
+			case .field(let darkMode):
+				return (darkMode ? UIColor(hex: "#6c80bf") : UIColor(hex: "#e3e7f2"))
+			case .introduction(let darkMode):
+				return (darkMode ?  UIColor(hex: "#91C6D5") : UIColor(hex: "#EBF4F6"))
+			case .legal(let darkMode):
+				return (darkMode ?  UIColor(hex: "#EDB299") : UIColor(hex: "#FAF2EE"))
+			case .about(let darkMode):
+				return (darkMode ?  UIColor(hex: "#DFE48C") : UIColor(hex: "#F8F9EB"))
+			case .contribute(let darkMode):
+				return (darkMode ?  UIColor(hex: "#7E66A6") : UIColor(hex: "#E8E6F1"))
+			case .endangered(let darkMode):
+				return (darkMode ?  UIColor(hex: "#C4787D") : UIColor(hex: "#F5EAE7"))
+			case .recognition(let darkMode):
+				return (darkMode ?  UIColor(hex: "#7DB283") : UIColor(hex: "#E8EEE8")) 
 			}
 		}
 	}

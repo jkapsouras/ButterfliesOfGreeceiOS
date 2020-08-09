@@ -16,33 +16,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-9a-8mZ">
-                                <rect key="frame" x="8" y="60" width="398" height="298.5"/>
+                                <rect key="frame" x="32" y="76" width="350" height="241"/>
                                 <state key="normal" image="butterflyIcon">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-l9-hyj">
-                                <rect key="frame" x="8" y="366.5" width="195" height="112"/>
+                                <rect key="frame" x="32" y="333" width="167" height="112"/>
                                 <state key="normal" image="introIcon"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGU-tO-TNC">
-                                <rect key="frame" x="211" y="366.5" width="195" height="112"/>
+                                <rect key="frame" x="215" y="333" width="167" height="112"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-bQ-tts">
-                                <rect key="frame" x="8" y="486.5" width="127.5" height="112"/>
+                                <rect key="frame" x="32" y="461" width="106" height="112"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-TD-Gxi">
-                                <rect key="frame" x="143.5" y="486.5" width="127" height="112"/>
+                                <rect key="frame" x="154" y="461" width="106" height="112"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbp-ym-6TB">
-                                <rect key="frame" x="278.5" y="486.5" width="127.5" height="112"/>
-                                <state key="normal" image="endangeredIcon"/>
+                                <rect key="frame" x="276" y="461" width="106" height="112"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="-100" minY="100" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-80" maxY="0.0"/>
+                                <state key="normal" title="endangered" image="endangeredIcon">
+                                    <color key="titleColor" red="0.69411764710000001" green="0.0" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-8L-SRI">
-                                <rect key="frame" x="8" y="606.5" width="398" height="239.5"/>
+                                <rect key="frame" x="32" y="589" width="350" height="241"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
@@ -52,41 +57,41 @@
                             <constraint firstItem="aGU-tO-TNC" firstAttribute="top" secondItem="2ge-l9-hyj" secondAttribute="top" id="0Gz-Bl-JF6"/>
                             <constraint firstItem="zfX-TD-Gxi" firstAttribute="height" secondItem="Xwi-bQ-tts" secondAttribute="height" id="0JK-oU-mTB"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="width" secondItem="zfX-TD-Gxi" secondAttribute="width" id="7Jq-An-55J"/>
-                            <constraint firstItem="aGU-tO-TNC" firstAttribute="leading" secondItem="2ge-l9-hyj" secondAttribute="trailing" constant="8" id="8DG-74-n6a"/>
-                            <constraint firstItem="zfX-TD-Gxi" firstAttribute="leading" secondItem="Xwi-bQ-tts" secondAttribute="trailing" constant="8" id="8Mc-39-Dgk"/>
+                            <constraint firstItem="aGU-tO-TNC" firstAttribute="leading" secondItem="2ge-l9-hyj" secondAttribute="trailing" constant="16" id="8DG-74-n6a"/>
+                            <constraint firstItem="zfX-TD-Gxi" firstAttribute="leading" secondItem="Xwi-bQ-tts" secondAttribute="trailing" constant="16" id="8Mc-39-Dgk"/>
                             <constraint firstItem="2ge-l9-hyj" firstAttribute="leading" secondItem="u3x-9a-8mZ" secondAttribute="leading" id="8NG-fd-DL7"/>
-                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="height" secondItem="2tF-wQ-IYy" secondAttribute="height" multiplier="1/3" id="C1n-i9-v8b"/>
                             <constraint firstItem="aGU-tO-TNC" firstAttribute="trailing" secondItem="u3x-9a-8mZ" secondAttribute="trailing" id="CHY-XB-DbJ"/>
                             <constraint firstItem="zfX-TD-Gxi" firstAttribute="top" secondItem="Xwi-bQ-tts" secondAttribute="top" id="DHm-qr-NQQ"/>
-                            <constraint firstItem="atF-Sq-MZC" firstAttribute="trailing" secondItem="u3x-9a-8mZ" secondAttribute="trailing" constant="8" id="Ja9-5B-GAe"/>
-                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="leading" secondItem="atF-Sq-MZC" secondAttribute="leading" constant="8" id="KAT-ec-Y2v"/>
-                            <constraint firstItem="tbp-ym-6TB" firstAttribute="leading" secondItem="zfX-TD-Gxi" secondAttribute="trailing" constant="8" id="LaP-wm-n3b"/>
+                            <constraint firstItem="atF-Sq-MZC" firstAttribute="trailing" secondItem="u3x-9a-8mZ" secondAttribute="trailing" constant="32" id="Ja9-5B-GAe"/>
+                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="leading" secondItem="atF-Sq-MZC" secondAttribute="leading" constant="32" id="KAT-ec-Y2v"/>
+                            <constraint firstItem="tbp-ym-6TB" firstAttribute="leading" secondItem="zfX-TD-Gxi" secondAttribute="trailing" constant="16" id="LaP-wm-n3b"/>
                             <constraint firstItem="d1e-8L-SRI" firstAttribute="leading" secondItem="Xwi-bQ-tts" secondAttribute="leading" id="R5u-8T-9Gc"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="top" secondItem="zfX-TD-Gxi" secondAttribute="top" id="Rp5-KW-BKK"/>
                             <constraint firstItem="2ge-l9-hyj" firstAttribute="height" secondItem="2tF-wQ-IYy" secondAttribute="height" multiplier="1/8" id="TTd-S2-kqt"/>
-                            <constraint firstItem="2ge-l9-hyj" firstAttribute="top" secondItem="u3x-9a-8mZ" secondAttribute="bottom" constant="8" id="TUg-AE-zey"/>
+                            <constraint firstItem="2ge-l9-hyj" firstAttribute="top" secondItem="u3x-9a-8mZ" secondAttribute="bottom" constant="16" id="TUg-AE-zey"/>
+                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="height" secondItem="d1e-8L-SRI" secondAttribute="height" id="YP5-Gs-54z"/>
                             <constraint firstItem="Xwi-bQ-tts" firstAttribute="height" secondItem="2ge-l9-hyj" secondAttribute="height" id="YRY-pg-3g1"/>
                             <constraint firstItem="aGU-tO-TNC" firstAttribute="height" secondItem="2ge-l9-hyj" secondAttribute="height" id="av4-2Y-ub7"/>
                             <constraint firstItem="Xwi-bQ-tts" firstAttribute="leading" secondItem="2ge-l9-hyj" secondAttribute="leading" id="c8E-0L-rYw"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="height" secondItem="Xwi-bQ-tts" secondAttribute="height" id="cPb-A0-Ejq"/>
-                            <constraint firstItem="atF-Sq-MZC" firstAttribute="bottom" secondItem="d1e-8L-SRI" secondAttribute="bottom" constant="16" id="cWj-XU-gDH"/>
-                            <constraint firstItem="Xwi-bQ-tts" firstAttribute="top" secondItem="2ge-l9-hyj" secondAttribute="bottom" constant="8" id="ckW-y6-rQo"/>
+                            <constraint firstItem="atF-Sq-MZC" firstAttribute="bottom" secondItem="d1e-8L-SRI" secondAttribute="bottom" constant="32" id="cWj-XU-gDH"/>
+                            <constraint firstItem="Xwi-bQ-tts" firstAttribute="top" secondItem="2ge-l9-hyj" secondAttribute="bottom" constant="16" id="ckW-y6-rQo"/>
                             <constraint firstItem="zfX-TD-Gxi" firstAttribute="width" secondItem="Xwi-bQ-tts" secondAttribute="width" id="e5I-Ff-RNO"/>
                             <constraint firstItem="aGU-tO-TNC" firstAttribute="width" secondItem="2ge-l9-hyj" secondAttribute="width" id="eKS-cF-pVD"/>
-                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="top" secondItem="atF-Sq-MZC" secondAttribute="top" constant="16" id="fIq-ya-021"/>
-                            <constraint firstItem="d1e-8L-SRI" firstAttribute="top" secondItem="zfX-TD-Gxi" secondAttribute="bottom" constant="8" id="njY-u9-jj6"/>
+                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="top" secondItem="atF-Sq-MZC" secondAttribute="top" constant="32" id="fIq-ya-021"/>
+                            <constraint firstItem="d1e-8L-SRI" firstAttribute="top" secondItem="zfX-TD-Gxi" secondAttribute="bottom" constant="16" id="njY-u9-jj6"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="trailing" secondItem="aGU-tO-TNC" secondAttribute="trailing" id="oKh-sG-BSw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="atF-Sq-MZC"/>
                     </view>
                     <connections>
-                        <outlet property="ButtonAbout" destination="aGU-tO-TNC" id="5gg-kH-Eff"/>
-                        <outlet property="ButtonContribute" destination="zfX-TD-Gxi" id="2T4-P1-R4D"/>
-                        <outlet property="ButtonEndangered" destination="tbp-ym-6TB" id="uKU-8Z-0GH"/>
-                        <outlet property="ButtonField" destination="u3x-9a-8mZ" id="8rk-b7-F3a"/>
-                        <outlet property="ButtonIntroduction" destination="2ge-l9-hyj" id="jEd-fV-sM4"/>
-                        <outlet property="ButtonLegal" destination="Xwi-bQ-tts" id="e9f-Kg-e0k"/>
-                        <outlet property="ButtonRecognition" destination="d1e-8L-SRI" id="Rwh-zi-mUP"/>
+                        <outlet property="ButtonAbout" destination="zfX-TD-Gxi" id="w7d-rW-vgM"/>
+                        <outlet property="ButtonContribute" destination="2ge-l9-hyj" id="tfk-rU-ZkA"/>
+                        <outlet property="ButtonEndangered" destination="aGU-tO-TNC" id="0Xw-xa-2hU"/>
+                        <outlet property="ButtonField" destination="u3x-9a-8mZ" id="yNy-Cm-B8e"/>
+                        <outlet property="ButtonIntroduction" destination="Xwi-bQ-tts" id="Mn7-u1-gV8"/>
+                        <outlet property="ButtonLegal" destination="tbp-ym-6TB" id="HvM-gC-N3s"/>
+                        <outlet property="ButtonRecognition" destination="d1e-8L-SRI" id="erZ-mg-dhv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vae-uC-JEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -95,8 +100,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="butterflyIcon" width="50" height="50"/>
-        <image name="endangeredIcon" width="50" height="50"/>
-        <image name="introIcon" width="50" height="50"/>
+        <image name="butterflyIcon" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="endangeredIcon" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="introIcon" width="85.333335876464844" height="85.333335876464844"/>
     </resources>
 </document>
