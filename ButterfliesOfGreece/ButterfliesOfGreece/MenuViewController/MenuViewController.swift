@@ -25,20 +25,7 @@ class MenuViewController: BaseController<MenuPresenter> {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		for family in UIFont.familyNames.sorted() {
-			let names = UIFont.fontNames(forFamilyName: family)
-			print("Family: \(family) Font names: \(names)")
-		}
-		
-		let path = Bundle.main.path(forResource: "data", ofType: "json")
-		let st = try? String(contentsOfFile: path!)
-		 let jsonData = try? String(contentsOfFile: path!).data(using: .utf8)
-				   
-		let decoder = JSONDecoder()
-		
-		var x = try? decoder.decode([Family].self, from: jsonData!)
-		print(jsonData!)
+		title = ""
     }
 	
 	override func viewWillLayoutSubviews() {
@@ -94,7 +81,6 @@ class MenuViewController: BaseController<MenuPresenter> {
 		ButtonContribute.backgroundColor = Constants.Colors.contribute(darkMode: false).color
 		ButtonEndangered.backgroundColor = Constants.Colors.endangered(darkMode: false).color
 		ButtonRecognition.backgroundColor = Constants.Colors.recognition(darkMode: false).color
-		
 		
 		ButtonField.setImage(#imageLiteral(resourceName: "butterflyIcon").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonField.tintColor = Constants.Colors.field(darkMode: true).color

@@ -15,6 +15,20 @@ class NavigationViewController: UINavigationController {
 
         // Do any additional setup after loading the view.
     }
+	
+	func setupNavigationBarAppearance(color: UIColor, textColor: UIColor, fontName: String, fontSize: CGFloat) {
+		navigationBar.barTintColor = color
+		navigationBar.tintColor = textColor
+//		navigationBar.shadowImage = UIImage()
+		navigationBar.isTranslucent = false
+
+		let font:UIFont = UIFont(name: fontName, size: fontSize)!
+		let navbarTitleAtt = [
+			NSAttributedString.Key.font:font,
+			NSAttributedString.Key.foregroundColor: textColor
+		]
+		navigationBar.titleTextAttributes = navbarTitleAtt
+	}
     
 
     /*

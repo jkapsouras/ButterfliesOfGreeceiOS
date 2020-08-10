@@ -26,6 +26,7 @@ struct Constants {
 		static let notchTop = 44
 		static let appFont = "Aka-Acid-TypoGrotesk"
 		static let fontMenuSize:CGFloat = 14
+		static let titleControllerSise:CGFloat = 18
 	}
 	
 }

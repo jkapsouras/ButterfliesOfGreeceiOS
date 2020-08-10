@@ -12,8 +12,15 @@ class FamiliesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		guard let navigation = navigationController else {
+			print("no navigation controller")
+			return
+		}
+		if let butterfliesNavigation = navigation as? NavigationViewController {
+			title = "families"
+			butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
+			butterfliesNavigation.setNavigationBarHidden(false, animated: true)
+		}
     }
     
 

@@ -7,11 +7,13 @@
 //
 
 import Foundation
-enum viewArrange{
+import RxSwift
+
+enum ViewArrange{
 	case list
 	case grid
 	
-	 func changeArrange()->viewArrange{
+	 func changeArrange()->ViewArrange{
 		switch self {
 		case .grid:
 			return .list
@@ -23,11 +25,11 @@ enum viewArrange{
 
 class FamiliesPresenter:BasePresenter{
 	
-	var currentArrange:viewArrange
+	var familiesState:FamiliesState
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol)
 	{
-		currentArrange = .grid
+		familiesState = FamiliesState(arrange: .grid)
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
@@ -38,8 +40,10 @@ class FamiliesPresenter:BasePresenter{
 				case .familyClicked(let familyId):
 					state.onNext(FamiliesViewStates.ToSpecies(familyId: familyId))
 				case .switchViewStyle:
-					currentArrange = currentArrange.changeArrange()
-					state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: currentArrange))
+					familiesState.currentArrange = familiesState.currentArrange.changeArrange()
+					state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: familiesState.currentArrange))
+				case .loadFamilies:
+					state.onNext(FamiliesViewStates.ShowFamilies(families: familiesState.families))
 			}
 			default:
 			state.onNext(GeneralViewState.idle)

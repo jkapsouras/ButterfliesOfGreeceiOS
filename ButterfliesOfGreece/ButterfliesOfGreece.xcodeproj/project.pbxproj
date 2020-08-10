@@ -29,6 +29,7 @@
 		FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */; };
 		FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5327B224E039BE00BA4AF5 /* ACTypoGrotesk.ttf */; };
 		FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */; };
+		FE5327B724E178D500BA4AF5 /* FamiliesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B624E178D500BA4AF5 /* FamiliesState.swift */; };
 		FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B040B24CB2AD6002F180F /* MenuComponent.swift */; };
 		FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA57F3824DD8B8300A66871 /* Families.storyboard */; };
 		FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */; };
@@ -90,6 +91,7 @@
 		FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		FE5327B224E039BE00BA4AF5 /* ACTypoGrotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ACTypoGrotesk.ttf; sourceTree = "<group>"; };
 		FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonstExtensions.swift; sourceTree = "<group>"; };
+		FE5327B624E178D500BA4AF5 /* FamiliesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesState.swift; sourceTree = "<group>"; };
 		FE8B040924CB2919002F180F /* ButterfliesOfGreeceTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ButterfliesOfGreeceTests.xctestplan; sourceTree = "<group>"; };
 		FE8B040B24CB2AD6002F180F /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComponent.swift; sourceTree = "<group>"; };
 		FEA57F3824DD8B8300A66871 /* Families.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Families.storyboard; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				FE389B3E24CF68F400F47717 /* FamiliesPresenter.swift */,
 				FEA57F3824DD8B8300A66871 /* Families.storyboard */,
 				FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */,
+				FE5327B624E178D500BA4AF5 /* FamiliesState.swift */,
 			);
 			path = FamiliesViewController;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */,
 				FE10425924D5AB030075D027 /* Family.swift in Sources */,
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
+				FE5327B724E178D500BA4AF5 /* FamiliesState.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
