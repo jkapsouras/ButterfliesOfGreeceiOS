@@ -17,6 +17,17 @@
 		FE10425924D5AB030075D027 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425824D5AB030075D027 /* Family.swift */; };
 		FE10425B24D5AB920075D027 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425A24D5AB920075D027 /* Specie.swift */; };
 		FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */; };
+		FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13419E24E326190076EF14 /* PhotosTableSource.swift */; };
+		FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341A024E3263A0076EF14 /* PhotosTableViewCell.swift */; };
+		FE1341A324E3263A0076EF14 /* PhotosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1341A124E3263A0076EF14 /* PhotosTableViewCell.xib */; };
+		FE1341A624E326880076EF14 /* PhotosCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341A524E326880076EF14 /* PhotosCollectionView.swift */; };
+		FE1341A824E326960076EF14 /* PhotosCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1341A724E326960076EF14 /* PhotosCollectionView.xib */; };
+		FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341AA24E327AD0076EF14 /* PhotosCollectionSource.swift */; };
+		FE1341AD24E327C10076EF14 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341AC24E327C10076EF14 /* PhotosCollectionViewCell.swift */; };
+		FE1341B024E32A8F0076EF14 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341AF24E32A8F0076EF14 /* HeaderView.swift */; };
+		FE1341B224E32A9C0076EF14 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1341B124E32A9C0076EF14 /* HeaderView.xib */; };
+		FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341B324E32B340076EF14 /* FamiliesCollectionComponent.swift */; };
+		FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
 		FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B3924CF68A300F47717 /* MenuUiEvents.swift */; };
@@ -30,6 +41,9 @@
 		FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5327B224E039BE00BA4AF5 /* ACTypoGrotesk.ttf */; };
 		FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */; };
 		FE5327B724E178D500BA4AF5 /* FamiliesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B624E178D500BA4AF5 /* FamiliesState.swift */; };
+		FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B924E1DDE900BA4AF5 /* FamiliesTableComponent.swift */; };
+		FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327BE24E30D7800BA4AF5 /* PhotosTableView.swift */; };
+		FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5327C024E30D8B00BA4AF5 /* PhotosTableView.xib */; };
 		FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B040B24CB2AD6002F180F /* MenuComponent.swift */; };
 		FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA57F3824DD8B8300A66871 /* Families.storyboard */; };
 		FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */; };
@@ -79,6 +93,17 @@
 		FE10425824D5AB030075D027 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		FE10425A24D5AB920075D027 /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
 		FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhoto.swift; sourceTree = "<group>"; };
+		FE13419E24E326190076EF14 /* PhotosTableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableSource.swift; sourceTree = "<group>"; };
+		FE1341A024E3263A0076EF14 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		FE1341A124E3263A0076EF14 /* PhotosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableViewCell.xib; sourceTree = "<group>"; };
+		FE1341A524E326880076EF14 /* PhotosCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionView.swift; sourceTree = "<group>"; };
+		FE1341A724E326960076EF14 /* PhotosCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionView.xib; sourceTree = "<group>"; };
+		FE1341AA24E327AD0076EF14 /* PhotosCollectionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionSource.swift; sourceTree = "<group>"; };
+		FE1341AC24E327C10076EF14 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE1341AF24E32A8F0076EF14 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FE1341B124E32A9C0076EF14 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		FE1341B324E32B340076EF14 /* FamiliesCollectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesCollectionComponent.swift; sourceTree = "<group>"; };
+		FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesHeaderComponent.swift; sourceTree = "<group>"; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
 		FE389B3924CF68A300F47717 /* MenuUiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUiEvents.swift; sourceTree = "<group>"; };
@@ -92,6 +117,9 @@
 		FE5327B224E039BE00BA4AF5 /* ACTypoGrotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ACTypoGrotesk.ttf; sourceTree = "<group>"; };
 		FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonstExtensions.swift; sourceTree = "<group>"; };
 		FE5327B624E178D500BA4AF5 /* FamiliesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesState.swift; sourceTree = "<group>"; };
+		FE5327B924E1DDE900BA4AF5 /* FamiliesTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesTableComponent.swift; sourceTree = "<group>"; };
+		FE5327BE24E30D7800BA4AF5 /* PhotosTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableView.swift; sourceTree = "<group>"; };
+		FE5327C024E30D8B00BA4AF5 /* PhotosTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableView.xib; sourceTree = "<group>"; };
 		FE8B040924CB2919002F180F /* ButterfliesOfGreeceTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ButterfliesOfGreeceTests.xctestplan; sourceTree = "<group>"; };
 		FE8B040B24CB2AD6002F180F /* MenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuComponent.swift; sourceTree = "<group>"; };
 		FEA57F3824DD8B8300A66871 /* Families.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Families.storyboard; sourceTree = "<group>"; };
@@ -199,6 +227,44 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		FE13419D24E325F90076EF14 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				FE13419E24E326190076EF14 /* PhotosTableSource.swift */,
+				FE1341A024E3263A0076EF14 /* PhotosTableViewCell.swift */,
+				FE1341A124E3263A0076EF14 /* PhotosTableViewCell.xib */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		FE1341A424E326660076EF14 /* PhotosCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FE1341A924E327980076EF14 /* Table */,
+				FE1341A524E326880076EF14 /* PhotosCollectionView.swift */,
+				FE1341A724E326960076EF14 /* PhotosCollectionView.xib */,
+			);
+			path = PhotosCollectionView;
+			sourceTree = "<group>";
+		};
+		FE1341A924E327980076EF14 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				FE1341AA24E327AD0076EF14 /* PhotosCollectionSource.swift */,
+				FE1341AC24E327C10076EF14 /* PhotosCollectionViewCell.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		FE1341AE24E32A6E0076EF14 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				FE1341AF24E32A8F0076EF14 /* HeaderView.swift */,
+				FE1341B124E32A9C0076EF14 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		FE1FBE8F24CB110B008D0EA1 /* Schedulers */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +277,7 @@
 		FE389B3724CF686900F47717 /* FamiliesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FE5327B824E1DD9900BA4AF5 /* Components */,
 				FE389B4324CF6A5D00F47717 /* ViewStates */,
 				FE389B4024CF698400F47717 /* UiEvents */,
 				FE389B3E24CF68F400F47717 /* FamiliesPresenter.swift */,
@@ -261,6 +328,46 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FE5327B824E1DD9900BA4AF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE5327B924E1DDE900BA4AF5 /* FamiliesTableComponent.swift */,
+				FE1341B324E32B340076EF14 /* FamiliesCollectionComponent.swift */,
+				FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FEEEEEDB24D6EF7100C9655B /* NavigationViewController */,
+				FE389B3724CF686900F47717 /* FamiliesViewController */,
+				FEAB9BA124B2031600A5D178 /* MenuViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FE5327BC24E30D2D00BA4AF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE1341AE24E32A6E0076EF14 /* HeaderView */,
+				FE1341A424E326660076EF14 /* PhotosCollectionView */,
+				FE5327BD24E30D5D00BA4AF5 /* PhotosTableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FE5327BD24E30D5D00BA4AF5 /* PhotosTableView */ = {
+			isa = PBXGroup;
+			children = (
+				FE13419D24E325F90076EF14 /* Table */,
+				FE5327BE24E30D7800BA4AF5 /* PhotosTableView.swift */,
+				FE5327C024E30D8B00BA4AF5 /* PhotosTableView.xib */,
+			);
+			path = PhotosTableView;
+			sourceTree = "<group>";
+		};
 		FE8B040A24CB2AC0002F180F /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,16 +407,15 @@
 		FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */ = {
 			isa = PBXGroup;
 			children = (
+				FE5327BC24E30D2D00BA4AF5 /* Views */,
+				FE5327BB24E30CE600BA4AF5 /* ViewControllers */,
 				FE10425724D5AAF10075D027 /* DTO */,
 				FEA57F3C24DD8E2600A66871 /* Managers */,
-				FEEEEEDB24D6EF7100C9655B /* NavigationViewController */,
 				FE10425424D5A6130075D027 /* Data */,
-				FE389B3724CF686900F47717 /* FamiliesViewController */,
 				0AC7BB0024CF0246000908B9 /* States */,
 				0AC7BAFD24CF012E000908B9 /* Events */,
 				FEAB9BB224B26CFD00A5D178 /* Base */,
 				FEAB9BA624B204AE00A5D178 /* Utilities */,
-				FEAB9BA124B2031600A5D178 /* MenuViewController */,
 				FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */,
 				FEAB9B8124B2027000A5D178 /* SceneDelegate.swift */,
 				FEAB9B8824B2027800A5D178 /* Assets.xcassets */,
@@ -475,14 +581,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1341A824E326960076EF14 /* PhotosCollectionView.xib in Resources */,
 				FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */,
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
+				FE1341B224E32A9C0076EF14 /* HeaderView.xib in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
+				FE1341A324E3263A0076EF14 /* PhotosTableViewCell.xib in Resources */,
 				FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */,
 				FE10425624D5A6380075D027 /* data.json in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
+				FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,26 +674,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1341A624E326880076EF14 /* PhotosCollectionView.swift in Sources */,
+				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
+				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
+				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
+				FE1341B024E32A8F0076EF14 /* HeaderView.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
+				FE1341AD24E327C10076EF14 /* PhotosCollectionViewCell.swift in Sources */,
 				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
 				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,
 				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
+				FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */,
+				FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
+				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
 				0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */,
 				FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */,
@@ -591,6 +710,7 @@
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
 				FE5327B724E178D500BA4AF5 /* FamiliesState.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
+				FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */,
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
