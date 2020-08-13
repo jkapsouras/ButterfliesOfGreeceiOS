@@ -14,17 +14,18 @@ class FamiliesCollectionComponent: UiComponent
 	let event:PublishSubject<UiEvent> = PublishSubject()
 	let photosCollectionView:PhotosCollectionView
 	let uiEvents: Observable<UiEvent>
-    
+	
 	init(view:PhotosCollectionView) {
 		photosCollectionView=view
 		uiEvents = Observable.merge(photosCollectionView.UiEvents,event.asObservable())
-    }
-    
-    public func renderViewState(viewState: ViewState) {
+	}
+	
+	public func renderViewState(viewState: ViewState) {
 		if let state = viewState as? FamiliesViewStates{
 			switch state {
 			case FamiliesViewStates.ShowFamilies(let data):
 				print("number of families: \(data.count)")
+				photosCollectionView.ShowFamilies(families: data)
 			case FamiliesViewStates.SwitchViewStyle(let arrange):
 				if(arrange == .list){
 					photosCollectionView.Hide()
@@ -36,6 +37,6 @@ class FamiliesCollectionComponent: UiComponent
 				print("default state")
 			}
 		}
-    }
+	}
 }
 

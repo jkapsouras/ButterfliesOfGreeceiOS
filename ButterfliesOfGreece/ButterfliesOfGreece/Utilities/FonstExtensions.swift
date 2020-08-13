@@ -27,3 +27,10 @@ extension UIButton{
 		self.titleLabel!.font = UIFont(name: Constants.Fonts.appFont, size: size) ?? UIFont.systemFont(ofSize: Constants.Fonts.fontMenuSize)
 	}
 }
+
+extension UILabel{
+	func setFont(size: CGFloat)
+	{
+		self.font = UIFont(name: Constants.Fonts.appFont, size: size) ?? UIFont.systemFont(ofSize: Constants.Fonts.fontMenuSize)
+	}
+}

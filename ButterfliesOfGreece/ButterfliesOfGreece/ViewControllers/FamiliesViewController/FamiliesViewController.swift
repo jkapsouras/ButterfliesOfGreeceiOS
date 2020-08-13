@@ -9,7 +9,8 @@
 import UIKit
 
 class FamiliesViewController: BaseController<FamiliesPresenter> {
-	var familiesComponent:FamiliesTableComponent?
+	var familiesTableComponent:FamiliesTableComponent?
+	var familiesCollectionComponent:FamiliesCollectionComponent?
 	@IBOutlet var ViewPhotosWithTable: PhotosTableView!
 	@IBOutlet weak var ViewPhotosWithCollection: PhotosCollectionView!
 	@IBOutlet weak var ViewHeader: HeaderView!
@@ -27,12 +28,13 @@ class FamiliesViewController: BaseController<FamiliesPresenter> {
     
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		familiesComponent?.event.onNext(FamiliesEvents.loadFamilies)
-		familiesComponent?.event.onNext(FamiliesEvents.switchViewStyle)
+		familiesTableComponent?.event.onNext(FamiliesEvents.loadFamilies)
+		familiesTableComponent?.event.onNext(FamiliesEvents.switchViewStyle)
 	}
 	
 	override func InitializeComponents() -> Array<UiComponent> {
-		familiesComponent = FamiliesTableComponent(view: ViewPhotosWithTable)
-        return [familiesComponent!]
+		familiesTableComponent = FamiliesTableComponent(view: ViewPhotosWithTable)
+		familiesCollectionComponent = FamiliesCollectionComponent(view: ViewPhotosWithCollection)
+        return [familiesTableComponent!, familiesCollectionComponent!]
     }
 }

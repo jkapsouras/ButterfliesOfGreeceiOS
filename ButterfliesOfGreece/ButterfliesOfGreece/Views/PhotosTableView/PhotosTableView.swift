@@ -13,86 +13,94 @@ import RxSwift
 class PhotosTableView: UIView {
 	@IBOutlet weak var TablePhotos: UITableView!
 	
-    var contentView:UIView?
-		let nibName = "PhotosTableView"
-		var UiEvents: Observable<UiEvent>{get
+	var contentView:UIView?
+	let nibName = "PhotosTableView"
+	var UiEvents: Observable<UiEvent>{get
+	{
+		return ViewEvents();
+		}
+	}
+	
+	let source = PhotosTableSource()
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		commonInit()
+		PrepareViews();
+		PrepareTexts();
+		PrepareFonts();
+	}
+	
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		//		commonInit()
+	}
+	
+	func commonInit() {
+		contentView = loadViewFromNib()
+		contentView?.frame = self.bounds
+		contentView?.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.flexibleWidth.rawValue | UIView.AutoresizingMask.flexibleHeight.rawValue)
+		
+		// Adding custom subview on top of our view (over any custom drawing > see note below)
+		self.addSubview(contentView!)
+		
+	}
+	
+	func loadViewFromNib() -> UIView? {
+		let nib = UINib(nibName: nibName, bundle: nil)
+		return nib.instantiate(withOwner: self, options: nil).first as? UIView
+	}
+	
+	func PrepareViews()
+	{
+		TablePhotos.register(PhotosTableViewCell.Nib, forCellReuseIdentifier: PhotosTableViewCell.Key)
+		
+		self.backgroundColor = UIColor.red
+		TablePhotos.backgroundColor = UIColor.green
+	}
+	
+	func UpdateViews()
+	{
+		
+	}
+	
+	func PrepareTexts()
+	{
+	}
+	
+	func PrepareFonts()
+	{
+	}
+	
+	func Show()
+	{
+		if (alpha == 0)
 		{
-			return ViewEvents();
-			}
+			alpha = 1
+			//	this.FadeIn();
+			//	_contentView.FadeIn();
 		}
-		
-		required init?(coder aDecoder: NSCoder) {
-			super.init(coder: aDecoder)
-			commonInit()
-			PrepareViews();
-			PrepareTexts();
-			PrepareFonts();
-		}
-		
-		override init(frame: CGRect) {
-			super.init(frame: frame)
-	//		commonInit()
-		}
-		
-		func commonInit() {
-			contentView = loadViewFromNib()
-			contentView?.frame = self.bounds
-			contentView?.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.flexibleWidth.rawValue | UIView.AutoresizingMask.flexibleHeight.rawValue)
-			
-			// Adding custom subview on top of our view (over any custom drawing > see note below)
-			self.addSubview(contentView!)
-			
-		}
-		
-		func loadViewFromNib() -> UIView? {
-			let nib = UINib(nibName: nibName, bundle: nil)
-			return nib.instantiate(withOwner: self, options: nil).first as? UIView
-		}
-		
-		func PrepareViews()
+	}
+	
+	func Hide()
+	{
+		if (alpha == 1)
 		{
-			self.backgroundColor = UIColor.clear
-			contentView?.backgroundColor = UIColor.white
+			alpha=0
 		}
-		
-		func UpdateViews()
-		{
-			
-		}
-		
-		func PrepareTexts()
-		{
-		}
-		
-		func PrepareFonts()
-		{
-		}
-		
-		func Show()
-		{
-			if (contentView?.alpha == 0)
-			{
-				alpha = 1
-				contentView?.alpha = 1
-				//	this.FadeIn();
-				//	_contentView.FadeIn();
-			}
-		}
-		
-		func Hide()
-		{
-			if (contentView?.alpha == 1)
-			{
-				contentView?.alpha=0
-				//	this.FadeOut();
-				//	_contentView.FadeOut();
-			}
-			self.alpha = 0
-			contentView?.alpha = 0
-		}
-		
-		func ViewEvents() -> Observable<UiEvent>
-		{
-			return Observable.never()
-		}
+		self.alpha = 0
+	}
+	
+	func ViewEvents() -> Observable<UiEvent>
+	{
+		return Observable.never()
+	}
+	
+	func ShowFamilies(families: [Family]){
+		source.setFamilies(families: families)
+		TablePhotos.separatorStyle = .none
+		TablePhotos.dataSource = source
+		TablePhotos.delegate = source
+		TablePhotos.reloadData()
+	}
 }

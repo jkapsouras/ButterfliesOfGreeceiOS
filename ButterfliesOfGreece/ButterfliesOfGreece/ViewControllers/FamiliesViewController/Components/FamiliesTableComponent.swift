@@ -27,6 +27,7 @@ class FamiliesTableComponent : UiComponent
 			switch state {
 			case FamiliesViewStates.ShowFamilies(let data):
 				print("number of families: \(data.count)")
+				photosTableView.ShowFamilies(families: data)
 			case FamiliesViewStates.SwitchViewStyle(let arrange):
 				if(arrange == .grid){
 					photosTableView.Hide()

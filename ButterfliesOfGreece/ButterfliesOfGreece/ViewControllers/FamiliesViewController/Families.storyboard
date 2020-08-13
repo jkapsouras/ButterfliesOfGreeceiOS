@@ -24,7 +24,7 @@
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgV-6F-FPh" customClass="PhotosTableView" customModule="ButterfliesOfGreece" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="116" width="414" height="746"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HF-7T-aSP" customClass="PhotosCollectionView" customModule="ButterfliesOfGreece" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="116" width="414" height="746"/>

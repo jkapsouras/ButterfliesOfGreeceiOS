@@ -29,7 +29,7 @@ class FamiliesPresenter:BasePresenter{
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol)
 	{
-		familiesState = FamiliesState(arrange: .grid)
+		familiesState = FamiliesState(arrange: .list)
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	

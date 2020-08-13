@@ -19,6 +19,7 @@ struct Constants {
 		case contribute(darkMode:Bool)
 		case endangered(darkMode:Bool)
 		case recognition(darkMode:Bool)
+		case appWhite
 	}
 	
 	struct Fonts
@@ -26,6 +27,7 @@ struct Constants {
 		static let notchTop = 44
 		static let appFont = "Aka-Acid-TypoGrotesk"
 		static let fontMenuSize:CGFloat = 14
+		static let fontPhotosSize:CGFloat = 16
 		static let titleControllerSise:CGFloat = 18
 	}
 	
@@ -47,7 +49,9 @@ extension Constants.Colors {
 			case .endangered(let darkMode):
 				return (darkMode ?  UIColor(hex: "#C4787D") : UIColor(hex: "#F5EAE7"))
 			case .recognition(let darkMode):
-				return (darkMode ?  UIColor(hex: "#7DB283") : UIColor(hex: "#E8EEE8")) 
+				return (darkMode ?  UIColor(hex: "#7DB283") : UIColor(hex: "#E8EEE8"))
+			case .appWhite:
+				return UIColor.white
 			}
 		}
 	}

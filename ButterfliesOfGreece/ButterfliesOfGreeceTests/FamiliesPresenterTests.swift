@@ -85,7 +85,7 @@ class FamiliesPresenterTests: XCTestCase {
 		let viewState = observer.events.first?.value.element as! FamiliesViewStates
 		switch viewState {
 		case .ShowFamilies(let families):
-			XCTAssert(families.count == 1)//test json data
+			XCTAssert(families.count == 9)//test json data
 		default:
 			XCTFail()
 		}
