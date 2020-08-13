@@ -29,6 +29,7 @@ struct Constants {
 		static let fontMenuSize:CGFloat = 14
 		static let fontPhotosSize:CGFloat = 16
 		static let titleControllerSise:CGFloat = 18
+		static let addedPhotosSize:CGFloat = 8
 	}
 	
 }

@@ -11,6 +11,12 @@ import RxSwift
 
 class HeaderView: UIView {
 	@IBOutlet weak var LableTitle: UILabel!
+	@IBOutlet weak var ButtonAddPhotos: UIButton!
+	@IBOutlet weak var ButtonChangeViewStyle: UIButton!
+	@IBOutlet weak var ButtonSearch: UIButton!
+	@IBOutlet weak var ViewNumberOfFiles: UIView!
+	@IBOutlet weak var LabelNumberOfFiles: UILabel!
+	@IBOutlet weak var ConstViewNumberTrailing: NSLayoutConstraint!
 	
 	var contentView:UIView?
 		let nibName = "HeaderView"
@@ -50,8 +56,27 @@ class HeaderView: UIView {
 		
 		func PrepareViews()
 		{
-			self.backgroundColor = UIColor.clear
-			contentView?.backgroundColor = UIColor.white
+			self.backgroundColor = Constants.Colors.field(darkMode: false).color
+			ButtonChangeViewStyle.setImage(UIImage(named: "listIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
+			ButtonChangeViewStyle.setTitle("", for: .normal)
+			ButtonChangeViewStyle.tintColor = Constants.Colors.field(darkMode: true).color
+			ButtonChangeViewStyle.imageView?.contentMode = .scaleAspectFit
+			ButtonSearch.setImage(UIImage(named: "recognitionIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
+			ButtonSearch.setTitle("", for: .normal)
+			ButtonSearch.tintColor = Constants.Colors.field(darkMode: true).color
+			ButtonSearch.imageView?.contentMode = .scaleAspectFit
+			ButtonAddPhotos.setImage(UIImage(named: "folderIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
+			ButtonAddPhotos.setTitle("", for: .normal)
+			ButtonAddPhotos.tintColor = Constants.Colors.field(darkMode: true).color
+			ButtonAddPhotos.imageView?.contentMode = .scaleAspectFit
+			ViewNumberOfFiles.backgroundColor = Constants.Colors.field(darkMode: false).color
+			LabelNumberOfFiles.textColor = Constants.Colors.field(darkMode: true).color
+			LabelNumberOfFiles.text = "0"
+			LabelNumberOfFiles.setFont(size: Constants.Fonts.addedPhotosSize)
+			LableTitle.setFont(size: Constants.Fonts.fontPhotosSize)
+			ViewNumberOfFiles.layer.borderColor = Constants.Colors.field(darkMode: true).color.cgColor
+			ViewNumberOfFiles.layer.borderWidth = 1
+			ViewNumberOfFiles.layer.cornerRadius = ViewNumberOfFiles.bounds.height/2
 		}
 		
 		func UpdateViews()
@@ -69,10 +94,9 @@ class HeaderView: UIView {
 		
 		func Show()
 		{
-			if (contentView?.alpha == 0)
+			if (alpha == 0)
 			{
 				alpha = 1
-				contentView?.alpha = 1
 				//	this.FadeIn();
 				//	_contentView.FadeIn();
 			}
@@ -80,14 +104,12 @@ class HeaderView: UIView {
 		
 		func Hide()
 		{
-			if (contentView?.alpha == 1)
+			if (alpha == 1)
 			{
-				contentView?.alpha=0
+				alpha=0
 				//	this.FadeOut();
 				//	_contentView.FadeOut();
 			}
-			self.alpha = 0
-			contentView?.alpha = 0
 		}
 		
 		func ViewEvents() -> Observable<UiEvent>
