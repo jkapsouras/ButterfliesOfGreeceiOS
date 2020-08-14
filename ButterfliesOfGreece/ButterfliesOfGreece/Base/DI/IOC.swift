@@ -26,7 +26,7 @@ struct IOC:IOCInjectable
      static func RegisterElements() -> Container {
         container=Container()
         
-//		RegisterDataSources(container: (container!))
+		RegisterDataSources(container: (container!))
         RegisterSchedulers(container: container!)
 //        RegisterUseCases(container: container!)
         RegisterPresenters(container: container!)
@@ -40,7 +40,7 @@ struct IOC:IOCInjectable
     
      static func RegisterDataSources(container: Container) {
 //		container.autoregister(AccountManagerProtocol.self, initializer: AccountManager.init).inObjectScope(.container)
-//		container.register(AccountManagerProtocol.self) { _ in AccountManager(prefs: UserDefaults.standard)}.inObjectScope(.container)
+		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
     }
     
 //     static func RegisterUseCases(container: Container) {

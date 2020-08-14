@@ -9,7 +9,7 @@
 import Foundation
 
 enum FamiliesEvents:UiEvent{
-	case switchViewStyle
 	case loadFamilies
 	case familyClicked(id:Int)
+	case addPhotosForPrintClicked(familyId:Int)
 }

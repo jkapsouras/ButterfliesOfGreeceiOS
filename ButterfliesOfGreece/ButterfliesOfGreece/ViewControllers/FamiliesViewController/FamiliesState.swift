@@ -12,11 +12,6 @@ struct FamiliesState {
 	lazy var families:[Family] = {
 		return self.ReadData(fileName: "data", type: "json")
 	}()
-	var currentArrange:ViewArrange
-	
-	init(arrange:ViewArrange){
-		currentArrange = arrange
-	}
 }
 
 extension FamiliesState{

@@ -14,13 +14,20 @@ class FamiliesHeaderComponent : UiComponent
 	let event:PublishSubject<UiEvent> = PublishSubject()
 	let headerView:HeaderView
 	let uiEvents: Observable<UiEvent>
-    
+	
 	init(view:HeaderView) {
 		headerView=view
 		uiEvents = Observable.merge(headerView.UiEvents,event.asObservable())
-    }
-    
-    public func renderViewState(viewState: ViewState) {
-		
-    }
+	}
+	
+	public func renderViewState(viewState: ViewState) {
+		if let state = viewState as? FamiliesViewStates{
+			switch state {
+			case FamiliesViewStates.SwitchViewStyle(let arrange):
+				headerView.changeViewForViewArrange(viewArrange: arrange)
+			default:
+				print("default state")
+			}
+		}
+	}
 }

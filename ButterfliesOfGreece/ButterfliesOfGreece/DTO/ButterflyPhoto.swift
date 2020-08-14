@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ButterflyPhoto:Codable{
+class ButterflyPhoto:Codable{
 	enum Genre:String, Codable{
 		case M
 		case F
@@ -29,6 +29,15 @@ struct ButterflyPhoto:Codable{
 		case genre
 		case identified = "iden"
 		
+	}
+	
+	init(){
+		id = -1
+		source = ""
+		title = ""
+		author = ""
+		genre = .F
+		identified = false
 	}
 }
 

@@ -11,6 +11,7 @@ import UIKit
 class FamiliesViewController: BaseController<FamiliesPresenter> {
 	var familiesTableComponent:FamiliesTableComponent?
 	var familiesCollectionComponent:FamiliesCollectionComponent?
+	var familiesHeaderComponent:FamiliesHeaderComponent?
 	@IBOutlet var ViewPhotosWithTable: PhotosTableView!
 	@IBOutlet weak var ViewPhotosWithCollection: PhotosCollectionView!
 	@IBOutlet weak var ViewHeader: HeaderView!
@@ -21,7 +22,7 @@ class FamiliesViewController: BaseController<FamiliesPresenter> {
 			print("no proper navigation controller")
 			return
 		}
-		title = Translations.Families
+		title = Translations.Field
 		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
     }
@@ -29,12 +30,18 @@ class FamiliesViewController: BaseController<FamiliesPresenter> {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		familiesTableComponent?.event.onNext(FamiliesEvents.loadFamilies)
-		familiesTableComponent?.event.onNext(FamiliesEvents.switchViewStyle)
+		familiesTableComponent?.event.onNext(HeaderViewEvents.switchViewStyleClicked)
+		familiesTableComponent?.event.onNext(HeaderViewEvents.initPhotosToPrint)
+	}
+	
+	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+		ViewPhotosWithCollection.updateViews()
 	}
 	
 	override func InitializeComponents() -> Array<UiComponent> {
 		familiesTableComponent = FamiliesTableComponent(view: ViewPhotosWithTable)
 		familiesCollectionComponent = FamiliesCollectionComponent(view: ViewPhotosWithCollection)
-        return [familiesTableComponent!, familiesCollectionComponent!]
+		familiesHeaderComponent = FamiliesHeaderComponent(view: ViewHeader)
+        return [familiesTableComponent!, familiesCollectionComponent!, familiesHeaderComponent!]
     }
 }

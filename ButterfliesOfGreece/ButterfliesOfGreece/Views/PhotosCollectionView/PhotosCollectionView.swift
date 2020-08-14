@@ -45,6 +45,10 @@ class PhotosCollectionView: UIView {
 		
 	}
 	
+	override func layoutSubviews() {
+		updateViews()
+	}
+	
 	func loadViewFromNib() -> UIView? {
 		let nib = UINib(nibName: nibName, bundle: nil)
 		return nib.instantiate(withOwner: self, options: nil).first as? UIView
@@ -57,14 +61,15 @@ class PhotosCollectionView: UIView {
 		self.backgroundColor = Constants.Colors.appWhite.color
 		CollectionPhotos.backgroundColor = Constants.Colors.appWhite.color
 		
+		
+	}
+	
+	func updateViews()
+	{
 		let layout = CollectionPhotos.collectionViewLayout as! UICollectionViewFlowLayout
 		let dimenWidth = (CollectionPhotos.bounds.width/2 - 24)
 		layout.itemSize = CGSize(width: dimenWidth, height: dimenWidth + 80)
-	}
-	
-	func UpdateViews()
-	{
-		
+		CollectionPhotos.reloadData()
 	}
 	
 	func PrepareTexts()

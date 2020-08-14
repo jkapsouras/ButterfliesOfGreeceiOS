@@ -10,10 +10,10 @@ import Foundation
 
 class BasePresenter{
     
-	   var disposeBag:DisposeBag=DisposeBag()
-		var backgroundThreadScheduler:BackgroundThreadProtocol
-		var mainThreadScheduler:MainThreadProtocol
-		var  state:PublishSubject<ViewState> = PublishSubject()
+	   let disposeBag:DisposeBag=DisposeBag()
+		let backgroundThreadScheduler:BackgroundThreadProtocol
+		let mainThreadScheduler:MainThreadProtocol
+		let  state:PublishSubject<ViewState> = PublishSubject()
 
 		init(backScheduler:BackgroundThreadProtocol,mainScheduler:MainThreadProtocol)
 		{
