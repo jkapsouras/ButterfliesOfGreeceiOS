@@ -27,56 +27,74 @@ class FamiliesPresenter:BasePresenter{
 	
 	var familiesState:FamiliesState
 	var headerState:HeaderState
-	var cacheManager:CacheManagerProtocol
+	var familiesRepository:FamiliesRepository
+	var photosToPrintRepository:PhotosToPrintRepository
 	
-	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol, cacheManager:CacheManagerProtocol)
+	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol, familiesRepository:FamiliesRepository, photosToPrintRepository:PhotosToPrintRepository)
 	{
-		self.cacheManager = cacheManager
-		familiesState = FamiliesState()
-		headerState = HeaderState(arrange: .grid)
+		self.familiesRepository = familiesRepository
+		self.photosToPrintRepository = photosToPrintRepository
+		familiesState = FamiliesState(families: [Family]())
+		headerState = HeaderState(arrange: .grid, photos: nil)
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
+	}
+	
+	override func setupEvents() {
+		emitter.onNext(FamiliesEvents.loadFamilies)
+		emitter.onNext(HeaderViewEvents.initState(arrange: .list))
 	}
 	
 	override func HandleEvent(uiEvents uiEvent: UiEvent) {
 		switch uiEvent {
 		case let familyEvent as FamiliesEvents:
-			switch familyEvent {
-			case .familyClicked(let familyId):
-				state.onNext(FamiliesViewStates.ToSpecies(familyId: familyId))
-			case .loadFamilies:
-				state.onNext(FamiliesViewStates.ShowFamilies(families: familiesState.families))
-			case .addPhotosForPrintClicked(let familyId):
-				cacheManager.getPhotosToPrint().map{photos in return self.updateHeaderState(photos: photos, familyId: familyId)}.subscribe(onNext: {count in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: count))}).dispose()
-			}
+			handleFamiliesEvents(familyEvent: familyEvent)
 		case let headerEvent as HeaderViewEvents:
-			switch headerEvent {
-			case .switchViewStyleClicked:
-				headerState.currentArrange = headerState.currentArrange.changeArrange()
-				state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
-			case .searchBarClicked:
-				print("search bar clicked")
-			case .printPhotosClicked:
-				print("print photos clicked")
-			case .initPhotosToPrint:
-				cacheManager.getPhotosToPrint().map{photos in return self.setupHeaderState(photos: photos)}.subscribe(onNext: {count in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: count))}).dispose()
-			}
+			handleHeaderViewEvents(headerEvent: headerEvent)
 		default:
 			state.onNext(GeneralViewState.idle)
 		}
 	}
 	
-	func setupHeaderState(photos:[ButterflyPhoto]) -> Int{
-		headerState.photosToPrint = photos
-		return photos.count
-	}
-	
-	func updateHeaderState(photos:[ButterflyPhoto], familyId:Int) -> Int{
-		headerState.photosToPrint = photos
+	func updateHeaderState(photos:[ButterflyPhoto], familyId:Int) -> HeaderState{
+		headerState = headerState.with(photos: photos)
 		let family = familiesState.families.first{$0.id==familyId}
 		let photos = family?.species.flatMap{$0.photos}
 		if let _ = headerState.photosToPrint{
-			headerState.photosToPrint! += photos ?? [ButterflyPhoto]()
+			headerState = headerState.with(photos: headerState.photosToPrint! + (photos ?? [ButterflyPhoto]()))
 		}
-		return headerState.photosToPrint?.count ?? 0
+		return headerState
+	}
+	
+	func handleFamiliesEvents(familyEvent: FamiliesEvents){
+		switch familyEvent {
+		case .familyClicked(let familyId):
+			state.onNext(FamiliesViewStates.ToSpecies(familyId: familyId))
+		case .loadFamilies:
+			_ = familiesRepository.getAllFamilies().map{families -> FamiliesState in
+				self.familiesState = self.familiesState.with(families: families)
+				return self.familiesState
+			}.subscribe(onNext: {familieState in self.state.onNext(FamiliesViewStates.ShowFamilies(families: familieState.families))})
+		case .addPhotosForPrintClicked(let familyId):
+			_ = photosToPrintRepository.getPhotosToPrint().map{photos in return self.updateHeaderState(photos: photos, familyId: familyId)}.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint!.count))})
+		}
+	}
+	
+	func handleHeaderViewEvents(headerEvent: HeaderViewEvents){
+		switch headerEvent {
+		case .initState(let arrange):
+			_ = photosToPrintRepository.getPhotosToPrint().map{photos -> HeaderState in
+				self.headerState = self.headerState.with(arrange: arrange, photos: photos)
+				return self.headerState
+			}.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint?.count ?? 0))
+				self.state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
+			})
+		case .switchViewStyleClicked:
+			headerState = headerState.with(arrange: headerState.currentArrange.changeArrange())
+			state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
+		case .searchBarClicked:
+			print("search bar clicked")
+		case .printPhotosClicked:
+			print("print photos clicked")
+		}
 	}
 }

@@ -9,29 +9,33 @@ import RxSwift
 import Foundation
 
 class BasePresenter{
-    
-	   let disposeBag:DisposeBag=DisposeBag()
-		let backgroundThreadScheduler:BackgroundThreadProtocol
-		let mainThreadScheduler:MainThreadProtocol
-		let  state:PublishSubject<ViewState> = PublishSubject()
-
-		init(backScheduler:BackgroundThreadProtocol,mainScheduler:MainThreadProtocol)
-		{
-			backgroundThreadScheduler=backScheduler
-			mainThreadScheduler=mainScheduler
-		}
-
-		func HandleEvent(uiEvents:UiEvent)
-		{
-
-		}
-
-		public func Subscribe(events:Observable<UiEvent>)->Observable<ViewState>
-		{
-			events
-				.subscribe(onNext: { event in self.HandleEvent(uiEvents: event)})
-				.disposed(by: disposeBag)
-
-			return state.asObservable().observeOn(mainThreadScheduler.scheduler)
-		}
+	
+	let disposeBag:DisposeBag=DisposeBag()
+	let backgroundThreadScheduler:BackgroundThreadProtocol
+	let mainThreadScheduler:MainThreadProtocol
+	let state:PublishSubject<ViewState> = PublishSubject()
+	let emitter:PublishSubject<UiEvent> = PublishSubject()
+	
+	init(backScheduler:BackgroundThreadProtocol,mainScheduler:MainThreadProtocol)
+	{
+		backgroundThreadScheduler=backScheduler
+		mainThreadScheduler=mainScheduler
+	}
+	
+	func HandleEvent(uiEvents:UiEvent)
+	{
+		
+	}
+	
+	func Subscribe(events:Observable<UiEvent>)->Observable<ViewState>
+	{
+		Observable.merge(events,emitter.asObservable())
+			.subscribe(onNext: { event in self.HandleEvent(uiEvents: event)})
+			.disposed(by: disposeBag)
+		return state.asObservable().observeOn(mainThreadScheduler.scheduler)
+	}
+	
+	func setupEvents(){
+		fatalError("Must Override")
+	}
 }

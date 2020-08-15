@@ -9,8 +9,8 @@
 import Foundation
 
 enum HeaderViewEvents:UiEvent{
+	case initState(arrange:ViewArrange)
 	case switchViewStyleClicked
 	case searchBarClicked
 	case printPhotosClicked
-	case initPhotosToPrint
 }

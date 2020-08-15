@@ -35,5 +35,9 @@ class MenuPresenter:BasePresenter{
 			state.onNext(GeneralViewState.idle)
 		}
 	}
+	
+	override func setupEvents() {
+		
+	}
 }
 

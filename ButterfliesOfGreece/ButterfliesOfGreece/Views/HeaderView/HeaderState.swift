@@ -9,10 +9,20 @@
 import Foundation
 
 struct HeaderState {
-	var photosToPrint:[ButterflyPhoto]?
-	var currentArrange:ViewArrange
+	let photosToPrint:[ButterflyPhoto]?
+	let currentArrange:ViewArrange
 	
-	init(arrange:ViewArrange){
+	init(arrange:ViewArrange, photos:[ButterflyPhoto]?){
 		currentArrange = arrange
+		photosToPrint = photos
+	}
+}
+
+extension HeaderState{
+	func with(arrange:ViewArrange? = nil, photos:[ButterflyPhoto]? = nil) -> HeaderState{
+		return HeaderState(
+			arrange: arrange ?? self.currentArrange,
+			photos: photos ?? self.photosToPrint
+		)
 	}
 }

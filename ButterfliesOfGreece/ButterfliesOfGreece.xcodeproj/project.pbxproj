@@ -51,6 +51,9 @@
 		FE8DADA624E57032009F92F6 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DADA424E57032009F92F6 /* PhotosCollectionViewCell.swift */; };
 		FE8DADA724E57032009F92F6 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8DADA524E57032009F92F6 /* PhotosCollectionViewCell.xib */; };
 		FE8DADA924E5759C009F92F6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FE8DADA824E5759B009F92F6 /* data.json */; };
+		FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6024E84A710038DD9C /* Storage.swift */; };
+		FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */; };
+		FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */; };
 		FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA57F3824DD8B8300A66871 /* Families.storyboard */; };
 		FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */; };
 		FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */; };
@@ -134,6 +137,9 @@
 		FE8DADA424E57032009F92F6 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE8DADA524E57032009F92F6 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE8DADA824E5759B009F92F6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FEA1CB6024E84A710038DD9C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesRepository.swift; sourceTree = "<group>"; };
+		FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintRepository.swift; sourceTree = "<group>"; };
 		FEA57F3824DD8B8300A66871 /* Families.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Families.storyboard; sourceTree = "<group>"; };
 		FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesViewController.swift; sourceTree = "<group>"; };
 		FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 			children = (
 				FE8DADA824E5759B009F92F6 /* data.json */,
 				FE5327B124E039AC00BA4AF5 /* Fonts */,
+				FEA1CB6024E84A710038DD9C /* Storage.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -408,6 +415,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FEA1CB6224E8691B0038DD9C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */,
+				FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		FEA57F3C24DD8E2600A66871 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +455,7 @@
 		FEAB9B7E24B2027000A5D178 /* ButterfliesOfGreece */ = {
 			isa = PBXGroup;
 			children = (
+				FEA1CB6224E8691B0038DD9C /* Repositories */,
 				FE5327BC24E30D2D00BA4AF5 /* Views */,
 				FE5327BB24E30CE600BA4AF5 /* ViewControllers */,
 				FE10425724D5AAF10075D027 /* DTO */,
@@ -722,6 +739,7 @@
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
+				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
@@ -731,6 +749,7 @@
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
 				FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */,
+				FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */,
 				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
 				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
@@ -752,6 +771,7 @@
 				FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */,
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
+				FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
 				FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */,

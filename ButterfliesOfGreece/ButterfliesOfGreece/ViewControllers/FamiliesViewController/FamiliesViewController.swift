@@ -26,13 +26,6 @@ class FamiliesViewController: BaseController<FamiliesPresenter> {
 		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
     }
-    
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		familiesTableComponent?.event.onNext(FamiliesEvents.loadFamilies)
-		familiesTableComponent?.event.onNext(HeaderViewEvents.switchViewStyleClicked)
-		familiesTableComponent?.event.onNext(HeaderViewEvents.initPhotosToPrint)
-	}
 	
 	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
 		ViewPhotosWithCollection.updateViews()

@@ -9,27 +9,15 @@
 import Foundation
 
 struct FamiliesState {
-	lazy var families:[Family] = {
-		return self.ReadData(fileName: "data", type: "json")
-	}()
+	let families:[Family]
+	
+	init(families:[Family]){
+		self.families = families
+	}
 }
 
 extension FamiliesState{
-	func ReadData(fileName:String, type:String)->[Family]{
-		let path = Bundle.main.path(forResource: fileName, ofType: type)
-		guard path != nil else{
-			return [Family]()
-		}
-		let json = try? String(contentsOfFile: path!)
-		guard json != nil else{
-			return [Family]()
-		}
-		let data = json!.data(using: .utf8)
-		let decoder = JSONDecoder()
-		let families = try? decoder.decode([Family].self, from: data!)
-		guard families != nil else{
-			return [Family]()
-		}
-		return families!
+	func with(families:[Family]? = nil) -> FamiliesState{
+		return FamiliesState(families: families ?? self.families)
 	}
 }
