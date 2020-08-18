@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class PhotosTableViewCell: UITableViewCell {
 	@IBOutlet weak var ImageButterfly: UIImageView!
@@ -15,6 +16,10 @@ class PhotosTableViewCell: UITableViewCell {
 	@IBOutlet weak var ViewUnderline: UIView!
 	static var Key:String = "PhotosTableViewCell"
 	static var Nib:UINib = UINib.init(nibName: "PhotosTableViewCell", bundle: nil)
+	
+	var addRecognizer:UITapGestureRecognizer?
+	var emitter:PublishSubject<UiEvent>?
+	var familyId:Int?
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,8 +37,10 @@ class PhotosTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-	func update(family: Family){
+	func update(family: Family, emitter:PublishSubject<UiEvent>){
+		self.emitter = emitter
 		LabelName.text = family.name
+		familyId = family.id
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(family.photo)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
@@ -47,5 +54,28 @@ class PhotosTableViewCell: UITableViewCell {
 		ViewUnderline.backgroundColor = Constants.Colors.field(darkMode: false).color
 		LabelName.setFont(size: Constants.Fonts.fontPhotosSize)
 		ImageAdd.tintColor = Constants.Colors.field(darkMode: true).color
+	}
+	
+	func addRecognizers(){
+		if (addRecognizer == nil)
+		{
+			addRecognizer = UITapGestureRecognizer(target: self, action: #selector(addTapped(_:)))
+			ImageAdd.addGestureRecognizer(addRecognizer!)
+			ImageAdd.isUserInteractionEnabled = true
+		}
+	}
+	
+	func removeRecognizers(){
+		if(addRecognizer != nil){
+			ImageAdd.isUserInteractionEnabled = false
+			ImageAdd.removeGestureRecognizer(addRecognizer!)
+			addRecognizer = nil
+		}
+	}
+	
+	@objc func addTapped(_ sender: UITapGestureRecognizer) {
+		if let emitter = emitter{
+			emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
+		}
 	}
 }

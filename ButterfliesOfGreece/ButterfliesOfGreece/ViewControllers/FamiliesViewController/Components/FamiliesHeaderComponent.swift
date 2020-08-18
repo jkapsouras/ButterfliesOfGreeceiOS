@@ -29,5 +29,11 @@ class FamiliesHeaderComponent : UiComponent
 				print("default state")
 			}
 		}
+		if let state = viewState as? HeaderViewViewStates{
+			switch state {
+			case HeaderViewViewStates.updateFolderIcon(let numberOfPhotos):
+				headerView.updateNumberOfPhotos(number: numberOfPhotos)
+			}
+		}
 	}
 }
