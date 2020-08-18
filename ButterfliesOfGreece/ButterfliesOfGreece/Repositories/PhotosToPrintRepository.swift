@@ -21,4 +21,8 @@ struct PhotosToPrintRepository {
 	mutating func getPhotosToPrint() -> Observable<[ButterflyPhoto]>{
 		return cacheManager.getPhotosToPrint()
 	}
+	
+	func savePhotosToPrint(photos:[ButterflyPhoto]){
+		_ = cacheManager.savePhotosToPrint(photos: photos)
+	}
 }

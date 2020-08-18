@@ -59,9 +59,7 @@ class FamiliesPresenter:BasePresenter{
 		headerState = headerState.with(photos: photos)
 		let family = familiesState.families.first{$0.id==familyId}
 		let photos = family?.species.flatMap{$0.photos}
-		if let _ = headerState.photosToPrint{
-			headerState = headerState.with(photos: headerState.photosToPrint! + (photos ?? [ButterflyPhoto]()))
-		}
+		headerState = headerState.with(photos:photos)
 		return headerState
 	}
 	
@@ -75,7 +73,11 @@ class FamiliesPresenter:BasePresenter{
 				return self.familiesState
 			}.subscribe(onNext: {familieState in self.state.onNext(FamiliesViewStates.ShowFamilies(families: familieState.families))})
 		case .addPhotosForPrintClicked(let familyId):
-			_ = photosToPrintRepository.getPhotosToPrint().map{photos in return self.updateHeaderState(photos: photos, familyId: familyId)}.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint!.count))})
+			_ = photosToPrintRepository
+				.getPhotosToPrint()
+				.map{photos in return self.updateHeaderState(photos: photos, familyId: familyId)}
+//				.do(onNext: {photoState in self.photosToPrintRepository.savePhotosToPrint(photos: photoState.photosToPrint ?? [ButterflyPhoto]())})
+				.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint!.count))})
 		}
 	}
 	

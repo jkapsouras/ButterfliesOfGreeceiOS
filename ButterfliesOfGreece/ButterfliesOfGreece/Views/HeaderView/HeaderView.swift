@@ -131,4 +131,8 @@ class HeaderView: UIView {
 			ButtonChangeViewStyle.setImage(UIImage(named: "gridIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
 		}
 	}
+	
+	func updateNumberOfPhotos(number:Int){
+		LabelNumberOfFiles.text = String(number)
+	}
 }

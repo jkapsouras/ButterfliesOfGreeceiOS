@@ -30,6 +30,7 @@ struct CacheManager:CacheManagerProtocol
 	}
 	
 	func savePhotosToPrint(photos:[ButterflyPhoto]) -> Observable<Bool> {
+		
 		return Observable.from(optional: UserDefaults.standard.set(photos, forKey: photosToPrint)).map({ _ in return true})
 	}
 	

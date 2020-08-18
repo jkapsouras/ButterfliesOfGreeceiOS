@@ -20,9 +20,23 @@ struct HeaderState {
 
 extension HeaderState{
 	func with(arrange:ViewArrange? = nil, photos:[ButterflyPhoto]? = nil) -> HeaderState{
+		
+		guard let photos = photos else{
+			return HeaderState(
+				arrange: arrange ?? self.currentArrange,
+				photos: self.photosToPrint
+			)
+		}
+		
+		guard let statePhotos = self.photosToPrint else{
+			return HeaderState(
+				arrange: arrange ?? self.currentArrange,
+				photos: photos
+			)
+		}
+		let tmpPhotos = statePhotos + photos
 		return HeaderState(
 			arrange: arrange ?? self.currentArrange,
-			photos: photos ?? self.photosToPrint
-		)
+			photos: tmpPhotos.uniques)
 	}
 }
