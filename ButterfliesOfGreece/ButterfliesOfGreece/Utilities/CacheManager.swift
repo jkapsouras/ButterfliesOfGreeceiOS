@@ -30,12 +30,17 @@ struct CacheManager:CacheManagerProtocol
 	}
 	
 	func savePhotosToPrint(photos:[ButterflyPhoto]) -> Observable<Bool> {
-		return Observable.from(optional: UserDefaults.standard.set(photos, forKey: photosToPrint)).map({ _ in return true})
+		let encodedData: Data = try! NSKeyedArchiver.archivedData(withRootObject: photos, requiringSecureCoding: false)
+		return Observable.from(optional: UserDefaults.standard.set(encodedData, forKey: photosToPrint)).do(onNext:{self._prefs.synchronize()}).map({ _ in return true})
 	}
 	
 	func getPhotosToPrint() -> Observable<[ButterflyPhoto]> {
-		let temp = UserDefaults.standard.array(forKey: photosToPrint)
-		var tempPhotos = temp as? [ButterflyPhoto]
+		let decoded = _prefs.data(forKey: photosToPrint)
+		guard let decodedF = decoded else{
+			return Observable.from(optional: [ButterflyPhoto]())
+		}
+		let decodedPhotos = try! NSKeyedUnarchiver.unarchivedObject(ofClasses: [ButterflyPhoto.self], from: decodedF)
+		var tempPhotos = decodedPhotos as? [ButterflyPhoto]
 		if tempPhotos == nil{
 			tempPhotos = [ButterflyPhoto]()
 		}
