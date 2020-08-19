@@ -102,7 +102,7 @@ class PhotosCollectionView: UIView {
 	
 	func ViewEvents() -> Observable<UiEvent>
 	{
-		return Observable.never()
+		return source.emitterObs
 	}
 	
 	func ShowFamilies(families: [Family]){

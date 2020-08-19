@@ -202,13 +202,15 @@ class FamiliesPresenterTests: XCTestCase {
 				switch viewState {
 				case .updateFolderIcon(let numberOfPhotos):
 					print("Number of photos \(numberOfPhotos)")
-					XCTAssert(numberOfPhotos == photosPerFamily[index])
-					sum += numberOfPhotos
+					sum += photosPerFamily[index]
+					print("sum: \(sum)")
+					XCTAssert(numberOfPhotos == sum)
 				}
 				index += 1
 			}
 		})
 		print("sum = \(sum)")
-		XCTAssert(sum == 490)
+		print("reduce =  \(photosPerFamily.reduce(0, +))")
+		XCTAssert(sum == photosPerFamily.reduce(0, +))
 	}
 }

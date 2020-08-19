@@ -76,7 +76,7 @@ class FamiliesPresenter:BasePresenter{
 			_ = photosToPrintRepository
 				.getPhotosToPrint()
 				.map{photos in return self.updateHeaderState(photos: photos, familyId: familyId)}
-//				.do(onNext: {photoState in self.photosToPrintRepository.savePhotosToPrint(photos: photoState.photosToPrint ?? [ButterflyPhoto]())})
+				.do(onNext: {photoState in self.photosToPrintRepository.savePhotosToPrint(photos: photoState.photosToPrint ?? [ButterflyPhoto]())})
 				.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint!.count))})
 		}
 	}

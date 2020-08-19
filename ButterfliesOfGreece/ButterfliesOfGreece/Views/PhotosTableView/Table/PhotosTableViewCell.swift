@@ -30,12 +30,6 @@ class PhotosTableViewCell: UITableViewCell {
 	override func draw(_ rect: CGRect) {
 		ImageButterfly.layer.cornerRadius = ImageButterfly.bounds.width/2
 	}
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 	func update(family: Family, emitter:PublishSubject<UiEvent>){
 		self.emitter = emitter

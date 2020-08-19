@@ -30,8 +30,14 @@ struct CacheManager:CacheManagerProtocol
 	}
 	
 	func savePhotosToPrint(photos:[ButterflyPhoto]) -> Observable<Bool> {
-		let encodedData: Data = try! NSKeyedArchiver.archivedData(withRootObject: photos, requiringSecureCoding: false)
+		do{
+		let encodedData = try NSKeyedArchiver.archivedData(withRootObject: photos, requiringSecureCoding: false)
 		return Observable.from(optional: UserDefaults.standard.set(encodedData, forKey: photosToPrint)).do(onNext:{self._prefs.synchronize()}).map({ _ in return true})
+		}
+		catch{
+			 print("Unexpected error: \(error).")
+			return Observable.from(optional: false)
+		}
 	}
 	
 	func getPhotosToPrint() -> Observable<[ButterflyPhoto]> {
@@ -39,7 +45,7 @@ struct CacheManager:CacheManagerProtocol
 		guard let decodedF = decoded else{
 			return Observable.from(optional: [ButterflyPhoto]())
 		}
-		let decodedPhotos = try! NSKeyedUnarchiver.unarchivedObject(ofClasses: [ButterflyPhoto.self], from: decodedF)
+		let decodedPhotos = try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decodedF)
 		var tempPhotos = decodedPhotos as? [ButterflyPhoto]
 		if tempPhotos == nil{
 			tempPhotos = [ButterflyPhoto]()

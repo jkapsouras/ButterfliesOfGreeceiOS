@@ -473,11 +473,11 @@
       {
         "id": 6,
         "name": "Pieris balcana",
-        "imgtitle": "default",
+        "imgtitle": "016_001",
         "photos": [ 
           {
             "id":0,
-            "src":"default",
+            "src":"016_001",
             "title":"G2",
             "author": "",
             "genre":"M",
@@ -998,11 +998,11 @@
       {
         "id": 24,
         "name": "Leptidea juvernica",
-        "imgtitle": "default",
+        "imgtitle": "034_001",
         "photos": [
           {
             "id":0,
-            "src":"default",
+            "src":"034_001",
             "title":"G2",
             "author": "",
             "genre":"M",
@@ -3814,11 +3814,11 @@
       {
         "id": 39,
         "name": "Melitaea aurelia",
-        "imgtitle": "default",
+        "imgtitle": "150_001",
         "photos": [
           {
             "id":0,
-            "src":"default",
+            "src":"150_001",
             "title":"G2",
             "author": "",
             "genre":"M",

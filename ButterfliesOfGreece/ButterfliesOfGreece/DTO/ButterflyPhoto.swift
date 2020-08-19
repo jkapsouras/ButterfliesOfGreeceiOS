@@ -8,12 +8,12 @@
 
 import Foundation
 
-class ButterflyPhoto:NSObject, NSCoding, Codable{
-	enum Genre: String, Codable{
-		case M
-		case F
-	}
+enum Genre: String, Codable{
+	case M = "M"
+	case F = "F"
+}
 
+class ButterflyPhoto:NSObject, NSCoding, Codable{
 	var id:Int
 	var source:String
 	var title:String
@@ -36,7 +36,7 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
         coder.encode (source, forKey: "src")
         coder.encode (title, forKey: "title")
 		coder.encode (author, forKey: "author")
-		coder.encode (genre, forKey: "genre")
+		coder.encode (genre.rawValue, forKey: "genre")
 		coder.encode (identified, forKey: "iden")
 	}
 	
@@ -45,8 +45,17 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
         source = coder.decodeObject (forKey: "src") as! String
         title = coder.decodeObject (forKey: "title") as! String
 		author = coder.decodeObject (forKey: "author") as! String
-		genre = coder.decodeObject (forKey: "genre") as! Genre
+		genre = Genre(rawValue: coder.decodeObject(forKey: "genre") as! String)!
 		identified = coder.decodeBool(forKey: "iden")
+	}
+	
+	init(id:Int, source:String, title:String, author:String, genre:Genre, identified:Bool) {
+		self.id = id
+		self.source = source
+		self.title = title
+		self.author = author
+		self.genre = genre
+		self.identified = identified
 	}
 	
 	override init(){

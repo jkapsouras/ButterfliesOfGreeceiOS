@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
@@ -75,7 +76,7 @@
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
 		FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */; };
 		FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */; };
-		FEF2855624EABC610043D28A /* ArraysExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2855524EABC610043D28A /* ArraysExtensions.swift */; };
+		FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoExtensionTests.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +171,7 @@
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
 		FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		FEF2855524EABC610043D28A /* ArraysExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraysExtensions.swift; sourceTree = "<group>"; };
+		FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoArraysExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A25982124ED954D003893FA /* PresentersTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */,
+				FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */,
+			);
+			path = PresentersTests;
+			sourceTree = "<group>";
+		};
+		0A25982224ED955E003893FA /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */,
+			);
+			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
 		0AC7BAFD24CF012E000908B9 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,11 +499,11 @@
 		FEAB9B9524B2027800A5D178 /* ButterfliesOfGreeceTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A25982224ED955E003893FA /* ExtensionTests */,
+				0A25982124ED954D003893FA /* PresentersTests */,
 				FEAB9B9824B2027800A5D178 /* Info.plist */,
-				FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */,
 				FE8B040924CB2919002F180F /* ButterfliesOfGreeceTests.xctestplan */,
 				FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */,
-				FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */,
 				FE389B4824CF70BD00F47717 /* TestSchedulers.swift */,
 				FE861B7424E6D02E003DA5ED /* TestUserPrefs.swift */,
 			);
@@ -515,7 +534,7 @@
 				FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */,
 				FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */,
 				FE861B7224E6BE1F003DA5ED /* CacheManager.swift */,
-				FEF2855524EABC610043D28A /* ArraysExtensions.swift */,
+				FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -746,7 +765,7 @@
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
-				FEF2855624EABC610043D28A /* ArraysExtensions.swift in Sources */,
+				FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */,
 				FE1341B024E32A8F0076EF14 /* HeaderView.swift in Sources */,
@@ -787,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE389B4724CF707900F47717 /* FamiliesPresenterTests.swift in Sources */,
+				0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */,
 				FE861B7524E6D02E003DA5ED /* TestUserPrefs.swift in Sources */,
 				FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */,
 				FE389B4924CF70BD00F47717 /* TestSchedulers.swift in Sources */,
