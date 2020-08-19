@@ -9,7 +9,7 @@
 import Foundation
 
 enum SpeciesEvents:UiEvent{
-	case loadFamilies
+	case loadSpecies(familyId:Int)
 	case specieClicked(id:Int)
 	case addPhotosForPrintClicked(specieId:Int)
 }

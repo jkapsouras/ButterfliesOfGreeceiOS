@@ -12,6 +12,10 @@ struct Storage {
 	lazy var families:[Family] = {
 		return self.ReadData(fileName: "data", type: "json")
 	}()
+	
+	mutating func species(familyId:Int) -> [Specie]{
+		return families.filter{$0.id == familyId}.flatMap{$0.species}
+	}
 }
 
 extension Storage{

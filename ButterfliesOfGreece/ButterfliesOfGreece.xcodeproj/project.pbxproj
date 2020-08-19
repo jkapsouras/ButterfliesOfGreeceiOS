@@ -11,6 +11,9 @@
 		0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982624EDBC5D003893FA /* SpeciesPresenter.swift */; };
 		0A25982924EDBC67003893FA /* SpeciesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982824EDBC67003893FA /* SpeciesState.swift */; };
 		0A25982C24EDBCB2003893FA /* SpeciesEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982B24EDBCB2003893FA /* SpeciesEvents.swift */; };
+		0A25982F24EDBD55003893FA /* SpeciesViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */; };
+		0A25983124EDBDDB003893FA /* SpeciesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983024EDBDDB003893FA /* SpeciesRepository.swift */; };
+		0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
@@ -97,6 +100,9 @@
 		0A25982624EDBC5D003893FA /* SpeciesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenter.swift; sourceTree = "<group>"; };
 		0A25982824EDBC67003893FA /* SpeciesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesState.swift; sourceTree = "<group>"; };
 		0A25982B24EDBCB2003893FA /* SpeciesEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesEvents.swift; sourceTree = "<group>"; };
+		0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewStates.swift; sourceTree = "<group>"; };
+		0A25983024EDBDDB003893FA /* SpeciesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRepository.swift; sourceTree = "<group>"; };
+		0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenterTests.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 			children = (
 				FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */,
 				FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */,
+				0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */,
 			);
 			path = PresentersTests;
 			sourceTree = "<group>";
@@ -239,6 +246,7 @@
 		0A25982D24EDBCE1003893FA /* ViewState */ = {
 			isa = PBXGroup;
 			children = (
+				0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */,
 			);
 			path = ViewState;
 			sourceTree = "<group>";
@@ -474,6 +482,7 @@
 			children = (
 				FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */,
 				FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */,
+				0A25983024EDBDDB003893FA /* SpeciesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -808,6 +817,8 @@
 				FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */,
 				FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */,
 				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
+				0A25982F24EDBD55003893FA /* SpeciesViewStates.swift in Sources */,
+				0A25983124EDBDDB003893FA /* SpeciesRepository.swift in Sources */,
 				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,
@@ -842,6 +853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE389B4724CF707900F47717 /* FamiliesPresenterTests.swift in Sources */,
+				0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */,
 				0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */,
 				FE861B7524E6D02E003DA5ED /* TestUserPrefs.swift in Sources */,
 				FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */,
