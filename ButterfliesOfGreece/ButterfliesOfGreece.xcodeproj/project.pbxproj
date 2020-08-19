@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */; };
+		0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982624EDBC5D003893FA /* SpeciesPresenter.swift */; };
+		0A25982924EDBC67003893FA /* SpeciesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982824EDBC67003893FA /* SpeciesState.swift */; };
+		0A25982C24EDBCB2003893FA /* SpeciesEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982B24EDBCB2003893FA /* SpeciesEvents.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
@@ -91,6 +94,9 @@
 
 /* Begin PBXFileReference section */
 		0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoExtensionTests.swift; sourceTree = "<group>"; };
+		0A25982624EDBC5D003893FA /* SpeciesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenter.swift; sourceTree = "<group>"; };
+		0A25982824EDBC67003893FA /* SpeciesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesState.swift; sourceTree = "<group>"; };
+		0A25982B24EDBCB2003893FA /* SpeciesEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesEvents.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +215,32 @@
 				0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */,
 			);
 			path = ExtensionTests;
+			sourceTree = "<group>";
+		};
+		0A25982524EDA917003893FA /* SpeciesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A25982D24EDBCE1003893FA /* ViewState */,
+				0A25982A24EDBCA1003893FA /* UiEvents */,
+				0A25982624EDBC5D003893FA /* SpeciesPresenter.swift */,
+				0A25982824EDBC67003893FA /* SpeciesState.swift */,
+			);
+			path = SpeciesViewController;
+			sourceTree = "<group>";
+		};
+		0A25982A24EDBCA1003893FA /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				0A25982B24EDBCB2003893FA /* SpeciesEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		0A25982D24EDBCE1003893FA /* ViewState */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewState;
 			sourceTree = "<group>";
 		};
 		0AC7BAFD24CF012E000908B9 /* Events */ = {
@@ -385,6 +417,7 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A25982524EDA917003893FA /* SpeciesViewController */,
 				FEEEEEDB24D6EF7100C9655B /* NavigationViewController */,
 				FE389B3724CF686900F47717 /* FamiliesViewController */,
 				FEAB9BA124B2031600A5D178 /* MenuViewController */,
@@ -751,6 +784,7 @@
 				FE1341A624E326880076EF14 /* PhotosCollectionView.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
+				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
@@ -794,9 +828,11 @@
 				FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */,
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
+				0A25982C24EDBCB2003893FA /* SpeciesEvents.swift in Sources */,
 				FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
+				0A25982924EDBC67003893FA /* SpeciesState.swift in Sources */,
 				FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
