@@ -1,32 +1,5670 @@
 [
-	{
-		"id": 0,
-		"name": "Papilionidae",
-		"photo": "001_001",
-		"spieces": [
-			{
-				"id": 0,
-				"name": "Iphiclides podalirius",
-				"imgtitle": "001_001",
-				"photos": [
-					{
-						"id": 0,
-						"src": "001_001",
-						"title": "B1",
-						"author": "Pamperis",
-						"genre": "M",
-						"iden": true
-					},
-					{
-						"id": 1,
-						"src": "001_002",
-						"title": "B2",
-						"author": "Pamperis",
-						"genre": "F",
-						"iden": true
-					}
-				]
-			}
-		]
-	}
-]
+  {
+    "id": 0,
+    "name": "Papilionidae",
+    "photo": "001_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Iphiclides podalirius",
+        "imgtitle": "001_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "001_001",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "001_002",
+            "title": "B2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Papilio machaon",
+        "imgtitle": "002_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "002_001",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "002_002",
+            "title": "B2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "002_003",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "002_004",
+            "title": "B2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Papilio alexanor",
+        "imgtitle": "003_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "003_001",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "003_002",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Zerynthia polyxena",
+        "imgtitle": "004_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "004_001",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "004_002",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "004_003",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Zerynthia cerisy",
+        "imgtitle": "005_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "005_001",
+            "title": "B1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "005_002",
+            "title": "B2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "005_003",
+            "title": "B3",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+
+      },
+      {
+        "id": 5,
+        "name": "Zerynthia cretica",
+        "imgtitle": "006_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "006_001",
+            "title": "C1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "006_002",
+            "title": "C2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Archon apollinus",
+        "imgtitle": "007_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "007_001",
+            "title": "C1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "007_002",
+            "title": "C2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "007_003",
+            "title": "C2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Parnassius apollo",
+        "imgtitle": "008_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "008_001",
+            "title": "C1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "008_002",
+            "title": "C2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Parnassius mnemosyne",
+        "imgtitle": "009_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "009_001",
+            "title": "C1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "009_002",
+            "title": "C2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+  },
+ {
+    "id": 1,
+    "name": "Pieridae",
+    "photo": "010_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Aporia crataegi",
+        "imgtitle": "010_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "010_001",
+            "title": "F2",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "010_002",
+            "title": "F22",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "010_003",
+            "title": "F22",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "010_004",
+            "title": "F22",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 4,
+            "src": "010_005",
+            "title": "F22",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 5,
+            "src": "010_006",
+            "title": "F22",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Pieris brassicae",
+        "imgtitle": "011_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "011_001",
+            "title": "G1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "011_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "011_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Pieris rapae",
+        "imgtitle": "012_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "012_001",
+            "title": "G1",
+            "author": "Pamperis",
+            "genre": "M",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "012_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "012_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pieris ergane",
+        "imgtitle": "013_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "013_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "013_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "013_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Pieris mannii",
+        "imgtitle": "014_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "014_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "014_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "014_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Pieris napi",
+        "imgtitle": "015_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "015_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "015_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "015_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Pieris balcana",
+        "imgtitle": "016_001",
+        "photos": [ 
+          {
+            "id":0,
+            "src":"016_001",
+            "title":"G2",
+            "author": "",
+            "genre":"M",
+            "iden":true
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Pieris krueperi",
+        "imgtitle": "017_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "017_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "017_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+
+          {
+            "id": 2,
+            "src": "017_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Pontia edusa",
+        "imgtitle": "018_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "018_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "018_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "018_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "018_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Pontia chloridice",
+        "imgtitle": "019_003",
+        "photos": [
+          {
+            "id": 0,
+            "src": "019_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "019_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "019_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 10,
+        "name": "Euchloe ausonia",
+        "imgtitle": "020_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "020_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "020_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "020_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "020_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 11,
+        "name": "Euchloe penia",
+        "imgtitle": "021_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "021_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "021_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Anthocharis gruneri",
+        "imgtitle": "022_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "022_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "022_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "022_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Anthocharis cardamines",
+        "imgtitle": "023_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "023_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "023_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "023_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Anthocharis damone",
+        "imgtitle": "024_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "024_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "024_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Colias crocea",
+        "imgtitle": "025_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "025_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "025_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "025_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "025_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+
+      },
+      {
+        "id": 16,
+        "name": "Colias aurorina",
+        "imgtitle": "026_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "026_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "026_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "026_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+
+      },
+      {
+
+        "id": 17,
+        "name": "Colias caucasica",
+        "imgtitle": "027_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "027_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "027_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "027_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Colias alfacariensis",
+        "imgtitle": "028_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "028_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "028_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "028_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 19,
+        "name": "Colias erate",
+        "imgtitle": "029_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "029_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Gonepteryx rhamni",
+        "imgtitle": "030_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "030_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "030_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Gonepteryx farinosa",
+        "imgtitle": "031_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "031_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Gonepteryx cleopatra",
+        "imgtitle": "032_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "032_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "032_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "032_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Leptidea sinapis",
+        "imgtitle": "033_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "033_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "033_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "033_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "Figure351",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Leptidea juvernica",
+        "imgtitle": "034_001",
+        "photos": [
+          {
+            "id":0,
+            "src":"034_001",
+            "title":"G2",
+            "author": "",
+            "genre":"M",
+            "iden":true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Leptidea duponcheli",
+        "imgtitle": "035_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "035_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Danaidae",
+    "photo": "036_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Danaus chrysippus",
+        "imgtitle": "036_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "036_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "036_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Riodinidae",
+    "photo": "037_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Hamearis lucina",
+        "imgtitle": "037_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "037_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "037_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Libytheidae",
+    "photo": "038_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Libythea celtis",
+        "imgtitle": "038_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "038_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "038_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lycaenidae",
+    "photo": "039_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Thecla betulae",
+        "imgtitle": "039_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "039_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "039_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 1,
+        "name": "Favonius quercus",
+        "imgtitle": "040_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "040_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "040_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 2,
+        "name": "Satyrium ledereri",
+        "imgtitle": "041_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "041_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "041_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 3,
+        "name": "Satyrium acaciae",
+        "imgtitle": "042_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "042_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "042_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+
+      },
+      {
+        "id": 4,
+        "name": "Satyrium ilicis",
+        "imgtitle": "043_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "043_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "043_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "043_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 5,
+        "name": "Satyrium w-album",
+        "imgtitle": "044_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "044_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Satyrium pruni",
+        "imgtitle": "045_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "045_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 7,
+        "name": "Satyrium spini",
+        "imgtitle": "046_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "046_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "046_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Callophys rubi",
+        "imgtitle": "047_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "047_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 9,
+        "name": "Lycaena phlaeas",
+        "imgtitle": "048_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "048_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "048_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "048_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "048_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 10,
+        "name": "Lycaena dispar",
+        "imgtitle": "049_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "049_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "049_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "049_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 11,
+        "name": "Lycaena virgaureae",
+        "imgtitle": "050_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "050_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "050_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "050_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "050_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Lycaena alciphron",
+        "imgtitle": "051_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "051_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "051_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "051_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Lycaena ottomana",
+        "imgtitle": "052_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "052_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "052_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "052_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Lycaena tityrus",
+        "imgtitle": "053_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "053_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "053_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "053_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+        
+      },
+      {
+        "id": 15,
+        "name": "Lycaena thersamon",
+        "imgtitle": "054_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "054_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "054_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "054_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Lycaena thetis",
+        "imgtitle": "055_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "055_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "055_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Lycaena candens",
+        "imgtitle": "056_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "056_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "056_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "056_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Zizeeria karsandra",
+        "imgtitle": "057_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "057_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "057_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "057_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Lampides boeticus",
+        "imgtitle": "058_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "058_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "058_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Leptodes pirithous",
+        "imgtitle": "059_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "059_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "059_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Cacyreus marshalli",
+        "imgtitle": "060_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "060_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 22,
+        "name": "Cupido decoloratus",
+        "imgtitle": "061_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "061_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "061_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "Figure352",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Cupido alcetas",
+        "imgtitle": "062_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "062_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "062_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Cupido argiades",
+        "imgtitle": "063_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "063_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "063_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Cupido minimus",
+        "imgtitle": "064_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "064_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "064_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Cupido osiris",
+        "imgtitle": "065_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "065_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "065_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "065_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "Figure353",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Tarucus balkanicus",
+        "imgtitle": "066_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "066_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "066_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Celastrina argiolus",
+        "imgtitle": "067_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "067_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "067_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 29,
+        "name": "Glaucopsyche alexis",
+        "imgtitle": "068_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "068_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "068_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "068_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Turanana taygetica",
+        "imgtitle": "069_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "069_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "069_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Phengaris alcon",
+        "imgtitle": "070_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "070_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "070_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Phengaris arion",
+        "imgtitle": "071_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "071_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "071_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Iolana iolas",
+        "imgtitle": "072_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "072_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "072_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Pseudophilotes vicrama",
+        "imgtitle": "073_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "073_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "073_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Pseudophilotes bavius",
+        "imgtitle": "074_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "074_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "074_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Scolitantides orion",
+        "imgtitle": "075_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "075_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "075_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "Freyeria trochylus",
+        "imgtitle": "076_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "076_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Kretania sephirus",
+        "imgtitle": "077_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "077_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "077_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 0,
+            "src": "078_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "078_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Plebejus argus",
+        "imgtitle": "079_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "079_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Plebejus idas",
+        "imgtitle": "080_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "080_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "080_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "Plebejus argyrognomon",
+        "imgtitle": "081_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "081_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "081_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "Plebejidea loewii",
+        "imgtitle": "082_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "082_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "082_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 44,
+        "name": "Kretania psylorita",
+        "imgtitle": "083_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "083_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "083_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Kretania eurypilus",
+        "imgtitle": "084_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "084_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Agriades dardanus",
+        "imgtitle": "085_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "085_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "085_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Aricia agestis",
+        "imgtitle": "086_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "086_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "086_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Aricia artaxerxes",
+        "imgtitle": "087_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "087_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "087_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Eumedonia eumedon",
+        "imgtitle": "088_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "088_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "Aricia anteros",
+        "imgtitle": "089_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "089_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "089_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "Cyaniris semiargus",
+        "imgtitle": "090_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "090_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "090_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "090_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "090_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 4,
+            "src": "Figure354",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "Polyommatus damon",
+        "imgtitle": "091_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "091_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "091_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 2,
+            "src": "091_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Polyommatus iphigenia",
+        "imgtitle": "092_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "092_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "092_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "Polyommatus admetus",
+        "imgtitle": "093_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "093_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "093_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 55,
+        "name": "Polyommatus aroaniensis",
+        "imgtitle": "094_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "094_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "094_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "Polyommatus ripartii",
+        "imgtitle": "096_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "096_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "096_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "Polyommatus timfristos",
+        "imgtitle": "239_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "239_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "239_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "Polyommatus orphicus",
+        "imgtitle": "097_001",
+        "photos": [
+          {
+
+            "id": 0,
+            "src": "097_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+
+            "id": 1,
+            "src": "097_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Polyommatus nephohiptamenos",
+        "imgtitle": "098_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "098_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "Neolysandra coelestina",
+        "imgtitle": "099_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "099_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "099_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "Polyommatus daphnis",
+        "imgtitle": "100_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "100_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "100_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "Lysandra coridon",
+        "imgtitle": "101_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "101_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "101_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "Lysandra bellargus",
+        "imgtitle": "102_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "102_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "102_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "Polyommatus escheri",
+        "imgtitle": "103_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "103_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "103_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "Polyommatus amandus",
+        "imgtitle": "104_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "104_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "104_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "Polyommatus thersites",
+        "imgtitle": "105_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "105_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "105_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "Polyommatus dorylas",
+        "imgtitle": "106_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "106_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "106_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "Polyommatus eros",
+        "imgtitle": "107_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "107_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "107_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "107_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 0,
+            "src": "108_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "108_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 71,
+        "name": "Polyommatus icarus",
+        "imgtitle": "109_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "109_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "109_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 0,
+            "src": "110_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "110_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Nymphalidae",
+    "photo": "111_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Charaxes jasius",
+        "imgtitle": "111_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "111_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Apatura iris",
+        "imgtitle": "112_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "112_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "112_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "112_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Apatura ilia",
+        "imgtitle": "113_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "113_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "113_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Apatura metis",
+        "imgtitle": "114_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "114_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Limenitis populi",
+        "imgtitle": "115_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "115_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "115_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Limenitis camilla",
+        "imgtitle": "116_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "116_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "116_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Limenitis reducta",
+        "imgtitle": "117_003",
+        "photos": [
+          {
+            "id": 0,
+            "src": "117_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "117_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "117_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "117_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Neptis sappho",
+        "imgtitle": "118_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "118_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "118_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Neptis rivularis",
+        "imgtitle": "119_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "119_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "119_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 9,
+        "name": "Nymphalis xanthomelas",
+        "imgtitle": "120_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "120_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Nymphalis polychloros",
+        "imgtitle": "121_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "121_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "121_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Nymphalis antiopa",
+        "imgtitle": "122_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "122_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "122_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 12,
+        "name": "Aglais io",
+        "imgtitle": "123_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "123_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "123_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Vanessa atalanta",
+        "imgtitle": "124_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "124_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "124_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Vanessa cardui",
+        "imgtitle": "125_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "125_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "125_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Aglais urticae",
+        "imgtitle": "126_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "126_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "126_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Polygonia c-album",
+        "imgtitle": "127_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "127_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "127_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Polygonia egea",
+        "imgtitle": "128_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "128_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "128_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Araschia levana",
+        "imgtitle": "129_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "129_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "129_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "129_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "129_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Argynnis pandora",
+        "imgtitle": "130_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "130_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "130_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Argynnis paphia",
+        "imgtitle": "131_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "131_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Fabriciana niobe",
+        "imgtitle": "132_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "132_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Speyeria aglaja",
+        "imgtitle": "133_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "133_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "133_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Fabriciana adippe",
+        "imgtitle": "134_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "134_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "134_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Issoria lathonia",
+        "imgtitle": "135_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "135_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Brenthis hecate",
+        "imgtitle": "136_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "136_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "136_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Brenthis daphne",
+        "imgtitle": "137_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "137_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "137_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Boloria graeca",
+        "imgtitle": "138_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "138_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "138_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 28,
+        "name": "Boloria euphrosyne",
+        "imgtitle": "139_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "139_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "139_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Boloria selene",
+        "imgtitle": "140_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "140_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "140_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 30,
+        "name": "Boloria dia",
+        "imgtitle": "141_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "141_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "141_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "Figure356",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Melitaea cinxia",
+        "imgtitle": "142_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "142_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "142_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "Figure357",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Melitaea arduinna",
+        "imgtitle": "143_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "143_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "143_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Melitaea phoebe",
+        "imgtitle": "144_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "144_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "144_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Melitaea telona",
+        "imgtitle": "145_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "145_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "145_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "145_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 3,
+            "src": "145_004",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 35,
+        "name": "Melitaea didyma",
+        "imgtitle": "146_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "146_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "146_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "Figure358",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "Melitaea trivia",
+        "imgtitle": "148_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "148_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "148_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "148_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Melitaea athalia",
+        "imgtitle": "149_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "149_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "149_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Melitaea aurelia",
+        "imgtitle": "150_001",
+        "photos": [
+          {
+            "id":0,
+            "src":"150_001",
+            "title":"G2",
+            "author": "",
+            "genre":"M",
+            "iden":true
+          }
+         ]
+      },
+      {
+        "id": 40,
+        "name": "Euphydryas aurinia",
+        "imgtitle": "151_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "151_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "151_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+] }, {
+  "id": 7,
+  "name": "Satyridae",
+  "photo": "152_001",
+  "spieces": [
+    {
+      "id": 0,
+      "name": "Melanargia russiae",
+      "imgtitle": "152_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "152_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Melanargia larissa",
+      "imgtitle": "153_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "153_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "153_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Melanargia galathea",
+      "imgtitle": "154_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "154_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "154_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Hipparchia fagi",
+      "imgtitle": "155_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "155_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "Figure359a",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "Figure359b",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Hipparchia syriaca",
+      "imgtitle": "156_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "156_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Hipparchia senthes",
+      "imgtitle": "157_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "157_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": false
+        },
+        {
+          "id": 1,
+          "src": "Figure3510",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Hipparchia volgensis",
+      "imgtitle": "158_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "158_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Hipparchia cretica",
+      "imgtitle": "159_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "159_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Hipparchia christenseni",
+      "imgtitle": "160_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "160_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Hipparchia mersina",
+      "imgtitle": "161_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "161_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+
+      "id": 11,
+      "name": "Hipparchia statilinus",
+      "imgtitle": "163_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "163_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Hipparchia fatua",
+      "imgtitle": "164_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "164_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Chazara briseis",
+      "imgtitle": "165_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "165_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Pseudochazara tisiphone",
+      "imgtitle": "166_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "166_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "166_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "166_003",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 3,
+          "src": "166_004",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Pseudochazara orestes",
+      "imgtitle": "167_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "167_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Pseudochazara amymone",
+      "imgtitle": "168_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "168_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Pseudochazara graeca",
+      "imgtitle": "169_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "169_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Pseudochazara geyeri",
+      "imgtitle": "170_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "170_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Pseudochazara anthelea",
+      "imgtitle": "171_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "171_001_01",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Pseudochazara amalthea",
+      "imgtitle": "171_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "171_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "171_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Satyrus ferula",
+      "imgtitle": "172_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "172_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "172_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "172_003",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Minois dryas",
+      "imgtitle": "173_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "173_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Brintesia circe",
+      "imgtitle": "174_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "174_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Arethusana arethusa",
+      "imgtitle": "175_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "175_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Erebia ligea",
+      "imgtitle": "176_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "176_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "176_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Erebia euryale",
+      "imgtitle": "177_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "177_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "177_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Erebia aethiops",
+      "imgtitle": "178_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "178_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "178_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Erebia medusa",
+      "imgtitle": "179_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "179_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "179_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Erebia epiphron",
+      "imgtitle": "180_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "180_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "180_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Erebia ottomana",
+      "imgtitle": "181_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "181_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "181_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "181_003",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 3,
+          "src": "181_004",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Erebia neleus",
+      "imgtitle": "182_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "182_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "182_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Erebia oeme",
+      "imgtitle": "183_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "183_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "183_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Erebia rhodopensis",
+      "imgtitle": "184_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "184_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "184_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Erebia melas",
+      "imgtitle": "185_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "185_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "185_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Proterebia phegea",
+      "imgtitle": "186_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "186_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "186_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "186_003",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Ypthima asterope",
+      "imgtitle": "187_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "187_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "187_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Maniola jurtina",
+      "imgtitle": "188_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "188_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "188_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "188_003",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Maniola halicarnassus",
+      "imgtitle": "189_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "189_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "189_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Maniola chia",
+      "imgtitle": "190_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "190_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "190_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Maniola telmessia",
+      "imgtitle": "191_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "191_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "191_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Maniola megala",
+      "imgtitle": "192_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "192_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "192_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 2,
+          "src": "192_003",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Hyponephele lupina",
+      "imgtitle": "193_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "193_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Hyponephele lycaon",
+      "imgtitle": "194_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "194_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "194_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Aphantopus hyperantus",
+      "imgtitle": "195_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "195_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "195_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Pyronia tithonus",
+      "imgtitle": "196_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "196_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "196_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Pyronia cecilia",
+      "imgtitle": "197_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "197_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "197_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Coenonympha thyrsis",
+      "imgtitle": "198_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "198_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "Figure3512",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+
+      "id": 47,
+      "name": "Coenonympha pamphilus",
+      "imgtitle": "199_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "199_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+
+      "id": 48,
+      "name": "Coenonympha arcania",
+      "imgtitle": "200_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "200_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Coenonympha leander",
+      "imgtitle": "201_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "201_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "201_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Coenonympha glycerion",
+      "imgtitle": "202_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "202_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Coenonympha rhodopensis",
+      "imgtitle": "203_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "203_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Pararge aegeria",
+      "imgtitle": "204_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "204_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "204_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Lasiommata megera",
+      "imgtitle": "205_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "205_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "205_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Lasiommata maera",
+      "imgtitle": "206_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "206_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Lasiommata petropolitana",
+      "imgtitle": "207_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "207_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "207_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Kirinia climene",
+      "imgtitle": "208_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "208_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        },
+        {
+          "id": 1,
+          "src": "208_002",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Kirinia roxelana",
+      "imgtitle": "209_001",
+      "photos": [
+        {
+          "id": 0,
+          "src": "209_001",
+          "title": "G2",
+          "author": "Pamperis",
+          "genre": "F",
+          "iden": true
+        }
+      ]
+    }
+  ]
+   }, {
+  "id": 8,
+  "name": "Hesperiidae",
+  "photo": "210_001",
+    "spieces": [
+      {
+        "id": 0,
+        "name": "Pyrgus malvae",
+        "imgtitle": "210_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "210_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "210_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "Figure3513",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Pyrgus alveus",
+        "imgtitle": "211_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "211_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          },
+          {
+            "id": 1,
+            "src": "211_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Pyrgus armoricanus",
+        "imgtitle": "212_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "212_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          },
+          {
+            "id": 1,
+            "src": "212_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pyrgus serratulae",
+        "imgtitle": "213_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "213_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Pyrgus sidae",
+        "imgtitle": "214_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "214_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "214_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+
+      },
+      {
+        "id": 5,
+        "name": "Pyrgus cinarae",
+        "imgtitle": "215_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "215_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "215_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Pyrgus carthami",
+        "imgtitle": "216_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "216_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Spialia orbifer",
+        "imgtitle": "217_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "217_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "217_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Spialia phlomidis",
+        "imgtitle": "218_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "218_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "218_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Muschampia tessellum",
+        "imgtitle": "219_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "219_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "219_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "219_003",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Muschampia cribrellum",
+        "imgtitle": "238_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "238_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Muschampia proto",
+        "imgtitle": "220_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "220_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "220_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Carcharodus alceae",
+        "imgtitle": "221_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "221_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "221_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 2,
+            "src": "Figure3514",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Carcharodus orientalis",
+        "imgtitle": "222_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "222_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          },
+          {
+            "id": 1,
+            "src": "222_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Carcharodus lavatherae",
+        "imgtitle": "223_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "223_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "223_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Carcharodus floccifera",
+        "imgtitle": "224_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "224_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": false
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Carcharodus stauderi",
+        "imgtitle": "225_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "225_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "225_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Erynnis tages",
+        "imgtitle": "226_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "226_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "226_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+
+        "id": 18,
+        "name": "Erynnis marloyi",
+        "imgtitle": "227_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "227_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "227_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Carterocephalus palaemon",
+        "imgtitle": "228_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "228_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          },
+          {
+            "id": 1,
+            "src": "228_002",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Thymelicus acteon",
+        "imgtitle": "229_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "229_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Thymelicus lineola",
+        "imgtitle": "230_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "230_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Thymelicus sylvestris",
+        "imgtitle": "231_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "231_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Thymelicus hyrax",
+        "imgtitle": "232_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "232_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Hesperia comma",
+        "imgtitle": "233_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "233_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Ochlodes sylvanus",
+        "imgtitle": "234_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "234_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Gegenes pumilio",
+        "imgtitle": "235_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "235_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Gegenes nostrodamus",
+        "imgtitle": "236_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "236_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Pelopidas thrax",
+        "imgtitle": "237_001",
+        "photos": [
+          {
+            "id": 0,
+            "src": "237_001",
+            "title": "G2",
+            "author": "Pamperis",
+            "genre": "F",
+            "iden": true
+          }
+        ]
+      }
+    ]
+} ]

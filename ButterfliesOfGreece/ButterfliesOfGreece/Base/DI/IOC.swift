@@ -26,9 +26,9 @@ struct IOC:IOCInjectable
      static func RegisterElements() -> Container {
         container=Container()
         
-//		RegisterDataSources(container: (container!))
+		RegisterDataSources(container: (container!))
         RegisterSchedulers(container: container!)
-//        RegisterUseCases(container: container!)
+        RegisterRepositories(container: container!)
         RegisterPresenters(container: container!)
         return container!
     }
@@ -39,15 +39,14 @@ struct IOC:IOCInjectable
 	}
     
      static func RegisterDataSources(container: Container) {
-//		container.autoregister(AccountManagerProtocol.self, initializer: AccountManager.init).inObjectScope(.container)
-//		container.register(AccountManagerProtocol.self) { _ in AccountManager(prefs: UserDefaults.standard)}.inObjectScope(.container)
+		container.autoregister(Storage.self, initializer: Storage.init)
+		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
     }
     
-//     static func RegisterUseCases(container: Container) {
-//        container.autoregister(GenericLoginUseCase<String,LoginAsync>.self, initializer: FakeLoginUseCase.init)
-//		container.autoregister(GenericTestUrlUseCase<String,TestURLAsync>.self, initializer: FakeTestUrlUseCase.init)
-//        container.autoregister(GenericSaveUrlUseCase<String,Bool>.self, initializer: SaveUrlUseCase.init)
-//    }
+     static func RegisterRepositories(container: Container) {
+		container.autoregister(FamiliesRepository.self, initializer: FamiliesRepository.init)
+		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
+    }
     
      static func RegisterPresenters(container: Container) {
         container.autoregister(MenuPresenter.self, initializer: MenuPresenter.init)

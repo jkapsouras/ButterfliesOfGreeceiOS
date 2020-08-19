@@ -58,6 +58,7 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			state?.filter{viewState in viewState.isTransition}.subscribe(onNext: {viewState in self.TransitionStateReceived(viewState: viewState)}).disposed(by: Presenter!.disposeBag)
 			
 			state?.connect().disposed(by: Presenter!.disposeBag)
+			Presenter?.setupEvents()
 		}
 	}
 	
