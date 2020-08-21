@@ -14,6 +14,11 @@
 		0A25982F24EDBD55003893FA /* SpeciesViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */; };
 		0A25983124EDBDDB003893FA /* SpeciesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983024EDBDDB003893FA /* SpeciesRepository.swift */; };
 		0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */; };
+		0A7351DE24EE681100E2712D /* Species.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7351DD24EE681100E2712D /* Species.storyboard */; };
+		0A7351E024EE68C600E2712D /* SpeciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351DF24EE68C600E2712D /* SpeciesViewController.swift */; };
+		0A7351E324EEA29400E2712D /* SpeciesTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351E224EEA29400E2712D /* SpeciesTableComponent.swift */; };
+		0A7351E524EEA2A000E2712D /* SpeciesCollectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351E424EEA2A000E2712D /* SpeciesCollectionComponent.swift */; };
+		0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351E624EEA2B400E2712D /* SpeciesHeaderComponent.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
@@ -103,6 +108,11 @@
 		0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewStates.swift; sourceTree = "<group>"; };
 		0A25983024EDBDDB003893FA /* SpeciesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRepository.swift; sourceTree = "<group>"; };
 		0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenterTests.swift; sourceTree = "<group>"; };
+		0A7351DD24EE681100E2712D /* Species.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Species.storyboard; sourceTree = "<group>"; };
+		0A7351DF24EE68C600E2712D /* SpeciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewController.swift; sourceTree = "<group>"; };
+		0A7351E224EEA29400E2712D /* SpeciesTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableComponent.swift; sourceTree = "<group>"; };
+		0A7351E424EEA2A000E2712D /* SpeciesCollectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesCollectionComponent.swift; sourceTree = "<group>"; };
+		0A7351E624EEA2B400E2712D /* SpeciesHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesHeaderComponent.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,10 +237,13 @@
 		0A25982524EDA917003893FA /* SpeciesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0A7351E124EE694700E2712D /* Components */,
 				0A25982D24EDBCE1003893FA /* ViewState */,
 				0A25982A24EDBCA1003893FA /* UiEvents */,
 				0A25982624EDBC5D003893FA /* SpeciesPresenter.swift */,
 				0A25982824EDBC67003893FA /* SpeciesState.swift */,
+				0A7351DD24EE681100E2712D /* Species.storyboard */,
+				0A7351DF24EE68C600E2712D /* SpeciesViewController.swift */,
 			);
 			path = SpeciesViewController;
 			sourceTree = "<group>";
@@ -249,6 +262,16 @@
 				0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */,
 			);
 			path = ViewState;
+			sourceTree = "<group>";
+		};
+		0A7351E124EE694700E2712D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0A7351E224EEA29400E2712D /* SpeciesTableComponent.swift */,
+				0A7351E424EEA2A000E2712D /* SpeciesCollectionComponent.swift */,
+				0A7351E624EEA2B400E2712D /* SpeciesHeaderComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		0AC7BAFD24CF012E000908B9 /* Events */ = {
@@ -707,6 +730,7 @@
 				FE1341A324E3263A0076EF14 /* PhotosTableViewCell.xib in Resources */,
 				FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
+				0A7351DE24EE681100E2712D /* Species.storyboard in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
 				FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */,
 			);
@@ -796,9 +820,12 @@
 				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
+				0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
+				0A7351E024EE68C600E2712D /* SpeciesViewController.swift in Sources */,
+				0A7351E524EEA2A000E2712D /* SpeciesCollectionComponent.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
@@ -809,6 +836,7 @@
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
 				FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */,
+				0A7351E324EEA29400E2712D /* SpeciesTableComponent.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */,
 				FE1341B024E32A8F0076EF14 /* HeaderView.swift in Sources */,

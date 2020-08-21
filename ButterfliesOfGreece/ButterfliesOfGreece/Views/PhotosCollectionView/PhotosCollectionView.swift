@@ -111,4 +111,11 @@ class PhotosCollectionView: UIView {
 		CollectionPhotos.delegate = source
 		CollectionPhotos.reloadData()
 	}
+	
+	func ShowSpecies(species: [Specie]){
+		source.setSpecies(species: species)
+		CollectionPhotos.dataSource = source
+		CollectionPhotos.delegate = source
+		CollectionPhotos.reloadData()
+	}
 }

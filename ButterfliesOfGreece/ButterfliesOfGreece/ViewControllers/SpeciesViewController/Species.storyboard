@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Species View Controller-->
+        <scene sceneID="EWj-fd-Ihd">
+            <objects>
+                <viewController restorationIdentifier="SpeciesViewController" storyboardIdentifier="SpeciesViewController" id="FuC-3q-fRf" customClass="SpeciesViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wH3-dy-Xdf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Rt-bJx" customClass="HeaderView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="72"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Nuf-4j-hn3"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2A3-84-6wC" customClass="PhotosTableView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="414" height="746"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-Rb-PYf" customClass="PhotosCollectionView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="414" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Gx-Rb-PYf" firstAttribute="leading" secondItem="2A3-84-6wC" secondAttribute="leading" id="5FR-Yv-b2P"/>
+                            <constraint firstItem="4Gx-Rb-PYf" firstAttribute="top" secondItem="MyD-Rt-bJx" secondAttribute="bottom" id="8Mp-cq-bQp"/>
+                            <constraint firstItem="MyD-Rt-bJx" firstAttribute="leading" secondItem="sz7-K6-qVG" secondAttribute="leading" id="HpW-xL-Ttd"/>
+                            <constraint firstItem="4Gx-Rb-PYf" firstAttribute="trailing" secondItem="2A3-84-6wC" secondAttribute="trailing" id="IiL-HG-bDa"/>
+                            <constraint firstItem="MyD-Rt-bJx" firstAttribute="top" secondItem="sz7-K6-qVG" secondAttribute="top" id="dm4-Hr-iHO"/>
+                            <constraint firstItem="sz7-K6-qVG" firstAttribute="bottom" secondItem="2A3-84-6wC" secondAttribute="bottom" id="eep-pE-tyS"/>
+                            <constraint firstItem="4Gx-Rb-PYf" firstAttribute="bottom" secondItem="2A3-84-6wC" secondAttribute="bottom" id="fvb-ua-VeB"/>
+                            <constraint firstItem="2A3-84-6wC" firstAttribute="trailing" secondItem="MyD-Rt-bJx" secondAttribute="trailing" id="gCX-3K-qfj"/>
+                            <constraint firstItem="sz7-K6-qVG" firstAttribute="trailing" secondItem="MyD-Rt-bJx" secondAttribute="trailing" id="iuC-ZJ-TSl"/>
+                            <constraint firstItem="2A3-84-6wC" firstAttribute="leading" secondItem="MyD-Rt-bJx" secondAttribute="leading" id="jSE-x5-whp"/>
+                            <constraint firstItem="4Gx-Rb-PYf" firstAttribute="top" secondItem="2A3-84-6wC" secondAttribute="top" id="uxo-YD-SMz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sz7-K6-qVG"/>
+                    </view>
+                    <connections>
+                        <outlet property="CollectionPhotos" destination="4Gx-Rb-PYf" id="TGL-GA-7Y7"/>
+                        <outlet property="TablePhotos" destination="2A3-84-6wC" id="Yuy-wP-UOv"/>
+                        <outlet property="ViewHeader" destination="MyD-Rt-bJx" id="CnU-tO-7zd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lba-ed-OjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243.47826086956525" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>

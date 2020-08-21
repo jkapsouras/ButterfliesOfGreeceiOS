@@ -10,8 +10,16 @@ import Foundation
 import UIKit
 import RxSwift
 
+enum ShowingStep{
+	case families
+	case species
+	case photos
+}
+
 class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate{
 	var families:[Family] = []
+	var species:[Specie] = []
+	var showingStep = ShowingStep.families
 	let emitter = PublishSubject<UiEvent>()
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
 	
@@ -21,7 +29,15 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.Key, for: indexPath) as! PhotosCollectionViewCell
-		cell.update(family: (families[indexPath.row]), emitter: emitter)
+		switch showingStep {
+			case .families:
+			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
+			case .species:
+			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
+			default:
+			print("not implemented yet")
+		}
+		
 		return cell
 	}
 	
@@ -39,5 +55,13 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 	
 	func setFamilies(families: [Family]){
 		self.families = families
+	}
+	
+	func setSpecies(species: [Specie]){
+		self.species = species
+	}
+	
+	func setShowingStep(showingStep:ShowingStep){
+		self.showingStep = showingStep
 	}
 }

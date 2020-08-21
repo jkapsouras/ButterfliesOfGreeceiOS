@@ -74,17 +74,24 @@ class BaseController<P> : UIViewController where P : BasePresenter
 	
 	func TransitionStateReceived(viewState:ViewState)->()
 	{
+		guard  navigationController != nil else{
+			print("There is no navigation controller!")
+			return
+		}
 		switch viewState {
 		case let menuTransition as MenuViewState:
-			guard  navigationController != nil else{
-				print("There is no navigation controller!")
-				return
-			}
 			switch menuTransition{
 			case .toField:
 				navigationManager!.MenuTransition(menuTransition: menuTransition)
 			default:
 				print("no transition")
+			}
+			case let familiesTransition as FamiliesViewStates:
+				switch familiesTransition {
+					case .ToSpecies(let familyId):
+					print("not implemented yet")
+					default:
+					print("no transition")
 			}
 		default:
 			print("default")
