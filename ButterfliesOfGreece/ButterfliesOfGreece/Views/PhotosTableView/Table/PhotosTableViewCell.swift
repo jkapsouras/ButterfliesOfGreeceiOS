@@ -20,18 +20,21 @@ class PhotosTableViewCell: UITableViewCell {
 	var addRecognizer:UITapGestureRecognizer?
 	var emitter:PublishSubject<UiEvent>?
 	var familyId:Int?
+	var specieId:Int?
+	var showingStep:ShowingStep?
 	
 	override func awakeFromNib() {
-        super.awakeFromNib()
+		super.awakeFromNib()
 		selectionStyle = .none
 		prepareView()
-    }
+	}
 	
 	override func draw(_ rect: CGRect) {
 		ImageButterfly.layer.cornerRadius = ImageButterfly.bounds.width/2
 	}
-    
-	func update(family: Family, emitter:PublishSubject<UiEvent>){
+	
+	func update(family: Family, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+		self.showingStep = showingStep
 		self.emitter = emitter
 		LabelName.text = family.name
 		familyId = family.id
@@ -40,7 +43,19 @@ class PhotosTableViewCell: UITableViewCell {
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
- 	}
+	}
+	
+	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+		self.showingStep = showingStep
+		self.emitter = emitter
+		LabelName.text = specie.name
+		familyId = specie.id
+		ImageButterfly.image = UIImage(named: "Thumbnails/\(specie.imageTitle)", in: nil, compatibleWith: nil)
+		if  ImageButterfly.image == nil{
+			ImageButterfly.image = #imageLiteral(resourceName: "default")
+		}
+		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+	}
 	
 	func prepareView(){
 		backgroundColor = Constants.Colors.appWhite.color
@@ -69,7 +84,14 @@ class PhotosTableViewCell: UITableViewCell {
 	
 	@objc func addTapped(_ sender: UITapGestureRecognizer) {
 		if let emitter = emitter{
-			emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
+			switch showingStep {
+			case .families:
+				emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
+			case .species:
+				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
+			default:
+				print("not implemented yet")
+			}
 		}
 	}
 }

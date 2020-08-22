@@ -103,4 +103,12 @@ class PhotosTableView: UIView {
 		TablePhotos.delegate = source
 		TablePhotos.reloadData()
 	}
+	
+	func ShowSpecies(species: [Specie]){
+		source.setSpecies(species: species)
+		TablePhotos.separatorStyle = .none
+		TablePhotos.dataSource = source
+		TablePhotos.delegate = source
+		TablePhotos.reloadData()
+	}
 }

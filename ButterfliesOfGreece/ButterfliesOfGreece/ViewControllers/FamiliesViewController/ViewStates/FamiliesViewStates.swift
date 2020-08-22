@@ -22,5 +22,4 @@ enum FamiliesViewStates:ViewState{
 			return false
 		}
 	}
-	
 }

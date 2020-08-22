@@ -26,8 +26,12 @@ class SpeciesPresenter:BasePresenter{
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
+	func setFamilyId(familyId:Int){
+		self.familyId = familyId
+	}
+	
 	override func setupEvents() {
-		emitter.onNext(SpeciesEvents.loadSpecies(familyId: familyId!))
+		emitter.onNext(SpeciesEvents.loadSpecies(familyId: 0))
 		emitter.onNext(HeaderViewEvents.initState(arrange: .list))
 	}
 	

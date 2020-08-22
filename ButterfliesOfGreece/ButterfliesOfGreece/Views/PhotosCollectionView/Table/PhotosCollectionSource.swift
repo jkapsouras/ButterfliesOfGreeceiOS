@@ -53,6 +53,15 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 		}
 	}
 	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		switch showingStep {
+		case .families:
+			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
+		default:
+			print("not implemented yet")
+		}
+	}
+	
 	func setFamilies(families: [Family]){
 		self.families = families
 	}

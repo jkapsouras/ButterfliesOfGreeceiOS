@@ -37,7 +37,7 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		else{
 			navigationManager = NavigationManager(controller: NavigationViewController())
 		}
-
+		
 		
 		if (Presenter == nil)
 		{
@@ -86,12 +86,12 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			default:
 				print("no transition")
 			}
-			case let familiesTransition as FamiliesViewStates:
-				switch familiesTransition {
-					case .ToSpecies(let familyId):
-					print("not implemented yet")
-					default:
-					print("no transition")
+		case let familiesTransition as FamiliesViewStates:
+			switch familiesTransition {
+			case .ToSpecies(let familyId):
+				navigationManager!.FamilyTransition(familyId: familyId)
+			default:
+				print("no transition")
 			}
 		default:
 			print("default")

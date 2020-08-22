@@ -8,26 +8,34 @@
 
 import UIKit
 
-class SpeciesViewController: UIViewController {
+class SpeciesViewController: BaseController<SpeciesPresenter> {
+	var speciesTableComponent:SpeciesTableComponent?
+	var speciesCollectionComponent:SpeciesCollectionComponent?
+	var speciesHeaderComponent:SpeciesHeaderComponent?
 	@IBOutlet weak var ViewHeader: HeaderView!
 	@IBOutlet weak var TablePhotos: PhotosTableView!
 	@IBOutlet weak var CollectionPhotos: PhotosCollectionView!
+	var familyId:Int?
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     override func viewDidLoad() {
+		   super.viewDidLoad()
+		   guard let butterfliesNavigation = navigationController as? NavigationViewController else {
+			   print("no proper navigation controller")
+			   return
+		   }
+		   title = "Species" //TODO: specie name from presenter
+		   butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
+		   butterfliesNavigation.setNavigationBarHidden(false, animated: true)
+	   }
+	   
+	   override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+		   CollectionPhotos.updateViews()
+	   }
+	   
+	   override func InitializeComponents() -> Array<UiComponent> {
+		   speciesTableComponent = SpeciesTableComponent(view: TablePhotos)
+		   speciesCollectionComponent = SpeciesCollectionComponent(view: CollectionPhotos)
+		   speciesHeaderComponent = SpeciesHeaderComponent(view: ViewHeader)
+		   return [speciesTableComponent!, speciesCollectionComponent!, speciesHeaderComponent!]
+	   }
 }
