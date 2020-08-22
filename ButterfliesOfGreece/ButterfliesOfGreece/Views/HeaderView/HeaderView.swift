@@ -135,4 +135,8 @@ class HeaderView: UIView {
 	func updateNumberOfPhotos(number:Int){
 		LabelNumberOfFiles.text = String(number)
 	}
+	
+	func updateTitle(title:String){
+		LableTitle.text = title
+	}
 }

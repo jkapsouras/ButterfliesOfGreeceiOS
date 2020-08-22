@@ -39,18 +39,21 @@ struct IOC:IOCInjectable
 	}
     
      static func RegisterDataSources(container: Container) {
-		container.autoregister(Storage.self, initializer: Storage.init)
+		container.autoregister(Storage.self, initializer: Storage.init).inObjectScope(.container)
 		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
     }
     
      static func RegisterRepositories(container: Container) {
 		container.autoregister(FamiliesRepository.self, initializer: FamiliesRepository.init)
+		container.autoregister(SpeciesRepository.self, initializer: SpeciesRepository.init)
+		container.autoregister(NavigationRepository.self, initializer: NavigationRepository.init)
 		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
     }
     
      static func RegisterPresenters(container: Container) {
         container.autoregister(MenuPresenter.self, initializer: MenuPresenter.init)
         container.autoregister(FamiliesPresenter.self, initializer: FamiliesPresenter.init)
+		container.autoregister(SpeciesPresenter.self, initializer: SpeciesPresenter.init)
     }
     
     public static var container: Container?

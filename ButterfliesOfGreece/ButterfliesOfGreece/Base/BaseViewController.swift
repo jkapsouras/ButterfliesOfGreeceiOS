@@ -37,7 +37,7 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		else{
 			navigationManager = NavigationManager(controller: NavigationViewController())
 		}
-
+		
 		
 		if (Presenter == nil)
 		{
@@ -74,15 +74,22 @@ class BaseController<P> : UIViewController where P : BasePresenter
 	
 	func TransitionStateReceived(viewState:ViewState)->()
 	{
+		guard  navigationController != nil else{
+			print("There is no navigation controller!")
+			return
+		}
 		switch viewState {
 		case let menuTransition as MenuViewState:
-			guard  navigationController != nil else{
-				print("There is no navigation controller!")
-				return
-			}
 			switch menuTransition{
 			case .toField:
 				navigationManager!.MenuTransition(menuTransition: menuTransition)
+			default:
+				print("no transition")
+			}
+		case let familiesTransition as FamiliesViewStates:
+			switch familiesTransition {
+			case .ToSpecies:
+				navigationManager!.FamilyTransition()
 			default:
 				print("no transition")
 			}

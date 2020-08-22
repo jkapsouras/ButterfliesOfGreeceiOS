@@ -12,6 +12,9 @@ import UIKit
 struct NavigationManager {
 	let navigationController: NavigationViewController
 	
+	let speciesViewController = "SpeciesViewController"
+	let speciesStoryboard = "Species"
+	
 	init(controller:NavigationViewController){
 		navigationController=controller
 	}
@@ -54,6 +57,21 @@ struct NavigationManager {
 		}
 		else{
 			navigationController.pushViewController(vc, animated: true)
+		}
+	}
+	
+	func FamilyTransition() {
+		let storyboard = UIStoryboard.init(name: speciesStoryboard, bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: speciesViewController)
+		let vcType = type(of: vc)
+		let vcExisits = navigationController.viewControllers.contains{$0.isKind(of: vcType)}
+		if(vcExisits){
+			let speciesVC = vc as! SpeciesViewController
+			navigationController.popToViewController(speciesVC, animated: true)
+		}
+		else{
+			let speciesVC = vc as! SpeciesViewController
+			navigationController.pushViewController(speciesVC, animated: true)
 		}
 	}
 }

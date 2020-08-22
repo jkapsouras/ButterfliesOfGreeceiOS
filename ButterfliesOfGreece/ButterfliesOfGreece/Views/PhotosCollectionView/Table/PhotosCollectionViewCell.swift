@@ -17,9 +17,12 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 	static var Key:String = "PhotosCollectionViewCell"
 	static var Nib:UINib = UINib.init(nibName: "PhotosCollectionViewCell", bundle: nil)
 	
+	
 	var addRecognizer:UITapGestureRecognizer?
 	var emitter:PublishSubject<UiEvent>?
 	var familyId:Int?
+	var specieId:Int?
+	var showingStep:ShowingStep?
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,8 +34,9 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 		ViewBack.layer.cornerRadius = 16
 	}
 
-	func update(family: Family, emitter:PublishSubject<UiEvent>){
+	func update(family: Family, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.emitter = emitter
+		self.showingStep = showingStep
 		LabelName.text = family.name
 		familyId = family.id
 		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(family.photo)", in: nil, compatibleWith: nil)
@@ -41,6 +45,18 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 		}
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
  	}
+	
+	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+		self.emitter = emitter
+		self.showingStep = showingStep
+		LabelName.text = specie.name
+		specieId = specie.id
+		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(specie.imageTitle)", in: nil, compatibleWith: nil)
+		if  ImageButterfly.image == nil{
+			ImageButterfly.image = #imageLiteral(resourceName: "default")
+		}
+		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+	}
 	
 	func prepareView(){
 		ViewBack.backgroundColor = Constants.Colors.field(darkMode: false).color
@@ -70,7 +86,15 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 	
 	@objc func addTapped(_ sender: UITapGestureRecognizer) {
 		if let emitter = emitter{
-			emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
+			switch showingStep {
+				case .families:
+				emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
+				case .species:
+					emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
+				default:
+				print("not implemented yet")
+			}
+			
 		}
 	}
 }

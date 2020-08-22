@@ -10,7 +10,7 @@ import Foundation
 
 enum FamiliesViewStates:ViewState{
 	case SwitchViewStyle(currentArrange:ViewArrange)
-	case ToSpecies(familyId:Int)
+	case ToSpecies
 	case ShowFamilies(families:[Family])
 	
 	var isTransition: Bool{
@@ -22,5 +22,4 @@ enum FamiliesViewStates:ViewState{
 			return false
 		}
 	}
-	
 }

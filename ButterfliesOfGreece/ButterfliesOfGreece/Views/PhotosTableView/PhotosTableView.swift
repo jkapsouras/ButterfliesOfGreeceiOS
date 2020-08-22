@@ -98,6 +98,16 @@ class PhotosTableView: UIView {
 	
 	func ShowFamilies(families: [Family]){
 		source.setFamilies(families: families)
+		source.setShowingStep(showingStep: .families)
+		TablePhotos.separatorStyle = .none
+		TablePhotos.dataSource = source
+		TablePhotos.delegate = source
+		TablePhotos.reloadData()
+	}
+	
+	func ShowSpecies(species: [Specie]){
+		source.setSpecies(species: species)
+		source.setShowingStep(showingStep: .species)
 		TablePhotos.separatorStyle = .none
 		TablePhotos.dataSource = source
 		TablePhotos.delegate = source

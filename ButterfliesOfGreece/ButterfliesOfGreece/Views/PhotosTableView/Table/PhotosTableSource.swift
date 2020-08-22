@@ -13,12 +13,21 @@ import RxSwift
 class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 {
 	var families:[Family] = []
+	var species:[Specie] = []
 	let emitter = PublishSubject<UiEvent>()
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
+	var showingStep = ShowingStep.families
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.Key, for: indexPath) as! PhotosTableViewCell
-		cell.update(family: (families[indexPath.row]), emitter: emitter)
+		switch showingStep {
+		case .families:
+			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
+		case .species:
+			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
+		default:
+			print("not implemented yet")
+		}
 		return cell
 	}
 	
@@ -34,20 +43,36 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 		}
 	}
 	
-//	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//		LocationSelected = _response!.mapItems[indexPath.row].placemark
-//		_owner?.ClosePlaces(mapItem: (_response?.mapItems[indexPath.row])!);
-//		_owner?.DismissView();
-////		tableView.FadeOut();
-//		tableView.alpha=0
-//	}
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		switch showingStep {
+		case .families:
+			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
+		default:
+			print("not implemented yet")
+		}
+	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return families.count
+		switch showingStep {
+		case .families:
+			return families.count
+		case .species:
+			return species.count
+		default:
+			return 0
+		}
 	}
 	
 	func setFamilies(families: [Family]){
 		self.families = families
+	}
+	
+	func setSpecies(species: [Specie]){
+		self.species = species
+	}
+	
+	func setShowingStep(showingStep:ShowingStep){
+		self.showingStep = showingStep
 	}
 }
 

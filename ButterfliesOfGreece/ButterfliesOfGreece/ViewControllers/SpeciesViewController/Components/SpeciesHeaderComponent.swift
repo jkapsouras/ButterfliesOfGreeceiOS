@@ -1,15 +1,15 @@
 //
-//  FamiliesHeaderComponent.swift
+//  SpeciesHeaderComponent.swift
 //  ButterfliesOfGreece
 //
-//  Created by Ioannis Kapsouras on 11/8/20.
+//  Created by Apprecot on 20/8/20.
 //  Copyright © 2020 Ioannis Kapsouras. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 
-class FamiliesHeaderComponent : UiComponent
+class SpeciesHeaderComponent : UiComponent
 {
 	let event:PublishSubject<UiEvent> = PublishSubject()
 	let headerView:HeaderView
@@ -21,18 +21,18 @@ class FamiliesHeaderComponent : UiComponent
 	}
 	
 	public func renderViewState(viewState: ViewState) {
-		if let state = viewState as? FamiliesViewStates{
+		if let state = viewState as? SpeciesViewStates{
 			switch state {
-			case FamiliesViewStates.SwitchViewStyle(let arrange):
-				headerView.changeViewForViewArrange(viewArrange: arrange)
-			default:
-				print("default state")
+				case SpeciesViewStates.SwitchViewStyle(let arrange):
+					headerView.changeViewForViewArrange(viewArrange: arrange)
+				default:
+					print("default state")
 			}
 		}
 		if let state = viewState as? HeaderViewViewStates{
 			switch state {
-			case HeaderViewViewStates.updateFolderIcon(let numberOfPhotos):
-				headerView.updateNumberOfPhotos(number: numberOfPhotos)
+				case HeaderViewViewStates.updateFolderIcon(let numberOfPhotos):
+					headerView.updateNumberOfPhotos(number: numberOfPhotos)
 			case HeaderViewViewStates.setHeaderTitle(let headerTitle):
 				headerView.updateTitle(title: headerTitle)
 			}

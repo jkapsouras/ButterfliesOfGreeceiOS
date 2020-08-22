@@ -107,6 +107,15 @@ class PhotosCollectionView: UIView {
 	
 	func ShowFamilies(families: [Family]){
 		source.setFamilies(families: families)
+		source.setShowingStep(showingStep: .families)
+		CollectionPhotos.dataSource = source
+		CollectionPhotos.delegate = source
+		CollectionPhotos.reloadData()
+	}
+	
+	func ShowSpecies(species: [Specie]){
+		source.setSpecies(species: species)
+		source.setShowingStep(showingStep: .species)
 		CollectionPhotos.dataSource = source
 		CollectionPhotos.delegate = source
 		CollectionPhotos.reloadData()
