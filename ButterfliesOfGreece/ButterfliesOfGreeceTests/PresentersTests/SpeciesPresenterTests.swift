@@ -80,10 +80,10 @@ class SpeciesPresenterTests: XCTestCase {
 		
 		scheduler.start()
 		
-		XCTAssert(!(observer.events.first?.value.element?.isTransition ?? false))
-		XCTAssert(observer.events.first?.value.element != nil &&
-			observer.events.first?.value.element is SpeciesViewStates)
-		let viewState = observer.events.first?.value.element as! SpeciesViewStates
+		XCTAssert(!(observer.events[1].value.element?.isTransition ?? false))
+		XCTAssert(observer.events[1].value.element != nil &&
+			observer.events[1].value.element is SpeciesViewStates)
+		let viewState = observer.events[1].value.element as! SpeciesViewStates
 		switch viewState {
 			case .ShowSpecies(let species):
 				XCTAssert(species.count == 9)//test json data
@@ -148,6 +148,8 @@ class SpeciesPresenterTests: XCTestCase {
 		switch viewState {
 			case .updateFolderIcon(let numberOfPhotos):
 				XCTAssert(numberOfPhotos == 0)//test json data
+			default:
+			print("not interested")
 		}
 		XCTAssert(observer.events[1].value.element != nil &&
 			observer.events[1].value.element is SpeciesViewStates)
@@ -189,7 +191,7 @@ class SpeciesPresenterTests: XCTestCase {
 		scheduler.start()
 
 		var sum = 0
-		var index = -1
+		var index = -2
 		observer.events.forEach({(vs) in
 			if index < 0{
 				index += 1
@@ -205,6 +207,8 @@ class SpeciesPresenterTests: XCTestCase {
 						sum += photosPerSpecieInFamily[index]
 						print("sum: \(sum)")
 						XCTAssert(numberOfPhotos == sum)
+					default:
+					print("not interested")
 				}
 				index += 1
 			}

@@ -149,6 +149,8 @@ class FamiliesPresenterTests: XCTestCase {
 		switch viewState {
 		case .updateFolderIcon(let numberOfPhotos):
 			XCTAssert(numberOfPhotos == 0)//test json data
+		default:
+			print("not interested")
 		}
 		XCTAssert(observer.events[1].value.element != nil &&
 			observer.events[1].value.element is FamiliesViewStates)
@@ -206,6 +208,8 @@ class FamiliesPresenterTests: XCTestCase {
 					sum += photosPerFamily[index]
 					print("sum: \(sum)")
 					XCTAssert(numberOfPhotos == sum)
+					default:
+					print("not interested")
 				}
 				index += 1
 			}
