@@ -33,6 +33,8 @@ class FamiliesHeaderComponent : UiComponent
 			switch state {
 			case HeaderViewViewStates.updateFolderIcon(let numberOfPhotos):
 				headerView.updateNumberOfPhotos(number: numberOfPhotos)
+			case HeaderViewViewStates.setHeaderTitle(let headerTitle):
+				headerView.updateTitle(title: headerTitle)
 			}
 		}
 	}

@@ -26,7 +26,7 @@ class SpeciesPresenterTests: XCTestCase {
 		super.setUp()
 		self.scheduler = TestScheduler(initialClock: 0)
 		let mockCachManager = MockCacheManager(userDefaults: MockUserDefaults(numberOfPhotos: 0))
-		presenter = SpeciesPresenter(mainThread: MockMainThreadScheduler(scheduler: self.scheduler),backgroundThread: MockBackgroundThreadScheduler(scheduler: self.scheduler), speciesRepository: SpeciesRepository(storage: Storage()), photosToPrintRepository: PhotosToPrintRepository(cacheManager: mockCachManager, storage: Storage()))
+		presenter = SpeciesPresenter(mainThread: MockMainThreadScheduler(scheduler: self.scheduler),backgroundThread: MockBackgroundThreadScheduler(scheduler: self.scheduler), speciesRepository: SpeciesRepository(storage: Storage()), navigationRepository: NavigationRepository(storage: Storage()), photosToPrintRepository: PhotosToPrintRepository(cacheManager: mockCachManager, storage: Storage()))
 		self.disposeBag = DisposeBag()
 	}
 	
@@ -130,7 +130,7 @@ class SpeciesPresenterTests: XCTestCase {
 		
 		scheduler
 			.createHotObservable([
-				Recorded.next(200, (HeaderViewEvents.initState(arrange: .list)) as UiEvent)
+				Recorded.next(200, (HeaderViewEvents.initState(currentArrange: .list)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag)

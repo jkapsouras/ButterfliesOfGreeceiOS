@@ -28,20 +28,24 @@ class FamiliesPresenter:BasePresenter{
 	var familiesState:FamiliesState
 	var headerState:HeaderState
 	var familiesRepository:FamiliesRepository
+	var navigationRepository:NavigationRepository
 	var photosToPrintRepository:PhotosToPrintRepository
 	
-	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol, familiesRepository:FamiliesRepository, photosToPrintRepository:PhotosToPrintRepository)
+	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
+		 familiesRepository:FamiliesRepository, navigationRepository:NavigationRepository,
+		 photosToPrintRepository:PhotosToPrintRepository)
 	{
 		self.familiesRepository = familiesRepository
+		self.navigationRepository = navigationRepository
 		self.photosToPrintRepository = photosToPrintRepository
 		familiesState = FamiliesState(families: [Family]())
-		headerState = HeaderState(arrange: .grid, photos: nil)
+		headerState = HeaderState(currentArrange: .grid, photosToPrint: nil, headerName: "Families")
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
 	override func setupEvents() {
 		emitter.onNext(FamiliesEvents.loadFamilies)
-		emitter.onNext(HeaderViewEvents.initState(arrange: .list))
+		emitter.onNext(HeaderViewEvents.initState(currentArrange: .list))
 	}
 	
 	override func HandleEvent(uiEvents uiEvent: UiEvent) {
@@ -66,12 +70,17 @@ class FamiliesPresenter:BasePresenter{
 	func handleFamiliesEvents(familyEvent: FamiliesEvents){
 		switch familyEvent {
 		case .familyClicked(let familyId):
-			state.onNext(FamiliesViewStates.ToSpecies(familyId: familyId))
+			_ = navigationRepository
+				.selectFamilyId(familyId:familyId)
+				.subscribe(onNext: {_ in self.state.onNext(FamiliesViewStates.ToSpecies)})
 		case .loadFamilies:
-			_ = familiesRepository.getAllFamilies().map{families -> FamiliesState in
-				self.familiesState = self.familiesState.with(families: families)
-				return self.familiesState
-			}.subscribe(onNext: {familieState in self.state.onNext(FamiliesViewStates.ShowFamilies(families: familieState.families))})
+			_ = familiesRepository
+				.getAllFamilies()
+				.map{families -> FamiliesState in
+					self.familiesState = self.familiesState.with(families: families)
+					return self.familiesState
+			}
+			.subscribe(onNext: {familieState in self.state.onNext(FamiliesViewStates.ShowFamilies(families: familieState.families))})
 		case .addPhotosForPrintClicked(let familyId):
 			_ = photosToPrintRepository
 				.getPhotosToPrint()
@@ -84,15 +93,23 @@ class FamiliesPresenter:BasePresenter{
 	func handleHeaderViewEvents(headerEvent: HeaderViewEvents){
 		switch headerEvent {
 		case .initState(let arrange):
-			_ = photosToPrintRepository.getPhotosToPrint().map{photos -> HeaderState in
-				self.headerState = self.headerState.with(arrange: arrange, photos: photos)
-				return self.headerState
-			}.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint?.count ?? 0))
-				self.state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
-			})
+			_ = Observable.zip(navigationRepository.setViewArrange(arrange: arrange)
+				.do(onNext:{_ in self.headerState = self.headerState.with(arrange: Storage.currentArrange)}),
+							   photosToPrintRepository.getPhotosToPrint().map{photos -> HeaderState in
+								self.headerState = self.headerState.with(photos: photos)
+								return self.headerState
+			},resultSelector: { _, header in (header)})
+				.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint?.count ?? 0))
+					self.state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
+				})
 		case .switchViewStyleClicked:
-			headerState = headerState.with(arrange: headerState.currentArrange.changeArrange())
-			state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
+			_ = navigationRepository.changeViewArrange()
+				.map{arrange -> HeaderState in
+					self.headerState = self.headerState.with(arrange: arrange)
+					return self.headerState
+			}
+				.subscribe(onNext: {headerState in self.state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))})
+			
 		case .searchBarClicked:
 			print("search bar clicked")
 		case .printPhotosClicked:

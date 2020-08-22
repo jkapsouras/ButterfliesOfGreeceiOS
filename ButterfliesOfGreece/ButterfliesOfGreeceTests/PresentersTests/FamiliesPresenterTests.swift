@@ -26,7 +26,7 @@ class FamiliesPresenterTests: XCTestCase {
 		super.setUp()
 		self.scheduler = TestScheduler(initialClock: 0)
 		let mockCachManager = MockCacheManager(userDefaults: MockUserDefaults(numberOfPhotos: 0))
-		presenter = FamiliesPresenter(mainThread: MockMainThreadScheduler(scheduler: self.scheduler),backgroundThread: MockBackgroundThreadScheduler(scheduler: self.scheduler), familiesRepository: FamiliesRepository(storage: Storage()), photosToPrintRepository: PhotosToPrintRepository(cacheManager: mockCachManager, storage: Storage()))
+		presenter = FamiliesPresenter(mainThread: MockMainThreadScheduler(scheduler: self.scheduler),backgroundThread: MockBackgroundThreadScheduler(scheduler: self.scheduler), familiesRepository: FamiliesRepository(storage: Storage()), navigationRepository: NavigationRepository(storage: Storage()), photosToPrintRepository: PhotosToPrintRepository(cacheManager: mockCachManager, storage: Storage()))
 		self.disposeBag = DisposeBag()
 	}
 	
@@ -42,6 +42,7 @@ class FamiliesPresenterTests: XCTestCase {
 		
 		scheduler
 			.createHotObservable([
+				Recorded.next(200, (HeaderViewEvents.initState(currentArrange: .list)) as UiEvent),
 				Recorded.next(200, (HeaderViewEvents.switchViewStyleClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
@@ -52,10 +53,10 @@ class FamiliesPresenterTests: XCTestCase {
 		
 		scheduler.start()
 		
-		XCTAssert(!(observer.events.first?.value.element?.isTransition ?? false))
-		XCTAssert(observer.events.first?.value.element != nil &&
-			observer.events.first?.value.element is FamiliesViewStates)
-		let viewState = observer.events.first?.value.element as! FamiliesViewStates
+		XCTAssert(!(observer.events[1].value.element?.isTransition ?? false))
+		XCTAssert(observer.events[1].value.element != nil &&
+			observer.events[1].value.element is FamiliesViewStates)
+		let viewState = observer.events[1].value.element as! FamiliesViewStates
 		switch viewState {
 		case .SwitchViewStyle(let currentArrange):
 			XCTAssert(currentArrange == .list)
@@ -115,8 +116,8 @@ class FamiliesPresenterTests: XCTestCase {
 			observer.events.first?.value.element is FamiliesViewStates)
 		let viewState = observer.events.first?.value.element as! FamiliesViewStates
 		switch viewState {
-		case .ToSpecies(let selectedFamilyId):
-			XCTAssert(selectedFamilyId == 1)//test json data
+		case .ToSpecies:
+			XCTAssert(Storage.familyId == 1)//test json data
 		default:
 			XCTFail()
 		}
@@ -126,11 +127,11 @@ class FamiliesPresenterTests: XCTestCase {
 	{
 		let observer = scheduler.createObserver(ViewState.self)
 		
-		presenter.headerState = presenter.headerState.with(arrange: .grid, photos: nil)
+		presenter.headerState = presenter.headerState.with(arrange: .list, photos: nil)
 		
 		scheduler
 			.createHotObservable([
-				Recorded.next(200, (HeaderViewEvents.initState(arrange: .list)) as UiEvent)
+				Recorded.next(200, (HeaderViewEvents.initState(currentArrange: .list)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag)

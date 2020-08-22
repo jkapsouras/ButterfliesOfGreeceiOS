@@ -53,7 +53,14 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return families.count
+		switch showingStep {
+		case .families:
+			return families.count
+		case .species:
+			return species.count
+		default:
+			return 0
+		}
 	}
 	
 	func setFamilies(families: [Family]){

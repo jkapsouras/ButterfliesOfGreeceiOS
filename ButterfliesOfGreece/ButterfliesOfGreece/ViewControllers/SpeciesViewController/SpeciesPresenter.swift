@@ -14,25 +14,26 @@ class SpeciesPresenter:BasePresenter{
 	var speciesState:SpeciesState
 	var headerState:HeaderState
 	var speciesRepository:SpeciesRepository
+	var navigationRepository:NavigationRepository
 	var photosToPrintRepository:PhotosToPrintRepository
-	var familyId:Int?
 	
-	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol, speciesRepository:SpeciesRepository, photosToPrintRepository:PhotosToPrintRepository)
+	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
+		 speciesRepository:SpeciesRepository, navigationRepository:NavigationRepository,
+		 photosToPrintRepository:PhotosToPrintRepository)
 	{
 		self.speciesRepository = speciesRepository
 		self.photosToPrintRepository = photosToPrintRepository
+		self.navigationRepository = navigationRepository
 		speciesState = SpeciesState(species: [Specie]())
-		headerState = HeaderState(arrange: .grid, photos: nil)
+		headerState = HeaderState(currentArrange: .grid, photosToPrint: nil, headerName: "Species")
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
-	func setFamilyId(familyId:Int){
-		self.familyId = familyId
-	}
-	
 	override func setupEvents() {
-		emitter.onNext(SpeciesEvents.loadSpecies(familyId: 0))
-		emitter.onNext(HeaderViewEvents.initState(arrange: .list))
+		_ = Observable.zip(navigationRepository.getFamilyId(),navigationRepository.getViewArrange(),resultSelector: {id, arrange in (id, arrange)})
+			.subscribe(onNext: {data in
+				self.emitter.onNext(SpeciesEvents.loadSpecies(familyId: data.0))
+				self.emitter.onNext(HeaderViewEvents.initState(currentArrange: data.1))})
 	}
 	
 	override func HandleEvent(uiEvents uiEvent: UiEvent) {
@@ -59,10 +60,17 @@ class SpeciesPresenter:BasePresenter{
 			case .specieClicked(let specieId):
 				state.onNext(SpeciesViewStates.ToPhotos(specieId: specieId))
 			case .loadSpecies(let familyId):
-				_ = speciesRepository.getSpeciesOfFamily(familyId: familyId).map{species -> SpeciesState in
+				_ = Observable.zip(speciesRepository.getSelectedFamilyName(familyId: familyId).map{familyName -> HeaderState in
+					self.headerState = self.headerState.with(headerName: familyName)
+					return self.headerState
+					},
+					speciesRepository.getSpeciesOfFamily(familyId:familyId).map{species -> SpeciesState in
 					self.speciesState = self.speciesState.with(species: species)
 					return self.speciesState
-				}.subscribe(onNext: {familieState in self.state.onNext(SpeciesViewStates.ShowSpecies(species: self.speciesState.species))})
+				}, resultSelector: {headerState, speciesState in (headerState, speciesState)})
+					.subscribe(onNext: {data in
+						self.state.onNext(HeaderViewViewStates.setHeaderTitle(headerTitle: data.0.headerName))
+						self.state.onNext(SpeciesViewStates.ShowSpecies(species: data.1.species))})
 			case .addPhotosForPrintClicked(let familyId):
 				_ = photosToPrintRepository
 					.getPhotosToPrint()
@@ -74,12 +82,13 @@ class SpeciesPresenter:BasePresenter{
 	
 	func handleHeaderViewEvents(headerEvent: HeaderViewEvents){
 		switch headerEvent {
-			case .initState(let arrange):
+			case .initState(let currentArrange):
 				_ = photosToPrintRepository.getPhotosToPrint().map{photos -> HeaderState in
-					self.headerState = self.headerState.with(arrange: arrange, photos: photos)
+					self.headerState = self.headerState.with(arrange: currentArrange, photos: photos)
 					return self.headerState
 				}.subscribe(onNext: {headerState in self.state.onNext(HeaderViewViewStates.updateFolderIcon(numberOfPhotos: headerState.photosToPrint?.count ?? 0))
 					self.state.onNext(SpeciesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
+					
 				})
 			case .switchViewStyleClicked:
 				headerState = headerState.with(arrange: headerState.currentArrange.changeArrange())

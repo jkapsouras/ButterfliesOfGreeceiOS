@@ -24,7 +24,14 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return families.count
+		switch showingStep {
+		case .families:
+			return families.count
+		case .species:
+			return species.count
+		default:
+			return 0
+		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

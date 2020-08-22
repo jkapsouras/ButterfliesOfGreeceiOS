@@ -10,10 +10,12 @@ import Foundation
 
 enum HeaderViewViewStates:ViewState{
 	case updateFolderIcon(numberOfPhotos:Int)
+	case setHeaderTitle(headerTitle:String)
 	
 	var isTransition: Bool{
 		switch self {
-		case .updateFolderIcon:
+		case .updateFolderIcon,
+			 .setHeaderTitle:
 			return false
 		}
 	}

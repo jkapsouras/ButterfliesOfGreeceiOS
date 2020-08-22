@@ -60,19 +60,17 @@ struct NavigationManager {
 		}
 	}
 	
-	func FamilyTransition(familyId: Int) {
+	func FamilyTransition() {
 		let storyboard = UIStoryboard.init(name: speciesStoryboard, bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: speciesViewController)
 		let vcType = type(of: vc)
 		let vcExisits = navigationController.viewControllers.contains{$0.isKind(of: vcType)}
 		if(vcExisits){
 			let speciesVC = vc as! SpeciesViewController
-			speciesVC.familyId = familyId
 			navigationController.popToViewController(speciesVC, animated: true)
 		}
 		else{
 			let speciesVC = vc as! SpeciesViewController
-			speciesVC.familyId = familyId
 			navigationController.pushViewController(speciesVC, animated: true)
 		}
 	}

@@ -88,8 +88,8 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			}
 		case let familiesTransition as FamiliesViewStates:
 			switch familiesTransition {
-			case .ToSpecies(let familyId):
-				navigationManager!.FamilyTransition(familyId: familyId)
+			case .ToSpecies:
+				navigationManager!.FamilyTransition()
 			default:
 				print("no transition")
 			}
