@@ -1,25 +1,25 @@
 //
-//  SpeciesViewStates.swift
+//  PhotoViewStates.swift
 //  ButterfliesOfGreece
 //
-//  Created by Apprecot on 19/8/20.
+//  Created by Ioannis Kapsouras on 23/8/20.
 //  Copyright © 2020 Ioannis Kapsouras. All rights reserved.
 //
 
 import Foundation
 
-enum SpeciesViewStates:ViewState{
+enum PhotosViewStates:ViewState{
 	case SwitchViewStyle(currentArrange:ViewArrange)
-	case ToPhotos(specieId:Int)
-	case ShowSpecies(species:[Specie])
+	case ToPhoto(photoId:Int)
+	case ShowPhotos(photos:[ButterflyPhoto])
 	
 	var isTransition: Bool{
 		switch self {
-			case .ToPhotos:
+			case .ToPhoto:
 				return true
 			case .SwitchViewStyle,
-				 .ShowSpecies:
+				 .ShowPhotos:
 				return false
 		}
-	}	
+	}
 }
