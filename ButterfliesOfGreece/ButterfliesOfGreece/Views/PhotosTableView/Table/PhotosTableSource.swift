@@ -14,6 +14,7 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 {
 	var families:[Family] = []
 	var species:[Specie] = []
+	var photos:[ButterflyPhoto] = []
 	let emitter = PublishSubject<UiEvent>()
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
 	var showingStep = ShowingStep.families
@@ -25,8 +26,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		case .species:
 			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
-		default:
-			print("not implemented yet")
+		case .photos:
+			cell.update(photo: (photos[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		}
 		return cell
 	}
@@ -49,8 +50,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
 		case .species:
 			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
-		default:
-			print("not implemented yet")
+		case .photos:
+			emitter.onNext(PhotosEvents.photoClicked(id: photos[indexPath.row].id))
 		}
 	}
 	
@@ -60,8 +61,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			return families.count
 		case .species:
 			return species.count
-		default:
-			return 0
+		case .photos:
+			return photos.count
 		}
 	}
 	
@@ -71,6 +72,10 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 	
 	func setSpecies(species: [Specie]){
 		self.species = species
+	}
+	
+	func setPhotos(photos: [ButterflyPhoto]){
+		self.photos = photos
 	}
 	
 	func setShowingStep(showingStep:ShowingStep){

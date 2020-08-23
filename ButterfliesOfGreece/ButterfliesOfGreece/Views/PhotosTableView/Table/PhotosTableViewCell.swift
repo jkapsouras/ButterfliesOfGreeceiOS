@@ -21,6 +21,7 @@ class PhotosTableViewCell: UITableViewCell {
 	var emitter:PublishSubject<UiEvent>?
 	var familyId:Int?
 	var specieId:Int?
+	var photoId:Int?
 	var showingStep:ShowingStep?
 	
 	override func awakeFromNib() {
@@ -49,8 +50,20 @@ class PhotosTableViewCell: UITableViewCell {
 		self.showingStep = showingStep
 		self.emitter = emitter
 		LabelName.text = specie.name
-		familyId = specie.id
+		specieId = specie.id
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(specie.imageTitle)", in: nil, compatibleWith: nil)
+		if  ImageButterfly.image == nil{
+			ImageButterfly.image = #imageLiteral(resourceName: "default")
+		}
+		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+	}
+	
+	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+		self.showingStep = showingStep
+		self.emitter = emitter
+		LabelName.text = "fotografos: \(photo.author)"
+		photoId = photo.id
+		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.title)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
@@ -89,8 +102,10 @@ class PhotosTableViewCell: UITableViewCell {
 				emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
 			case .species:
 				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
-			default:
-				print("not implemented yet")
+			case .photos:
+				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
+			case .none:
+				print("do nothing")
 			}
 		}
 	}
