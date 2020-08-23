@@ -64,7 +64,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 		self.showingStep = showingStep
 		LabelName.text = "fotografos: \(photo.author)"
 		photoId = photo.id
-		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(photo.title)", in: nil, compatibleWith: nil)
+		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}

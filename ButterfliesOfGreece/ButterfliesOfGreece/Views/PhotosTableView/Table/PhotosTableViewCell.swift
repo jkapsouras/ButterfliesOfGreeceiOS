@@ -63,7 +63,7 @@ class PhotosTableViewCell: UITableViewCell {
 		self.emitter = emitter
 		LabelName.text = "fotografos: \(photo.author)"
 		photoId = photo.id
-		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.title)", in: nil, compatibleWith: nil)
+		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
