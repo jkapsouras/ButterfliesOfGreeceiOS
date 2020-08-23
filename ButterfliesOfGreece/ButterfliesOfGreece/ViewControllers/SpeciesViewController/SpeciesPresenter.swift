@@ -58,7 +58,9 @@ class SpeciesPresenter:BasePresenter{
 	func handleSpeciesEvents(specieEvent: SpeciesEvents){
 		switch specieEvent {
 			case .specieClicked(let specieId):
-				state.onNext(SpeciesViewStates.ToPhotos(specieId: specieId))
+				_ = navigationRepository
+				.selectSpecieId(specieId: specieId)
+				.subscribe(onNext: {_ in self.state.onNext(SpeciesViewStates.ToPhotos)})
 			case .loadSpecies(let familyId):
 				_ = Observable.zip(speciesRepository.getSelectedFamilyName(familyId: familyId).map{familyName -> HeaderState in
 					self.headerState = self.headerState.with(headerName: familyName)
@@ -91,8 +93,12 @@ class SpeciesPresenter:BasePresenter{
 					
 				})
 			case .switchViewStyleClicked:
-				headerState = headerState.with(arrange: headerState.currentArrange.changeArrange())
-				state.onNext(SpeciesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
+				_ = navigationRepository.changeViewArrange()
+					.map{arrange -> HeaderState in
+						self.headerState = self.headerState.with(arrange: arrange)
+						return self.headerState
+				}
+					.subscribe(onNext: {headerState in self.state.onNext(SpeciesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))})
 			case .searchBarClicked:
 				print("search bar clicked")
 			case .printPhotosClicked:

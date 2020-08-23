@@ -39,6 +39,8 @@ class SpeciesPresenterTests: XCTestCase {
 		let observer = scheduler.createObserver(ViewState.self)
 		
 		presenter.headerState = presenter.headerState.with(arrange: .grid, photos: nil)
+		var storage = Storage()
+		_ = storage.setViewArrange(currentArrange: .grid)
 		
 		scheduler
 			.createHotObservable([
@@ -115,8 +117,8 @@ class SpeciesPresenterTests: XCTestCase {
 			observer.events.first?.value.element is SpeciesViewStates)
 		let viewState = observer.events.first?.value.element as! SpeciesViewStates
 		switch viewState {
-			case .ToPhotos(let specieId):
-				XCTAssert(specieId == 1)//test json data
+			case .ToPhotos:
+				XCTAssert(Storage.specieId == 1)//test json data
 			default:
 				XCTFail()
 		}
