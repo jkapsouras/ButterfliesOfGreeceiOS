@@ -19,13 +19,22 @@ struct Storage {
 	private(set) static var currentArrange:ViewArrange = .list
 	static var familyId:Int?
 	static var specieId:Int?
+	static var photoId:Int?
 	
 	mutating func species(familyId:Int) -> [Specie]{
 		return families.filter{$0.id == familyId}.flatMap{$0.species}
 	}
 	
+	mutating func photos(specieId:Int) -> [ButterflyPhoto]{
+		return species(familyId: Storage.familyId!).filter{$0.id == specieId}.flatMap{$0.photos}
+	}
+	
 	mutating func getSelectedFamilyName(familyId:Int) -> String{
 		return families.first{$0.id == familyId}!.name
+	}
+	
+	mutating func getSelectedSpecieName(specieId:Int) -> String{
+		return families.first{$0.id == Storage.familyId!}!.species.first{$0.id == specieId}!.name
 	}
 	
 	mutating func setFamilyId(familyId:Int) -> Observable<Bool>{
@@ -42,6 +51,14 @@ struct Storage {
 	
 	func getSpecieId() -> Observable<Int>{
 		return Observable.from(optional: Storage.specieId!)
+	}
+	
+	mutating func setPhotoId(photoId:Int) -> Observable<Bool>{
+		return Observable.from(optional: Storage.photoId = photoId).map({ _ in return true})
+	}
+	
+	func getPhotoId() -> Observable<Int>{
+		return Observable.from(optional: Storage.photoId!)
 	}
 	
 	mutating func setViewArrange(currentArrange:ViewArrange) -> Observable<Bool>{
