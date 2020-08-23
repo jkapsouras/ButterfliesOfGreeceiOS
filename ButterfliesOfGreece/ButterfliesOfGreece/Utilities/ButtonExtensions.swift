@@ -21,9 +21,9 @@ func centerVerticallyWithPadding(padding : CGFloat) {
 	let totalHeight = imageViewSize.height + titleLabelSize.height + padding
 
 	self.imageEdgeInsets = UIEdgeInsets(
-		top: max(0, -(totalHeight - imageViewSize.height)),
+		top: max(0, -(totalHeight - imageViewSize.height)) + 24,
 		left: 0.0,
-		bottom: 0.0,
+		bottom: 16.0,
 		right: -titleLabelSize.width
 	)
 

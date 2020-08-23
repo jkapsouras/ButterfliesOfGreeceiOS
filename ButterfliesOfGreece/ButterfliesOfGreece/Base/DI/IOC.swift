@@ -26,9 +26,9 @@ struct IOC:IOCInjectable
      static func RegisterElements() -> Container {
         container=Container()
         
-//		RegisterDataSources(container: (container!))
+		RegisterDataSources(container: (container!))
         RegisterSchedulers(container: container!)
-//        RegisterUseCases(container: container!)
+        RegisterRepositories(container: container!)
         RegisterPresenters(container: container!)
         return container!
     }
@@ -39,20 +39,23 @@ struct IOC:IOCInjectable
 	}
     
      static func RegisterDataSources(container: Container) {
-//		container.autoregister(AccountManagerProtocol.self, initializer: AccountManager.init).inObjectScope(.container)
-//		container.register(AccountManagerProtocol.self) { _ in AccountManager(prefs: UserDefaults.standard)}.inObjectScope(.container)
+		container.autoregister(Storage.self, initializer: Storage.init).inObjectScope(.container)
+		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
     }
     
-//     static func RegisterUseCases(container: Container) {
-//        container.autoregister(GenericLoginUseCase<String,LoginAsync>.self, initializer: FakeLoginUseCase.init)
-//		container.autoregister(GenericTestUrlUseCase<String,TestURLAsync>.self, initializer: FakeTestUrlUseCase.init)
-//        container.autoregister(GenericSaveUrlUseCase<String,Bool>.self, initializer: SaveUrlUseCase.init)
-//    }
+     static func RegisterRepositories(container: Container) {
+		container.autoregister(FamiliesRepository.self, initializer: FamiliesRepository.init)
+		container.autoregister(SpeciesRepository.self, initializer: SpeciesRepository.init)
+		container.autoregister(PhotosRepository.self, initializer: PhotosRepository.init)
+		container.autoregister(NavigationRepository.self, initializer: NavigationRepository.init)
+		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
+    }
     
      static func RegisterPresenters(container: Container) {
         container.autoregister(MenuPresenter.self, initializer: MenuPresenter.init)
-//        container.autoregister(LoginPresenter.self, initializer: LoginPresenter.init)
-//		container.autoregister(SettingsPresenter.self, initializer: SettingsPresenter.init)
+        container.autoregister(FamiliesPresenter.self, initializer: FamiliesPresenter.init)
+		container.autoregister(SpeciesPresenter.self, initializer: SpeciesPresenter.init)
+		container.autoregister(PhotosPresenter.self, initializer: PhotosPresenter.init)
     }
     
     public static var container: Container?
