@@ -94,6 +94,7 @@
 		FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09424F245CE00335E77 /* PhotosState.swift */; };
 		FEFBA09724F2472500335E77 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09624F2472500335E77 /* PhotosPresenter.swift */; };
 		FEFBA09924F2479500335E77 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09824F2479500335E77 /* PhotosRepository.swift */; };
+		FEFBA09B24F296E600335E77 /* PhotosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +207,7 @@
 		FEFBA09424F245CE00335E77 /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
 		FEFBA09624F2472500335E77 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
 		FEFBA09824F2479500335E77 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
+		FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */,
 				FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */,
 				0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */,
+				FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */,
 			);
 			path = PresentersTests;
 			sourceTree = "<group>";
@@ -930,6 +933,7 @@
 			files = (
 				FE389B4724CF707900F47717 /* FamiliesPresenterTests.swift in Sources */,
 				0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */,
+				FEFBA09B24F296E600335E77 /* PhotosPresenterTests.swift in Sources */,
 				0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */,
 				FE861B7524E6D02E003DA5ED /* TestUserPrefs.swift in Sources */,
 				FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */,

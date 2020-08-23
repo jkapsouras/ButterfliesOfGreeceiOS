@@ -38,6 +38,7 @@ extension HeaderState{
 				headerName: headerName ?? self.headerName
 			)
 		}
+		
 		let tmpPhotos = statePhotos + photos
 		return HeaderState(
 			currentArrange: arrange ?? self.currentArrange,
