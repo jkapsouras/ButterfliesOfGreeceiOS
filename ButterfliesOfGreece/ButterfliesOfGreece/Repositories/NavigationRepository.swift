@@ -32,6 +32,14 @@ struct NavigationRepository {
 		return storage.getSpecieId()
 	}
 	
+	mutating func selectPhotoId(photoId:Int) -> Observable<Bool>{
+		return storage.setPhotoId(photoId: photoId)
+	}
+	
+	func getPhotoId() -> Observable<Int>{
+		return storage.getPhotoId()
+	}
+	
 	mutating func setViewArrange(arrange:ViewArrange) -> Observable<Bool>{
 		return storage.setViewArrange(currentArrange:arrange)
 	}
