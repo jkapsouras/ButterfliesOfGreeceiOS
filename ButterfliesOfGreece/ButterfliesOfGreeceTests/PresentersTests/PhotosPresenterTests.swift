@@ -1,8 +1,8 @@
 //
-//  SpeciesPresenterTests.swift
+//  PhotosPresenterTests.swift
 //  ButterfliesOfGreeceTests
 //
-//  Created by Apprecot on 19/8/20.
+//  Created by Ioannis Kapsouras on 23/8/20.
 //  Copyright © 2020 Ioannis Kapsouras. All rights reserved.
 //
 
@@ -15,8 +15,8 @@ import RxCocoa
 
 @testable import ButterfliesOfGreece
 
-class SpeciesPresenterTests: XCTestCase {
-	var presenter: SpeciesPresenter!
+class PhotosPresenterTests: XCTestCase {
+	var presenter: PhotosPresenter!
 	var sub:PublishSubject<UiEvent>=PublishSubject<UiEvent>()
 	var scheduler:TestScheduler!
 	var disposeBag:DisposeBag!
@@ -26,7 +26,7 @@ class SpeciesPresenterTests: XCTestCase {
 		super.setUp()
 		self.scheduler = TestScheduler(initialClock: 0)
 		let mockCachManager = MockCacheManager(userDefaults: MockUserDefaults(numberOfPhotos: 0))
-		presenter = SpeciesPresenter(mainThread: MockMainThreadScheduler(scheduler: self.scheduler),backgroundThread: MockBackgroundThreadScheduler(scheduler: self.scheduler), speciesRepository: SpeciesRepository(storage: Storage()), navigationRepository: NavigationRepository(storage: Storage()), photosToPrintRepository: PhotosToPrintRepository(cacheManager: mockCachManager, storage: Storage()))
+		presenter = PhotosPresenter(mainThread: MockMainThreadScheduler(scheduler: self.scheduler),backgroundThread: MockBackgroundThreadScheduler(scheduler: self.scheduler), photosRepository: PhotosRepository(storage: Storage()), navigationRepository: NavigationRepository(storage: Storage()), photosToPrintRepository: PhotosToPrintRepository(cacheManager: mockCachManager, storage: Storage()))
 		self.disposeBag = DisposeBag()
 	}
 	
@@ -39,8 +39,6 @@ class SpeciesPresenterTests: XCTestCase {
 		let observer = scheduler.createObserver(ViewState.self)
 		
 		presenter.headerState = presenter.headerState.with(arrange: .grid, photos: nil)
-		var storage = Storage()
-		_ = storage.setViewArrange(currentArrange: .grid)
 		
 		scheduler
 			.createHotObservable([
@@ -56,8 +54,8 @@ class SpeciesPresenterTests: XCTestCase {
 		
 		XCTAssert(!(observer.events.first?.value.element?.isTransition ?? false))
 		XCTAssert(observer.events.first?.value.element != nil &&
-			observer.events.first?.value.element is SpeciesViewStates)
-		let viewState = observer.events.first?.value.element as! SpeciesViewStates
+			observer.events.first?.value.element is PhotosViewStates)
+		let viewState = observer.events.first?.value.element as! PhotosViewStates
 		switch viewState {
 			case .SwitchViewStyle(let currentArrange):
 				XCTAssert(currentArrange == .list)
@@ -66,13 +64,17 @@ class SpeciesPresenterTests: XCTestCase {
 		}
 	}
 	
-	func testShouldGetSpeciesData()
+	func testShouldGetPhotosData()
 	{
 		let observer = scheduler.createObserver(ViewState.self)
 		
+		var storage = Storage()
+		
+		_ = storage.setFamilyId(familyId: 0)
+		
 		scheduler
 			.createHotObservable([
-				Recorded.next(200, (SpeciesEvents.loadSpecies(familyId: 0)) as UiEvent)
+				Recorded.next(200, (PhotosEvents.loadPhotos(specieId: 0)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag)
@@ -84,17 +86,18 @@ class SpeciesPresenterTests: XCTestCase {
 		
 		XCTAssert(!(observer.events[1].value.element?.isTransition ?? false))
 		XCTAssert(observer.events[1].value.element != nil &&
-			observer.events[1].value.element is SpeciesViewStates)
-		let viewState = observer.events[1].value.element as! SpeciesViewStates
+			observer.events[1].value.element is PhotosViewStates)
+		let viewState = observer.events[1].value.element as! PhotosViewStates
 		switch viewState {
-			case .ShowSpecies(let species):
-				XCTAssert(species.count == 9)//test json data
+			case .ShowPhotos(let photos):
+				print("photos.count = \(photos.count)")
+				XCTAssert(photos.count == 2)//test json data
 			default:
 				XCTFail()
 		}
 	}
 	
-	func testShouldNavigateToPhotosOnSpecieClick()
+	func testShouldNavigateToPhotoOnPhotoClick()
 	{
 		let observer = scheduler.createObserver(ViewState.self)
 		
@@ -102,7 +105,7 @@ class SpeciesPresenterTests: XCTestCase {
 		
 		scheduler
 			.createHotObservable([
-				Recorded.next(200, (SpeciesEvents.specieClicked(id: 1)) as UiEvent)
+				Recorded.next(200, (PhotosEvents.photoClicked(id: 1)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag)
@@ -114,11 +117,11 @@ class SpeciesPresenterTests: XCTestCase {
 		
 		XCTAssert(observer.events.first?.value.element?.isTransition ?? false)
 		XCTAssert(observer.events.first?.value.element != nil &&
-			observer.events.first?.value.element is SpeciesViewStates)
-		let viewState = observer.events.first?.value.element as! SpeciesViewStates
+			observer.events.first?.value.element is PhotosViewStates)
+		let viewState = observer.events.first?.value.element as! PhotosViewStates
 		switch viewState {
-			case .ToPhotos:
-				XCTAssert(Storage.specieId == 1)//test json data
+			case .ToPhoto(let photoId):
+				XCTAssert(photoId == 1)//test json data
 			default:
 				XCTFail()
 		}
@@ -154,9 +157,9 @@ class SpeciesPresenterTests: XCTestCase {
 			print("not interested")
 		}
 		XCTAssert(observer.events[1].value.element != nil &&
-			observer.events[1].value.element is SpeciesViewStates)
-		let speciesViewState = observer.events[1].value.element as! SpeciesViewStates
-		switch speciesViewState {
+			observer.events[1].value.element is PhotosViewStates)
+		let photosViewState = observer.events[1].value.element as! PhotosViewStates
+		switch photosViewState {
 			case .SwitchViewStyle(let arrange):
 				XCTAssert(arrange == .list)//test json data
 			default:
@@ -167,22 +170,17 @@ class SpeciesPresenterTests: XCTestCase {
 	func testShouldGetCorrectNumberOfAddedPhotos()
 	{
 		let observer = scheduler.createObserver(ViewState.self)
-		let photosPerSpecieInFamily = [2,4]
+		let addedPhotos = [1,1]
 
 		presenter.headerState = presenter.headerState.with(arrange: .grid, photos: nil)
+		var storage = Storage()
+		_ = storage.setFamilyId(familyId: 0)
 
 		scheduler
 			.createHotObservable([
-				Recorded.next(100, (SpeciesEvents.loadSpecies(familyId: 0)) as UiEvent),
-				Recorded.next(200, (SpeciesEvents.addPhotosForPrintClicked(specieId: 0)) as UiEvent),
-				Recorded.next(300, (SpeciesEvents.addPhotosForPrintClicked(specieId: 1)) as UiEvent)
-//				Recorded.next(400, (FamiliesEvents.addPhotosForPrintClicked(familyId: 2)) as UiEvent),
-//				Recorded.next(500, (FamiliesEvents.addPhotosForPrintClicked(familyId: 3)) as UiEvent),
-//				Recorded.next(600, (FamiliesEvents.addPhotosForPrintClicked(familyId: 4)) as UiEvent),
-//				Recorded.next(700, (FamiliesEvents.addPhotosForPrintClicked(familyId: 5)) as UiEvent),
-//				Recorded.next(800, (FamiliesEvents.addPhotosForPrintClicked(familyId: 6)) as UiEvent),
-//				Recorded.next(900, (FamiliesEvents.addPhotosForPrintClicked(familyId: 7)) as UiEvent),
-//				Recorded.next(1000, (FamiliesEvents.addPhotosForPrintClicked(familyId: 8)) as UiEvent)
+				Recorded.next(100, (PhotosEvents.loadPhotos(specieId: 0)) as UiEvent),
+				Recorded.next(200, (PhotosEvents.addPhotoForPrintClicked(photoId: 0)) as UiEvent),
+				Recorded.next(300, (PhotosEvents.addPhotoForPrintClicked(photoId: 1)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag)
@@ -206,7 +204,7 @@ class SpeciesPresenterTests: XCTestCase {
 				switch viewState {
 					case .updateFolderIcon(let numberOfPhotos):
 						print("Number of photos \(numberOfPhotos)")
-						sum += photosPerSpecieInFamily[index]
+						sum += addedPhotos[index]
 						print("sum: \(sum)")
 						XCTAssert(numberOfPhotos == sum)
 					default:
@@ -216,6 +214,6 @@ class SpeciesPresenterTests: XCTestCase {
 			}
 		})
 		print("sum = \(sum)")
-		print("reduce =  \(photosPerSpecieInFamily.reduce(0, +))")
+		print("reduce =  \(addedPhotos.reduce(0, +))")
 	}
 }

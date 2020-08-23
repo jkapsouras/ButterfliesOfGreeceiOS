@@ -120,4 +120,12 @@ class PhotosCollectionView: UIView {
 		CollectionPhotos.delegate = source
 		CollectionPhotos.reloadData()
 	}
+	
+	func ShowPhotos(photos: [ButterflyPhoto]){
+		source.setPhotos(photos: photos)
+		source.setShowingStep(showingStep: .photos)
+		CollectionPhotos.dataSource = source
+		CollectionPhotos.delegate = source
+		CollectionPhotos.reloadData()
+	}
 }

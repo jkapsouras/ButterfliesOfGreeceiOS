@@ -46,6 +46,7 @@ struct IOC:IOCInjectable
      static func RegisterRepositories(container: Container) {
 		container.autoregister(FamiliesRepository.self, initializer: FamiliesRepository.init)
 		container.autoregister(SpeciesRepository.self, initializer: SpeciesRepository.init)
+		container.autoregister(PhotosRepository.self, initializer: PhotosRepository.init)
 		container.autoregister(NavigationRepository.self, initializer: NavigationRepository.init)
 		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
     }
@@ -54,6 +55,7 @@ struct IOC:IOCInjectable
         container.autoregister(MenuPresenter.self, initializer: MenuPresenter.init)
         container.autoregister(FamiliesPresenter.self, initializer: FamiliesPresenter.init)
 		container.autoregister(SpeciesPresenter.self, initializer: SpeciesPresenter.init)
+		container.autoregister(PhotosPresenter.self, initializer: PhotosPresenter.init)
     }
     
     public static var container: Container?

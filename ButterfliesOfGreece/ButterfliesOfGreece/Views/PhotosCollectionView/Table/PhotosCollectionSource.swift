@@ -19,6 +19,7 @@ enum ShowingStep{
 class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate{
 	var families:[Family] = []
 	var species:[Specie] = []
+	var photos:[ButterflyPhoto] = []
 	var showingStep = ShowingStep.families
 	let emitter = PublishSubject<UiEvent>()
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
@@ -29,20 +30,20 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 			return families.count
 		case .species:
 			return species.count
-		default:
-			return 0
+		case .photos:
+			return photos.count
 		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.Key, for: indexPath) as! PhotosCollectionViewCell
 		switch showingStep {
-			case .families:
+		case .families:
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
-			case .species:
+		case .species:
 			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
-			default:
-			print("not implemented yet")
+		case .photos:
+			cell.update(photo: (photos[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		}
 		
 		return cell
@@ -64,8 +65,10 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 		switch showingStep {
 		case .families:
 			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
-		default:
-			print("not implemented yet")
+		case .species:
+			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
+		case .photos:
+			emitter.onNext(PhotosEvents.photoClicked(id: photos[indexPath.row].id))
 		}
 	}
 	
@@ -75,6 +78,10 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 	
 	func setSpecies(species: [Specie]){
 		self.species = species
+	}
+	
+	func setPhotos(photos: [ButterflyPhoto]){
+		self.photos = photos
 	}
 	
 	func setShowingStep(showingStep:ShowingStep){

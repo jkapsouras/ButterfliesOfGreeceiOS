@@ -10,7 +10,7 @@ import Foundation
 
 enum SpeciesViewStates:ViewState{
 	case SwitchViewStyle(currentArrange:ViewArrange)
-	case ToPhotos(specieId:Int)
+	case ToPhotos
 	case ShowSpecies(species:[Specie])
 	
 	var isTransition: Bool{
@@ -21,6 +21,25 @@ enum SpeciesViewStates:ViewState{
 				 .ShowSpecies:
 				return false
 		}
+	}	
+}
+
+extension SpeciesViewStates{
+	var toStoryboardName:String?{
+		switch self {
+		case .ToPhotos:
+			return "Photos"
+		default:
+			return nil
+		}
 	}
 	
+	var toViewControllerName:String?{
+		switch self {
+		case .ToPhotos:
+			return "PhotosViewController"
+		default:
+			return nil
+		}
+	}
 }

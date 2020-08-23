@@ -32,3 +32,23 @@ enum MenuViewState:ViewState {
 		}
 	}
 }
+
+extension MenuViewState{
+	var toStoryboardName:String?{
+		switch self {
+		case .toField:
+			return "Families"
+		default:
+			return nil
+		}
+	}
+	
+	var toViewControllerName:String?{
+		switch self {
+		case .toField:
+			return "FamiliesViewController"
+		default:
+			return nil
+		}
+	}
+}

@@ -15,7 +15,6 @@ class SpeciesViewController: BaseController<SpeciesPresenter> {
 	@IBOutlet weak var ViewHeader: HeaderView!
 	@IBOutlet weak var TablePhotos: PhotosTableView!
 	@IBOutlet weak var CollectionPhotos: PhotosCollectionView!
-	var familyId:Int?
 	
      override func viewDidLoad() {
 		   super.viewDidLoad()

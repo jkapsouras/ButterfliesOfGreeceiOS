@@ -22,18 +22,19 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 	var emitter:PublishSubject<UiEvent>?
 	var familyId:Int?
 	var specieId:Int?
+	var photoId:Int?
 	var showingStep:ShowingStep?
 	
-    override func awakeFromNib() {
-        super.awakeFromNib()
+	override func awakeFromNib() {
+		super.awakeFromNib()
 		prepareView()
-    }
+	}
 	
 	override func draw(_ rect: CGRect) {
 		ImageButterfly.layer.cornerRadius = ImageButterfly.bounds.width/2
 		ViewBack.layer.cornerRadius = 16
 	}
-
+	
 	func update(family: Family, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.emitter = emitter
 		self.showingStep = showingStep
@@ -44,7 +45,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
- 	}
+	}
 	
 	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.emitter = emitter
@@ -52,6 +53,18 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 		LabelName.text = specie.name
 		specieId = specie.id
 		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(specie.imageTitle)", in: nil, compatibleWith: nil)
+		if  ImageButterfly.image == nil{
+			ImageButterfly.image = #imageLiteral(resourceName: "default")
+		}
+		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+	}
+	
+	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+		self.emitter = emitter
+		self.showingStep = showingStep
+		LabelName.text = "fotografos: \(photo.author)"
+		photoId = photo.id
+		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
@@ -87,11 +100,13 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 	@objc func addTapped(_ sender: UITapGestureRecognizer) {
 		if let emitter = emitter{
 			switch showingStep {
-				case .families:
+			case .families:
 				emitter.onNext(FamiliesEvents.addPhotosForPrintClicked(familyId: familyId ?? -1))
-				case .species:
-					emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
-				default:
+			case .species:
+				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
+			case .photos:
+				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
+			case .none:
 				print("not implemented yet")
 			}
 			
