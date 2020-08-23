@@ -91,6 +91,7 @@
 		FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */; };
 		FEFBA09024F244A200335E77 /* PhotosEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA08F24F244A200335E77 /* PhotosEvents.swift */; };
 		FEFBA09324F244E100335E77 /* PhotoViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09224F244E100335E77 /* PhotoViewStates.swift */; };
+		FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09424F245CE00335E77 /* PhotosState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,7 @@
 		FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoArraysExtensions.swift; sourceTree = "<group>"; };
 		FEFBA08F24F244A200335E77 /* PhotosEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEvents.swift; sourceTree = "<group>"; };
 		FEFBA09224F244E100335E77 /* PhotoViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewStates.swift; sourceTree = "<group>"; };
+		FEFBA09424F245CE00335E77 /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -646,6 +648,7 @@
 			children = (
 				FEFBA09124F244CE00335E77 /* ViewStates */,
 				FEFBA08E24F2449100335E77 /* UiEvents */,
+				FEFBA09424F245CE00335E77 /* PhotosState.swift */,
 			);
 			path = PhotosViewController;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 			files = (
 				FE1341A624E326880076EF14 /* PhotosCollectionView.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
+				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
 				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
