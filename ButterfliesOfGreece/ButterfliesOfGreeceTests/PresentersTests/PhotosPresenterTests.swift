@@ -181,13 +181,6 @@ class PhotosPresenterTests: XCTestCase {
 				Recorded.next(100, (PhotosEvents.loadPhotos(specieId: 0)) as UiEvent),
 				Recorded.next(200, (PhotosEvents.addPhotoForPrintClicked(photoId: 0)) as UiEvent),
 				Recorded.next(300, (PhotosEvents.addPhotoForPrintClicked(photoId: 1)) as UiEvent)
-//				Recorded.next(400, (FamiliesEvents.addPhotosForPrintClicked(familyId: 2)) as UiEvent),
-//				Recorded.next(500, (FamiliesEvents.addPhotosForPrintClicked(familyId: 3)) as UiEvent),
-//				Recorded.next(600, (FamiliesEvents.addPhotosForPrintClicked(familyId: 4)) as UiEvent),
-//				Recorded.next(700, (FamiliesEvents.addPhotosForPrintClicked(familyId: 5)) as UiEvent),
-//				Recorded.next(800, (FamiliesEvents.addPhotosForPrintClicked(familyId: 6)) as UiEvent),
-//				Recorded.next(900, (FamiliesEvents.addPhotosForPrintClicked(familyId: 7)) as UiEvent),
-//				Recorded.next(1000, (FamiliesEvents.addPhotosForPrintClicked(familyId: 8)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag)

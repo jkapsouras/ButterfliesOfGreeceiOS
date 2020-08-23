@@ -23,3 +23,23 @@ enum SpeciesViewStates:ViewState{
 		}
 	}	
 }
+
+extension SpeciesViewStates{
+	var toStoryboardName:String?{
+		switch self {
+		case .ToPhotos:
+			return "Photos"
+		default:
+			return nil
+		}
+	}
+	
+	var toViewControllerName:String?{
+		switch self {
+		case .ToPhotos:
+			return "PhotosViewController"
+		default:
+			return nil
+		}
+	}
+}

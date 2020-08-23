@@ -80,19 +80,11 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		}
 		switch viewState {
 		case let menuTransition as MenuViewState:
-			switch menuTransition{
-			case .toField:
 				navigationManager!.MenuTransition(menuTransition: menuTransition)
-			default:
-				print("no transition")
-			}
 		case let familiesTransition as FamiliesViewStates:
-			switch familiesTransition {
-			case .ToSpecies:
-				navigationManager!.FamilyTransition()
-			default:
-				print("no transition")
-			}
+			navigationManager!.FamilyTransition(familyTransition: familiesTransition)
+			case let speciesTransition as SpeciesViewStates:
+				navigationManager!.SpecieTransition(specieTransition: speciesTransition)
 		default:
 			print("default")
 		}

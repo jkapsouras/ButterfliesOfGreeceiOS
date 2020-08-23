@@ -12,44 +12,49 @@ import UIKit
 struct NavigationManager {
 	let navigationController: NavigationViewController
 	
-	let speciesViewController = "SpeciesViewController"
-	let speciesStoryboard = "Species"
-	
 	init(controller:NavigationViewController){
 		navigationController=controller
 	}
 	
-	let menuTransitionsControllers: [MenuViewState:String] = [
-		.toField: "FamiliesViewController",
-		.toIntroduction: "not implemented yet",
-		.toAbout: "not implemented yet",
-		.toContribute: "not implemented yet",
-		.toEndangered: "not implemented yet",
-		.toLegal: "not implemented yet",
-		.toOfflineRecognition: "not implemented yet",
-		.toOnlineRecognition: "not implemented yet"]
-	
-	let menuTransitionsStoryboards: [MenuViewState:String] = [
-		.toField: "Families",
-		.toIntroduction: "not implemented yet",
-		.toAbout: "not implemented yet",
-		.toContribute: "not implemented yet",
-		.toEndangered: "not implemented yet",
-		.toLegal: "not implemented yet",
-		.toOfflineRecognition: "not implemented yet",
-		.toOnlineRecognition: "not implemented yet"]
-	
 	func MenuTransition(menuTransition: MenuViewState) {
-		guard let currentStoryboardName = menuTransitionsStoryboards[menuTransition] else{
+		guard let currentStoryboardName = menuTransition.toStoryboardName else{
 			print("Storyboard name not found")
 			return
 		}
-		guard let currentControllerName = menuTransitionsControllers[menuTransition] else{
+		guard let currentControllerName = menuTransition.toViewControllerName else{
+			print("Controller name not found")
+			return 
+		}
+		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
+	}
+	
+	func FamilyTransition(familyTransition: FamiliesViewStates) {
+		guard let currentStoryboardName = familyTransition.toStoryboardName else{
+			print("Storyboard name not found")
+			return
+		}
+		guard let currentControllerName = familyTransition.toViewControllerName else{
 			print("Controller name not found")
 			return
 		}
-		let storyboard = UIStoryboard.init(name: currentStoryboardName, bundle: nil)
-		let vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
+	}
+	
+	func SpecieTransition(specieTransition: SpeciesViewStates) {
+		guard let currentStoryboardName = specieTransition.toStoryboardName else{
+			print("Storyboard name not found")
+			return
+		}
+		guard let currentControllerName = specieTransition.toViewControllerName else{
+			print("Controller name not found")
+			return
+		}
+		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
+	}
+	
+	func navigateToController(storyboardName:String, controllerName:String){
+		let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: controllerName)
 		let vcType = type(of: vc)
 		let vcExisits = navigationController.viewControllers.contains{$0.isKind(of: vcType)}
 		if(vcExisits){
@@ -57,21 +62,6 @@ struct NavigationManager {
 		}
 		else{
 			navigationController.pushViewController(vc, animated: true)
-		}
-	}
-	
-	func FamilyTransition() {
-		let storyboard = UIStoryboard.init(name: speciesStoryboard, bundle: nil)
-		let vc = storyboard.instantiateViewController(identifier: speciesViewController)
-		let vcType = type(of: vc)
-		let vcExisits = navigationController.viewControllers.contains{$0.isKind(of: vcType)}
-		if(vcExisits){
-			let speciesVC = vc as! SpeciesViewController
-			navigationController.popToViewController(speciesVC, animated: true)
-		}
-		else{
-			let speciesVC = vc as! SpeciesViewController
-			navigationController.pushViewController(speciesVC, animated: true)
 		}
 	}
 }

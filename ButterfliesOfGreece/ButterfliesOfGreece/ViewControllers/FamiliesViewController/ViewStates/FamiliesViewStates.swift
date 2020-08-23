@@ -23,3 +23,23 @@ enum FamiliesViewStates:ViewState{
 		}
 	}
 }
+
+extension FamiliesViewStates{
+	var toStoryboardName:String?{
+		switch self {
+		case .ToSpecies:
+			return "Species"
+		default:
+			return nil
+		}
+	}
+	
+	var toViewControllerName:String?{
+		switch self {
+		case .ToSpecies:
+			return "SpeciesViewController"
+		default:
+			return nil
+		}
+	}
+}

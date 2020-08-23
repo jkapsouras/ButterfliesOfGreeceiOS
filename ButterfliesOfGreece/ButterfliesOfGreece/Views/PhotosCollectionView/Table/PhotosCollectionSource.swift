@@ -37,11 +37,11 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.Key, for: indexPath) as! PhotosCollectionViewCell
 		switch showingStep {
-			case .families:
+		case .families:
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
-			case .species:
+		case .species:
 			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
-			default:
+		default:
 			print("not implemented yet")
 		}
 		
@@ -64,6 +64,8 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 		switch showingStep {
 		case .families:
 			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
+		case .species:
+			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
 		default:
 			print("not implemented yet")
 		}

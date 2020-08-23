@@ -47,6 +47,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 		switch showingStep {
 		case .families:
 			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
+		case .species:
+			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
 		default:
 			print("not implemented yet")
 		}

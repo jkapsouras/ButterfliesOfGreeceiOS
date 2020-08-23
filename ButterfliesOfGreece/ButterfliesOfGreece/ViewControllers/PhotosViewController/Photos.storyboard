@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOS-2U-D8b">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View Controller-->
+        <scene sceneID="33e-4v-kno">
+            <objects>
+                <viewController storyboardIdentifier="PhotosViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FOS-2U-D8b" customClass="PhotosViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ukv-l6-lgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-jI-Mlm" customClass="PhotosCollectionView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BZ-JO-9gY" customClass="HeaderView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="57" width="414" height="72"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Jmn-st-ai6"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="253-sO-QJP" customClass="PhotosTableView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YvM-gd-3na" firstAttribute="trailing" secondItem="1BZ-JO-9gY" secondAttribute="trailing" id="27e-tx-Z2n"/>
+                            <constraint firstItem="1BZ-JO-9gY" firstAttribute="top" secondItem="YvM-gd-3na" secondAttribute="top" constant="13" id="7ms-j0-pr8"/>
+                            <constraint firstItem="253-sO-QJP" firstAttribute="trailing" secondItem="1BZ-JO-9gY" secondAttribute="trailing" id="AD6-2H-tcm"/>
+                            <constraint firstItem="rCj-jI-Mlm" firstAttribute="bottom" secondItem="253-sO-QJP" secondAttribute="bottom" id="C1b-qS-Rgm"/>
+                            <constraint firstItem="rCj-jI-Mlm" firstAttribute="top" secondItem="253-sO-QJP" secondAttribute="top" id="H5h-s6-zEt"/>
+                            <constraint firstItem="253-sO-QJP" firstAttribute="leading" secondItem="1BZ-JO-9gY" secondAttribute="leading" id="TfI-gB-ZXV"/>
+                            <constraint firstItem="253-sO-QJP" firstAttribute="top" secondItem="1BZ-JO-9gY" secondAttribute="bottom" id="UdG-FF-Wy9"/>
+                            <constraint firstItem="rCj-jI-Mlm" firstAttribute="trailing" secondItem="253-sO-QJP" secondAttribute="trailing" id="bm7-R4-h4g"/>
+                            <constraint firstItem="rCj-jI-Mlm" firstAttribute="leading" secondItem="253-sO-QJP" secondAttribute="leading" id="epM-2w-Pez"/>
+                            <constraint firstItem="1BZ-JO-9gY" firstAttribute="leading" secondItem="YvM-gd-3na" secondAttribute="leading" id="wbY-tH-oIo"/>
+                            <constraint firstItem="YvM-gd-3na" firstAttribute="bottom" secondItem="253-sO-QJP" secondAttribute="bottom" id="ygr-eg-qiq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YvM-gd-3na"/>
+                    </view>
+                    <connections>
+                        <outlet property="ViewHeader" destination="1BZ-JO-9gY" id="aqN-vN-QNQ"/>
+                        <outlet property="ViewPhotosCollection" destination="rCj-jI-Mlm" id="jCt-UL-wAx"/>
+                        <outlet property="ViewPhotosTable" destination="253-sO-QJP" id="Jax-ZF-ZFV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5x-RU-NfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>

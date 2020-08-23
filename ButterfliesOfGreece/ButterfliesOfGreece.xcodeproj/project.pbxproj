@@ -95,6 +95,8 @@
 		FEFBA09724F2472500335E77 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09624F2472500335E77 /* PhotosPresenter.swift */; };
 		FEFBA09924F2479500335E77 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09824F2479500335E77 /* PhotosRepository.swift */; };
 		FEFBA09B24F296E600335E77 /* PhotosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */; };
+		FEFBA09F24F29B4700335E77 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09E24F29B4700335E77 /* PhotosViewController.swift */; };
+		FEFBA0A124F29B5F00335E77 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFBA0A024F29B5F00335E77 /* Photos.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +210,8 @@
 		FEFBA09624F2472500335E77 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
 		FEFBA09824F2479500335E77 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
 		FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenterTests.swift; sourceTree = "<group>"; };
+		FEFBA09E24F29B4700335E77 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		FEFBA0A024F29B5F00335E77 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -654,10 +658,13 @@
 		FEFBA08D24F2445900335E77 /* PhotosViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FEFBA0A224F29C7A00335E77 /* Components */,
 				FEFBA09124F244CE00335E77 /* ViewStates */,
 				FEFBA08E24F2449100335E77 /* UiEvents */,
 				FEFBA09424F245CE00335E77 /* PhotosState.swift */,
 				FEFBA09624F2472500335E77 /* PhotosPresenter.swift */,
+				FEFBA09E24F29B4700335E77 /* PhotosViewController.swift */,
+				FEFBA0A024F29B5F00335E77 /* Photos.storyboard */,
 			);
 			path = PhotosViewController;
 			sourceTree = "<group>";
@@ -676,6 +683,13 @@
 				FEFBA09224F244E100335E77 /* PhotoViewStates.swift */,
 			);
 			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FEFBA0A224F29C7A00335E77 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -776,6 +790,7 @@
 				FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
 				0A7351DE24EE681100E2712D /* Species.storyboard in Resources */,
+				FEFBA0A124F29B5F00335E77 /* Photos.storyboard in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
 				FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */,
 			);
@@ -860,6 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE1341A624E326880076EF14 /* PhotosCollectionView.swift in Sources */,
+				FEFBA09F24F29B4700335E77 /* PhotosViewController.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
