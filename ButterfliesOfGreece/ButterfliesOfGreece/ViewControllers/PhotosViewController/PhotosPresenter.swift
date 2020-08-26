@@ -24,7 +24,7 @@ class PhotosPresenter:BasePresenter{
 		self.photosRepository = photosRepository
 		self.photosToPrintRepository = photosToPrintRepository
 		self.navigationRepository = navigationRepository
-		photosState = PhotosState(photos: [ButterflyPhoto]())
+		photosState = PhotosState(photos: [ButterflyPhoto](), indexOfSelectedPhoto: -1)
 		headerState = HeaderState(currentArrange: .grid, photosToPrint: nil, headerName: "Photos")
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}

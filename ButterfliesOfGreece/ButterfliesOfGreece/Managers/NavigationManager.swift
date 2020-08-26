@@ -52,6 +52,20 @@ struct NavigationManager {
 		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
 	}
 	
+	func PhotosTransition(photosTransitions: PhotosViewStates) {
+		guard let currentStoryboardName = photosTransitions.toStoryboardName else{ 
+			print("Storyboard name not found")
+			return
+		}
+		guard let currentControllerName = photosTransitions.toViewControllerName else{
+			print("Controller name not found")
+			return
+		}
+		let storyboard = UIStoryboard.init(name: currentStoryboardName, bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		navigationController.present(vc, animated: true, completion: nil)
+	}
+	
 	func navigateToController(storyboardName:String, controllerName:String){
 		let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: controllerName)
