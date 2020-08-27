@@ -9,7 +9,7 @@
 import Foundation
 
 enum ModalViewStates:ViewState{
-	case ShowPhotosStartingWith(index:Int, photos:[ButterflyPhoto])
+	case ShowPhotosStartingWith(index:Int, photos:[String])
 	
 	var isTransition: Bool{
 		switch self {

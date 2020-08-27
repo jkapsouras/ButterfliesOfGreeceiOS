@@ -50,7 +50,9 @@ class PhotosPresenter:BasePresenter{
 	func handlePhotosEvents(photosEvent: PhotosEvents){
 		switch photosEvent {
 			case .photoClicked(let photoId):
-				state.onNext(PhotosViewStates.ToPhoto(photoId: photoId))
+				_ = navigationRepository
+				.selectPhotoId(photoId: photoId)
+				.subscribe(onNext: {_ in self.state.onNext(PhotosViewStates.ToPhoto(photoId: photoId))})
 			case .loadPhotos(let specieId):
 				_ = Observable.zip(photosRepository.getSelectedSpecieName(specieId: specieId).map{specieName -> HeaderState in
 					self.headerState = self.headerState.with(headerName: specieName)

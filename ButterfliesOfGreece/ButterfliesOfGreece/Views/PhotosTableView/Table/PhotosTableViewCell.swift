@@ -61,7 +61,7 @@ class PhotosTableViewCell: UITableViewCell {
 	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.showingStep = showingStep
 		self.emitter = emitter
-		LabelName.text = "fotografos: \(photo.author)"
+		LabelName.text = "\(Translations.Photographer): \(photo.author)"
 		photoId = photo.id
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{

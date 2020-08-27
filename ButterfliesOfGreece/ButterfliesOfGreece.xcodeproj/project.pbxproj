@@ -97,6 +97,8 @@
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
+		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
+		FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */; };
 		FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */; };
 		FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */; };
 		FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */; };
@@ -223,6 +225,8 @@
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
+		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPhotoComponent.swift; sourceTree = "<group>"; };
 		FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoArraysExtensions.swift; sourceTree = "<group>"; };
@@ -539,6 +543,7 @@
 		FE85F65424F2E71400414631 /* ModalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FEE1D6E324F7851E000C0A15 /* Components */,
 				FEA3D15024F6FE32004B7F7A /* ViewStates */,
 				FEA3D14D24F6FE00004B7F7A /* UiEvents */,
 				FE85F65524F2E73C00414631 /* ModalPhoto.storyboard */,
@@ -688,6 +693,7 @@
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
 				FEB3520F24CB19620040313D /* BaseViewController.swift */,
 				FEB3521124CB199C0040313D /* UiComponent.swift */,
+				FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -698,6 +704,14 @@
 				FEB3520724CB13ED0040313D /* IOC.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		FEE1D6E324F7851E000C0A15 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FEEEEEDB24D6EF7100C9655B /* NavigationViewController */ = {
@@ -971,6 +985,7 @@
 				FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */,
 				FEA3D15424F6FF9D004B7F7A /* ModalPresenter.swift in Sources */,
 				FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */,
+				FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */,
 				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
 				0A25982F24EDBD55003893FA /* SpeciesViewStates.swift in Sources */,
 				0A25983124EDBDDB003893FA /* SpeciesRepository.swift in Sources */,
@@ -982,6 +997,7 @@
 				FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */,
 				FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */,
 				FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */,
+				FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */,
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,

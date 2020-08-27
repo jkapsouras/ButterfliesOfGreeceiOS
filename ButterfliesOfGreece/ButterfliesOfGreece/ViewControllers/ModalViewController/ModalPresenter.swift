@@ -47,7 +47,7 @@ class ModalPresenter:BasePresenter{
 				self.photosState = self.photosState.with(photos: photos, photoId: photoId)
 				return self.photosState}
 				.subscribe(onNext: {data in
-					self.state.onNext(ModalViewStates.ShowPhotosStartingWith(index: data.indexOfSelectedPhoto, photos: data.photos))})
+					self.state.onNext(ModalViewStates.ShowPhotosStartingWith(index: data.indexOfSelectedPhoto, photos: data.photos.compactMap{$0.source}))})
 		}
 	}
 }

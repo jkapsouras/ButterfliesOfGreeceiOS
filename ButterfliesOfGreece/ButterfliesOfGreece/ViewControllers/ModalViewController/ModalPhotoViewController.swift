@@ -26,13 +26,18 @@ class ModalPhotoViewController: UIViewController {
 		view.backgroundColor = Constants.Colors.field(darkMode: false).color
     }
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		ImagePhoto.image = UIImage(named: photoName ?? "default", in: nil, compatibleWith: nil)
+	}
+	
 	override func viewWillLayoutSubviews() {
 	  super.viewWillLayoutSubviews()
 		if let zoomImage = ImagePhoto.image {
 		  updateMinZoomScaleForSize(zoomImage.size)
 	  }
 	}
-    
+	
 	func updateMinZoomScaleForSize(_ imageSize: CGSize) {
 	  let widthScale = view.frame.width / imageSize.width
 	  let heightScale = view.frame.height / imageSize.height
