@@ -79,7 +79,7 @@ struct Storage {
 	
 	mutating func searchSpeciesBy(term:String) -> [Specie]{
 		return getAllSpecies().filter{specie in
-			specie.name.contains(term.lowercased())}
+			specie.name.lowercased().contains(term.lowercased())}
 	}
 }
 

@@ -87,7 +87,7 @@ class SpeciesPresenterTests: XCTestCase {
 			observer.events[1].value.element is SpeciesViewStates)
 		let viewState = observer.events[1].value.element as! SpeciesViewStates
 		switch viewState {
-			case .ShowSpecies(let species):
+			case .ShowSpecies(let species, _):
 				XCTAssert(species.count == 9)//test json data
 			default:
 				XCTFail()

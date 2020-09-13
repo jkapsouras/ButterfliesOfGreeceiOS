@@ -53,7 +53,7 @@ class SearchPresenterTests: XCTestCase {
 			observer.events[0].value.element is SearchViewStates)
 		let viewState = observer.events[0].value.element as! SearchViewStates
 		switch viewState {
-		case .ShowResult(let species):
+		case .ShowResult(let species, _):
 			XCTAssert(species.count == 1)//test json data
 		default:
 			XCTFail()
@@ -66,7 +66,7 @@ class SearchPresenterTests: XCTestCase {
 		
 		scheduler
 			.createHotObservable([
-				Recorded.next(200, (SearchEvents.specieClicked(id: 1)) as UiEvent)
+				Recorded.next(200, (SearchEvents.specieClicked(specie: Specie(id: 1, familyId: 1, name: "test", imageTitle: "teset", photos: [ButterflyPhoto]()))) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
 			.disposed(by: presenter!.disposeBag!)
@@ -109,7 +109,7 @@ class SearchPresenterTests: XCTestCase {
 			observer.events[0].value.element is SearchViewStates)
 		let viewState = observer.events[0].value.element as! SearchViewStates
 		switch viewState {
-		case .ShowResult(let result):
+		case .ShowResult(let result, _):
 			XCTAssert(result.count == 0)//test json data
 		default:
 			XCTFail()
