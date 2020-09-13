@@ -44,6 +44,9 @@
 		FE143994250EAEA700B53E34 /* PrintToPdfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE143993250EAEA700B53E34 /* PrintToPdfEvents.swift */; };
 		FE143997250EAEF300B53E34 /* PrintToPdfViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE143996250EAEF300B53E34 /* PrintToPdfViewStates.swift */; };
 		FE143999250EB4B000B53E34 /* PrintToPdf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE143998250EB4B000B53E34 /* PrintToPdf.storyboard */; };
+		FE14399C250EB6E600B53E34 /* HeaderPrintToPdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14399B250EB6E600B53E34 /* HeaderPrintToPdfView.swift */; };
+		FE14399E250EB6F900B53E34 /* HeaderPrintToPdfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE14399D250EB6F900B53E34 /* HeaderPrintToPdfView.xib */; };
+		FE1439A2250EB8D500B53E34 /* PrintToPdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1439A1250EB8D500B53E34 /* PrintToPdfViewController.swift */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
 		FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23263A250D1A62009C8075 /* SearchResultComponent.swift */; };
@@ -180,6 +183,9 @@
 		FE143993250EAEA700B53E34 /* PrintToPdfEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfEvents.swift; sourceTree = "<group>"; };
 		FE143996250EAEF300B53E34 /* PrintToPdfViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfViewStates.swift; sourceTree = "<group>"; };
 		FE143998250EB4B000B53E34 /* PrintToPdf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrintToPdf.storyboard; sourceTree = "<group>"; };
+		FE14399B250EB6E600B53E34 /* HeaderPrintToPdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPrintToPdfView.swift; sourceTree = "<group>"; };
+		FE14399D250EB6F900B53E34 /* HeaderPrintToPdfView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderPrintToPdfView.xib; sourceTree = "<group>"; };
+		FE1439A1250EB8D500B53E34 /* PrintToPdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfViewController.swift; sourceTree = "<group>"; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
 		FE23263A250D1A62009C8075 /* SearchResultComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultComponent.swift; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 				FE14398E250EA9A300B53E34 /* PrintToPdfPresenter.swift */,
 				FE143990250EA9B100B53E34 /* PrintToPdfState.swift */,
 				FE143998250EB4B000B53E34 /* PrintToPdf.storyboard */,
+				FE1439A1250EB8D500B53E34 /* PrintToPdfViewController.swift */,
 			);
 			path = PrintToPdfViewController;
 			sourceTree = "<group>";
@@ -478,6 +485,15 @@
 				FE143996250EAEF300B53E34 /* PrintToPdfViewStates.swift */,
 			);
 			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */ = {
+			isa = PBXGroup;
+			children = (
+				FE14399B250EB6E600B53E34 /* HeaderPrintToPdfView.swift */,
+				FE14399D250EB6F900B53E34 /* HeaderPrintToPdfView.xib */,
+			);
+			path = HeaderPrintToPdfView;
 			sourceTree = "<group>";
 		};
 		FE1FBE8F24CB110B008D0EA1 /* Schedulers */ = {
@@ -602,6 +618,7 @@
 		FE5327BC24E30D2D00BA4AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */,
 				FE1341AE24E32A6E0076EF14 /* HeaderView */,
 				FE1341A424E326660076EF14 /* PhotosCollectionView */,
 				FE5327BD24E30D5D00BA4AF5 /* PhotosTableView */,
@@ -968,6 +985,7 @@
 				FEACB9FF24F3A38F00F61689 /* PageModal.storyboard in Resources */,
 				FEA23DD12503DC7A00776D19 /* Search.storyboard in Resources */,
 				FE85F65624F2E73C00414631 /* ModalPhoto.storyboard in Resources */,
+				FE14399E250EB6F900B53E34 /* HeaderPrintToPdfView.xib in Resources */,
 				FE8DADA924E5759C009F92F6 /* data.json in Resources */,
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
 				FE1341B224E32A9C0076EF14 /* HeaderView.xib in Resources */,
@@ -1119,7 +1137,9 @@
 				FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */,
 				FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */,
 				FE14398F250EA9A300B53E34 /* PrintToPdfPresenter.swift in Sources */,
+				FE1439A2250EB8D500B53E34 /* PrintToPdfViewController.swift in Sources */,
 				FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */,
+				FE14399C250EB6E600B53E34 /* HeaderPrintToPdfView.swift in Sources */,
 				FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */,
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,

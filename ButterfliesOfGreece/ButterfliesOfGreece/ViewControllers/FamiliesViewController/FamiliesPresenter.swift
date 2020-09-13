@@ -113,7 +113,7 @@ class FamiliesPresenter:BasePresenter{
 		case .searchBarClicked:
 			state.onNext(HeaderViewViewStates.toSearch)
 		case .printPhotosClicked:
-			print("print photos clicked")
+			state.onNext(HeaderViewViewStates.toPrintPhotos)
 		}
 	}
 }
