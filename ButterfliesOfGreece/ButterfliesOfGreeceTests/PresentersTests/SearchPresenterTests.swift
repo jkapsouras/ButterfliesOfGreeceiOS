@@ -32,6 +32,7 @@ class SearchPresenterTests: XCTestCase {
 	override func tearDown() {
 		// Put teardown code here. This method is called after the invocation of each test method in the class.
 	}
+	
 	func testShouldGetSpeciesFromSearchTerm()
 	{
 		let observer = scheduler.createObserver(ViewState.self)
