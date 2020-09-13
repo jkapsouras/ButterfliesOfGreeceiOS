@@ -23,7 +23,7 @@ class SpeciesCollectionComponent: UiComponent
 	public func renderViewState(viewState: ViewState) {
 		if let state = viewState as? SpeciesViewStates{
 			switch state {
-				case SpeciesViewStates.ShowSpecies(let data):
+			case SpeciesViewStates.ShowSpecies(let data, _):
 					print("number of species: \(data.count)")
 					photosCollectionView.ShowSpecies(species: data)
 				case SpeciesViewStates.SwitchViewStyle(let arrange):

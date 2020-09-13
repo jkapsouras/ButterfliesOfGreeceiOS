@@ -16,25 +16,37 @@ class SpeciesViewController: BaseController<SpeciesPresenter> {
 	@IBOutlet weak var TablePhotos: PhotosTableView!
 	@IBOutlet weak var CollectionPhotos: PhotosCollectionView!
 	
-     override func viewDidLoad() {
-		   super.viewDidLoad()
-		   guard let butterfliesNavigation = navigationController as? NavigationViewController else {
-			   print("no proper navigation controller")
-			   return
-		   }
-		   title = "Species" //TODO: specie name from presenter
-		   butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
-		   butterfliesNavigation.setNavigationBarHidden(false, animated: true)
-	   }
-	   
-	   override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-		   CollectionPhotos.updateViews()
-	   }
-	   
-	   override func InitializeComponents() -> Array<UiComponent> {
-		   speciesTableComponent = SpeciesTableComponent(view: TablePhotos)
-		   speciesCollectionComponent = SpeciesCollectionComponent(view: CollectionPhotos)
-		   speciesHeaderComponent = SpeciesHeaderComponent(view: ViewHeader)
-		   return [speciesTableComponent!, speciesCollectionComponent!, speciesHeaderComponent!]
-	   }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		guard let butterfliesNavigation = navigationController as? NavigationViewController else {
+			print("no proper navigation controller")
+			return
+		}
+		title = "Species" //TODO: specie name from presenter
+		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
+		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		navigationController?.view.setNeedsLayout() // force update layout
+		navigationController?.view.layoutIfNeeded()
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		navigationController?.view.setNeedsLayout() // force update layout
+		navigationController?.view.layoutIfNeeded()
+	}
+	
+	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+		CollectionPhotos.updateViews()
+	}
+	
+	override func InitializeComponents() -> Array<UiComponent> {
+		speciesTableComponent = SpeciesTableComponent(view: TablePhotos)
+		speciesCollectionComponent = SpeciesCollectionComponent(view: CollectionPhotos)
+		speciesHeaderComponent = SpeciesHeaderComponent(view: ViewHeader)
+		return [speciesTableComponent!, speciesCollectionComponent!, speciesHeaderComponent!]
+	}
 }

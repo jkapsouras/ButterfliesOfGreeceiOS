@@ -120,7 +120,8 @@ class HeaderView: UIView {
 	
 	func ViewEvents() -> Observable<UiEvent>
 	{
-		return Observable.merge(ButtonChangeViewStyle.rx.tap.map{_ in HeaderViewEvents.switchViewStyleClicked})
+		return Observable.merge(ButtonChangeViewStyle.rx.tap.map{_ in HeaderViewEvents.switchViewStyleClicked},
+		ButtonSearch.rx.tap.map{_ in HeaderViewEvents.searchBarClicked})
 	}
 	
 	func changeViewForViewArrange(viewArrange: ViewArrange){

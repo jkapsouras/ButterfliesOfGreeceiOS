@@ -68,6 +68,19 @@ struct Storage {
 	mutating func changeArrange(){
 		Storage.currentArrange = Storage.currentArrange.changeArrange()
 	}
+	
+	mutating func getAllPhotos() -> Observable<[ButterflyPhoto]>{
+		return Observable.from(optional: families.flatMap{$0.species}.flatMap{$0.photos})
+	}
+	
+	mutating func getAllSpecies() -> [Specie]{
+		return families.flatMap{$0.species}
+	}
+	
+	mutating func searchSpeciesBy(term:String) -> [Specie]{
+		return getAllSpecies().filter{specie in
+			specie.name.contains(term.lowercased())}
+	}
 }
 
 extension Storage{
@@ -82,9 +95,12 @@ extension Storage{
 		}
 		let data = json!.data(using: .utf8)
 		let decoder = JSONDecoder()
-		let families = try? decoder.decode([Family].self, from: data!)
+		var families = try? decoder.decode([Family].self, from: data!)
 		guard families != nil else{
 			return [Family]()
+		}
+		families = families!.compactMap{family in
+			Family(id: family.id, name: family.name, photo: family.photo, species: family.species.compactMap{specie in Specie(id: specie.id, familyId: family.id, name: specie.name, imageTitle: specie.imageTitle, photos: specie.photos)})
 		}
 		return families!
 	}

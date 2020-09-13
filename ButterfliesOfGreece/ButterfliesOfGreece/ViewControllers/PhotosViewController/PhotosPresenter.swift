@@ -88,7 +88,7 @@ class PhotosPresenter:BasePresenter{
 				headerState = headerState.with(arrange: headerState.currentArrange.changeArrange())
 				state.onNext(PhotosViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
 			case .searchBarClicked:
-				print("search bar clicked")
+				state.onNext(HeaderViewViewStates.toSearch)
 			case .printPhotosClicked:
 				print("print photos clicked")
 		}

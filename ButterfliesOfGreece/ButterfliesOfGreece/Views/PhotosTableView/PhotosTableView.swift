@@ -105,9 +105,10 @@ class PhotosTableView: UIView {
 		TablePhotos.reloadData()
 	}
 	
-	func ShowSpecies(species: [Specie]){
+	func ShowSpecies(species: [Specie], fromSearch: Bool){
 		source.setSpecies(species: species)
 		source.setShowingStep(showingStep: .species)
+		source.setFromSearch(fromSearch: fromSearch)
 		TablePhotos.separatorStyle = .none
 		TablePhotos.dataSource = source
 		TablePhotos.delegate = source

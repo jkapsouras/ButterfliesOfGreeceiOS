@@ -80,13 +80,17 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		}
 		switch viewState {
 		case let menuTransition as MenuViewState:
-				navigationManager!.MenuTransition(menuTransition: menuTransition)
+			navigationManager!.MenuTransition(menuTransition: menuTransition)
 		case let familiesTransition as FamiliesViewStates:
 			navigationManager!.FamilyTransition(familyTransition: familiesTransition)
-			case let speciesTransition as SpeciesViewStates:
-				navigationManager!.SpecieTransition(specieTransition: speciesTransition)
+		case let speciesTransition as SpeciesViewStates:
+			navigationManager!.SpecieTransition(specieTransition: speciesTransition)
 		case let photosTransition as PhotosViewStates:
 			navigationManager!.PhotosTransition(photosTransitions: photosTransition)
+		case let headerTransition as HeaderViewViewStates:
+			navigationManager!.HeaderTransition(headerTransition: headerTransition)
+		case let searchTransition as SearchViewStates:
+			navigationManager!.searchTransition(searchTransition: searchTransition)
 		default:
 			print("default")
 		}

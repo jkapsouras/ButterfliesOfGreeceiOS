@@ -1,15 +1,15 @@
 //
-//  SpeciesTableComponent.swift
+//  SearchResultComponent.swift
 //  ButterfliesOfGreece
 //
-//  Created by Apprecot on 20/8/20.
+//  Created by Ioannis Kapsouras on 12/9/20.
 //  Copyright © 2020 Ioannis Kapsouras. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 
-class SpeciesTableComponent : UiComponent
+class SearchResultComponent : UiComponent
 {
 	let event:PublishSubject<UiEvent> = PublishSubject()
 	let photosTableView:PhotosTableView
@@ -21,18 +21,11 @@ class SpeciesTableComponent : UiComponent
     }
     
     public func renderViewState(viewState: ViewState) {
-		if let state = viewState as? SpeciesViewStates{
+		if let state = viewState as? SearchViewStates{
 			switch state {
-			case SpeciesViewStates.ShowSpecies(let data, let fromSearch):
-				print("number of species: \(data.count)")
-				photosTableView.ShowSpecies(species: data, fromSearch: fromSearch)
-			case SpeciesViewStates.SwitchViewStyle(let arrange):
-				if(arrange == .grid){
-					photosTableView.Hide()
-				}
-				else{
-					photosTableView.Show()
-				}
+			case SearchViewStates.ShowResult(let result, let fromSearch):
+				print("number of species: \(result.count)")
+				photosTableView.ShowSpecies(species: result, fromSearch: fromSearch)
 			default:
 				print("default state")
 			}

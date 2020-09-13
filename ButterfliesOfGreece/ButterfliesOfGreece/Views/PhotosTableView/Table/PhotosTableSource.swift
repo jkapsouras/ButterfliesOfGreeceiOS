@@ -18,6 +18,7 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 	let emitter = PublishSubject<UiEvent>()
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
 	var showingStep = ShowingStep.families
+	var fromSearch = false
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.Key, for: indexPath) as! PhotosTableViewCell
@@ -25,7 +26,7 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 		case .families:
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		case .species:
-			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
+			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep, fromSearch: fromSearch)
 		case .photos:
 			cell.update(photo: (photos[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		}
@@ -49,7 +50,12 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 		case .families:
 			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
 		case .species:
-			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
+			if(fromSearch){
+				emitter.onNext(SearchEvents.specieClicked(specie: species[indexPath.row]))
+			}
+			else{
+				emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
+			}
 		case .photos:
 			emitter.onNext(PhotosEvents.photoClicked(id: photos[indexPath.row].id))
 		}
@@ -80,6 +86,10 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 	
 	func setShowingStep(showingStep:ShowingStep){
 		self.showingStep = showingStep
+	}
+	
+	func setFromSearch(fromSearch: Bool){
+		self.fromSearch = fromSearch
 	}
 }
 
