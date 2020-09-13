@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lk7-LZ-mtv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal Photo View Controller-->
+        <scene sceneID="6Dq-br-Ayb">
+            <objects>
+                <viewController storyboardIdentifier="ModalPhotoViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lk7-LZ-mtv" customClass="ModalPhotoViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YQG-0X-2aB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjN-c7-zMw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001_001" translatesAutoresizingMaskIntoConstraints="NO" id="qld-oY-GWJ">
+                                        <rect key="frame" x="0.0" y="242.5" width="414" height="333"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qld-oY-GWJ" firstAttribute="leading" secondItem="XjN-c7-zMw" secondAttribute="leading" id="1jT-FR-GgO"/>
+                                    <constraint firstItem="qld-oY-GWJ" firstAttribute="centerX" secondItem="XjN-c7-zMw" secondAttribute="centerX" id="53n-ru-SLK"/>
+                                    <constraint firstAttribute="trailing" secondItem="qld-oY-GWJ" secondAttribute="trailing" id="LIL-uu-Miy"/>
+                                    <constraint firstAttribute="bottom" secondItem="qld-oY-GWJ" secondAttribute="bottom" id="SRe-S7-e9z"/>
+                                    <constraint firstItem="qld-oY-GWJ" firstAttribute="centerY" secondItem="XjN-c7-zMw" secondAttribute="centerY" id="cgV-ZR-S8y"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZEO-Af-qnb"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="H6f-Fo-OHD"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I9E-Yl-AL2" firstAttribute="bottom" secondItem="XjN-c7-zMw" secondAttribute="bottom" id="Iit-UL-gYf"/>
+                            <constraint firstItem="XjN-c7-zMw" firstAttribute="top" secondItem="I9E-Yl-AL2" secondAttribute="top" id="QAL-cw-7n4"/>
+                            <constraint firstItem="XjN-c7-zMw" firstAttribute="leading" secondItem="I9E-Yl-AL2" secondAttribute="leading" id="hD3-qn-Hti"/>
+                            <constraint firstItem="I9E-Yl-AL2" firstAttribute="trailing" secondItem="XjN-c7-zMw" secondAttribute="trailing" id="nr2-NW-UnF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I9E-Yl-AL2"/>
+                    </view>
+                    <connections>
+                        <outlet property="ConstImageBottom" destination="SRe-S7-e9z" id="dnG-0c-T3z"/>
+                        <outlet property="ConstImageLeading" destination="1jT-FR-GgO" id="rhq-Ns-Pdt"/>
+                        <outlet property="ConstImageTrailing" destination="LIL-uu-Miy" id="F1u-O5-qoN"/>
+                        <outlet property="ImagePhoto" destination="qld-oY-GWJ" id="vIP-zU-lzF"/>
+                        <outlet property="ViewScroll" destination="XjN-c7-zMw" id="ytX-kc-Ddg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fnb-MV-8s7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="110.49107142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="001_001" width="333.33334350585938" height="333.33334350585938"/>
+    </resources>
+</document>

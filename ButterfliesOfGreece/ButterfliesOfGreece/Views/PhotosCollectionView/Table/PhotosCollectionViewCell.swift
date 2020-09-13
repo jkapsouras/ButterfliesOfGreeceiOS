@@ -62,7 +62,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.emitter = emitter
 		self.showingStep = showingStep
-		LabelName.text = "fotografos: \(photo.author)"
+		LabelName.text = "\(photo.author)"
 		photoId = photo.id
 		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{

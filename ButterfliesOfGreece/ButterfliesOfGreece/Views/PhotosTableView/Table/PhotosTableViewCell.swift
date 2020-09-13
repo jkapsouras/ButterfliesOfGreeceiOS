@@ -46,7 +46,7 @@ class PhotosTableViewCell: UITableViewCell {
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
 	}
 	
-	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep, fromSearch: Bool){
 		self.showingStep = showingStep
 		self.emitter = emitter
 		LabelName.text = specie.name
@@ -56,12 +56,13 @@ class PhotosTableViewCell: UITableViewCell {
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+		ImageAdd.alpha = fromSearch ? 0 : 1
 	}
 	
 	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.showingStep = showingStep
 		self.emitter = emitter
-		LabelName.text = "fotografos: \(photo.author)"
+		LabelName.text = "\(Translations.Photographer): \(photo.author)"
 		photoId = photo.id
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{

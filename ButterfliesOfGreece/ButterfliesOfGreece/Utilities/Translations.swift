@@ -68,6 +68,12 @@ struct Translations {
 		}
 	}
 	
+	static var Photographer:String {
+		get{
+			"photographer".Localise()
+		}
+	}
+	
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil

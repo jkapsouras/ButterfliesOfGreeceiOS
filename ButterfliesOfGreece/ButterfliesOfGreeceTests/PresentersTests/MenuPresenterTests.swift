@@ -43,7 +43,7 @@ class MenuPresenterTests: XCTestCase {
 			Recorded.next(200, (MenuEvent.fieldClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-            .disposed(by: presenter!.disposeBag)
+            .disposed(by: (presenter!.disposeBag)!)
         
         presenter.state.bind(to: observer)
         .disposed(by: disposeBag)
@@ -65,7 +65,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.introductionClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -87,7 +87,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.aboutClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -109,7 +109,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.contributeClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -131,7 +131,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.endangeredSpeciesClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -153,7 +153,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.legalClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -175,7 +175,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.offlineRecognitionClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -197,7 +197,7 @@ class MenuPresenterTests: XCTestCase {
 				Recorded.next(200, (MenuEvent.onlineRecognitionClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -219,7 +219,7 @@ class MenuPresenterTests: XCTestCase {
 			Recorded.next(200, (GeneralEvents.idle) as UiEvent)
         ])
             .bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-            .disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
         
         presenter.state.bind(to: observer)
         .disposed(by: disposeBag)

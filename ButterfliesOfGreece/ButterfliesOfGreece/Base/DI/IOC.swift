@@ -56,6 +56,8 @@ struct IOC:IOCInjectable
         container.autoregister(FamiliesPresenter.self, initializer: FamiliesPresenter.init)
 		container.autoregister(SpeciesPresenter.self, initializer: SpeciesPresenter.init)
 		container.autoregister(PhotosPresenter.self, initializer: PhotosPresenter.init)
+		container.autoregister(ModalPresenter.self, initializer: ModalPresenter.init)
+		container.autoregister(SearchPresenter.self, initializer: SearchPresenter.init)
     }
     
     public static var container: Container?

@@ -11,7 +11,7 @@ import Foundation
 enum SpeciesViewStates:ViewState{
 	case SwitchViewStyle(currentArrange:ViewArrange)
 	case ToPhotos
-	case ShowSpecies(species:[Specie])
+	case ShowSpecies(species:[Specie], fromSearch: Bool)
 	
 	var isTransition: Bool{
 		switch self {

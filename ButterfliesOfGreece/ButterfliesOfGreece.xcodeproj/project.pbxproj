@@ -40,6 +40,10 @@
 		FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
+		FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23263A250D1A62009C8075 /* SearchResultComponent.swift */; };
+		FE23263D250D25D0009C8075 /* SearchHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23263C250D25D0009C8075 /* SearchHeaderComponent.swift */; };
+		FE24D59924FEE4680057D630 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24D59824FEE4680057D630 /* SearchPresenterTests.swift */; };
+		FE24D59C24FEE6CB0057D630 /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24D59B24FEE6CB0057D630 /* StorageTests.swift */; };
 		FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B3924CF68A300F47717 /* MenuUiEvents.swift */; };
 		FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B3C24CF68CB00F47717 /* MenuViewStates.swift */; };
 		FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B3E24CF68F400F47717 /* FamiliesPresenter.swift */; };
@@ -60,6 +64,7 @@
 		FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F64C24F2A2A700414631 /* PhotosTableComponent.swift */; };
 		FE85F65124F2A2DF00414631 /* PhotosCollectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F65024F2A2DF00414631 /* PhotosCollectionComponent.swift */; };
 		FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F65224F2A2ED00414631 /* PhotosHeaderComponent.swift */; };
+		FE85F65624F2E73C00414631 /* ModalPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE85F65524F2E73C00414631 /* ModalPhoto.storyboard */; };
 		FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE861B7024E6BC8C003DA5ED /* HeaderState.swift */; };
 		FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE861B7224E6BE1F003DA5ED /* CacheManager.swift */; };
 		FE861B7524E6D02E003DA5ED /* TestUserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE861B7424E6D02E003DA5ED /* TestUserPrefs.swift */; };
@@ -70,6 +75,16 @@
 		FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6024E84A710038DD9C /* Storage.swift */; };
 		FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */; };
 		FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */; };
+		FEA23DC52503C34600776D19 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23DC42503C34600776D19 /* SearchState.swift */; };
+		FEA23DC92503C5A500776D19 /* SearchEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23DC82503C5A500776D19 /* SearchEvents.swift */; };
+		FEA23DCB2503C65500776D19 /* SearchViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23DCA2503C65500776D19 /* SearchViewStates.swift */; };
+		FEA23DCD2503C8E600776D19 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23DCC2503C8E600776D19 /* SearchPresenter.swift */; };
+		FEA23DD12503DC7A00776D19 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA23DD02503DC7A00776D19 /* Search.storyboard */; };
+		FEA23DD32503DCE900776D19 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23DD22503DCE900776D19 /* SearchViewController.swift */; };
+		FEA3D14F24F6FE16004B7F7A /* ModalEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D14E24F6FE16004B7F7A /* ModalEvents.swift */; };
+		FEA3D15224F6FE3F004B7F7A /* ModalViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D15124F6FE3F004B7F7A /* ModalViewStates.swift */; };
+		FEA3D15424F6FF9D004B7F7A /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D15324F6FF9D004B7F7A /* ModalPresenter.swift */; };
+		FEA3D15624F703AB004B7F7A /* ModalPresentersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D15524F703AB004B7F7A /* ModalPresentersTests.swift */; };
 		FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA57F3824DD8B8300A66871 /* Families.storyboard */; };
 		FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */; };
 		FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */; };
@@ -83,12 +98,17 @@
 		FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */; };
 		FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB024B2099200A5D178 /* Translations.swift */; };
 		FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */; };
+		FEACB9FD24F2E80200F61689 /* ModalPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB9FC24F2E80200F61689 /* ModalPhotoViewController.swift */; };
+		FEACB9FF24F3A38F00F61689 /* PageModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEACB9FE24F3A38F00F61689 /* PageModal.storyboard */; };
+		FEACBA0124F3A44200F61689 /* PageModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACBA0024F3A44200F61689 /* PageModalViewController.swift */; };
 		FEB3520824CB13ED0040313D /* IOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520724CB13ED0040313D /* IOC.swift */; };
 		FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520D24CB17640040313D /* ButtonExtensions.swift */; };
 		FEB3521024CB19620040313D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3520F24CB19620040313D /* BaseViewController.swift */; };
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
+		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
+		FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */; };
 		FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */; };
 		FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */; };
 		FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */; };
@@ -150,6 +170,10 @@
 		FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesHeaderComponent.swift; sourceTree = "<group>"; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
+		FE23263A250D1A62009C8075 /* SearchResultComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultComponent.swift; sourceTree = "<group>"; };
+		FE23263C250D25D0009C8075 /* SearchHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderComponent.swift; sourceTree = "<group>"; };
+		FE24D59824FEE4680057D630 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		FE24D59B24FEE6CB0057D630 /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		FE389B3924CF68A300F47717 /* MenuUiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUiEvents.swift; sourceTree = "<group>"; };
 		FE389B3C24CF68CB00F47717 /* MenuViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewStates.swift; sourceTree = "<group>"; };
 		FE389B3E24CF68F400F47717 /* FamiliesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesPresenter.swift; sourceTree = "<group>"; };
@@ -170,6 +194,7 @@
 		FE85F64C24F2A2A700414631 /* PhotosTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableComponent.swift; sourceTree = "<group>"; };
 		FE85F65024F2A2DF00414631 /* PhotosCollectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionComponent.swift; sourceTree = "<group>"; };
 		FE85F65224F2A2ED00414631 /* PhotosHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosHeaderComponent.swift; sourceTree = "<group>"; };
+		FE85F65524F2E73C00414631 /* ModalPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalPhoto.storyboard; sourceTree = "<group>"; };
 		FE861B7024E6BC8C003DA5ED /* HeaderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderState.swift; sourceTree = "<group>"; };
 		FE861B7224E6BE1F003DA5ED /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		FE861B7424E6D02E003DA5ED /* TestUserPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserPrefs.swift; sourceTree = "<group>"; };
@@ -181,6 +206,16 @@
 		FEA1CB6024E84A710038DD9C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesRepository.swift; sourceTree = "<group>"; };
 		FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintRepository.swift; sourceTree = "<group>"; };
+		FEA23DC42503C34600776D19 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
+		FEA23DC82503C5A500776D19 /* SearchEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEvents.swift; sourceTree = "<group>"; };
+		FEA23DCA2503C65500776D19 /* SearchViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewStates.swift; sourceTree = "<group>"; };
+		FEA23DCC2503C8E600776D19 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		FEA23DD02503DC7A00776D19 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		FEA23DD22503DCE900776D19 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FEA3D14E24F6FE16004B7F7A /* ModalEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalEvents.swift; sourceTree = "<group>"; };
+		FEA3D15124F6FE3F004B7F7A /* ModalViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewStates.swift; sourceTree = "<group>"; };
+		FEA3D15324F6FF9D004B7F7A /* ModalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
+		FEA3D15524F703AB004B7F7A /* ModalPresentersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentersTests.swift; sourceTree = "<group>"; };
 		FEA57F3824DD8B8300A66871 /* Families.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Families.storyboard; sourceTree = "<group>"; };
 		FEA57F3A24DD8BAE00A66871 /* FamiliesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesViewController.swift; sourceTree = "<group>"; };
 		FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
@@ -200,6 +235,9 @@
 		FEAB9BAE24B2075500A5D178 /* StringsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsExtensions.swift; sourceTree = "<group>"; };
 		FEAB9BB024B2099200A5D178 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		FEACB9FC24F2E80200F61689 /* ModalPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPhotoViewController.swift; sourceTree = "<group>"; };
+		FEACB9FE24F3A38F00F61689 /* PageModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageModal.storyboard; sourceTree = "<group>"; };
+		FEACBA0024F3A44200F61689 /* PageModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModalViewController.swift; sourceTree = "<group>"; };
 		FEB3520724CB13ED0040313D /* IOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOC.swift; sourceTree = "<group>"; };
 		FEB3520D24CB17640040313D /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		FEB3520F24CB19620040313D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +245,8 @@
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
+		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPhotoComponent.swift; sourceTree = "<group>"; };
 		FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoArraysExtensions.swift; sourceTree = "<group>"; };
@@ -247,6 +287,8 @@
 				FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */,
 				0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */,
 				FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */,
+				FEA3D15524F703AB004B7F7A /* ModalPresentersTests.swift */,
+				FE24D59824FEE4680057D630 /* SearchPresenterTests.swift */,
 			);
 			path = PresentersTests;
 			sourceTree = "<group>";
@@ -406,6 +448,37 @@
 			path = Schedulers;
 			sourceTree = "<group>";
 		};
+		FE232639250D1A35009C8075 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE23263A250D1A62009C8075 /* SearchResultComponent.swift */,
+				FE23263C250D25D0009C8075 /* SearchHeaderComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE24D59724FEE43F0057D630 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE232639250D1A35009C8075 /* Components */,
+				FEA23DC72503C59700776D19 /* ViewStates */,
+				FEA23DC62503C58C00776D19 /* UiEvents */,
+				FEA23DC42503C34600776D19 /* SearchState.swift */,
+				FEA23DCC2503C8E600776D19 /* SearchPresenter.swift */,
+				FEA23DD02503DC7A00776D19 /* Search.storyboard */,
+				FEA23DD22503DCE900776D19 /* SearchViewController.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		FE24D59A24FEE6B70057D630 /* StorageTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE24D59B24FEE6CB0057D630 /* StorageTests.swift */,
+			);
+			path = StorageTests;
+			sourceTree = "<group>";
+		};
 		FE389B3724CF686900F47717 /* FamiliesViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +546,8 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FE24D59724FEE43F0057D630 /* SearchViewController */,
+				FE85F65424F2E71400414631 /* ModalViewController */,
 				FEFBA08D24F2445900335E77 /* PhotosViewController */,
 				0A25982524EDA917003893FA /* SpeciesViewController */,
 				FEEEEEDB24D6EF7100C9655B /* NavigationViewController */,
@@ -518,6 +593,21 @@
 			path = ViewStates;
 			sourceTree = "<group>";
 		};
+		FE85F65424F2E71400414631 /* ModalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1D6E324F7851E000C0A15 /* Components */,
+				FEA3D15024F6FE32004B7F7A /* ViewStates */,
+				FEA3D14D24F6FE00004B7F7A /* UiEvents */,
+				FE85F65524F2E73C00414631 /* ModalPhoto.storyboard */,
+				FEACB9FC24F2E80200F61689 /* ModalPhotoViewController.swift */,
+				FEACB9FE24F3A38F00F61689 /* PageModal.storyboard */,
+				FEACBA0024F3A44200F61689 /* PageModalViewController.swift */,
+				FEA3D15324F6FF9D004B7F7A /* ModalPresenter.swift */,
+			);
+			path = ModalViewController;
+			sourceTree = "<group>";
+		};
 		FE8B040A24CB2AC0002F180F /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +626,38 @@
 				FEFBA09824F2479500335E77 /* PhotosRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FEA23DC62503C58C00776D19 /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				FEA23DC82503C5A500776D19 /* SearchEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		FEA23DC72503C59700776D19 /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FEA23DCA2503C65500776D19 /* SearchViewStates.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FEA3D14D24F6FE00004B7F7A /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				FEA3D14E24F6FE16004B7F7A /* ModalEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		FEA3D15024F6FE32004B7F7A /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FEA3D15124F6FE3F004B7F7A /* ModalViewStates.swift */,
+			);
+			path = ViewStates;
 			sourceTree = "<group>";
 		};
 		FEA57F3C24DD8E2600A66871 /* Managers */ = {
@@ -593,6 +715,7 @@
 		FEAB9B9524B2027800A5D178 /* ButterfliesOfGreeceTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE24D59A24FEE6B70057D630 /* StorageTests */,
 				0A25982224ED955E003893FA /* ExtensionTests */,
 				0A25982124ED954D003893FA /* PresentersTests */,
 				FEAB9B9824B2027800A5D178 /* Info.plist */,
@@ -640,6 +763,7 @@
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
 				FEB3520F24CB19620040313D /* BaseViewController.swift */,
 				FEB3521124CB199C0040313D /* UiComponent.swift */,
+				FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -650,6 +774,14 @@
 				FEB3520724CB13ED0040313D /* IOC.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		FEE1D6E324F7851E000C0A15 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FEEEEEDB24D6EF7100C9655B /* NavigationViewController */ = {
@@ -790,6 +922,9 @@
 				FE1341A824E326960076EF14 /* PhotosCollectionView.xib in Resources */,
 				FE8DADA724E57032009F92F6 /* PhotosCollectionViewCell.xib in Resources */,
 				FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */,
+				FEACB9FF24F3A38F00F61689 /* PageModal.storyboard in Resources */,
+				FEA23DD12503DC7A00776D19 /* Search.storyboard in Resources */,
+				FE85F65624F2E73C00414631 /* ModalPhoto.storyboard in Resources */,
 				FE8DADA924E5759C009F92F6 /* data.json in Resources */,
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
 				FE1341B224E32A9C0076EF14 /* HeaderView.xib in Resources */,
@@ -884,23 +1019,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE1341A624E326880076EF14 /* PhotosCollectionView.swift in Sources */,
+				FEACBA0124F3A44200F61689 /* PageModalViewController.swift in Sources */,
 				FEFBA09F24F29B4700335E77 /* PhotosViewController.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
 				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
+				FEA23DCB2503C65500776D19 /* SearchViewStates.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
 				0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
+				FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
+				FEA23DC52503C34600776D19 /* SearchState.swift in Sources */,
 				0A7351E024EE68C600E2712D /* SpeciesViewController.swift in Sources */,
 				0A7351E524EEA2A000E2712D /* SpeciesCollectionComponent.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FEFBA09024F244A200335E77 /* PhotosEvents.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
+				FEA3D15224F6FE3F004B7F7A /* ModalViewStates.swift in Sources */,
 				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
@@ -909,14 +1049,18 @@
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
 				FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */,
 				0A7351E324EEA29400E2712D /* SpeciesTableComponent.swift in Sources */,
+				FEA23DD32503DCE900776D19 /* SearchViewController.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */,
 				FE71B27024F1ACF3009F6BF0 /* NavigationRepository.swift in Sources */,
+				FEA3D14F24F6FE16004B7F7A /* ModalEvents.swift in Sources */,
 				FE1341B024E32A8F0076EF14 /* HeaderView.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
 				FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */,
+				FEA3D15424F6FF9D004B7F7A /* ModalPresenter.swift in Sources */,
 				FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */,
+				FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */,
 				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
 				0A25982F24EDBD55003893FA /* SpeciesViewStates.swift in Sources */,
 				0A25983124EDBDDB003893FA /* SpeciesRepository.swift in Sources */,
@@ -925,16 +1069,21 @@
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,
 				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
+				FE23263D250D25D0009C8075 /* SearchHeaderComponent.swift in Sources */,
 				FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */,
 				FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */,
 				FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */,
+				FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */,
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,
 				FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */,
+				FEACB9FD24F2E80200F61689 /* ModalPhotoViewController.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
+				FEA23DC92503C5A500776D19 /* SearchEvents.swift in Sources */,
 				FE8DADA624E57032009F92F6 /* PhotosCollectionViewCell.swift in Sources */,
 				0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */,
+				FEA23DCD2503C8E600776D19 /* SearchPresenter.swift in Sources */,
 				FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */,
 				FE10425924D5AB030075D027 /* Family.swift in Sources */,
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
@@ -959,13 +1108,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA3D15624F703AB004B7F7A /* ModalPresentersTests.swift in Sources */,
 				FE389B4724CF707900F47717 /* FamiliesPresenterTests.swift in Sources */,
 				0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */,
+				FE24D59924FEE4680057D630 /* SearchPresenterTests.swift in Sources */,
 				FEFBA09B24F296E600335E77 /* PhotosPresenterTests.swift in Sources */,
 				0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */,
 				FE861B7524E6D02E003DA5ED /* TestUserPrefs.swift in Sources */,
 				FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */,
 				FE389B4924CF70BD00F47717 /* TestSchedulers.swift in Sources */,
+				FE24D59C24FEE6CB0057D630 /* StorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

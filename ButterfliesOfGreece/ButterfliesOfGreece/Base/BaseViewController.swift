@@ -24,8 +24,8 @@ class BaseController<P> : UIViewController where P : BasePresenter
 	var events:Observable<UiEvent>?
 	var Components:Array<UiComponent>?
 	
-	override public func viewDidLoad() {
-		super.viewDidLoad()
+	override public func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		InitViews()
 		AddFonts()
 		Components = InitializeComponents()
@@ -52,24 +52,24 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			let state = Presenter?.Subscribe(events: events!).publish()
 			
 			Components?.forEach{component in
-				state?.subscribe(onNext: { viewState in component.renderViewState(viewState: viewState)}).disposed(by: Presenter!.disposeBag)
+				state?.subscribe(onNext: { viewState in component.renderViewState(viewState: viewState)}).disposed(by: Presenter!.disposeBag!)
 			}
 			
-			state?.filter{viewState in viewState.isTransition}.subscribe(onNext: {viewState in self.TransitionStateReceived(viewState: viewState)}).disposed(by: Presenter!.disposeBag)
+			state?.filter{viewState in viewState.isTransition}.subscribe(onNext: {viewState in self.TransitionStateReceived(viewState: viewState)}).disposed(by: Presenter!.disposeBag!)
 			
-			state?.connect().disposed(by: Presenter!.disposeBag)
+			state?.connect().disposed(by: Presenter!.disposeBag!)
 			Presenter?.setupEvents()
 		}
-	}
-	
-	override public func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
 		LocalizeViews()
 	}
 	
 	override public func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		UpdateViews()
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		unSubscribe()
 	}
 	
 	func TransitionStateReceived(viewState:ViewState)->()
@@ -80,11 +80,17 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		}
 		switch viewState {
 		case let menuTransition as MenuViewState:
-				navigationManager!.MenuTransition(menuTransition: menuTransition)
+			navigationManager!.MenuTransition(menuTransition: menuTransition)
 		case let familiesTransition as FamiliesViewStates:
 			navigationManager!.FamilyTransition(familyTransition: familiesTransition)
-			case let speciesTransition as SpeciesViewStates:
-				navigationManager!.SpecieTransition(specieTransition: speciesTransition)
+		case let speciesTransition as SpeciesViewStates:
+			navigationManager!.SpecieTransition(specieTransition: speciesTransition)
+		case let photosTransition as PhotosViewStates:
+			navigationManager!.PhotosTransition(photosTransitions: photosTransition)
+		case let headerTransition as HeaderViewViewStates:
+			navigationManager!.HeaderTransition(headerTransition: headerTransition)
+		case let searchTransition as SearchViewStates:
+			navigationManager!.searchTransition(searchTransition: searchTransition)
 		default:
 			print("default")
 		}
@@ -93,6 +99,16 @@ class BaseController<P> : UIViewController where P : BasePresenter
 	func  InitializeComponents()->Array<UiComponent>
 	{
 		preconditionFailure("This method must be overridden")
+	}
+	
+	func unSubscribe()
+	{
+		guard let presenter = Presenter else{
+			print("presenter already nil")
+			return
+		}
+		presenter.unSubscribe()
+		Presenter = nil
 	}
 	
 	func InitViews(){}

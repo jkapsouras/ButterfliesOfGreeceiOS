@@ -10,6 +10,7 @@ import Foundation
 
 struct Specie:Codable {
 	var id:Int
+	var familyId:Int?
 	var name:String
 	var imageTitle:String
 	var photos:[ButterflyPhoto]

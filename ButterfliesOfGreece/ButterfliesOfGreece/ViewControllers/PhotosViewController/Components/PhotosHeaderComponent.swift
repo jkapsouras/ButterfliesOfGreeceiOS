@@ -35,6 +35,8 @@ class PhotosHeaderComponent : UiComponent
 					headerView.updateNumberOfPhotos(number: numberOfPhotos)
 			case HeaderViewViewStates.setHeaderTitle(let headerTitle):
 				headerView.updateTitle(title: headerTitle)
+			default:
+				break
 			}
 		}
 	}

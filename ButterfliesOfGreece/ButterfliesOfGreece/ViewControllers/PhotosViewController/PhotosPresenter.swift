@@ -24,7 +24,7 @@ class PhotosPresenter:BasePresenter{
 		self.photosRepository = photosRepository
 		self.photosToPrintRepository = photosToPrintRepository
 		self.navigationRepository = navigationRepository
-		photosState = PhotosState(photos: [ButterflyPhoto]())
+		photosState = PhotosState(photos: [ButterflyPhoto](), indexOfSelectedPhoto: -1)
 		headerState = HeaderState(currentArrange: .grid, photosToPrint: nil, headerName: "Photos")
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
@@ -50,7 +50,9 @@ class PhotosPresenter:BasePresenter{
 	func handlePhotosEvents(photosEvent: PhotosEvents){
 		switch photosEvent {
 			case .photoClicked(let photoId):
-				state.onNext(PhotosViewStates.ToPhoto(photoId: photoId))
+				_ = navigationRepository
+				.selectPhotoId(photoId: photoId)
+				.subscribe(onNext: {_ in self.state.onNext(PhotosViewStates.ToPhoto(photoId: photoId))})
 			case .loadPhotos(let specieId):
 				_ = Observable.zip(photosRepository.getSelectedSpecieName(specieId: specieId).map{specieName -> HeaderState in
 					self.headerState = self.headerState.with(headerName: specieName)
@@ -86,7 +88,7 @@ class PhotosPresenter:BasePresenter{
 				headerState = headerState.with(arrange: headerState.currentArrange.changeArrange())
 				state.onNext(PhotosViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))
 			case .searchBarClicked:
-				print("search bar clicked")
+				state.onNext(HeaderViewViewStates.toSearch)
 			case .printPhotosClicked:
 				print("print photos clicked")
 		}
