@@ -13,8 +13,8 @@ class HeaderPrintToPdfView: UIView {
 	@IBOutlet weak var LabelItemsPerPage: UILabel!
 	@IBOutlet weak var ButtonArrange: UIButton!
 	@IBOutlet weak var ButtonPrint: UIButton!
-	@IBOutlet weak var PrintDelete: UIButton!
 	@IBOutlet weak var LabelTitle: UILabel!
+	@IBOutlet weak var ButtonDelete: UIButton!
 	
     var contentView:UIView?
 	let nibName = "HeaderPrintToPdfView"
@@ -58,6 +58,28 @@ class HeaderPrintToPdfView: UIView {
 		backgroundColor = Constants.Colors.field(darkMode: true).color
 		LabelItemsPerPage.textColor = Constants.Colors.field(darkMode: false).color
 		LabelTitle.textColor = Constants.Colors.field(darkMode: false).color
+		
+		ButtonArrange.setTitle("1", for: .normal)
+		ButtonArrange.setImage(UIImage(named: "expandIcon"), for: .normal)
+		ButtonArrange.contentMode = .scaleAspectFit
+		ButtonArrange.imageView?.contentMode = .scaleAspectFit
+		ButtonArrange.titleEdgeInsets = UIEdgeInsets(top: 0, left: -ButtonArrange.imageView!.frame.size.width, bottom: 0, right: ButtonArrange.imageView!.frame.size.width);
+		ButtonArrange.imageEdgeInsets = UIEdgeInsets(top: 8, left: ButtonArrange.titleLabel!.frame.size.width, bottom: 8, right: -ButtonArrange.titleLabel!.frame.size.width);
+		ButtonArrange.setTitleColor(Constants.Colors.field(darkMode: false).color, for: .normal)
+		ButtonArrange.tintColor = Constants.Colors.field(darkMode: false).color
+		ButtonDelete.setImage(UIImage(named: "deleteIcon"), for: .normal)
+		ButtonDelete.contentMode = .scaleAspectFit
+		ButtonDelete.imageView?.contentMode = .scaleAspectFit
+		ButtonDelete.tintColor = Constants.Colors.field(darkMode: false).color
+		ButtonDelete.setTitle("", for: .normal)
+		ButtonDelete.imageEdgeInsets = UIEdgeInsets(top: 12, left: 8, bottom: 14, right: 8);
+		ButtonPrint.setImage(UIImage(named: "printIcon"), for: .normal)
+		ButtonPrint.contentMode = .scaleAspectFit
+		ButtonPrint.imageView?.contentMode = .scaleAspectFit
+		ButtonPrint.tintColor = Constants.Colors.field(darkMode: false).color
+		ButtonPrint.setTitle("", for: .normal)
+		ButtonPrint.imageEdgeInsets = UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 8);
+		
 	}
 	
 	func prepareTexts(){
@@ -67,5 +89,6 @@ class HeaderPrintToPdfView: UIView {
 	func prepareFonts(){
 		LabelItemsPerPage.setFont(size: Constants.Fonts.fontPhotosSize)
 		LabelTitle.setFont(size: Constants.Fonts.fontPhotosSize)
+		ButtonArrange.setFont(size: Constants.Fonts.fontPhotosSize)
 	}
 }

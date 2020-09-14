@@ -10,10 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderPrintToPdfView" customModule="ButterfliesOfGreece" customModuleProvider="target">
             <connections>
                 <outlet property="ButtonArrange" destination="7Bu-o6-jid" id="MGi-MU-jRu"/>
+                <outlet property="ButtonDelete" destination="atO-yP-gln" id="LjY-MV-EEs"/>
                 <outlet property="ButtonPrint" destination="ZIe-bR-1On" id="vNe-5n-Bvf"/>
                 <outlet property="LabelItemsPerPage" destination="znR-lq-yly" id="ow5-kU-b9C"/>
                 <outlet property="LabelTitle" destination="fSL-hY-gJ5" id="aso-o1-SnP"/>
-                <outlet property="PrintDelete" destination="atO-yP-gln" id="Nr2-2f-QgL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,7 +28,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-o6-jid">
-                    <rect key="frame" x="66" y="438" width="46" height="30"/>
+                    <rect key="frame" x="66" y="430" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7Bu-o6-jid" secondAttribute="height" multiplier="1:1" id="jUo-wW-nih"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIe-bR-1On">
@@ -40,11 +43,11 @@
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atO-yP-gln">
-                    <rect key="frame" x="294" y="431" width="44" height="44"/>
+                    <rect key="frame" x="308" y="431" width="44" height="44"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-hY-gJ5">
-                    <rect key="frame" x="136" y="442.5" width="142" height="21"/>
+                    <rect key="frame" x="122" y="442.5" width="170" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -64,7 +67,7 @@
                 <constraint firstItem="fSL-hY-gJ5" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="pxo-IU-Vph"/>
                 <constraint firstItem="atO-yP-gln" firstAttribute="height" secondItem="ZIe-bR-1On" secondAttribute="height" id="rPy-KO-LdX"/>
                 <constraint firstItem="7Bu-o6-jid" firstAttribute="centerY" secondItem="znR-lq-yly" secondAttribute="centerY" id="rua-iZ-TBF"/>
-                <constraint firstItem="ZIe-bR-1On" firstAttribute="leading" secondItem="atO-yP-gln" secondAttribute="trailing" constant="16" id="yce-IE-Q7L"/>
+                <constraint firstItem="ZIe-bR-1On" firstAttribute="leading" secondItem="atO-yP-gln" secondAttribute="trailing" constant="2" id="yce-IE-Q7L"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
