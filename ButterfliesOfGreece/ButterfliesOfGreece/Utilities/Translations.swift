@@ -74,6 +74,18 @@ struct Translations {
 		}
 	}
 	
+	static var Images:String {
+		get{
+			"images".Localise()
+		}
+	}
+	
+	static var Page:String {
+		get{
+			"page".Localise()
+		}
+	}
+	
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil

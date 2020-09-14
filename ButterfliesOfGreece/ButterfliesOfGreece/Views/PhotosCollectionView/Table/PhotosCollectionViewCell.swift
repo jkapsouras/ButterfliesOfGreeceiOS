@@ -106,8 +106,10 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
 			case .photos:
 				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
-			case .none:
+			case .photosToPrint:
 				print("not implemented yet")
+			case .none:
+				print("nothing")
 			}
 			
 		}

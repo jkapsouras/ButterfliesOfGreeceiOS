@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="72" id="l4H-Nt-MaN"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do3-Q0-8py">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do3-Q0-8py" customClass="PhotosTableView" customModule="ButterfliesOfGreece" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="116" width="414" height="746"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -41,6 +41,7 @@
                     </view>
                     <connections>
                         <outlet property="ViewHeader" destination="O1Z-Sp-xZd" id="bHg-Wb-bDK"/>
+                        <outlet property="ViewPhotos" destination="do3-Q0-8py" id="cic-hq-yCL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAI-gA-OIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

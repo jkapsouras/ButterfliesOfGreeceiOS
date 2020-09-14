@@ -58,6 +58,7 @@ struct IOC:IOCInjectable
 		container.autoregister(PhotosPresenter.self, initializer: PhotosPresenter.init)
 		container.autoregister(ModalPresenter.self, initializer: ModalPresenter.init)
 		container.autoregister(SearchPresenter.self, initializer: SearchPresenter.init)
+		container.autoregister(PrintToPdfPresenter.self, initializer: PrintToPdfPresenter.init)
     }
     
     public static var container: Container?

@@ -68,7 +68,7 @@ class PhotosTableViewCell: UITableViewCell {
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
-		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+		ImageAdd.image = showingStep == ShowingStep.photos ?  #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate) : #imageLiteral(resourceName: "minusIcon").withRenderingMode(.alwaysTemplate)
 	}
 	
 	func prepareView(){
@@ -105,6 +105,8 @@ class PhotosTableViewCell: UITableViewCell {
 				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
 			case .photos:
 				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
+			case .photosToPrint:
+				print("do nothing")
 			case .none:
 				print("do nothing")
 			}

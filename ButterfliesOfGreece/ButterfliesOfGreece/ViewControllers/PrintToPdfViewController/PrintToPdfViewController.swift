@@ -8,8 +8,11 @@
 
 import UIKit
 
-class PrintToPdfViewController: UIViewController {
+class PrintToPdfViewController: BaseController<PrintToPdfPresenter> {
+	var photosToPrintComponent:PhotosToPrintComponent?
+	
 	@IBOutlet weak var ViewHeader: HeaderPrintToPdfView!
+	@IBOutlet weak var ViewPhotos: PhotosTableView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +21,9 @@ class PrintToPdfViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   override func InitializeComponents() -> Array<UiComponent> {
+		photosToPrintComponent = PhotosToPrintComponent(view: ViewPhotos)
+		return [photosToPrintComponent!]
+	}
 
 }

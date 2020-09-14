@@ -16,21 +16,21 @@ class HeaderPrintToPdfView: UIView {
 	@IBOutlet weak var LabelTitle: UILabel!
 	@IBOutlet weak var ButtonDelete: UIButton!
 	
-    var contentView:UIView?
+	var contentView:UIView?
 	let nibName = "HeaderPrintToPdfView"
-//	var UiEvents: Observable<UiEvent>{get
-//	{
-//		return ViewEvents();
-//		}
-//	}
+		var UiEvents: Observable<UiEvent>{get
+		{
+			return ViewEvents();
+			}
+		}
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		commonInit()
+		prepareTexts()
+		prepareFonts()
 		prepareViews()
-//		prepareTexts()
-//		prepareFonts()
-//		updateViews()
+		//		updateViews()
 	}
 	
 	override init(frame: CGRect) {
@@ -45,7 +45,6 @@ class HeaderPrintToPdfView: UIView {
 		
 		// Adding custom subview on top of our view (over any custom drawing > see note below)
 		self.addSubview(contentView!)
-		
 	}
 	
 	func loadViewFromNib() -> UIView? {
@@ -64,7 +63,7 @@ class HeaderPrintToPdfView: UIView {
 		ButtonArrange.contentMode = .scaleAspectFit
 		ButtonArrange.imageView?.contentMode = .scaleAspectFit
 		ButtonArrange.titleEdgeInsets = UIEdgeInsets(top: 0, left: -ButtonArrange.imageView!.frame.size.width, bottom: 0, right: ButtonArrange.imageView!.frame.size.width);
-		ButtonArrange.imageEdgeInsets = UIEdgeInsets(top: 8, left: ButtonArrange.titleLabel!.frame.size.width, bottom: 8, right: -ButtonArrange.titleLabel!.frame.size.width);
+		ButtonArrange.imageEdgeInsets = UIEdgeInsets(top: 8, left: ButtonArrange.titleLabel!.frame.size.width, bottom: 10, right: -ButtonArrange.titleLabel!.frame.size.width);
 		ButtonArrange.setTitleColor(Constants.Colors.field(darkMode: false).color, for: .normal)
 		ButtonArrange.tintColor = Constants.Colors.field(darkMode: false).color
 		ButtonDelete.setImage(UIImage(named: "deleteIcon"), for: .normal)
@@ -83,12 +82,17 @@ class HeaderPrintToPdfView: UIView {
 	}
 	
 	func prepareTexts(){
-		
+		LabelItemsPerPage.text = "\(Translations.Images)/\(Translations.Page):"
 	}
 	
 	func prepareFonts(){
-		LabelItemsPerPage.setFont(size: Constants.Fonts.fontPhotosSize)
-		LabelTitle.setFont(size: Constants.Fonts.fontPhotosSize)
-		ButtonArrange.setFont(size: Constants.Fonts.fontPhotosSize)
+		LabelItemsPerPage.setFont(size: Constants.Fonts.fontHeaderSize)
+		LabelTitle.setFont(size: Constants.Fonts.fontHeaderSize)
+		ButtonArrange.setFont(size: Constants.Fonts.fontHeaderSize)
+	}
+	
+	func ViewEvents() -> Observable<UiEvent>
+	{
+		return Observable.never()
 	}
 }
