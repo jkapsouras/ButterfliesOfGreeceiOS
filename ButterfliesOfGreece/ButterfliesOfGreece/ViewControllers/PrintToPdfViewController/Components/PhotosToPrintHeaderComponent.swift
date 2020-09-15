@@ -19,15 +19,16 @@ class PhotosToPrintHeaderComponent : UiComponent
 	
 	let uiEvents: Observable<UiEvent>
     
-	init(headerView:HeaderPrintToPdfView, buttonDone:UIButton, pickerContainerView:UIView, pickerView:UIPickerView) {
+	init(headerView:HeaderPrintToPdfView, buttonDone:UIButton, pickerContainerView:UIView, pickerView:UIPickerView, model:PickerDataModel) {
 		self.headerView = headerView
 		self.buttonDone = buttonDone
 		self.pikcerContainerView = pickerContainerView
 		self.pickerView = pickerView
-		model = PickerDataModel(selectedArrange: PdfArrange.onePerPage)
-		uiEvents = headerView.UiEvents
+		self.model = model
+		uiEvents = Observable.merge(headerView.UiEvents, buttonDone.rx.tap.map{_ in
+			model.done()})
     }
-    
+	
     public func renderViewState(viewState: ViewState) {
 		if let state = viewState as? PrintToPdfViewStates{
 			switch state {
@@ -35,10 +36,13 @@ class PhotosToPrintHeaderComponent : UiComponent
 				headerView.ShowPhotosToPrint(numberOfPhotos: data)
 			case PrintToPdfViewStates.showPickArrangeView(let currentArrange):
 				pikcerContainerView.alpha = 1
-				model = PickerDataModel(selectedArrange: currentArrange)
+				model.selectedArrange = currentArrange
 				pickerView.dataSource = model
 				pickerView.delegate = model
 				pickerView.selectRow(model.findSelectedRow(currentArrange: currentArrange), inComponent: 0, animated: true)
+			case PrintToPdfViewStates.arrangeViewChanged(let arrange):
+				headerView.showArrange(arrange:arrange)
+				pikcerContainerView.alpha=0;
 			default:
 				break
 			}

@@ -12,6 +12,7 @@ enum PrintToPdfViewStates:ViewState{
 	case showPhotos(photos:[ButterflyPhoto])
 	case showNumberOfPhotos(numberOfPhotos:Int)
 	case showPickArrangeView(currentArrange:PdfArrange)
+	case arrangeViewChanged(currentArrange:PdfArrange)
 	
 	var isTransition: Bool{
 		return false

@@ -58,7 +58,7 @@ class HeaderPrintToPdfView: UIView {
 		LabelItemsPerPage.textColor = Constants.Colors.field(darkMode: false).color
 		LabelTitle.textColor = Constants.Colors.field(darkMode: false).color
 		
-		ButtonArrange.setTitle("1", for: .normal)
+		ButtonArrange.setTitle(PdfArrange.onePerPage.toString(), for: .normal)
 		ButtonArrange.setImage(UIImage(named: "expandIcon"), for: .normal)
 		ButtonArrange.contentMode = .scaleAspectFit
 		ButtonArrange.imageView?.contentMode = .scaleAspectFit
@@ -93,6 +93,10 @@ class HeaderPrintToPdfView: UIView {
 	
 	func ShowPhotosToPrint(numberOfPhotos:Int){
 		LabelTitle.text = "\(numberOfPhotos) \(Translations.Photos)"
+	}
+	
+	func showArrange(arrange:PdfArrange){
+		ButtonArrange.setTitle(arrange.toString(), for: .normal)
 	}
 	
 	func ViewEvents() -> Observable<UiEvent>

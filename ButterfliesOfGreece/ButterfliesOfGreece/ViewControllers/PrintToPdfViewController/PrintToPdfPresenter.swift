@@ -47,7 +47,8 @@ class PrintToPdfPresenter:BasePresenter{
 		case .changeArrangeClicked:
 			state.onNext(PrintToPdfViewStates.showPickArrangeView(currentArrange: photosToPdfState.pdfArrange))
 		case .arrangeSelected(let pdfArrange):
-			print("arrange selected")
+			photosToPdfState = photosToPdfState.with(pdfArrange: pdfArrange)
+			state.onNext(PrintToPdfViewStates.arrangeViewChanged(currentArrange: photosToPdfState.pdfArrange))
 		}
 	}
 }

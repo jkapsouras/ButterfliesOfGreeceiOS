@@ -30,7 +30,7 @@ class PrintToPdfViewController: BaseController<PrintToPdfPresenter> {
 	
 	override func InitializeComponents() -> Array<UiComponent> {
 		photosToPrintComponent = PhotosToPrintComponent(view: ViewPhotos)
-		photosToPrintHeaderComponent = PhotosToPrintHeaderComponent(headerView: ViewHeader, buttonDone: ButtonDone, pickerContainerView: ViewPickerContainer, pickerView: ViewPicker)
+		photosToPrintHeaderComponent = PhotosToPrintHeaderComponent(headerView: ViewHeader, buttonDone: ButtonDone, pickerContainerView: ViewPickerContainer, pickerView: ViewPicker, model: PickerDataModel(selectedArrange: PdfArrange.onePerPage))
 		return [photosToPrintComponent!, photosToPrintHeaderComponent!]
 	}
 	
