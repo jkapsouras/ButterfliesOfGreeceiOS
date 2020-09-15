@@ -13,8 +13,34 @@ enum PrintToPdfViewStates:ViewState{
 	case showNumberOfPhotos(numberOfPhotos:Int)
 	case showPickArrangeView(currentArrange:PdfArrange)
 	case arrangeViewChanged(currentArrange:PdfArrange)
+	case allPhotosDeleted
 	
 	var isTransition: Bool{
-		return false
+		switch self {
+		case .allPhotosDeleted:
+			return true
+		default:
+			return false
+		}
+	}
+}
+
+extension PrintToPdfViewStates{
+	var toStoryboardName:String?{
+		switch self {
+		case .allPhotosDeleted:
+			return "Families"
+		default:
+			return nil
+		}
+	}
+	
+	var toViewControllerName:String?{
+		switch self {
+		case .allPhotosDeleted:
+			return "FamiliesViewController"
+		default:
+			return nil
+		}
 	}
 }

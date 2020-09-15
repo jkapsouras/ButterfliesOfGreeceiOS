@@ -22,6 +22,7 @@ class PhotosTableViewCell: UITableViewCell {
 	var familyId:Int?
 	var specieId:Int?
 	var photoId:Int?
+	var photo:ButterflyPhoto?
 	var showingStep:ShowingStep?
 	
 	override func awakeFromNib() {
@@ -64,6 +65,7 @@ class PhotosTableViewCell: UITableViewCell {
 		self.emitter = emitter
 		LabelName.text = "\(Translations.Photographer): \(photo.author)"
 		photoId = photo.id
+		self.photo = photo
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
@@ -106,7 +108,9 @@ class PhotosTableViewCell: UITableViewCell {
 			case .photos:
 				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
 			case .photosToPrint:
-				print("do nothing")
+				if let photo = photo{
+					emitter.onNext(PrintToPdfEvents.delete(photo: photo))
+				}
 			case .none:
 				print("do nothing")
 			}

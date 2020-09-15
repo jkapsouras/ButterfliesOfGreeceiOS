@@ -49,6 +49,19 @@ class PrintToPdfPresenter:BasePresenter{
 		case .arrangeSelected(let pdfArrange):
 			photosToPdfState = photosToPdfState.with(pdfArrange: pdfArrange)
 			state.onNext(PrintToPdfViewStates.arrangeViewChanged(currentArrange: photosToPdfState.pdfArrange))
+		case .delete(let photo):
+			_ = photosToPrintRepository.delete(photo: photo)
+				.map{photos -> PhotosToPdfState in
+					self.photosToPdfState = self.photosToPdfState.with(photos: photos)
+					return self.photosToPdfState
+			}
+			.subscribe(onNext: {state in
+				self.state.onNext(PrintToPdfViewStates.showPhotos(photos: state.photos))
+				self.state.onNext(PrintToPdfViewStates.showNumberOfPhotos(numberOfPhotos: state.photos.count))})
+		case .deleteAll:
+			_ = photosToPrintRepository.deleteAll()
+				.subscribe(onNext: {_ in
+					self.state.onNext(PrintToPdfViewStates.allPhotosDeleted)})
 		}
 	}
 }

@@ -91,6 +91,8 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			navigationManager!.HeaderTransition(headerTransition: headerTransition)
 		case let searchTransition as SearchViewStates:
 			navigationManager!.searchTransition(searchTransition: searchTransition)
+		case let printToPdfTransition as PrintToPdfViewStates:
+			navigationManager!.printToPdfTransition(pdfTransition: printToPdfTransition)
 		default:
 			print("default")
 		}

@@ -25,4 +25,12 @@ struct PhotosToPrintRepository {
 	func savePhotosToPrint(photos:[ButterflyPhoto]){
 		_ = cacheManager.savePhotosToPrint(photos: photos)
 	}
+	
+	func delete(photo:ButterflyPhoto) -> Observable<[ButterflyPhoto]>{
+		return cacheManager.delete(photo: photo)
+	}
+	
+	func deleteAll() -> Observable<Bool>{
+		return cacheManager.Clear()
+	}
 }
