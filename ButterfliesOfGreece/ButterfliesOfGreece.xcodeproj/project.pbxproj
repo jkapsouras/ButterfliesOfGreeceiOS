@@ -117,6 +117,8 @@
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
+		FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */; };
+		FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E6251150D000D07FA9 /* PickerDataModel.swift */; };
 		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
 		FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */; };
 		FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */; };
@@ -265,6 +267,8 @@
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
+		FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintHeaderComponent.swift; sourceTree = "<group>"; };
+		FED640E6251150D000D07FA9 /* PickerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataModel.swift; sourceTree = "<group>"; };
 		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPhotoComponent.swift; sourceTree = "<group>"; };
 		FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
@@ -589,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				FE41F795250F572000104C35 /* PhotosToPrintComponent.swift */,
+				FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -821,6 +826,7 @@
 				FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */,
 				FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */,
 				FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */,
+				FED640E6251150D000D07FA9 /* PickerDataModel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1115,6 +1121,7 @@
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				FEA3D15224F6FE3F004B7F7A /* ModalViewStates.swift in Sources */,
 				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
+				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
@@ -1155,6 +1162,7 @@
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,
+				FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */,
 				FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */,
 				FEACB9FD24F2E80200F61689 /* ModalPhotoViewController.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,

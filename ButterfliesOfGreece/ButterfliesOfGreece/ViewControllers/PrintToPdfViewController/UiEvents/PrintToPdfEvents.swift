@@ -10,4 +10,6 @@ import Foundation
 
 enum PrintToPdfEvents:UiEvent{
 	case loadPhotos
+	case changeArrangeClicked
+	case arrangeSelected(pdfArrange:PdfArrange)
 }

@@ -13,6 +13,19 @@ enum PdfArrange{
 	case twoPerPage
 	case fourPerPage
 	case sixPerPage
+	
+	func toString() -> String{
+		switch self {
+		case .onePerPage:
+			return "1"
+		case .twoPerPage:
+			return "2"
+		case .fourPerPage:
+			return "4"
+		case .sixPerPage:
+			return "6"
+		}
+	}
 }
 
 struct PhotosToPdfState {

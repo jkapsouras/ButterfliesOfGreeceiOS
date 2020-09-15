@@ -25,6 +25,8 @@ class PhotosToPrintComponent : UiComponent
 			case PrintToPdfViewStates.showPhotos(let data):
 				print("number of species: \(data.count)")
 				photosTableView.ShowPhotosToPrint(photos: data)
+			default:
+				break
 			}
 		}
     }

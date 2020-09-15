@@ -91,8 +91,12 @@ class HeaderPrintToPdfView: UIView {
 		ButtonArrange.setFont(size: Constants.Fonts.fontHeaderSize)
 	}
 	
+	func ShowPhotosToPrint(numberOfPhotos:Int){
+		LabelTitle.text = "\(numberOfPhotos) \(Translations.Photos)"
+	}
+	
 	func ViewEvents() -> Observable<UiEvent>
 	{
-		return Observable.never()
+		return ButtonArrange.rx.tap.map{_ in PrintToPdfEvents.changeArrangeClicked}
 	}
 }

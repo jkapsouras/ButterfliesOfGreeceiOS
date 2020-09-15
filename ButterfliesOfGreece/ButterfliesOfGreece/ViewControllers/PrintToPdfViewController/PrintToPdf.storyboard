@@ -26,22 +26,52 @@
                                 <rect key="frame" x="0.0" y="116" width="414" height="746"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZu-0u-WaM">
+                                <rect key="frame" x="0.0" y="598" width="414" height="264"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBT-aO-8sO">
+                                        <rect key="frame" x="0.0" y="48" width="414" height="216"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHp-sf-TGK">
+                                        <rect key="frame" x="352" y="8" width="46" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SuT-Ig-iZb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="qBT-aO-8sO" firstAttribute="top" secondItem="sHp-sf-TGK" secondAttribute="bottom" id="6mF-km-y94"/>
+                                    <constraint firstItem="sHp-sf-TGK" firstAttribute="top" secondItem="IZu-0u-WaM" secondAttribute="top" constant="8" id="BCM-Vs-dwa"/>
+                                    <constraint firstAttribute="trailing" secondItem="qBT-aO-8sO" secondAttribute="trailing" id="BFN-Ej-YLV"/>
+                                    <constraint firstAttribute="bottom" secondItem="qBT-aO-8sO" secondAttribute="bottom" id="MTq-YL-A8S"/>
+                                    <constraint firstAttribute="trailing" secondItem="sHp-sf-TGK" secondAttribute="trailing" constant="16" id="PPE-H1-47r"/>
+                                    <constraint firstItem="qBT-aO-8sO" firstAttribute="leading" secondItem="IZu-0u-WaM" secondAttribute="leading" id="mn8-0l-dsF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="do3-Q0-8py" firstAttribute="top" secondItem="O1Z-Sp-xZd" secondAttribute="bottom" id="1Ch-Er-Mwy"/>
                             <constraint firstItem="mAB-7W-xJW" firstAttribute="bottom" secondItem="do3-Q0-8py" secondAttribute="bottom" id="4MM-OT-XfG"/>
                             <constraint firstItem="O1Z-Sp-xZd" firstAttribute="leading" secondItem="mAB-7W-xJW" secondAttribute="leading" id="69U-FC-ITH"/>
+                            <constraint firstItem="mAB-7W-xJW" firstAttribute="bottom" secondItem="IZu-0u-WaM" secondAttribute="bottom" id="8rd-ch-HNw"/>
+                            <constraint firstItem="mAB-7W-xJW" firstAttribute="trailing" secondItem="IZu-0u-WaM" secondAttribute="trailing" id="RsA-bl-xN9"/>
                             <constraint firstItem="mAB-7W-xJW" firstAttribute="trailing" secondItem="O1Z-Sp-xZd" secondAttribute="trailing" id="a8j-tE-lUh"/>
                             <constraint firstItem="do3-Q0-8py" firstAttribute="leading" secondItem="mAB-7W-xJW" secondAttribute="leading" id="pRs-KG-N5j"/>
                             <constraint firstItem="mAB-7W-xJW" firstAttribute="trailing" secondItem="do3-Q0-8py" secondAttribute="trailing" id="qoR-1N-ndV"/>
                             <constraint firstItem="O1Z-Sp-xZd" firstAttribute="top" secondItem="mAB-7W-xJW" secondAttribute="top" id="xIV-zG-UDF"/>
+                            <constraint firstItem="IZu-0u-WaM" firstAttribute="leading" secondItem="mAB-7W-xJW" secondAttribute="leading" id="xQw-49-mRL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mAB-7W-xJW"/>
                     </view>
                     <connections>
+                        <outlet property="ButtonDone" destination="sHp-sf-TGK" id="5Rc-vC-gPz"/>
                         <outlet property="ViewHeader" destination="O1Z-Sp-xZd" id="bHg-Wb-bDK"/>
                         <outlet property="ViewPhotos" destination="do3-Q0-8py" id="cic-hq-yCL"/>
+                        <outlet property="ViewPicker" destination="qBT-aO-8sO" id="NSC-jS-eic"/>
+                        <outlet property="ViewPickerContainer" destination="IZu-0u-WaM" id="IIV-hR-Ejb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAI-gA-OIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

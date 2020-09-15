@@ -42,7 +42,12 @@ class PrintToPdfPresenter:BasePresenter{
 					self.photosToPdfState = self.photosToPdfState.with(photos: photos)
 					return self.photosToPdfState}
 				.subscribe(onNext: {state in
-					self.state.onNext(PrintToPdfViewStates.showPhotos(photos: state.photos))})
+					self.state.onNext(PrintToPdfViewStates.showPhotos(photos: state.photos))
+					self.state.onNext(PrintToPdfViewStates.showNumberOfPhotos(numberOfPhotos: state.photos.count))})
+		case .changeArrangeClicked:
+			state.onNext(PrintToPdfViewStates.showPickArrangeView(currentArrange: photosToPdfState.pdfArrange))
+		case .arrangeSelected(let pdfArrange):
+			print("arrange selected")
 		}
 	}
 }
