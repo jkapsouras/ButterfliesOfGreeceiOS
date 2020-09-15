@@ -100,7 +100,7 @@ extension Storage{
 			return [Family]()
 		}
 		families = families!.compactMap{family in
-			Family(id: family.id, name: family.name, photo: family.photo, species: family.species.compactMap{specie in Specie(id: specie.id, familyId: family.id, name: specie.name, imageTitle: specie.imageTitle, photos: specie.photos)})
+			Family(id: family.id, name: family.name, photo: family.photo, species: family.species.compactMap{specie in Specie(id: specie.id, familyId: family.id, name: specie.name, imageTitle: specie.imageTitle, photos: specie.photos.compactMap{photo in ButterflyPhoto(id: photo.id, source: photo.source, title: photo.title, author: photo.author, genre: photo.genre, identified: photo.identified, familyId: family.id, specieId: specie.id)})})
 		}
 		return families!
 	}

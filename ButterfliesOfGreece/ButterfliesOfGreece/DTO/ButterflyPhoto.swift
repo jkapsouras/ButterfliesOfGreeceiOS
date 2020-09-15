@@ -20,6 +20,8 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 	var author:String
 	var genre:Genre
 	var identified:Bool
+	var familyId:Int?
+	var specieId:Int?
 	
 	enum CodingKeys: String, CodingKey {
 		case id
@@ -38,6 +40,8 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		coder.encode (author, forKey: "author")
 		coder.encode (genre.rawValue, forKey: "genre")
 		coder.encode (identified, forKey: "iden")
+		coder.encode (familyId, forKey: "familyId")
+		coder.encode (specieId, forKey: "specieId")
 	}
 	
 	required init?(coder: NSCoder) {
@@ -47,15 +51,19 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		author = coder.decodeObject (forKey: "author") as! String
 		genre = Genre(rawValue: coder.decodeObject(forKey: "genre") as! String)!
 		identified = coder.decodeBool(forKey: "iden")
+		familyId = coder.decodeObject(forKey: "familyId") as? Int
+		specieId = coder.decodeObject(forKey: "specieId") as? Int
 	}
 	
-	init(id:Int, source:String, title:String, author:String, genre:Genre, identified:Bool) {
+	init(id:Int, source:String, title:String, author:String, genre:Genre, identified:Bool, familyId:Int, specieId:Int) {
 		self.id = id
 		self.source = source
 		self.title = title
 		self.author = author
 		self.genre = genre
 		self.identified = identified
+		self.familyId = familyId
+		self.specieId = specieId
 	}
 	
 	override init(){
@@ -65,6 +73,8 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		author = ""
 		genre = .F
 		identified = false
+		familyId = -1
+		specieId = -1
 	}
 }
 

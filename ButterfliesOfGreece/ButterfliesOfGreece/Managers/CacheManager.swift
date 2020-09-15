@@ -56,7 +56,7 @@ struct CacheManager:CacheManagerProtocol
 	
 	func delete(photo:ButterflyPhoto) -> Observable<[ButterflyPhoto]> {
 		return getPhotosToPrint().map{photos in
-			let newPhotos = photos.filter{ph in ph.source != photo.source}
+			let newPhotos = photos.filter{ph in !(ph.familyId == photo.familyId && ph.specieId == photo.specieId && ph.id == photo.id)}
 			return newPhotos
 		}
 		.do(onNext: {photos in _ = self.savePhotosToPrint(photos: photos)})
