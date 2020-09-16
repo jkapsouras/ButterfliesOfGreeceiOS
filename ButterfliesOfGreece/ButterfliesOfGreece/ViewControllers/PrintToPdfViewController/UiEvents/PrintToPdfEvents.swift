@@ -14,4 +14,5 @@ enum PrintToPdfEvents:UiEvent{
 	case arrangeSelected(pdfArrange:PdfArrange)
 	case deleteAll
 	case delete(photo:ButterflyPhoto)
+	case printPhotos
 }

@@ -102,6 +102,7 @@ class HeaderPrintToPdfView: UIView {
 	func ViewEvents() -> Observable<UiEvent>
 	{
 		return Observable.merge(ButtonArrange.rx.tap.map{_ in PrintToPdfEvents.changeArrangeClicked},
-								ButtonDelete.rx.tap.map{_ in PrintToPdfEvents.deleteAll})
+								ButtonDelete.rx.tap.map{_ in PrintToPdfEvents.deleteAll},
+								ButtonPrint.rx.tap.map{_ in PrintToPdfEvents.printPhotos})
 	}
 }

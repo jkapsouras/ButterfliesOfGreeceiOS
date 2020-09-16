@@ -14,10 +14,12 @@ enum PrintToPdfViewStates:ViewState{
 	case showPickArrangeView(currentArrange:PdfArrange)
 	case arrangeViewChanged(currentArrange:PdfArrange)
 	case allPhotosDeleted
+	case toPrintPreview
 	
 	var isTransition: Bool{
 		switch self {
-		case .allPhotosDeleted:
+		case .allPhotosDeleted,
+			 .toPrintPreview:
 			return true
 		default:
 			return false
@@ -30,6 +32,8 @@ extension PrintToPdfViewStates{
 		switch self {
 		case .allPhotosDeleted:
 			return "Families"
+		case .toPrintPreview:
+			return "PdfPreview"
 		default:
 			return nil
 		}
@@ -39,6 +43,8 @@ extension PrintToPdfViewStates{
 		switch self {
 		case .allPhotosDeleted:
 			return "FamiliesViewController"
+			case .toPrintPreview:
+			return "PdfPreviewViewController"
 		default:
 			return nil
 		}

@@ -20,9 +20,18 @@ struct Storage {
 	static var familyId:Int?
 	static var specieId:Int?
 	static var photoId:Int?
+	static var pdfArrange:PdfArrange?
 	
 	mutating func species(familyId:Int) -> [Specie]{
 		return families.filter{$0.id == familyId}.flatMap{$0.species}
+	}
+	
+	func getPdfArrange() -> PdfArrange{
+		return Storage.pdfArrange ?? PdfArrange.onePerPage
+	}
+	
+	func setPdfArrange(pdfArrange:PdfArrange) -> Observable<Bool> {
+		return Observable.from(optional: Storage.pdfArrange = pdfArrange).map({ _ in return true})
 	}
 	
 	mutating func photos(specieId:Int) -> [ButterflyPhoto]{

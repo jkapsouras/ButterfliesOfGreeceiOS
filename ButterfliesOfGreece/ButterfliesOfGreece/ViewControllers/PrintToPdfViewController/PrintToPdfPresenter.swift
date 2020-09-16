@@ -62,6 +62,8 @@ class PrintToPdfPresenter:BasePresenter{
 			_ = photosToPrintRepository.deleteAll()
 				.subscribe(onNext: {_ in
 					self.state.onNext(PrintToPdfViewStates.allPhotosDeleted)})
+		case .printPhotos:
+			state.onNext(PrintToPdfViewStates.toPrintPreview)
 		}
 	}
 }

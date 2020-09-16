@@ -33,4 +33,12 @@ struct PhotosToPrintRepository {
 	func deleteAll() -> Observable<Bool>{
 		return cacheManager.Clear()
 	}
+	
+	func getPdfArrange() -> Observable<PdfArrange>{
+		return Observable.from(optional: storage.getPdfArrange())
+	}
+	
+	func setPdfArrange(pdfArrange:PdfArrange) -> Observable<Bool>{
+		return storage.setPdfArrange(pdfArrange: pdfArrange)
+	}
 }
