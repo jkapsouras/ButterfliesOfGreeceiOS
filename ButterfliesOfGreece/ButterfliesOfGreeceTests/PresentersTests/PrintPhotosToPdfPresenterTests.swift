@@ -56,6 +56,8 @@ class PrintToPdfPresenterTests: XCTestCase {
 		switch viewState {
 		case .showPhotos(let photos):
 			XCTAssert(photos.count == 0)//test json data
+		default:
+			break
 		}
 	}
 	
@@ -85,6 +87,8 @@ class PrintToPdfPresenterTests: XCTestCase {
 		switch viewState {
 		case .showPhotos(let photos):
 			XCTAssert(photos.count == 10)//test json data
+		default:
+			break
 		}
 	}
 }
