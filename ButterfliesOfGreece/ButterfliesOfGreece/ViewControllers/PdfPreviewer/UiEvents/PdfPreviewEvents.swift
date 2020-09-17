@@ -8,6 +8,6 @@
 
 import Foundation
 
-//enum PdfPreviewEvents:UiEvent{
-//	case showPdf(pdfData: Data)
-//}
+enum PdfPreviewEvents:UiEvent{
+	case sharePdf
+}

@@ -22,6 +22,7 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 	var identified:Bool
 	var familyId:Int?
 	var specieId:Int?
+	var specieName:String?
 	
 	enum CodingKeys: String, CodingKey {
 		case id
@@ -30,7 +31,6 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		case author
 		case genre
 		case identified = "iden"
-		
 	}
 	
 	func encode(with coder: NSCoder) {
@@ -42,6 +42,7 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		coder.encode (identified, forKey: "iden")
 		coder.encode (familyId, forKey: "familyId")
 		coder.encode (specieId, forKey: "specieId")
+		coder.encode (specieName, forKey: "specieName")
 	}
 	
 	required init?(coder: NSCoder) {
@@ -53,9 +54,10 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		identified = coder.decodeBool(forKey: "iden")
 		familyId = coder.decodeObject(forKey: "familyId") as? Int
 		specieId = coder.decodeObject(forKey: "specieId") as? Int
+		specieName = coder.decodeObject(forKey: "specieName") as? String
 	}
 	
-	init(id:Int, source:String, title:String, author:String, genre:Genre, identified:Bool, familyId:Int, specieId:Int) {
+	init(id:Int, source:String, title:String, author:String, genre:Genre, identified:Bool, familyId:Int, specieId:Int, specieName:String) {
 		self.id = id
 		self.source = source
 		self.title = title
@@ -64,6 +66,7 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		self.identified = identified
 		self.familyId = familyId
 		self.specieId = specieId
+		self.specieName = specieName
 	}
 	
 	override init(){
@@ -75,6 +78,7 @@ class ButterflyPhoto:NSObject, NSCoding, Codable{
 		identified = false
 		familyId = -1
 		specieId = -1
+		specieName = ""
 	}
 }
 

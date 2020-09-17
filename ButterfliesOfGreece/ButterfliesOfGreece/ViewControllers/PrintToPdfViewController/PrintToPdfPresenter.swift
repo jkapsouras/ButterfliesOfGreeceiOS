@@ -47,8 +47,12 @@ class PrintToPdfPresenter:BasePresenter{
 		case .changeArrangeClicked:
 			state.onNext(PrintToPdfViewStates.showPickArrangeView(currentArrange: photosToPdfState.pdfArrange))
 		case .arrangeSelected(let pdfArrange):
-			photosToPdfState = photosToPdfState.with(pdfArrange: pdfArrange)
-			state.onNext(PrintToPdfViewStates.arrangeViewChanged(currentArrange: photosToPdfState.pdfArrange))
+			_ = photosToPrintRepository.setPdfArrange(pdfArrange: pdfArrange)
+				.map{_  -> PhotosToPdfState in
+					self.photosToPdfState = self.photosToPdfState.with(pdfArrange: pdfArrange)
+					return self.photosToPdfState}
+				.subscribe(onNext: {state in
+					self.state.onNext(PrintToPdfViewStates.arrangeViewChanged(currentArrange: state.pdfArrange))})
 		case .delete(let photo):
 			_ = photosToPrintRepository.delete(photo: photo)
 				.map{photos -> PhotosToPdfState in

@@ -10,6 +10,7 @@ import Foundation
 
 enum PdfPreviewViewStates:ViewState{
 	case showPdf(pdfData: Data)
+	case showShareDialog(pdfData: Data)
 	
 	var isTransition: Bool{
 		return false

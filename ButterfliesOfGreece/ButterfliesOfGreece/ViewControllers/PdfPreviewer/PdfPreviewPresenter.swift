@@ -30,6 +30,17 @@ class PdfPreviewPresenter:BasePresenter{
 				self.pdfState = self.pdfState.with(pdfData: self.pdfCreator.createFlyer(photos: data.1, pdfArrange: data.0), photos: data.1, pdfArrange: data.0)
 				self.state.onNext(PdfPreviewViewStates.showPdf(pdfData: self.pdfState.pdfData!))
 			})
-		
+	}
+	
+	override func HandleEvent(uiEvents: UiEvent) {
+		switch uiEvents {
+		case let previewPdfEvents as PdfPreviewEvents:
+			switch previewPdfEvents {
+			case .sharePdf:
+				state.onNext(PdfPreviewViewStates.showShareDialog(pdfData: pdfState.pdfData ?? Data()))
+			}
+		default:
+			state.onNext(GeneralViewState.idle)
+		}
 	}
 }

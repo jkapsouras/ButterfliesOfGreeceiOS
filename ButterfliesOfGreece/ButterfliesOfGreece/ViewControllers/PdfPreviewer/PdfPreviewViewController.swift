@@ -11,16 +11,13 @@ import UIKit
 class PdfPreviewViewController: BaseController<PdfPreviewPresenter> {
 	var pdfPreviewComponent:PdfPreviewComponent?
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-   override func InitializeComponents() -> Array<UiComponent> {
-		pdfPreviewComponent = PdfPreviewComponent(view: view)
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
+	
+	override func InitializeComponents() -> Array<UiComponent> {
+		pdfPreviewComponent = PdfPreviewComponent(controller:self, view: view, navigationItem: navigationItem)
 		return [pdfPreviewComponent!]
 	}
-
+	
 }
