@@ -635,6 +635,7 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEFAD1892514B03F0022A215 /* ContributeViewController */,
 				FE9D70342511EF2400FCE1F3 /* PdfPreviewer */,
 				FE14398D250EA98A00B53E34 /* PrintToPdfViewController */,
 				FE24D59724FEE43F0057D630 /* SearchViewController */,
@@ -923,6 +924,21 @@
 				FEEEEEDE24D6F02800C9655B /* NavigationViewController.swift */,
 			);
 			path = NavigationViewController;
+			sourceTree = "<group>";
+		};
+		FEFAD1892514B03F0022A215 /* ContributeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEFAD18A2514B04B0022A215 /* UiEvents */,
+			);
+			path = ContributeViewController;
+			sourceTree = "<group>";
+		};
+		FEFAD18A2514B04B0022A215 /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UiEvents;
 			sourceTree = "<group>";
 		};
 		FEFBA08D24F2445900335E77 /* PhotosViewController */ = {
