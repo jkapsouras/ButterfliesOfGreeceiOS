@@ -98,6 +98,72 @@ struct Translations {
 		}
 	}
 	
+	static var PhotoName:String {
+		get{
+			"photo_name".Localise()
+		}
+	}
+	
+	static var Date:String {
+		get{
+			"date".Localise()
+		}
+	}
+	
+	static var Altitude:String {
+		get{
+			"altitude".Localise()
+		}
+	}
+	
+	static var Place:String {
+		get{
+			"place".Localise()
+		}
+	}
+	
+	static var Longitude:String {
+		get{
+			"longitude".Localise()
+		}
+	}
+	
+	static var Latitude:String {
+		get{
+			"latitude".Localise()
+		}
+	}
+	
+	static var Stage:String {
+		get{
+			"stage".Localise()
+		}
+	}
+	
+	static var GenusSpecies:String {
+		get{
+			"genus_species".Localise()
+		}
+	}
+	
+	static var NameSpecies:String {
+		get{
+			"name_species".Localise()
+		}
+	}
+	
+	static var Comments:String {
+		get{
+			"comments".Localise()
+		}
+	}
+	
+	static var SendInfo:String {
+		get{
+			"send_info".Localise()
+		}
+	}
+	
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil

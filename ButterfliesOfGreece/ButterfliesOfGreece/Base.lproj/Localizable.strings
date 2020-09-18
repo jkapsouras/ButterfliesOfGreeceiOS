@@ -19,3 +19,14 @@
 "page" = "Page";
 "photos" = "Photos";
 "select" = "Done";
+"photo_name" = "Photo name";
+"date" = "Date";
+"altitude" = "Altitude";
+"place" = "Place";
+"longitude" = "Longitude";
+"latitude" = "Latitude";
+"stage" = "Stage";
+"genus_species" = "Genus species";
+"name_species" = "Name species";
+"comments" = "Comments";
+"send_info" = "Share info with the author";

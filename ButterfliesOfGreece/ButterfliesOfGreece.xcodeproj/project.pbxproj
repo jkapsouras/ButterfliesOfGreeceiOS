@@ -68,6 +68,14 @@
 		FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B924E1DDE900BA4AF5 /* FamiliesTableComponent.swift */; };
 		FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327BE24E30D7800BA4AF5 /* PhotosTableView.swift */; };
 		FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5327C024E30D8B00BA4AF5 /* PhotosTableView.xib */; };
+		FE6691DE2514B2EE006C377F /* Contribute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6691DD2514B2EE006C377F /* Contribute.storyboard */; };
+		FE6691E02514B2FF006C377F /* ContributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691DF2514B2FF006C377F /* ContributeViewController.swift */; };
+		FE6691E32514B359006C377F /* ContributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6691E22514B359006C377F /* ContributeView.xib */; };
+		FE6691E52514B36E006C377F /* ContributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691E42514B36D006C377F /* ContributeView.swift */; };
+		FE6691E82514D95B006C377F /* ContributeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691E72514D95B006C377F /* ContributeComponent.swift */; };
+		FE6691EA2514E1A1006C377F /* ContributePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691E92514E1A0006C377F /* ContributePresenter.swift */; };
+		FE6691EC2514E978006C377F /* ContributeEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691EB2514E978006C377F /* ContributeEvents.swift */; };
+		FE6691EE2514EA07006C377F /* ContributeViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691ED2514EA07006C377F /* ContributeViewStates.swift */; };
 		FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */; };
 		FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */; };
 		FE71B27024F1ACF3009F6BF0 /* NavigationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */; };
@@ -218,6 +226,14 @@
 		FE5327B924E1DDE900BA4AF5 /* FamiliesTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesTableComponent.swift; sourceTree = "<group>"; };
 		FE5327BE24E30D7800BA4AF5 /* PhotosTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableView.swift; sourceTree = "<group>"; };
 		FE5327C024E30D8B00BA4AF5 /* PhotosTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableView.xib; sourceTree = "<group>"; };
+		FE6691DD2514B2EE006C377F /* Contribute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contribute.storyboard; sourceTree = "<group>"; };
+		FE6691DF2514B2FF006C377F /* ContributeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeViewController.swift; sourceTree = "<group>"; };
+		FE6691E22514B359006C377F /* ContributeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContributeView.xib; sourceTree = "<group>"; };
+		FE6691E42514B36D006C377F /* ContributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeView.swift; sourceTree = "<group>"; };
+		FE6691E72514D95B006C377F /* ContributeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeComponent.swift; sourceTree = "<group>"; };
+		FE6691E92514E1A0006C377F /* ContributePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributePresenter.swift; sourceTree = "<group>"; };
+		FE6691EB2514E978006C377F /* ContributeEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeEvents.swift; sourceTree = "<group>"; };
+		FE6691ED2514EA07006C377F /* ContributeViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeViewStates.swift; sourceTree = "<group>"; };
 		FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewEvents.swift; sourceTree = "<group>"; };
 		FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewViewStates.swift; sourceTree = "<group>"; };
 		FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRepository.swift; sourceTree = "<group>"; };
@@ -652,6 +668,7 @@
 		FE5327BC24E30D2D00BA4AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE6691E12514B345006C377F /* ContributeView */,
 				FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */,
 				FE1341AE24E32A6E0076EF14 /* HeaderView */,
 				FE1341A424E326660076EF14 /* PhotosCollectionView */,
@@ -668,6 +685,31 @@
 				FE5327C024E30D8B00BA4AF5 /* PhotosTableView.xib */,
 			);
 			path = PhotosTableView;
+			sourceTree = "<group>";
+		};
+		FE6691DC2514B2D7006C377F /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FE6691ED2514EA07006C377F /* ContributeViewStates.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FE6691E12514B345006C377F /* ContributeView */ = {
+			isa = PBXGroup;
+			children = (
+				FE6691E22514B359006C377F /* ContributeView.xib */,
+				FE6691E42514B36D006C377F /* ContributeView.swift */,
+			);
+			path = ContributeView;
+			sourceTree = "<group>";
+		};
+		FE6691E62514D941006C377F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE6691E72514D95B006C377F /* ContributeComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FE6952E724E59B4B00A844A2 /* UiEvents */ = {
@@ -929,7 +971,12 @@
 		FEFAD1892514B03F0022A215 /* ContributeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FE6691E62514D941006C377F /* Components */,
+				FE6691DC2514B2D7006C377F /* ViewStates */,
 				FEFAD18A2514B04B0022A215 /* UiEvents */,
+				FE6691DD2514B2EE006C377F /* Contribute.storyboard */,
+				FE6691DF2514B2FF006C377F /* ContributeViewController.swift */,
+				FE6691E92514E1A0006C377F /* ContributePresenter.swift */,
 			);
 			path = ContributeViewController;
 			sourceTree = "<group>";
@@ -937,6 +984,7 @@
 		FEFAD18A2514B04B0022A215 /* UiEvents */ = {
 			isa = PBXGroup;
 			children = (
+				FE6691EB2514E978006C377F /* ContributeEvents.swift */,
 			);
 			path = UiEvents;
 			sourceTree = "<group>";
@@ -1084,6 +1132,8 @@
 				FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
 				FE9D70362511EF3600FCE1F3 /* PdfPreview.storyboard in Resources */,
+				FE6691DE2514B2EE006C377F /* Contribute.storyboard in Resources */,
+				FE6691E32514B359006C377F /* ContributeView.xib in Resources */,
 				0A7351DE24EE681100E2712D /* Species.storyboard in Resources */,
 				FEFBA0A124F29B5F00335E77 /* Photos.storyboard in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
@@ -1184,6 +1234,7 @@
 				0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
 				FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */,
+				FE6691E52514B36E006C377F /* ContributeView.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
 				FEA23DC52503C34600776D19 /* SearchState.swift in Sources */,
@@ -1197,6 +1248,7 @@
 				FEA3D15224F6FE3F004B7F7A /* ModalViewStates.swift in Sources */,
 				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
 				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
+				FE6691EA2514E1A1006C377F /* ContributePresenter.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
 				FE9D703A2511F77C00FCE1F3 /* PdfPreviewPresenter.swift in Sources */,
@@ -1236,6 +1288,7 @@
 				FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */,
 				FE14399C250EB6E600B53E34 /* HeaderPrintToPdfView.swift in Sources */,
 				FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */,
+				FE6691E82514D95B006C377F /* ContributeComponent.swift in Sources */,
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,
@@ -1243,6 +1296,7 @@
 				FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */,
 				FEACB9FD24F2E80200F61689 /* ModalPhotoViewController.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
+				FE6691EC2514E978006C377F /* ContributeEvents.swift in Sources */,
 				FE9D70422511FF8800FCE1F3 /* PdfPreviewStates.swift in Sources */,
 				FEA23DC92503C5A500776D19 /* SearchEvents.swift in Sources */,
 				FE8DADA624E57032009F92F6 /* PhotosCollectionViewCell.swift in Sources */,
@@ -1252,6 +1306,7 @@
 				FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */,
 				FE10425924D5AB030075D027 /* Family.swift in Sources */,
 				FEB3521224CB199C0040313D /* UiComponent.swift in Sources */,
+				FE6691EE2514EA07006C377F /* ContributeViewStates.swift in Sources */,
 				FE85F65124F2A2DF00414631 /* PhotosCollectionComponent.swift in Sources */,
 				FEFBA09924F2479500335E77 /* PhotosRepository.swift in Sources */,
 				FE5327B724E178D500BA4AF5 /* FamiliesState.swift in Sources */,
@@ -1260,6 +1315,7 @@
 				FE9D70312511E3CE00FCE1F3 /* PdfManager.swift in Sources */,
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
+				FE6691E02514B2FF006C377F /* ContributeViewController.swift in Sources */,
 				FEFBA09324F244E100335E77 /* PhotoViewStates.swift in Sources */,
 				0A25982C24EDBCB2003893FA /* SpeciesEvents.swift in Sources */,
 				FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */,
