@@ -12,10 +12,12 @@ enum HeaderViewViewStates:ViewState{
 	case updateFolderIcon(numberOfPhotos:Int)
 	case setHeaderTitle(headerTitle:String)
 	case toSearch
+	case toPrintPhotos
 	
 	var isTransition: Bool{
 		switch self {
-		case .toSearch:
+		case .toSearch,
+			 .toPrintPhotos:
 			return true
 		case .updateFolderIcon,
 			 .setHeaderTitle:
@@ -29,6 +31,8 @@ extension HeaderViewViewStates{
 		switch self {
 		case .toSearch:
 			return "Search"
+		case .toPrintPhotos:
+			return "PrintToPdf"
 		default:
 			return nil
 		}
@@ -38,6 +42,8 @@ extension HeaderViewViewStates{
 		switch self {
 		case .toSearch:
 			return "SearchViewController"
+			case .toPrintPhotos:
+			return "PrintToPdfViewController"
 		default:
 			return nil
 		}

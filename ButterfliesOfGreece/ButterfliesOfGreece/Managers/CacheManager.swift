@@ -17,6 +17,7 @@ protocol CacheManagerProtocol
 	func  savePhotosToPrint(photos:[ButterflyPhoto]) -> Observable<Bool>
 	func  getPhotosToPrint() -> Observable<[ButterflyPhoto]>
 	func  Clear() -> Observable<Bool>
+	func delete(photo:ButterflyPhoto) -> Observable<[ButterflyPhoto]>
 }
 
 struct CacheManager:CacheManagerProtocol
@@ -51,6 +52,14 @@ struct CacheManager:CacheManagerProtocol
 			tempPhotos = [ButterflyPhoto]()
 		}
 		return Observable.from(optional:  tempPhotos)
+	}
+	
+	func delete(photo:ButterflyPhoto) -> Observable<[ButterflyPhoto]> {
+		return getPhotosToPrint().map{photos in
+			let newPhotos = photos.filter{ph in !(ph.familyId == photo.familyId && ph.specieId == photo.specieId && ph.id == photo.id)}
+			return newPhotos
+		}
+		.do(onNext: {photos in _ = self.savePhotosToPrint(photos: photos)})
 	}
 	
 	func Clear() -> Observable<Bool> {

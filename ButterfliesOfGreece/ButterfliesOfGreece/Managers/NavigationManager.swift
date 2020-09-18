@@ -90,6 +90,18 @@ struct NavigationManager {
 		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
 	}
 	
+	func printToPdfTransition(pdfTransition: PrintToPdfViewStates) {
+		guard let currentStoryboardName = pdfTransition.toStoryboardName else{
+			print("Storyboard name not found")
+			return
+		}
+		guard let currentControllerName = pdfTransition.toViewControllerName else{
+			print("Controller name not found")
+			return
+		}
+		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
+	}
+	
 	func navigateToController(storyboardName:String, controllerName:String){
 		let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: controllerName)

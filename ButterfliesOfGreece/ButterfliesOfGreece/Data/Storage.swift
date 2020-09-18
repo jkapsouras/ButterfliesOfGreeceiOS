@@ -20,9 +20,18 @@ struct Storage {
 	static var familyId:Int?
 	static var specieId:Int?
 	static var photoId:Int?
+	static var pdfArrange:PdfArrange?
 	
 	mutating func species(familyId:Int) -> [Specie]{
 		return families.filter{$0.id == familyId}.flatMap{$0.species}
+	}
+	
+	func getPdfArrange() -> PdfArrange{
+		return Storage.pdfArrange ?? PdfArrange.onePerPage
+	}
+	
+	func setPdfArrange(pdfArrange:PdfArrange) -> Observable<Bool> {
+		return Observable.from(optional: Storage.pdfArrange = pdfArrange).map({ _ in return true})
 	}
 	
 	mutating func photos(specieId:Int) -> [ButterflyPhoto]{
@@ -100,7 +109,7 @@ extension Storage{
 			return [Family]()
 		}
 		families = families!.compactMap{family in
-			Family(id: family.id, name: family.name, photo: family.photo, species: family.species.compactMap{specie in Specie(id: specie.id, familyId: family.id, name: specie.name, imageTitle: specie.imageTitle, photos: specie.photos)})
+			Family(id: family.id, name: family.name, photo: family.photo, species: family.species.compactMap{specie in Specie(id: specie.id, familyId: family.id, name: specie.name, imageTitle: specie.imageTitle, photos: specie.photos.compactMap{photo in ButterflyPhoto(id: photo.id, source: photo.source, title: photo.title, author: photo.author, genre: photo.genre, identified: photo.identified, familyId: family.id, specieId: specie.id, specieName: specie.name)})})
 		}
 		return families!
 	}

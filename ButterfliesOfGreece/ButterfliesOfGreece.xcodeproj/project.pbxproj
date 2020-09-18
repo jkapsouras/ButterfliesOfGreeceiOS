@@ -39,6 +39,14 @@
 		FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341B324E32B340076EF14 /* FamiliesCollectionComponent.swift */; };
 		FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */; };
 		FE14398C250E76E200B53E34 /* PrintPhotosToPdfPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14398B250E76E200B53E34 /* PrintPhotosToPdfPresenterTests.swift */; };
+		FE14398F250EA9A300B53E34 /* PrintToPdfPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14398E250EA9A300B53E34 /* PrintToPdfPresenter.swift */; };
+		FE143991250EA9B100B53E34 /* PrintToPdfState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE143990250EA9B100B53E34 /* PrintToPdfState.swift */; };
+		FE143994250EAEA700B53E34 /* PrintToPdfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE143993250EAEA700B53E34 /* PrintToPdfEvents.swift */; };
+		FE143997250EAEF300B53E34 /* PrintToPdfViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE143996250EAEF300B53E34 /* PrintToPdfViewStates.swift */; };
+		FE143999250EB4B000B53E34 /* PrintToPdf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE143998250EB4B000B53E34 /* PrintToPdf.storyboard */; };
+		FE14399C250EB6E600B53E34 /* HeaderPrintToPdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14399B250EB6E600B53E34 /* HeaderPrintToPdfView.swift */; };
+		FE14399E250EB6F900B53E34 /* HeaderPrintToPdfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE14399D250EB6F900B53E34 /* HeaderPrintToPdfView.xib */; };
+		FE1439A2250EB8D500B53E34 /* PrintToPdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1439A1250EB8D500B53E34 /* PrintToPdfViewController.swift */; };
 		FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */; };
 		FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */; };
 		FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23263A250D1A62009C8075 /* SearchResultComponent.swift */; };
@@ -52,6 +60,7 @@
 		FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B4424CF6A6D00F47717 /* FamiliesViewStates.swift */; };
 		FE389B4724CF707900F47717 /* FamiliesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */; };
 		FE389B4924CF70BD00F47717 /* TestSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE389B4824CF70BD00F47717 /* TestSchedulers.swift */; };
+		FE41F796250F572000104C35 /* PhotosToPrintComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE41F795250F572000104C35 /* PhotosToPrintComponent.swift */; };
 		FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */; };
 		FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5327B224E039BE00BA4AF5 /* ACTypoGrotesk.ttf */; };
 		FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */; };
@@ -73,6 +82,14 @@
 		FE8DADA624E57032009F92F6 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DADA424E57032009F92F6 /* PhotosCollectionViewCell.swift */; };
 		FE8DADA724E57032009F92F6 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8DADA524E57032009F92F6 /* PhotosCollectionViewCell.xib */; };
 		FE8DADA924E5759C009F92F6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FE8DADA824E5759B009F92F6 /* data.json */; };
+		FE9D70312511E3CE00FCE1F3 /* PdfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */; };
+		FE9D70362511EF3600FCE1F3 /* PdfPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9D70352511EF3600FCE1F3 /* PdfPreview.storyboard */; };
+		FE9D70382511EF6700FCE1F3 /* PdfPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70372511EF6700FCE1F3 /* PdfPreviewViewController.swift */; };
+		FE9D703A2511F77C00FCE1F3 /* PdfPreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70392511F77C00FCE1F3 /* PdfPreviewPresenter.swift */; };
+		FE9D703C2511F79E00FCE1F3 /* PdfState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D703B2511F79E00FCE1F3 /* PdfState.swift */; };
+		FE9D70402511FEE500FCE1F3 /* PdfPreviewEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D703F2511FEE500FCE1F3 /* PdfPreviewEvents.swift */; };
+		FE9D70422511FF8800FCE1F3 /* PdfPreviewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70412511FF8800FCE1F3 /* PdfPreviewStates.swift */; };
+		FE9D70452512004B00FCE1F3 /* PdfPreviewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70442512004B00FCE1F3 /* PdfPreviewComponent.swift */; };
 		FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6024E84A710038DD9C /* Storage.swift */; };
 		FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */; };
 		FEA1CB6624E870B40038DD9C /* PhotosToPrintRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */; };
@@ -108,6 +125,8 @@
 		FEB3521224CB199C0040313D /* UiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521124CB199C0040313D /* UiComponent.swift */; };
 		FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521324CB20210040313D /* MenuPresenter.swift */; };
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
+		FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */; };
+		FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E6251150D000D07FA9 /* PickerDataModel.swift */; };
 		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
 		FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */; };
 		FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */; };
@@ -170,6 +189,14 @@
 		FE1341B324E32B340076EF14 /* FamiliesCollectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesCollectionComponent.swift; sourceTree = "<group>"; };
 		FE1341B524E32E6F0076EF14 /* FamiliesHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesHeaderComponent.swift; sourceTree = "<group>"; };
 		FE14398B250E76E200B53E34 /* PrintPhotosToPdfPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintPhotosToPdfPresenterTests.swift; sourceTree = "<group>"; };
+		FE14398E250EA9A300B53E34 /* PrintToPdfPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfPresenter.swift; sourceTree = "<group>"; };
+		FE143990250EA9B100B53E34 /* PrintToPdfState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfState.swift; sourceTree = "<group>"; };
+		FE143993250EAEA700B53E34 /* PrintToPdfEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfEvents.swift; sourceTree = "<group>"; };
+		FE143996250EAEF300B53E34 /* PrintToPdfViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfViewStates.swift; sourceTree = "<group>"; };
+		FE143998250EB4B000B53E34 /* PrintToPdf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrintToPdf.storyboard; sourceTree = "<group>"; };
+		FE14399B250EB6E600B53E34 /* HeaderPrintToPdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPrintToPdfView.swift; sourceTree = "<group>"; };
+		FE14399D250EB6F900B53E34 /* HeaderPrintToPdfView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderPrintToPdfView.xib; sourceTree = "<group>"; };
+		FE1439A1250EB8D500B53E34 /* PrintToPdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintToPdfViewController.swift; sourceTree = "<group>"; };
 		FE1FBE9024CB1121008D0EA1 /* BackgroundThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThreadScheduler.swift; sourceTree = "<group>"; };
 		FE1FBE9224CB11A8008D0EA1 /* MainThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadScheduler.swift; sourceTree = "<group>"; };
 		FE23263A250D1A62009C8075 /* SearchResultComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultComponent.swift; sourceTree = "<group>"; };
@@ -183,6 +210,7 @@
 		FE389B4424CF6A6D00F47717 /* FamiliesViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesViewStates.swift; sourceTree = "<group>"; };
 		FE389B4624CF707900F47717 /* FamiliesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesPresenterTests.swift; sourceTree = "<group>"; };
 		FE389B4824CF70BD00F47717 /* TestSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulers.swift; sourceTree = "<group>"; };
+		FE41F795250F572000104C35 /* PhotosToPrintComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintComponent.swift; sourceTree = "<group>"; };
 		FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		FE5327B224E039BE00BA4AF5 /* ACTypoGrotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ACTypoGrotesk.ttf; sourceTree = "<group>"; };
 		FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FonstExtensions.swift; sourceTree = "<group>"; };
@@ -205,6 +233,14 @@
 		FE8DADA424E57032009F92F6 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE8DADA524E57032009F92F6 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE8DADA824E5759B009F92F6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfManager.swift; sourceTree = "<group>"; };
+		FE9D70352511EF3600FCE1F3 /* PdfPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PdfPreview.storyboard; sourceTree = "<group>"; };
+		FE9D70372511EF6700FCE1F3 /* PdfPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewViewController.swift; sourceTree = "<group>"; };
+		FE9D70392511F77C00FCE1F3 /* PdfPreviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewPresenter.swift; sourceTree = "<group>"; };
+		FE9D703B2511F79E00FCE1F3 /* PdfState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfState.swift; sourceTree = "<group>"; };
+		FE9D703F2511FEE500FCE1F3 /* PdfPreviewEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewEvents.swift; sourceTree = "<group>"; };
+		FE9D70412511FF8800FCE1F3 /* PdfPreviewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewStates.swift; sourceTree = "<group>"; };
+		FE9D70442512004B00FCE1F3 /* PdfPreviewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewComponent.swift; sourceTree = "<group>"; };
 		FEA1CB6024E84A710038DD9C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FEA1CB6324E869360038DD9C /* FamiliesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliesRepository.swift; sourceTree = "<group>"; };
 		FEA1CB6524E870B40038DD9C /* PhotosToPrintRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintRepository.swift; sourceTree = "<group>"; };
@@ -247,6 +283,8 @@
 		FEB3521324CB20210040313D /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		FEB3521B24CB22F30040313D /* ButterfliesOfGreeceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreeceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
+		FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintHeaderComponent.swift; sourceTree = "<group>"; };
+		FED640E6251150D000D07FA9 /* PickerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataModel.swift; sourceTree = "<group>"; };
 		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		FEE1D6E424F7853A000C0A15 /* ModalPhotoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPhotoComponent.swift; sourceTree = "<group>"; };
 		FEEEEEDC24D6EF8600C9655B /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
@@ -442,6 +480,45 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
+		FE14398D250EA98A00B53E34 /* PrintToPdfViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE41F794250F56ED00104C35 /* Components */,
+				FE143995250EAEE500B53E34 /* ViewStates */,
+				FE143992250EAE8600B53E34 /* UiEvents */,
+				FE14398E250EA9A300B53E34 /* PrintToPdfPresenter.swift */,
+				FE143990250EA9B100B53E34 /* PrintToPdfState.swift */,
+				FE143998250EB4B000B53E34 /* PrintToPdf.storyboard */,
+				FE1439A1250EB8D500B53E34 /* PrintToPdfViewController.swift */,
+			);
+			path = PrintToPdfViewController;
+			sourceTree = "<group>";
+		};
+		FE143992250EAE8600B53E34 /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				FE143993250EAEA700B53E34 /* PrintToPdfEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		FE143995250EAEE500B53E34 /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FE143996250EAEF300B53E34 /* PrintToPdfViewStates.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */ = {
+			isa = PBXGroup;
+			children = (
+				FE14399B250EB6E600B53E34 /* HeaderPrintToPdfView.swift */,
+				FE14399D250EB6F900B53E34 /* HeaderPrintToPdfView.xib */,
+			);
+			path = HeaderPrintToPdfView;
+			sourceTree = "<group>";
+		};
 		FE1FBE8F24CB110B008D0EA1 /* Schedulers */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +605,15 @@
 			path = ViewStates;
 			sourceTree = "<group>";
 		};
+		FE41F794250F56ED00104C35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE41F795250F572000104C35 /* PhotosToPrintComponent.swift */,
+				FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FE5327B124E039AC00BA4AF5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +635,8 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FE9D70342511EF2400FCE1F3 /* PdfPreviewer */,
+				FE14398D250EA98A00B53E34 /* PrintToPdfViewController */,
 				FE24D59724FEE43F0057D630 /* SearchViewController */,
 				FE85F65424F2E71400414631 /* ModalViewController */,
 				FEFBA08D24F2445900335E77 /* PhotosViewController */,
@@ -563,6 +651,7 @@
 		FE5327BC24E30D2D00BA4AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */,
 				FE1341AE24E32A6E0076EF14 /* HeaderView */,
 				FE1341A424E326660076EF14 /* PhotosCollectionView */,
 				FE5327BD24E30D5D00BA4AF5 /* PhotosTableView */,
@@ -619,6 +708,44 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FE9D70342511EF2400FCE1F3 /* PdfPreviewer */ = {
+			isa = PBXGroup;
+			children = (
+				FE9D70432512003800FCE1F3 /* Components */,
+				FE9D703E2511FEAB00FCE1F3 /* ViewStates */,
+				FE9D703D2511FEA300FCE1F3 /* UiEvents */,
+				FE9D70352511EF3600FCE1F3 /* PdfPreview.storyboard */,
+				FE9D70372511EF6700FCE1F3 /* PdfPreviewViewController.swift */,
+				FE9D70392511F77C00FCE1F3 /* PdfPreviewPresenter.swift */,
+				FE9D703B2511F79E00FCE1F3 /* PdfState.swift */,
+			);
+			path = PdfPreviewer;
+			sourceTree = "<group>";
+		};
+		FE9D703D2511FEA300FCE1F3 /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				FE9D703F2511FEE500FCE1F3 /* PdfPreviewEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		FE9D703E2511FEAB00FCE1F3 /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FE9D70412511FF8800FCE1F3 /* PdfPreviewStates.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FE9D70432512003800FCE1F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE9D70442512004B00FCE1F3 /* PdfPreviewComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FEA1CB6224E8691B0038DD9C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +795,7 @@
 			children = (
 				FE861B7224E6BE1F003DA5ED /* CacheManager.swift */,
 				FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */,
+				FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -754,6 +882,7 @@
 				FE5327AF24E02AD000BA4AF5 /* ImageExtensions.swift */,
 				FE5327B424E03B9200BA4AF5 /* FonstExtensions.swift */,
 				FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */,
+				FED640E6251150D000D07FA9 /* PickerDataModel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -922,12 +1051,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE143999250EB4B000B53E34 /* PrintToPdf.storyboard in Resources */,
 				FE1341A824E326960076EF14 /* PhotosCollectionView.xib in Resources */,
 				FE8DADA724E57032009F92F6 /* PhotosCollectionViewCell.xib in Resources */,
 				FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */,
 				FEACB9FF24F3A38F00F61689 /* PageModal.storyboard in Resources */,
 				FEA23DD12503DC7A00776D19 /* Search.storyboard in Resources */,
 				FE85F65624F2E73C00414631 /* ModalPhoto.storyboard in Resources */,
+				FE14399E250EB6F900B53E34 /* HeaderPrintToPdfView.xib in Resources */,
 				FE8DADA924E5759C009F92F6 /* data.json in Resources */,
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
 				FE1341B224E32A9C0076EF14 /* HeaderView.xib in Resources */,
@@ -936,6 +1067,7 @@
 				FE1341A324E3263A0076EF14 /* PhotosTableViewCell.xib in Resources */,
 				FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
+				FE9D70362511EF3600FCE1F3 /* PdfPreview.storyboard in Resources */,
 				0A7351DE24EE681100E2712D /* Species.storyboard in Resources */,
 				FEFBA0A124F29B5F00335E77 /* Photos.storyboard in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
@@ -1025,9 +1157,11 @@
 				FEACBA0124F3A44200F61689 /* PageModalViewController.swift in Sources */,
 				FEFBA09F24F29B4700335E77 /* PhotosViewController.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
+				FE9D703C2511F79E00FCE1F3 /* PdfState.swift in Sources */,
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
 				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
+				FE9D70402511FEE500FCE1F3 /* PdfPreviewEvents.swift in Sources */,
 				FEA23DCB2503C65500776D19 /* SearchViewStates.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
@@ -1040,14 +1174,18 @@
 				0A7351E024EE68C600E2712D /* SpeciesViewController.swift in Sources */,
 				0A7351E524EEA2A000E2712D /* SpeciesCollectionComponent.swift in Sources */,
 				FE1FBE9324CB11A8008D0EA1 /* MainThreadScheduler.swift in Sources */,
+				FE143997250EAEF300B53E34 /* PrintToPdfViewStates.swift in Sources */,
 				FEAB9BAF24B2075500A5D178 /* StringsExtensions.swift in Sources */,
 				FEFBA09024F244A200335E77 /* PhotosEvents.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				FEA3D15224F6FE3F004B7F7A /* ModalViewStates.swift in Sources */,
 				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
+				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
+				FE9D703A2511F77C00FCE1F3 /* PdfPreviewPresenter.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
+				FE143991250EA9B100B53E34 /* PrintToPdfState.swift in Sources */,
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
 				FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */,
@@ -1070,22 +1208,30 @@
 				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FEFBA09724F2472500335E77 /* PhotosPresenter.swift in Sources */,
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
+				FE143994250EAEA700B53E34 /* PrintToPdfEvents.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,
 				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
 				FE23263D250D25D0009C8075 /* SearchHeaderComponent.swift in Sources */,
 				FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */,
 				FE5327BF24E30D7800BA4AF5 /* PhotosTableView.swift in Sources */,
+				FE9D70452512004B00FCE1F3 /* PdfPreviewComponent.swift in Sources */,
+				FE14398F250EA9A300B53E34 /* PrintToPdfPresenter.swift in Sources */,
+				FE1439A2250EB8D500B53E34 /* PrintToPdfViewController.swift in Sources */,
 				FE13419F24E326190076EF14 /* PhotosTableSource.swift in Sources */,
+				FE14399C250EB6E600B53E34 /* HeaderPrintToPdfView.swift in Sources */,
 				FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */,
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,
+				FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */,
 				FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */,
 				FEACB9FD24F2E80200F61689 /* ModalPhotoViewController.swift in Sources */,
 				FEB3520E24CB17640040313D /* ButtonExtensions.swift in Sources */,
+				FE9D70422511FF8800FCE1F3 /* PdfPreviewStates.swift in Sources */,
 				FEA23DC92503C5A500776D19 /* SearchEvents.swift in Sources */,
 				FE8DADA624E57032009F92F6 /* PhotosCollectionViewCell.swift in Sources */,
 				0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */,
+				FE41F796250F572000104C35 /* PhotosToPrintComponent.swift in Sources */,
 				FEA23DCD2503C8E600776D19 /* SearchPresenter.swift in Sources */,
 				FE389B3D24CF68CB00F47717 /* MenuViewStates.swift in Sources */,
 				FE10425924D5AB030075D027 /* Family.swift in Sources */,
@@ -1095,12 +1241,14 @@
 				FE5327B724E178D500BA4AF5 /* FamiliesState.swift in Sources */,
 				FEAB9BA524B2041800A5D178 /* MenuViewController.swift in Sources */,
 				FE1341B624E32E6F0076EF14 /* FamiliesHeaderComponent.swift in Sources */,
+				FE9D70312511E3CE00FCE1F3 /* PdfManager.swift in Sources */,
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
 				FEFBA09324F244E100335E77 /* PhotoViewStates.swift in Sources */,
 				0A25982C24EDBCB2003893FA /* SpeciesEvents.swift in Sources */,
 				FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
+				FE9D70382511EF6700FCE1F3 /* PdfPreviewViewController.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
 				0A25982924EDBC67003893FA /* SpeciesState.swift in Sources */,
 				FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */,

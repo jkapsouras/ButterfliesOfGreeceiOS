@@ -27,7 +27,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		case .species:
 			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep, fromSearch: fromSearch)
-		case .photos:
+		case .photos,
+			 .photosToPrint:
 			cell.update(photo: (photos[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		}
 		return cell
@@ -56,7 +57,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			else{
 				emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
 			}
-		case .photos:
+		case .photos,
+			 .photosToPrint:
 			emitter.onNext(PhotosEvents.photoClicked(id: photos[indexPath.row].id))
 		}
 	}
@@ -67,7 +69,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			return families.count
 		case .species:
 			return species.count
-		case .photos:
+		case .photos,
+			 .photosToPrint:
 			return photos.count
 		}
 	}

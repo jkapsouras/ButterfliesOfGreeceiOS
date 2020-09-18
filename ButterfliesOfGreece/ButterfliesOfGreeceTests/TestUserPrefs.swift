@@ -33,6 +33,10 @@ class MockUserDefaults:UserDefaults{
 }
 
 class MockCacheManager:CacheManagerProtocol{
+	func delete(photo: ButterflyPhoto) -> Observable<[ButterflyPhoto]> {
+		return Observable.from(optional: [ButterflyPhoto]())
+	}
+	
 	var photosToPrint: String = "photosToPrint"
 	var _prefs: UserDefaults
 	

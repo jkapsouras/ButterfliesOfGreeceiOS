@@ -123,4 +123,13 @@ class PhotosTableView: UIView {
 		TablePhotos.delegate = source
 		TablePhotos.reloadData()
 	}
+	
+	func ShowPhotosToPrint(photos: [ButterflyPhoto]){
+		source.setPhotos(photos: photos)
+		source.setShowingStep(showingStep: .photosToPrint)
+		TablePhotos.separatorStyle = .none
+		TablePhotos.dataSource = source
+		TablePhotos.delegate = source
+		TablePhotos.reloadData()
+	}
 }
