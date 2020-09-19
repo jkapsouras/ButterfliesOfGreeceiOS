@@ -42,8 +42,8 @@ struct IOC:IOCInjectable
      static func RegisterDataSources(container: Container) {
 		container.autoregister(Storage.self, initializer: Storage.init).inObjectScope(.container)
 		container.autoregister(LocationManager.self, initializer: LocationManager.init).inObjectScope(.container)
-		container.autoregister(CLLocationManager.self, initializer: CLLocationManager.init).inObjectScope(.container)
 		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
+		container.autoregister(CLLocationManager.self, initializer: CLLocationManager.init).inObjectScope(.container)
 //		container.register(LocationProtocol.self) { _ in LocationManager(manager: CLLocationManager())}.inObjectScope(.container)
     }
     
@@ -53,6 +53,7 @@ struct IOC:IOCInjectable
 		container.autoregister(PhotosRepository.self, initializer: PhotosRepository.init)
 		container.autoregister(NavigationRepository.self, initializer: NavigationRepository.init)
 		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
+		container.autoregister(ContributionRepository.self, initializer: ContributionRepository.init)
     }
     
      static func RegisterPresenters(container: Container) {

@@ -102,6 +102,20 @@ struct NavigationManager {
 		navigateToController(storyboardName: currentStoryboardName, controllerName: currentControllerName)
 	}
 	
+	func contributeTransition(contributeTransitions: ContributeViewStates) {
+		guard let currentStoryboardName = contributeTransitions.toStoryboardName else{
+			print("Storyboard name not found")
+			return
+		}
+		guard let currentControllerName = contributeTransitions.toViewControllerName else{
+			print("Controller name not found")
+			return
+		}
+		let storyboard = UIStoryboard.init(name: currentStoryboardName, bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		navigationController.present(vc, animated: true, completion: nil)
+	}
+	
 	func navigateToController(storyboardName:String, controllerName:String){
 		let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: controllerName)

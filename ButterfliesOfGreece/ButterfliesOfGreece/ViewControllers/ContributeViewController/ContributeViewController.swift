@@ -26,7 +26,7 @@ class ContributeViewController: BaseController<ContributePresenter> {
 	}
 	
 	override func InitializeComponents() -> Array<UiComponent> {
-		contributeComponent = ContributeComponent(view: ViewContribute, navigationItem: navigationItem, owner: self)
+		contributeComponent = ContributeComponent(view: ViewContribute, navigationItem: navigationItem, parentView: view, owner: self)
 		return [contributeComponent!]
 	}
 }

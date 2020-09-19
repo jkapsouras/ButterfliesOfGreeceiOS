@@ -10,12 +10,29 @@ import Foundation
 import UIKit
 import PDFKit
 
+enum Key: String {
+	case paperRect
+	case printableRect
+}
+
 struct PdfManager{
+	let pageWidth = 8.5 * 72.0
+	let pageHeight = 11 * 72.0
 	
 	init(){
 	}
 	
-	func createFlyer(photos:[ButterflyPhoto], pdfArrange:PdfArrange) -> Data {
+	func createRecordsTable(html:String, printRenderer:UIPrintPageRenderer) -> Data{
+		let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+		// adjust printableRect as you need, add padding or whatever
+		printRenderer.setValue(NSValue(cgRect: pageRect), forKey: "paperRect")
+		
+		// Set the horizontal and vertical insets (that's optional).
+		printRenderer.setValue(NSValue(cgRect: pageRect), forKey: "printableRect")
+		return printRenderer.exportHTMLContentToPDF(HTMLContent: html)
+	}
+	
+	func createPhotosBook(photos:[ButterflyPhoto], pdfArrange:PdfArrange) -> Data {
 		// 1
 		let pdfMetaData = [
 			kCGPDFContextCreator: "Selected photos of Butterflies of Greece",
@@ -24,9 +41,6 @@ struct PdfManager{
 		let format = UIGraphicsPDFRendererFormat()
 		format.documentInfo = pdfMetaData as [String: Any]
 		
-		// 2
-		let pageWidth = 8.5 * 72.0
-		let pageHeight = 11 * 72.0
 		let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
 		
 		// 3
@@ -62,7 +76,7 @@ struct PdfManager{
 					let image1 = UIImage(named: "ThumbnailsBig/\(photos[i].source)", in: nil, compatibleWith: nil)
 					let image2 = UIImage(named: "ThumbnailsBig/\(photos[i+1].source)", in: nil, compatibleWith: nil)
 					if let image1 = image1,
-					let image2 = image2{
+					   let image2 = image2{
 						context.beginPage()
 						_ = addTwoImagesWithText(context: context,
 												 text1: "\(photos[i].author)\n\(photos[i].specieName ?? "")", image1: image1,
@@ -95,9 +109,9 @@ struct PdfManager{
 					let image3 = UIImage(named: "ThumbnailsBig/\(photos[i+2].source)", in: nil, compatibleWith: nil)
 					let image4 = UIImage(named: "ThumbnailsBig/\(photos[i+3].source)", in: nil, compatibleWith: nil)
 					if let image1 = image1,
-					let image2 = image2,
-					let image3 = image3,
-						let image4 = image4{
+					   let image2 = image2,
+					   let image3 = image3,
+					   let image4 = image4{
 						context.beginPage()
 						_ = addFourImagesWithText(context: context, text1: "\(photos[i].author)\n\(photos[i].specieName ?? "")", image1: image1, text2:  "\(photos[i+1].author)\n\(photos[i+1].specieName ?? "")", image2: image2, text3: "\(photos[i+2].author)\n\(photos[i+2].specieName ?? "")", image3: image3, text4:  "\(photos[i+3].author)\n\(photos[i+3].specieName ?? "")", image4: image4, pageRect: pageRect, imageTop: 0)
 					}
@@ -135,11 +149,11 @@ struct PdfManager{
 					let image5 = UIImage(named: "ThumbnailsBig/\(photos[i+4].source)", in: nil, compatibleWith: nil)
 					let image6 = UIImage(named: "ThumbnailsBig/\(photos[i+5].source)", in: nil, compatibleWith: nil)
 					if let image1 = image1,
-					let image2 = image2,
-					let image3 = image3,
-						let image4 = image4,
-					let image5 = image5,
-					let image6 = image6{
+					   let image2 = image2,
+					   let image3 = image3,
+					   let image4 = image4,
+					   let image5 = image5,
+					   let image6 = image6{
 						context.beginPage()
 						_ = addSixImagesWithText(context: context,
 												 text1: "\(photos[i].author)\n\(photos[i].specieName ?? "")", image1: image1,
@@ -283,7 +297,7 @@ struct PdfManager{
 		attributedText1.draw(in: textRect1)
 		
 		let imageRect2 = CGRect(x: image2X, y: pageRect.height / 2,
-		width: scaledWidth2, height: scaledHeight2)
+								width: scaledWidth2, height: scaledHeight2)
 		image2.draw(in: imageRect2)
 		
 		let textTop2 = (pageRect.height / 2) + imageRect2.height + 4
@@ -397,7 +411,7 @@ struct PdfManager{
 		
 		let image2X = imageRect1.origin.x + imageRect1.width
 		let imageRect2 = CGRect(x: image2X, y: imageRect1.origin.y,
-		width: scaledWidth2, height: scaledHeight2)
+								width: scaledWidth2, height: scaledHeight2)
 		image2.draw(in: imageRect2)
 		
 		let textTop2 = imageRect2.origin.y + imageRect2.size.height + 4
@@ -420,11 +434,11 @@ struct PdfManager{
 		
 		let image3X = imageRect1.origin.x// + imageRect1.width
 		let imageRect3 = CGRect(x: image3X, y: (pageRect.height / 2),
-		width: scaledWidth3, height: scaledHeight3)
+								width: scaledWidth3, height: scaledHeight3)
 		image3.draw(in: imageRect3)
-
+		
 		let textTop3 = imageRect3.origin.y +  imageRect3.height + 4
-
+		
 		let textRect3 = CGRect(
 			x: imageRect3.origin.x + 4,
 			y: textTop3,
@@ -434,20 +448,20 @@ struct PdfManager{
 		drawContext.saveGState()
 		// 3
 		drawContext.setLineWidth(2.0)
-
+		
 		drawContext.setFillColor(Constants.Colors.field(darkMode: false).color.cgColor)
 		drawContext.fill(CGRect(x: image3X, y: textTop3 - 4, width: imageRect3.width,height: size3.height+8))
 		drawContext.strokePath()
 		drawContext.restoreGState()
 		attributedText3.draw(in: textRect3)
-
+		
 		let image4X = imageRect1.origin.x + imageRect1.width
 		let imageRect4 = CGRect(x: image4X, y: (pageRect.height / 2),
-		width: scaledWidth4, height: scaledHeight4)
+								width: scaledWidth4, height: scaledHeight4)
 		image4.draw(in: imageRect4)
-
+		
 		let textTop4 = (pageRect.height / 2) + imageRect4.height + 4
-
+		
 		let textRect4 = CGRect(
 			x: imageRect4.origin.x + 4,
 			y: textTop4,
@@ -457,7 +471,7 @@ struct PdfManager{
 		drawContext.saveGState()
 		// 3
 		drawContext.setLineWidth(2.0)
-
+		
 		drawContext.setFillColor(Constants.Colors.field(darkMode: false).color.cgColor)
 		drawContext.fill(CGRect(x: image4X, y: textTop4 - 4,width: imageRect4.width,height: size4.height + 8))
 		drawContext.strokePath()
@@ -585,7 +599,7 @@ struct PdfManager{
 		
 		let image2X = imageRect1.origin.x + imageRect1.width
 		let imageRect2 = CGRect(x: image2X, y: imageRect1.origin.y	,
-		width: scaledWidth2, height: scaledHeight2)
+								width: scaledWidth2, height: scaledHeight2)
 		image2.draw(in: imageRect2)
 		
 		let textTop2 = imageRect2.origin.y + imageRect2.height + 4
@@ -608,11 +622,11 @@ struct PdfManager{
 		
 		let image3X = imageRect1.origin.x + imageRect1.width + imageRect2.width
 		let imageRect3 = CGRect(x: image3X, y: imageRect1.origin.y,
-		width: scaledWidth3, height: scaledHeight3)
+								width: scaledWidth3, height: scaledHeight3)
 		image3.draw(in: imageRect3)
-
+		
 		let textTop3 = imageRect3.origin.y + imageRect3.height + 4
-
+		
 		let textRect3 = CGRect(
 			x: imageRect3.origin.x + 4,
 			y: textTop3,
@@ -622,20 +636,20 @@ struct PdfManager{
 		drawContext.saveGState()
 		// 3
 		drawContext.setLineWidth(2.0)
-
+		
 		drawContext.setFillColor(Constants.Colors.field(darkMode: false).color.cgColor)
 		drawContext.fill(CGRect(x: image3X, y: textTop3 - 4,width: imageRect3.width,height: size3.height + 8))
 		drawContext.strokePath()
 		drawContext.restoreGState()
 		attributedText3.draw(in: textRect3)
-
+		
 		let image4X = imageRect1.origin.x
 		let imageRect4 = CGRect(x: image4X, y: (pageRect.height / 2),
-		width: scaledWidth4, height: scaledHeight4)
+								width: scaledWidth4, height: scaledHeight4)
 		image4.draw(in: imageRect4)
-
+		
 		let textTop4 =   (pageRect.height / 2) + imageRect4.height + 4
-
+		
 		let textRect4 = CGRect(
 			x: imageRect4.origin.x + 4,
 			y: textTop4,
@@ -645,7 +659,7 @@ struct PdfManager{
 		drawContext.saveGState()
 		// 3
 		drawContext.setLineWidth(2.0)
-
+		
 		drawContext.setFillColor(Constants.Colors.field(darkMode: false).color.cgColor)
 		drawContext.fill(CGRect(x: image4X, y: textTop4 - 4,width: imageRect4.width,height: size4.height + 8))
 		drawContext.strokePath()
@@ -654,11 +668,11 @@ struct PdfManager{
 		
 		let image5X = imageRect2.origin.x
 		let imageRect5 = CGRect(x: image5X, y: (pageRect.height/2),
-		width: scaledWidth5, height: scaledHeight5)
+								width: scaledWidth5, height: scaledHeight5)
 		image5.draw(in: imageRect5)
-
+		
 		let textTop5 = (pageRect.height / 2) + imageRect5.height + 4
-
+		
 		let textRect5 = CGRect(
 			x: imageRect5.origin.x + 4,
 			y: textTop5,
@@ -668,7 +682,7 @@ struct PdfManager{
 		drawContext.saveGState()
 		// 3
 		drawContext.setLineWidth(2.0)
-
+		
 		drawContext.setFillColor(Constants.Colors.field(darkMode: false).color.cgColor)
 		drawContext.fill(CGRect(x: image5X, y: textTop5 - 4,width: imageRect5.width,height: size5.height + 8))
 		drawContext.strokePath()
@@ -677,11 +691,11 @@ struct PdfManager{
 		
 		let image6X = imageRect3.origin.x
 		let imageRect6 = CGRect(x: image6X, y: (pageRect.height/2),
-		width: scaledWidth6, height: scaledHeight6)
+								width: scaledWidth6, height: scaledHeight6)
 		image6.draw(in: imageRect6)
-
+		
 		let textTop6 = (pageRect.height / 2) + imageRect6.height + 4
-
+		
 		let textRect6 = CGRect(
 			x: imageRect6.origin.x + 4,
 			y: textTop6,
@@ -691,7 +705,7 @@ struct PdfManager{
 		drawContext.saveGState()
 		// 3
 		drawContext.setLineWidth(2.0)
-
+		
 		drawContext.setFillColor(Constants.Colors.field(darkMode: false).color.cgColor)
 		drawContext.fill(CGRect(x: image6X, y: textTop6 - 4,width: imageRect6.width,height: size6.height + 8))
 		drawContext.strokePath()

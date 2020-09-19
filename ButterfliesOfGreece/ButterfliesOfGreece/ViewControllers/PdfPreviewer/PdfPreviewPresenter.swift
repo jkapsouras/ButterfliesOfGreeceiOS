@@ -28,7 +28,7 @@ class PdfPreviewPresenter:BasePresenter{
 			.subscribeOn(backgroundThreadScheduler.scheduler)
 			.map{data -> PdfPreviewState in
 				self.state.onNext(GeneralViewState.idle)
-				self.pdfState = self.pdfState.with(pdfData: self.pdfCreator.createFlyer(photos: data.1, pdfArrange: data.0), photos: data.1, pdfArrange: data.0)
+				self.pdfState = self.pdfState.with(pdfData: self.pdfCreator.createPhotosBook(photos: data.1, pdfArrange: data.0), photos: data.1, pdfArrange: data.0)
 				return self.pdfState
 		}
 			.subscribe(onNext: {data in

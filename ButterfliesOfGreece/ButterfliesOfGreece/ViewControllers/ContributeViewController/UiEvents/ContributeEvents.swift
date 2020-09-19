@@ -24,4 +24,7 @@ enum ContributeEvents:UiEvent{
 	case textCommentsSet(comments:String)
 	case addClicked
 	case exportClicked
+	case sharePdf
+	case instructionsClicked
+	case closePdf
 }

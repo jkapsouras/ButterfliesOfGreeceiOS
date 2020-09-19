@@ -189,7 +189,9 @@ class ContributeView: UIView {
 								TextStage.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textStateSet(stage: self.TextStage.text ?? "")},
 								TextGenusSpecie.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textGenusSpeciesSet(genusSpecies: self.TextGenusSpecie.text ?? "")},
 								TextNameSpecie.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textNameSpeciesSet(nameSpecies: self.TextNameSpecie.text ?? "")},
-								TextComments.rx.didEndEditing.map{_ in ContributeEvents.textCommentsSet(comments: self.TextComments.text ?? "")}
+								TextComments.rx.didEndEditing.map{_ in ContributeEvents.textCommentsSet(comments: self.TextComments.text ?? "")},
+								ButtonAdd.rx.tap.map{_ in ContributeEvents.addClicked},
+								ButtonExport.rx.tap.map{_ in ContributeEvents.exportClicked}
 		)
 	}
 	
@@ -226,6 +228,19 @@ class ContributeView: UIView {
 			UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
 		}))
 		controller.present(alert, animated: true)
+	}
+	
+	func showItem(added: Bool, controller: UIViewController){
+		if added{
+			let alert = UIAlertController(title: Translations.Contribution, message: Translations.ContributionAdded, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: Translations.Ok, style: .default, handler: nil))
+			controller.present(alert, animated: true)
+		}
+		else{
+			let alert = UIAlertController(title: Translations.Contribution, message: Translations.ContributionNotAdded, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: Translations.Ok, style: .default, handler: nil))
+			controller.present(alert, animated: true)
+		}
 	}
 	
 	@objc func dateClicked(_ sender: UITapGestureRecognizer){

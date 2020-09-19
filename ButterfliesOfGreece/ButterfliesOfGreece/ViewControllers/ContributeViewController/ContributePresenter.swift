@@ -7,16 +7,19 @@
 //
 
 import Foundation
+import UIKit
 
 class ContributePresenter:BasePresenter{
 	let locationManager:LocationManager
+	let contributionRepository:ContributionRepository
 	var contributeState:ContributeState
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
-		 locationManager:LocationManager)
+		 contributionRepository:ContributionRepository, locationManager:LocationManager)
 	{
+		self.contributionRepository = contributionRepository
 		self.locationManager = locationManager
-		contributeState = ContributeState(contributionItem: ContributionItem())
+		contributeState = ContributeState(contributionItem: ContributionItem(), exportedHtml: "", pdfData: Data())
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
@@ -33,7 +36,7 @@ class ContributePresenter:BasePresenter{
 				break
 			}
 		}).disposed(by: disposeBag!)
-		locationManager.locationObs.subscribe(onNext: {locationState in
+		locationManager.locationObs.observeOn(backgroundThreadScheduler.scheduler).subscribe(onNext: {locationState in
 			switch locationState{
 			case .showLocation(let location):
 				self.emitter.onNext(ContributeEvents.locationFetched(location: location))
@@ -81,9 +84,29 @@ class ContributePresenter:BasePresenter{
 			case .textLongitudeSet(longitude: let longitude):
 				contributeState = contributeState.with(longitude: longitude)
 			case .addClicked:
-				break
+				contributionRepository.saveContributionItem(item: contributeState.contributionItem)
+					.subscribeOn(backgroundThreadScheduler.scheduler)
+					.subscribe(onNext: {done in
+								self.state.onNext(done ? ContributeViewStates.showItemAdded : ContributeViewStates.showItemNotAdded)})
+					.disposed(by: disposeBag!)
 			case .exportClicked:
-				break 
+				contributionRepository.getContributionItems()
+//					.subscribeOn(backgroundThreadScheduler.scheduler)
+					.do(onNext: {items in
+								self.contributeState = self.contributeState.prepareHtmlForExport(items: items)
+				let pdfManager = PdfManager()
+							self.contributeState = self.contributeState.with(pdfData:pdfManager.createRecordsTable(html: self.contributeState.exportedHtml, printRenderer: UIPrintPageRenderer()))
+							self.state.onNext(ContributeViewStates.showExtractedPdf(pdfData: self.contributeState.pdfData ?? Data()))})
+					.flatMap{_ in
+						self.contributionRepository.delete()}
+					.subscribe(onNext: {_ in print("all good")})
+					.disposed(by: disposeBag!)
+			case .sharePdf:
+				state.onNext(ContributeViewStates.showShareDialog(pdfData: contributeState.pdfData ?? Data()))
+			case .instructionsClicked:
+				state.onNext(ContributeViewStates.showInstructions)
+			case .closePdf:
+				state.onNext(ContributeViewStates.closePdf)
 			}
 		default:
 			state.onNext(GeneralViewState.idle)

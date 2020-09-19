@@ -15,8 +15,39 @@ enum ContributeViewStates:ViewState{
 	case showSettingsDialog
 	case showLocation(latitude:String, longitude:String)
 	case showLocationError
+	case showItemAdded
+	case showItemNotAdded
+	case showExtractedPdf(pdfData: Data)
+	case showShareDialog(pdfData: Data)
+	case showInstructions
+	case closePdf
 	
 	var isTransition: Bool{
-		return false
+		switch self {
+		case .showInstructions:
+			return true
+		default:
+			return false
+		}
+	}
+}
+
+extension ContributeViewStates{
+	var toStoryboardName:String?{
+		switch self {
+		case .showInstructions:
+			return "InfoModal"
+		default:
+			return nil
+		}
+	}
+	
+	var toViewControllerName:String?{
+		switch self {
+		case .showInstructions:
+			return "InfoModalViewController"
+		default:
+			return nil
+		}
 	}
 }

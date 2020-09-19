@@ -200,6 +200,36 @@ struct Translations {
 		}
 	}
 	
+	static var Contribution:String {
+		get{
+			"contribution".Localise()
+		}
+	}
+	
+	static var ContributionAdded:String {
+		get{
+			"contribution_added".Localise()
+		}
+	}
+	
+	static var ContributionNotAdded:String {
+		get{
+			"contribution_not_added".Localise()
+		}
+	}
+	
+	static var ContributionInstructionsMessage:String {
+		get{
+			"contribute_instructions_message".Localise()
+		}
+	}
+	
+	static var ContributionInstructionsTitle:String {
+		get{
+			"contribute_instructions_title".Localise()
+		}
+	}
+
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil
