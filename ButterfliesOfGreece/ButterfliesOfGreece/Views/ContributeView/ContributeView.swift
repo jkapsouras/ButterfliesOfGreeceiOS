@@ -39,14 +39,18 @@ class ContributeView: UIView {
 	@IBOutlet weak var ViewDatePicker: UIDatePicker!
 	@IBOutlet weak var ButtonDone: UIButton!
 	@IBOutlet weak var ViewDateUnderline: UIView!
+	@IBOutlet weak var LabelDateText: UILabel!
 	
-    var contentView:UIView?
+	let emitter:PublishSubject<UiEvent> = PublishSubject<UiEvent>()
+	var dateRecognizer:UITapGestureRecognizer?
+	
+	var contentView:UIView?
 	let nibName = "ContributeView"
-		var UiEvents: Observable<UiEvent>{get
-		{
-			return ViewEvents();
-			}
-		}
+	var UiEvents: Observable<UiEvent>{get
+	{
+		return ViewEvents();
+	}
+	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
@@ -75,7 +79,7 @@ class ContributeView: UIView {
 		let nib = UINib(nibName: nibName, bundle: nil)
 		return nib.instantiate(withOwner: self, options: nil).first as? UIView
 	}
-
+	
 	func prepareTexts(){
 		LabelTitle.text = Translations.SendInfo
 		LabelName.text = Translations.PhotoName
@@ -103,9 +107,10 @@ class ContributeView: UIView {
 		LabelGenusSpecie.setFont(size: Constants.Fonts.fontMenuSize)
 		LabelNameSpecie	.setFont(size: Constants.Fonts.fontMenuSize)
 		LabelComments.setFont(size: Constants.Fonts.fontMenuSize)
-		 
+		
 		TextName.setFont(size: Constants.Fonts.fontMenuSize)
 		TextDate.setFont(size: Constants.Fonts.fontMenuSize)
+		LabelDateText.setFont(size: Constants.Fonts.fontMenuSize)
 		TextAltitude.setFont(size: Constants.Fonts.fontMenuSize)
 		TextPlace.setFont(size: Constants.Fonts.fontMenuSize)
 		TextLongitude.setFont(size: Constants.Fonts.fontMenuSize)
@@ -134,6 +139,7 @@ class ContributeView: UIView {
 		
 		TextName.textColor = Constants.Colors.contribute(darkMode: false).color
 		TextDate.textColor = Constants.Colors.contribute(darkMode: false).color
+		LabelDateText.textColor = Constants.Colors.contribute(darkMode: false).color
 		TextAltitude.textColor = Constants.Colors.contribute(darkMode: false).color
 		TextPlace.textColor = Constants.Colors.contribute(darkMode: false).color
 		TextLongitude.textColor = Constants.Colors.contribute(darkMode: false).color
@@ -165,13 +171,26 @@ class ContributeView: UIView {
 		for view in ViewUnderlines{
 			view.backgroundColor = Constants.Colors.contribute(darkMode: true).color
 		}
+		
+		dateRecognizer = UITapGestureRecognizer(target: self, action: #selector(dateClicked(_:)))
+		LabelDateText.addGestureRecognizer(dateRecognizer!)
+		LabelDateText.isUserInteractionEnabled = true
+		LabelDateText.text = ""
 	}
 	
 	func ViewEvents() -> Observable<UiEvent>{
-		return Observable.merge(TextDate.rx.controlEvent(.editingDidBegin).map{_ in
-			self.TextDate.endEditing(true)
-			return ContributeEvents.TextDateClicked},
-								ButtonDone.rx.tap.map{_ in ContributeEvents.ButtonDoneClicked(date:  self.ViewDatePicker.date)})
+		return Observable.merge(emitter.asObserver(),
+								TextName.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textNameSet(name: self.TextName.text ?? "")},
+								ButtonDone.rx.tap.map{_ in ContributeEvents.buttonDoneClicked(date:  self.ViewDatePicker.date)},
+								TextAltitude.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textAltitudeSet(altitude: self.TextAltitude.text ?? "")},
+								TextPlace.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textPlaceSet(place: self.TextPlace.text ?? "")},
+								TextLongitude.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textLongitudeSet(longitude: self.TextLongitude.text ?? "")},
+								TextLatitude.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textLatitudeSet(latitude: self.TextLatitude.text ?? "")},
+								TextStage.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textStateSet(stage: self.TextStage.text ?? "")},
+								TextGenusSpecie.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textGenusSpeciesSet(genusSpecies: self.TextGenusSpecie.text ?? "")},
+								TextNameSpecie.rx.controlEvent(.editingDidEnd).map{_ in ContributeEvents.textNameSpeciesSet(nameSpecies: self.TextNameSpecie.text ?? "")},
+								TextComments.rx.didEndEditing.map{_ in ContributeEvents.textCommentsSet(comments: self.TextComments.text ?? "")}
+		)
 	}
 	
 	func showDatePicker(){
@@ -183,6 +202,34 @@ class ContributeView: UIView {
 	}
 	
 	func setDate(date:String){
-		TextDate.text = date
+		LabelDateText.text = date
+	}
+	
+	func setLocation(latitude:String, longitude:String){
+		TextLongitude.text = longitude
+		TextLatitude.text = latitude
+		TextLongitude.isUserInteractionEnabled = false
+		TextLatitude.isUserInteractionEnabled = false
+	}
+	
+	func locationError(controller: UIViewController){
+		TextLongitude.isUserInteractionEnabled = true
+		TextLatitude.isUserInteractionEnabled = true
+		let alert = UIAlertController(title: Translations.LocationErrorTitle, message: Translations.LocationErrorMessage, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: Translations.Ok, style: .default, handler: nil))
+		controller.present(alert, animated: true)
+	}
+	
+	func openPromptToSettingsDialog(controller: UIViewController){
+		let alert = UIAlertController(title: Translations.NoLocationRights, message: Translations.NoLocationRightsMessage, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: Translations.OpenSettings, style: .default, handler: { action in
+			UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+		}))
+		controller.present(alert, animated: true)
+	}
+	
+	@objc func dateClicked(_ sender: UITapGestureRecognizer){
+		endEditing(true)
+		emitter.onNext(ContributeEvents.textDateClicked)
 	}
 }

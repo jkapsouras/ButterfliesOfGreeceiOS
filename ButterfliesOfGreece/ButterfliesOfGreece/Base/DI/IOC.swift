@@ -10,6 +10,7 @@ import Foundation
 import Swinject
 import SwinjectAutoregistration
 import RxSwift
+import CoreLocation
 
 protocol IOCInjectable
 {
@@ -40,7 +41,10 @@ struct IOC:IOCInjectable
     
      static func RegisterDataSources(container: Container) {
 		container.autoregister(Storage.self, initializer: Storage.init).inObjectScope(.container)
+		container.autoregister(LocationManager.self, initializer: LocationManager.init).inObjectScope(.container)
+		container.autoregister(CLLocationManager.self, initializer: CLLocationManager.init).inObjectScope(.container)
 		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
+//		container.register(LocationProtocol.self) { _ in LocationManager(manager: CLLocationManager())}.inObjectScope(.container)
     }
     
      static func RegisterRepositories(container: Container) {

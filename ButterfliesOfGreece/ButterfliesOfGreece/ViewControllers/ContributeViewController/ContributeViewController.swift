@@ -7,24 +7,26 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ContributeViewController: BaseController<ContributePresenter> {
 	@IBOutlet weak var ViewContribute: ContributeView!
 	var contributeComponent:ContributeComponent!
+	let manager:CLLocationManager = CLLocationManager()
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		guard let butterfliesNavigation = navigationController as? NavigationViewController else {
 			print("no proper navigation controller")
 			return
 		}
-        title = Translations.Contribute
+		title = Translations.Contribute
 		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.contribute(darkMode: false).color, textColor: Constants.Colors.contribute(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
-    }
+	}
 	
 	override func InitializeComponents() -> Array<UiComponent> {
-		contributeComponent = ContributeComponent(view: ViewContribute, navigationItem: navigationItem)
+		contributeComponent = ContributeComponent(view: ViewContribute, navigationItem: navigationItem, owner: self)
 		return [contributeComponent!]
 	}
 }

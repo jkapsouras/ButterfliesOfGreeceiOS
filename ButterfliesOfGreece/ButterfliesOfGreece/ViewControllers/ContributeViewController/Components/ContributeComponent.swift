@@ -11,25 +11,27 @@ import RxSwift
 
 class ContributeComponent : UiComponent
 {
+	let owner:UIViewController
 	let view:ContributeView
 	let navigationItem:UINavigationItem
 	let uiEvents: Observable<UiEvent>
 	let emitter:PublishSubject<UiEvent> = PublishSubject()
 	
-	init(view:ContributeView, navigationItem:UINavigationItem) {
+	init(view:ContributeView, navigationItem:UINavigationItem, owner:UIViewController) {
+		self.owner = owner
 		self.view = view
 		self.navigationItem = navigationItem
 		uiEvents = Observable.merge(self.view.UiEvents,emitter.asObservable())
 		// Create the info button
 		let infoButton = UIButton(type: .infoLight)
 		infoButton.tintColor = Constants.Colors.contribute(darkMode: true).color
-
+		
 		// You will need to configure the target action for the button itself, not the bar button itemr
 		infoButton.addTarget(self, action: #selector(infoTapped), for: .touchUpInside)
-
+		
 		// Create a bar button item using the info button as its custom view
 		let info = UIBarButtonItem(customView: infoButton)
-
+		
 		// Use it as required
 		self.navigationItem.setRightBarButton(info, animated: true)
 	}
@@ -47,6 +49,12 @@ class ContributeComponent : UiComponent
 				view.hideDatePicker()
 			case .setDate(let date):
 				view.setDate(date: date)
+			case .showLocation(let latitude,let longitude):
+				view.setLocation(latitude: latitude, longitude: longitude)
+			case .showSettingsDialog:
+				view.openPromptToSettingsDialog(controller: owner)
+			case .showLocationError:
+				view.locationError(controller: owner)
 			}
 		}
 	}

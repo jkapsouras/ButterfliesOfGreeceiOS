@@ -30,3 +30,9 @@
 "name_species" = "Name species";
 "comments" = "Comments";
 "send_info" = "Share info with the author";
+"location_error_title" = "Location is not found";
+"location_error_message" = "You can add your location manually in the appropriate fields";
+"ok" = "Ok";
+"no_location_rights" = "Location denied";
+"no_location_rights_message" = "Permission rights are not granted. You can go to settings to change permission status";
+"open_settings" = "Open settings";

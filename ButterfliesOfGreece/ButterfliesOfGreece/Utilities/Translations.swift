@@ -164,6 +164,42 @@ struct Translations {
 		}
 	}
 	
+	static var LocationErrorTitle:String {
+		get{
+			"location_error_title".Localise()
+		}
+	}
+	
+	static var LocationErrorMessage:String {
+		get{
+			"location_error_message".Localise()
+		}
+	}
+	
+	static var Ok:String {
+		get{
+			"ok".Localise()
+		}
+	}
+	
+	static var NoLocationRights:String {
+		get{
+			"no_location_rights".Localise()
+		}
+	}
+	
+	static var NoLocationRightsMessage:String {
+		get{
+			"no_location_rights_message".Localise()
+		}
+	}
+	
+	static var OpenSettings:String {
+		get{
+			"open_settings".Localise()
+		}
+	}
+	
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil

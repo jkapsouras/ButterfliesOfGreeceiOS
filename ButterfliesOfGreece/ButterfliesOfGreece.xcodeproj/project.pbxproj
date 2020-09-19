@@ -76,6 +76,7 @@
 		FE6691EA2514E1A1006C377F /* ContributePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691E92514E1A0006C377F /* ContributePresenter.swift */; };
 		FE6691EC2514E978006C377F /* ContributeEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691EB2514E978006C377F /* ContributeEvents.swift */; };
 		FE6691EE2514EA07006C377F /* ContributeViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691ED2514EA07006C377F /* ContributeViewStates.swift */; };
+		FE6691F02514F1B3006C377F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691EF2514F1B3006C377F /* LocationManager.swift */; };
 		FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */; };
 		FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */; };
 		FE71B27024F1ACF3009F6BF0 /* NavigationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */; };
@@ -90,6 +91,8 @@
 		FE8DADA624E57032009F92F6 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8DADA424E57032009F92F6 /* PhotosCollectionViewCell.swift */; };
 		FE8DADA724E57032009F92F6 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8DADA524E57032009F92F6 /* PhotosCollectionViewCell.xib */; };
 		FE8DADA924E5759C009F92F6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FE8DADA824E5759B009F92F6 /* data.json */; };
+		FE928C9A2515F133004CBFB3 /* ContributeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE928C992515F133004CBFB3 /* ContributeState.swift */; };
+		FE928C9E2515F144004CBFB3 /* ContributionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE928C9D2515F144004CBFB3 /* ContributionItem.swift */; };
 		FE9D70312511E3CE00FCE1F3 /* PdfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */; };
 		FE9D70362511EF3600FCE1F3 /* PdfPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9D70352511EF3600FCE1F3 /* PdfPreview.storyboard */; };
 		FE9D70382511EF6700FCE1F3 /* PdfPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70372511EF6700FCE1F3 /* PdfPreviewViewController.swift */; };
@@ -234,6 +237,7 @@
 		FE6691E92514E1A0006C377F /* ContributePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributePresenter.swift; sourceTree = "<group>"; };
 		FE6691EB2514E978006C377F /* ContributeEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeEvents.swift; sourceTree = "<group>"; };
 		FE6691ED2514EA07006C377F /* ContributeViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeViewStates.swift; sourceTree = "<group>"; };
+		FE6691EF2514F1B3006C377F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewEvents.swift; sourceTree = "<group>"; };
 		FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewViewStates.swift; sourceTree = "<group>"; };
 		FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRepository.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 		FE8DADA424E57032009F92F6 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE8DADA524E57032009F92F6 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE8DADA824E5759B009F92F6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FE928C992515F133004CBFB3 /* ContributeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeState.swift; sourceTree = "<group>"; };
+		FE928C9D2515F144004CBFB3 /* ContributionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionItem.swift; sourceTree = "<group>"; };
 		FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfManager.swift; sourceTree = "<group>"; };
 		FE9D70352511EF3600FCE1F3 /* PdfPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PdfPreview.storyboard; sourceTree = "<group>"; };
 		FE9D70372511EF6700FCE1F3 /* PdfPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfPreviewViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +456,7 @@
 				FE10425824D5AB030075D027 /* Family.swift */,
 				FE10425A24D5AB920075D027 /* Specie.swift */,
 				FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */,
+				FE928C9D2515F144004CBFB3 /* ContributionItem.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -839,6 +846,7 @@
 				FE861B7224E6BE1F003DA5ED /* CacheManager.swift */,
 				FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */,
 				FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */,
+				FE6691EF2514F1B3006C377F /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -977,6 +985,7 @@
 				FE6691DD2514B2EE006C377F /* Contribute.storyboard */,
 				FE6691DF2514B2FF006C377F /* ContributeViewController.swift */,
 				FE6691E92514E1A0006C377F /* ContributePresenter.swift */,
+				FE928C992515F133004CBFB3 /* ContributeState.swift */,
 			);
 			path = ContributeViewController;
 			sourceTree = "<group>";
@@ -1223,6 +1232,7 @@
 				FEACBA0124F3A44200F61689 /* PageModalViewController.swift in Sources */,
 				FEFBA09F24F29B4700335E77 /* PhotosViewController.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
+				FE928C9E2515F144004CBFB3 /* ContributionItem.swift in Sources */,
 				FE9D703C2511F79E00FCE1F3 /* PdfState.swift in Sources */,
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
@@ -1253,6 +1263,7 @@
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
 				FE9D703A2511F77C00FCE1F3 /* PdfPreviewPresenter.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
+				FE6691F02514F1B3006C377F /* LocationManager.swift in Sources */,
 				FE143991250EA9B100B53E34 /* PrintToPdfState.swift in Sources */,
 				FE389B3F24CF68F400F47717 /* FamiliesPresenter.swift in Sources */,
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
@@ -1321,6 +1332,7 @@
 				FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
 				FE9D70382511EF6700FCE1F3 /* PdfPreviewViewController.swift in Sources */,
+				FE928C9A2515F133004CBFB3 /* ContributeState.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
 				0A25982924EDBC67003893FA /* SpeciesState.swift in Sources */,
 				FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */,

@@ -12,6 +12,9 @@ enum ContributeViewStates:ViewState{
 	case showDatePicker
 	case hideDatePicker
 	case setDate(date:String)
+	case showSettingsDialog
+	case showLocation(latitude:String, longitude:String)
+	case showLocationError
 	
 	var isTransition: Bool{
 		return false
