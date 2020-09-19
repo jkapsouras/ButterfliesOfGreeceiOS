@@ -34,3 +34,17 @@ extension UILabel{
 		self.font = UIFont(name: Constants.Fonts.appFont, size: size) ?? UIFont.systemFont(ofSize: Constants.Fonts.fontMenuSize)
 	}
 }
+
+extension UITextField{
+	func setFont(size: CGFloat)
+	{
+		self.font = UIFont(name: Constants.Fonts.appFont, size: size) ?? UIFont.systemFont(ofSize: Constants.Fonts.fontMenuSize)
+	}
+}
+
+extension UITextView{
+	func setFont(size: CGFloat)
+	{
+		self.font = UIFont(name: Constants.Fonts.appFont, size: size) ?? UIFont.systemFont(ofSize: Constants.Fonts.fontMenuSize)
+	}
+}

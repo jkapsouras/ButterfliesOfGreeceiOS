@@ -38,6 +38,8 @@ extension MenuViewState{
 		switch self {
 		case .toField:
 			return "Families"
+		case .toContribute:
+			return "Contribute"
 		default:
 			return nil
 		}
@@ -47,6 +49,8 @@ extension MenuViewState{
 		switch self {
 		case .toField:
 			return "FamiliesViewController"
+		case .toContribute:
+			return "ContributeViewController"
 		default:
 			return nil
 		}

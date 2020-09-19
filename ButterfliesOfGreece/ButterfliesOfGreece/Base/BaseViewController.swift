@@ -93,6 +93,8 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			navigationManager!.searchTransition(searchTransition: searchTransition)
 		case let printToPdfTransition as PrintToPdfViewStates:
 			navigationManager!.printToPdfTransition(pdfTransition: printToPdfTransition)
+		case let contributeTransition as ContributeViewStates:
+			navigationManager!.contributeTransition(contributeTransitions: contributeTransition)
 		default:
 			print("default")
 		}

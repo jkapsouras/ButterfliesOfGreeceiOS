@@ -51,5 +51,11 @@ class PdfPreviewComponent : UiComponent
 				controller.present(vc, animated: true, completion: nil)
 			}
 		}
+		if let state = viewState as? GeneralViewState{
+			switch state {
+			case .idle:
+				print("start loading")
+			}
+		}
 	}
 }

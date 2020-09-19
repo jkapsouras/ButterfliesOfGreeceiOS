@@ -19,3 +19,26 @@
 "page" = "Page";
 "photos" = "Photos";
 "select" = "Done";
+"photo_name" = "Photo name";
+"date" = "Date";
+"altitude" = "Altitude";
+"place" = "Place";
+"longitude" = "Longitude";
+"latitude" = "Latitude";
+"stage" = "Stage";
+"genus_species" = "Genus species";
+"name_species" = "Name species";
+"comments" = "Comments";
+"send_info" = "Share info with the author";
+"location_error_title" = "Location is not found";
+"location_error_message" = "You can add your location manually in the appropriate fields";
+"ok" = "Ok";
+"no_location_rights" = "Location denied";
+"no_location_rights_message" = "Permission rights are not granted. You can go to settings to change permission status";
+"open_settings" = "Open settings";
+"contribution" = "Contribution";
+"contribution_added" = "Your record has been added!";
+"contribution_not_added" = "Your record has not been added!";
+"contribute_instructions_message" = "You can collect and send info about photographs to the author from this page. Fill out the photo name and the comments sections. Click on store button to store information to your device. You can export all the comments in a file of your device and then send them to the author. You can also print your records and send them to: Lazaros N. Pamperis, PO BOX 1220, 41110 Larisa, Greece. Your records of the butterflies of Greece could be very useful for the protection of the butterflies and the environment in Greece. Keep your records and photographs taken always accompanied with the exact locality, coordinates (latitude and longitude) and altitude (m). Also keep any other information associated with the butterflies (eg number individuals of males or females seen, mating behavior, host plants etc). Author's email: pamperis@otenet.gr";
+"contribute_instructions_title" = "How to contribute";
+
