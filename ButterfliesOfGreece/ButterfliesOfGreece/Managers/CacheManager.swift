@@ -67,7 +67,7 @@ struct CacheManager:CacheManagerProtocol
 		}.map{items -> Bool in
 			do{
 				let encodedData = try NSKeyedArchiver.archivedData(withRootObject: items, requiringSecureCoding: false)
-				UserDefaults.standard.set(encodedData, forKey: contributionItems)
+				UserDefaults.standard.set(encodedData, forKey: self.contributionItems)
 				return true
 			}
 			catch{
