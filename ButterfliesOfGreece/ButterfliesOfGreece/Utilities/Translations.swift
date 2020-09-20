@@ -229,7 +229,43 @@ struct Translations {
 			"contribute_instructions_title".Localise()
 		}
 	}
-
+	
+	static var AboutTitle:String {
+		get{
+			"about_title".Localise()
+		}
+	}
+	
+	static var AboutSubtitle:String {
+		get{
+			"about_subtitle".Localise()
+		}
+	}
+	
+	static var AboutSecond:String {
+		get{
+			"about_second".Localise()
+		}
+	}
+	
+	static var AboutFirst:String {
+		get{
+			"about_first".Localise()
+		}
+	}
+	
+	static var AboutThird:String {
+		get{
+			"about_third".Localise()
+		}
+	}
+	
+	static var AboutThirdTitle:String {
+		get{
+			"about_third_title".Localise()
+		}
+	}
+	
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil

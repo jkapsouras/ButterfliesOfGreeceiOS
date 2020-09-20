@@ -45,7 +45,7 @@ extension Constants.Colors {
 			case .legal(let darkMode):
 				return (darkMode ?  UIColor(hex: "#EDB299") : UIColor(hex: "#FAF2EE"))
 			case .about(let darkMode):
-				return (darkMode ?  UIColor(hex: "#DFE48C") : UIColor(hex: "#F8F9EB"))
+				return (darkMode ?  UIColor(hex: "#ced54e") : UIColor(hex: "#F8F9EB"))
 			case .contribute(let darkMode):
 				return (darkMode ?  UIColor(hex: "#7E66A6") : UIColor(hex: "#E8E6F1"))
 			case .endangered(let darkMode):

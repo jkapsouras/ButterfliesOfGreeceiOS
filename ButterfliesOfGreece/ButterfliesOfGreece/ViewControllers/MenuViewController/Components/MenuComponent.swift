@@ -16,15 +16,19 @@ class MenuComponent : UiComponent
 	var uiEvents: Observable<UiEvent>
     let FieldButton:UIButton
 	let ContributeButton:UIButton
-    
-	init(field:UIButton, contribute:UIButton) {
+	let AboutButton:UIButton
+	
+	init(field:UIButton, contribute:UIButton, about:UIButton) {
         FieldButton=field
 		ContributeButton=contribute
+		AboutButton = about
         
 		let events = Observable.merge(FieldButton.rx.tap.map{tap in
 			MenuEvent.fieldClicked as UiEvent},
 										ContributeButton.rx.tap.map{tap in
-										MenuEvent.contributeClicked as UiEvent})
+										MenuEvent.contributeClicked as UiEvent},
+										AboutButton.rx.tap.map{tap in
+										MenuEvent.aboutClicked as UiEvent})
         
         uiEvents = events
     }
