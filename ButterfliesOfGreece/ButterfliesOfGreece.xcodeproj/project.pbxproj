@@ -142,6 +142,8 @@
 		FEC4709A25165FAF002F0E2F /* InfoModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4709925165FAF002F0E2F /* InfoModalViewController.swift */; };
 		FEC470AE2516A38E002F0E2F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470AC2516A38D002F0E2F /* AboutViewController.swift */; };
 		FEC470AF2516A38E002F0E2F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC470AD2516A38D002F0E2F /* About.storyboard */; };
+		FEC470BA2517AE50002F0E2F /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC470B92517AE50002F0E2F /* Introduction.storyboard */; };
+		FEC470BE2517AE63002F0E2F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470BD2517AE63002F0E2F /* IntroductionViewController.swift */; };
 		FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */; };
 		FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E6251150D000D07FA9 /* PickerDataModel.swift */; };
 		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
@@ -317,6 +319,8 @@
 		FEC4709925165FAF002F0E2F /* InfoModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModalViewController.swift; sourceTree = "<group>"; };
 		FEC470AC2516A38D002F0E2F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FEC470AD2516A38D002F0E2F /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		FEC470B92517AE50002F0E2F /* Introduction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
+		FEC470BD2517AE63002F0E2F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintHeaderComponent.swift; sourceTree = "<group>"; };
 		FED640E6251150D000D07FA9 /* PickerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataModel.swift; sourceTree = "<group>"; };
 		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
@@ -670,6 +674,7 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEC470B82517AE3A002F0E2F /* IntroductionViewController */,
 				FEC4709D2516A0DA002F0E2F /* AboutViewController */,
 				FEC4709425165F56002F0E2F /* InfoModalViewController */,
 				FEFAD1892514B03F0022A215 /* ContributeViewController */,
@@ -993,6 +998,15 @@
 			path = AboutViewController;
 			sourceTree = "<group>";
 		};
+		FEC470B82517AE3A002F0E2F /* IntroductionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEC470B92517AE50002F0E2F /* Introduction.storyboard */,
+				FEC470BD2517AE63002F0E2F /* IntroductionViewController.swift */,
+			);
+			path = IntroductionViewController;
+			sourceTree = "<group>";
+		};
 		FEE1D6E324F7851E000C0A15 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1182,6 +1196,7 @@
 				0A7351DE24EE681100E2712D /* Species.storyboard in Resources */,
 				FEFBA0A124F29B5F00335E77 /* Photos.storyboard in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
+				FEC470BA2517AE50002F0E2F /* Introduction.storyboard in Resources */,
 				FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,6 +1283,7 @@
 				FEACBA0124F3A44200F61689 /* PageModalViewController.swift in Sources */,
 				FEFBA09F24F29B4700335E77 /* PhotosViewController.swift in Sources */,
 				FE1341A224E3263A0076EF14 /* PhotosTableViewCell.swift in Sources */,
+				FEC470BE2517AE63002F0E2F /* IntroductionViewController.swift in Sources */,
 				FE928C9E2515F144004CBFB3 /* ContributionItem.swift in Sources */,
 				FE9D703C2511F79E00FCE1F3 /* PdfState.swift in Sources */,
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,

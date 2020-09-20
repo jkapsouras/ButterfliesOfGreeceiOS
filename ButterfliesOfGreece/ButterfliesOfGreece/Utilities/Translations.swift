@@ -266,6 +266,60 @@ struct Translations {
 		}
 	}
 	
+	static var IntroductionTitle:String {
+		get{
+			"introduction_title".Localise()
+		}
+	}
+	
+	static var IntroductionSubtitle:String {
+		get{
+			"introduction_subtitle".Localise()
+		}
+	}
+	
+	static var IntroductionMessage:String {
+		get{
+			"introduction_message".Localise()
+		}
+	}
+	
+	static var IntroductionField:String {
+		get{
+			"introduction_field".Localise()
+		}
+	}
+	
+	static var IntroductionLegal:String {
+		get{
+			"introduction_legacy".Localise()
+		}
+	}
+	
+	static var IntroductionAbout:String {
+		get{
+			"introduction_about".Localise()
+		}
+	}
+	
+	static var IntroductionContribute:String {
+		get{
+			"introduction_contribute".Localise()
+		}
+	}
+	
+	static var IntroductionEndangered:String {
+		get{
+			"introduction_endangered".Localise()
+		}
+	}
+	
+	static var IntroductionRecognition:String {
+		get{
+			"introduction_recognition".Localise()
+		}
+	}
+
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil
