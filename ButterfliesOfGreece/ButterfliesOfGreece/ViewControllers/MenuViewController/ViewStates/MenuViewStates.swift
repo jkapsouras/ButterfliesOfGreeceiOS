@@ -20,7 +20,7 @@ enum MenuViewState:ViewState {
 	
 	var isTransition:Bool{
 		switch self {
-			case .toField,
+		case .toField,
 			 .toIntroduction,
 			 .toEndangered,
 			 .toLegal,
@@ -28,7 +28,7 @@ enum MenuViewState:ViewState {
 			 .toContribute,
 			 .toOnlineRecognition,
 			 .toOfflineRecognition:
-				return true
+			return true
 		}
 	}
 }
@@ -42,6 +42,12 @@ extension MenuViewState{
 			return "Contribute"
 		case .toAbout:
 			return "About"
+		case .toIntroduction:
+			return "Introduction"
+		case .toEndangered:
+			return "Endangered"
+		case .toLegal:
+			return "Legal"
 		default:
 			return nil
 		}
@@ -55,6 +61,12 @@ extension MenuViewState{
 			return "ContributeViewController"
 		case .toAbout:
 			return "AboutViewController"
+		case .toIntroduction:
+			return "IntroductionViewController"
+		case .toEndangered:
+			return "EndangeredViewController"
+		case .toLegal:
+			return "LegalViewController"
 		default:
 			return nil
 		}

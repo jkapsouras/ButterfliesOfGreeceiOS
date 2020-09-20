@@ -33,6 +33,18 @@ class FamiliesViewController: BaseController<FamiliesPresenter> {
 		navigationController?.view.layoutIfNeeded()
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		guard let butterfliesNavigation = navigationController as? NavigationViewController else {
+			print("no proper navigation controller")
+			return
+		}
+		
+		title = Translations.Field
+		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.field(darkMode: false).color, textColor: Constants.Colors.field(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
+		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
+	}
+	
 	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
 		ViewPhotosWithCollection.updateViews()
 	}

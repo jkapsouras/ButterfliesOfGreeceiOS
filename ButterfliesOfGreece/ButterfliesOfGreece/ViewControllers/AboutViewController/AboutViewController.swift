@@ -97,6 +97,18 @@ class AboutViewController: UIViewController {
 		LabelSubTitle.text = Translations.AboutThirdTitle
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		guard let butterfliesNavigation = navigationController as? NavigationViewController else {
+			print("no proper navigation controller")
+			return
+		}
+		
+		title = Translations.About
+		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.about(darkMode: false).color, textColor: Constants.Colors.about(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
+		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
+	}
+	
 	override func viewWillLayoutSubviews() {
 		let fixedWidthFirst = TextAreaFirst.frame.size.width
 		let newSizeFirst = TextAreaFirst.sizeThatFits(CGSize(width: fixedWidthFirst, height: CGFloat.greatestFiniteMagnitude))

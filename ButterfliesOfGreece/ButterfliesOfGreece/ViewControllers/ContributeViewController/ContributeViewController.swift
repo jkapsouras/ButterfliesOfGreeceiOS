@@ -25,6 +25,18 @@ class ContributeViewController: BaseController<ContributePresenter> {
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		guard let butterfliesNavigation = navigationController as? NavigationViewController else {
+			print("no proper navigation controller")
+			return
+		}
+		
+		title = Translations.Contribute
+		butterfliesNavigation.setupNavigationBarAppearance(color: Constants.Colors.contribute(darkMode: false).color, textColor: Constants.Colors.contribute(darkMode: true).color, fontName: Constants.Fonts.appFont, fontSize: Constants.Fonts.titleControllerSise)
+		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
+	}
+	
 	override func InitializeComponents() -> Array<UiComponent> {
 		contributeComponent = ContributeComponent(view: ViewContribute, navigationItem: navigationItem, parentView: view, owner: self)
 		return [contributeComponent!]
