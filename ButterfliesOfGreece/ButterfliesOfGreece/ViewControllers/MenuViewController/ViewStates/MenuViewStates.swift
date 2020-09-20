@@ -40,6 +40,8 @@ extension MenuViewState{
 			return "Families"
 		case .toContribute:
 			return "Contribute"
+		case .toAbout:
+			return "About"
 		default:
 			return nil
 		}
@@ -51,6 +53,8 @@ extension MenuViewState{
 			return "FamiliesViewController"
 		case .toContribute:
 			return "ContributeViewController"
+		case .toAbout:
+			return "AboutViewController"
 		default:
 			return nil
 		}

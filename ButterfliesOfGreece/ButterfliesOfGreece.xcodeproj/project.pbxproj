@@ -140,6 +140,8 @@
 		FEC4709125164B6B002F0E2F /* PrintRendererExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4709025164B6B002F0E2F /* PrintRendererExtension.swift */; };
 		FEC4709625165F92002F0E2F /* InfoModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC4709525165F92002F0E2F /* InfoModal.storyboard */; };
 		FEC4709A25165FAF002F0E2F /* InfoModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4709925165FAF002F0E2F /* InfoModalViewController.swift */; };
+		FEC470AE2516A38E002F0E2F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470AC2516A38D002F0E2F /* AboutViewController.swift */; };
+		FEC470AF2516A38E002F0E2F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC470AD2516A38D002F0E2F /* About.storyboard */; };
 		FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */; };
 		FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E6251150D000D07FA9 /* PickerDataModel.swift */; };
 		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
@@ -313,6 +315,8 @@
 		FEC4709025164B6B002F0E2F /* PrintRendererExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintRendererExtension.swift; sourceTree = "<group>"; };
 		FEC4709525165F92002F0E2F /* InfoModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoModal.storyboard; sourceTree = "<group>"; };
 		FEC4709925165FAF002F0E2F /* InfoModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModalViewController.swift; sourceTree = "<group>"; };
+		FEC470AC2516A38D002F0E2F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		FEC470AD2516A38D002F0E2F /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintHeaderComponent.swift; sourceTree = "<group>"; };
 		FED640E6251150D000D07FA9 /* PickerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataModel.swift; sourceTree = "<group>"; };
 		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
@@ -666,6 +670,7 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEC4709D2516A0DA002F0E2F /* AboutViewController */,
 				FEC4709425165F56002F0E2F /* InfoModalViewController */,
 				FEFAD1892514B03F0022A215 /* ContributeViewController */,
 				FE9D70342511EF2400FCE1F3 /* PdfPreviewer */,
@@ -979,6 +984,15 @@
 			path = InfoModalViewController;
 			sourceTree = "<group>";
 		};
+		FEC4709D2516A0DA002F0E2F /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEC470AD2516A38D002F0E2F /* About.storyboard */,
+				FEC470AC2516A38D002F0E2F /* AboutViewController.swift */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
 		FEE1D6E324F7851E000C0A15 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1161,6 +1175,7 @@
 				FE1341A324E3263A0076EF14 /* PhotosTableViewCell.xib in Resources */,
 				FE5327B324E039DD00BA4AF5 /* ACTypoGrotesk.ttf in Resources */,
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
+				FEC470AF2516A38E002F0E2F /* About.storyboard in Resources */,
 				FE9D70362511EF3600FCE1F3 /* PdfPreview.storyboard in Resources */,
 				FE6691DE2514B2EE006C377F /* Contribute.storyboard in Resources */,
 				FE6691E32514B359006C377F /* ContributeView.xib in Resources */,
@@ -1267,6 +1282,7 @@
 				FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */,
 				FE6691E52514B36E006C377F /* ContributeView.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
+				FEC470AE2516A38E002F0E2F /* AboutViewController.swift in Sources */,
 				0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */,
 				FEA23DC52503C34600776D19 /* SearchState.swift in Sources */,
 				0A7351E024EE68C600E2712D /* SpeciesViewController.swift in Sources */,
