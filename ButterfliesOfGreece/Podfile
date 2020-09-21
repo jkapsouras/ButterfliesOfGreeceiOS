@@ -11,6 +11,7 @@ target 'ButterfliesOfGreece' do
   pod 'IQKeyboardManagerSwift'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
+  pod 'AppCenter'
 end
 
 target 'ButterfliesOfGreeceTests' do

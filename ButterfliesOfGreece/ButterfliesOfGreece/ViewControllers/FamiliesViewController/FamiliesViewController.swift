@@ -45,6 +45,10 @@ class FamiliesViewController: BaseController<FamiliesPresenter> {
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
 	}
 	
+	override func viewWillLayoutSubviews() {
+		ViewPhotosWithCollection.updateViews()
+	}
+	
 	override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
 		ViewPhotosWithCollection.updateViews()
 	}

@@ -24,6 +24,10 @@ class ModalPhotoViewController: UIViewController {
 		ViewScroll.delegate = self
         // Do any additional setup after loading the view.
 		view.backgroundColor = Constants.Colors.field(darkMode: false).color
+		ViewScroll.backgroundColor = Constants.Colors.field(darkMode: false).color
+		ImagePhoto.contentMode = .scaleAspectFit
+		ViewScroll.contentMode = .scaleAspectFit
+		ViewScroll.clipsToBounds = true
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -39,14 +43,12 @@ class ModalPhotoViewController: UIViewController {
 	}
 	
 	func updateMinZoomScaleForSize(_ imageSize: CGSize) {
-	  let widthScale = view.frame.width / imageSize.width
-	  let heightScale = view.frame.height / imageSize.height
-	  let minScale = min(widthScale, heightScale)
-	  
 	  // Scale the image down to fit in the view
-	  ViewScroll.minimumZoomScale = minScale
-		ViewScroll.maximumZoomScale = 4*minScale
-	  ViewScroll.zoomScale = minScale
+	  ViewScroll.minimumZoomScale = 1
+		ViewScroll.maximumZoomScale = 4*1
+	  ViewScroll.zoomScale = 1
+		
+		view.layoutIfNeeded()
 	  
 	  // Set the image frame size after scaling down
 //	  let imageWidth = imageSize.width * minScale

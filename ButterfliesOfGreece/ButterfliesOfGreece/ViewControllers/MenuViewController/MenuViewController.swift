@@ -28,6 +28,7 @@ class MenuViewController: BaseController<MenuPresenter> {
 		title = ""
     }
 	
+	
 	override func viewWillLayoutSubviews() {
 		ButtonEndangered.centerVerticallyWithPadding(padding: buttonPadding)
 		ButtonField.centerVerticallyWithPadding(padding: buttonPadding)
@@ -103,6 +104,8 @@ class MenuViewController: BaseController<MenuPresenter> {
 		ButtonRecognition.setImage(#imageLiteral(resourceName: "recognitionIcon").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonRecognition.tintColor = Constants.Colors.recognition(darkMode: true).color
 		ButtonRecognition.imageView?.contentMode = .scaleAspectFit
+		
+		view.backgroundColor = UIColor.white
     }
     
     override func LocalizeViews() {
