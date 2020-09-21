@@ -355,6 +355,12 @@ struct Translations {
 			"ministry".Localise()
 		}
 	}
+	
+	static var EndangeredTitle:String {
+		get{
+			"endangered_title".Localise()
+		}
+	}
 
 	static func FindLanguage(language:String? = nil)->Bundle
 	{

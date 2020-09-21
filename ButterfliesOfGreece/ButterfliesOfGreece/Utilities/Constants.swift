@@ -35,6 +35,7 @@ struct Constants {
 	
 	static let TermsPdf = "127557_2178_2015"
 	static let FormsPdf = "135366-16"
+	static let SpeciesPdf = "species"
 	
 }
 extension Constants.Colors {
