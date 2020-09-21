@@ -144,6 +144,14 @@
 		FEC470AF2516A38E002F0E2F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC470AD2516A38D002F0E2F /* About.storyboard */; };
 		FEC470BA2517AE50002F0E2F /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC470B92517AE50002F0E2F /* Introduction.storyboard */; };
 		FEC470BE2517AE63002F0E2F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470BD2517AE63002F0E2F /* IntroductionViewController.swift */; };
+		FEC470C72517EF4A002F0E2F /* Legal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC470C62517EF4A002F0E2F /* Legal.storyboard */; };
+		FEC470CB2517EF59002F0E2F /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470CA2517EF59002F0E2F /* LegalViewController.swift */; };
+		FEC470D22517F912002F0E2F /* LegalEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470D12517F912002F0E2F /* LegalEvents.swift */; };
+		FEC470D82517F962002F0E2F /* LegalViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470D72517F962002F0E2F /* LegalViewStates.swift */; };
+		FEC470DC2517F9AA002F0E2F /* LegalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470DB2517F9AA002F0E2F /* LegalPresenter.swift */; };
+		FEC470E12517FAE7002F0E2F /* 127557_2178_2015.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FEC470DF2517FAE6002F0E2F /* 127557_2178_2015.pdf */; };
+		FEC470E22517FAE7002F0E2F /* 135366-16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FEC470E02517FAE6002F0E2F /* 135366-16.pdf */; };
+		FEC470E62517FBA6002F0E2F /* LegalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC470E52517FBA6002F0E2F /* LegalComponent.swift */; };
 		FED640E525114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */; };
 		FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E6251150D000D07FA9 /* PickerDataModel.swift */; };
 		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
@@ -321,6 +329,14 @@
 		FEC470AD2516A38D002F0E2F /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		FEC470B92517AE50002F0E2F /* Introduction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
 		FEC470BD2517AE63002F0E2F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		FEC470C62517EF4A002F0E2F /* Legal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Legal.storyboard; sourceTree = "<group>"; };
+		FEC470CA2517EF59002F0E2F /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
+		FEC470D12517F912002F0E2F /* LegalEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalEvents.swift; sourceTree = "<group>"; };
+		FEC470D72517F962002F0E2F /* LegalViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewStates.swift; sourceTree = "<group>"; };
+		FEC470DB2517F9AA002F0E2F /* LegalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalPresenter.swift; sourceTree = "<group>"; };
+		FEC470DF2517FAE6002F0E2F /* 127557_2178_2015.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 127557_2178_2015.pdf; sourceTree = "<group>"; };
+		FEC470E02517FAE6002F0E2F /* 135366-16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "135366-16.pdf"; sourceTree = "<group>"; };
+		FEC470E52517FBA6002F0E2F /* LegalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalComponent.swift; sourceTree = "<group>"; };
 		FED640E425114A9E00D07FA9 /* PhotosToPrintHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosToPrintHeaderComponent.swift; sourceTree = "<group>"; };
 		FED640E6251150D000D07FA9 /* PickerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataModel.swift; sourceTree = "<group>"; };
 		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
@@ -459,6 +475,8 @@
 		FE10425424D5A6130075D027 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FEC470DF2517FAE6002F0E2F /* 127557_2178_2015.pdf */,
+				FEC470E02517FAE6002F0E2F /* 135366-16.pdf */,
 				FE8DADA824E5759B009F92F6 /* data.json */,
 				FE5327B124E039AC00BA4AF5 /* Fonts */,
 				FEA1CB6024E84A710038DD9C /* Storage.swift */,
@@ -674,6 +692,7 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEC470C52517EF2D002F0E2F /* LegalViewController */,
 				FEC470B82517AE3A002F0E2F /* IntroductionViewController */,
 				FEC4709D2516A0DA002F0E2F /* AboutViewController */,
 				FEC4709425165F56002F0E2F /* InfoModalViewController */,
@@ -1007,6 +1026,43 @@
 			path = IntroductionViewController;
 			sourceTree = "<group>";
 		};
+		FEC470C52517EF2D002F0E2F /* LegalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FEC470D02517F901002F0E2F /* Components */,
+				FEC470CF2517F8F0002F0E2F /* ViewStates */,
+				FEC470CE2517F8E9002F0E2F /* UiEvents */,
+				FEC470C62517EF4A002F0E2F /* Legal.storyboard */,
+				FEC470CA2517EF59002F0E2F /* LegalViewController.swift */,
+				FEC470DB2517F9AA002F0E2F /* LegalPresenter.swift */,
+			);
+			path = LegalViewController;
+			sourceTree = "<group>";
+		};
+		FEC470CE2517F8E9002F0E2F /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				FEC470D12517F912002F0E2F /* LegalEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		FEC470CF2517F8F0002F0E2F /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				FEC470D72517F962002F0E2F /* LegalViewStates.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		FEC470D02517F901002F0E2F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEC470E52517FBA6002F0E2F /* LegalComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FEE1D6E324F7851E000C0A15 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1233,7 @@
 				FE8DADA724E57032009F92F6 /* PhotosCollectionViewCell.xib in Resources */,
 				FEEEEEDD24D6EF8600C9655B /* Navigation.storyboard in Resources */,
 				FEC4709625165F92002F0E2F /* InfoModal.storyboard in Resources */,
+				FEC470C72517EF4A002F0E2F /* Legal.storyboard in Resources */,
 				FEACB9FF24F3A38F00F61689 /* PageModal.storyboard in Resources */,
 				FEA23DD12503DC7A00776D19 /* Search.storyboard in Resources */,
 				FE85F65624F2E73C00414631 /* ModalPhoto.storyboard in Resources */,
@@ -1198,6 +1255,8 @@
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
 				FEC470BA2517AE50002F0E2F /* Introduction.storyboard in Resources */,
 				FE5327C124E30D8B00BA4AF5 /* PhotosTableView.xib in Resources */,
+				FEC470E22517FAE7002F0E2F /* 135366-16.pdf in Resources */,
+				FEC470E12517FAE7002F0E2F /* 127557_2178_2015.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1346,7 @@
 				FE928C9E2515F144004CBFB3 /* ContributionItem.swift in Sources */,
 				FE9D703C2511F79E00FCE1F3 /* PdfState.swift in Sources */,
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
+				FEC470D82517F962002F0E2F /* LegalViewStates.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
 				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
 				FE9D70402511FEE500FCE1F3 /* PdfPreviewEvents.swift in Sources */,
@@ -1295,6 +1355,7 @@
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
 				0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
+				FEC470CB2517EF59002F0E2F /* LegalViewController.swift in Sources */,
 				FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */,
 				FE6691E52514B36E006C377F /* ContributeView.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
@@ -1356,6 +1417,7 @@
 				FE14399C250EB6E600B53E34 /* HeaderPrintToPdfView.swift in Sources */,
 				FEE1D6E524F7853A000C0A15 /* ModalPhotoComponent.swift in Sources */,
 				FE6691E82514D95B006C377F /* ContributeComponent.swift in Sources */,
+				FEC470E62517FBA6002F0E2F /* LegalComponent.swift in Sources */,
 				FE861B7124E6BC8C003DA5ED /* HeaderState.swift in Sources */,
 				FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */,
 				FE1341AB24E327AD0076EF14 /* PhotosCollectionSource.swift in Sources */,
@@ -1383,10 +1445,12 @@
 				FE10425B24D5AB920075D027 /* Specie.swift in Sources */,
 				FE389B4524CF6A6D00F47717 /* FamiliesViewStates.swift in Sources */,
 				FE6691E02514B2FF006C377F /* ContributeViewController.swift in Sources */,
+				FEC470DC2517F9AA002F0E2F /* LegalPresenter.swift in Sources */,
 				FEFBA09324F244E100335E77 /* PhotoViewStates.swift in Sources */,
 				0A25982C24EDBCB2003893FA /* SpeciesEvents.swift in Sources */,
 				FEA1CB6124E84A710038DD9C /* Storage.swift in Sources */,
 				FE389B3A24CF68A300F47717 /* MenuUiEvents.swift in Sources */,
+				FEC470D22517F912002F0E2F /* LegalEvents.swift in Sources */,
 				FE9D70382511EF6700FCE1F3 /* PdfPreviewViewController.swift in Sources */,
 				FE928C9A2515F133004CBFB3 /* ContributeState.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,

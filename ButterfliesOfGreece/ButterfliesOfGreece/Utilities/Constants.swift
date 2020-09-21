@@ -33,6 +33,9 @@ struct Constants {
 		static let addedPhotosSize:CGFloat = 8
 	}
 	
+	static let TermsPdf = "127557_2178_2015"
+	static let FormsPdf = "135366-16"
+	
 }
 extension Constants.Colors {
 	var color: UIColor {
