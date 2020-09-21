@@ -23,4 +23,9 @@ struct SpeciesRepository {
 	mutating func getSelectedFamilyName(familyId:Int) -> Observable<String>{
 		return Observable.from(optional: storage.getSelectedFamilyName(familyId: familyId))
 	}
+	
+	mutating func getSpeciesFromSearchTerm(term:String) -> Observable<[Specie]>{
+		return Observable.from(optional:
+			storage.searchSpeciesBy(term: term))
+	}
 }

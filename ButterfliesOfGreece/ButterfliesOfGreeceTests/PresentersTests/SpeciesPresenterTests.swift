@@ -47,7 +47,7 @@ class SpeciesPresenterTests: XCTestCase {
 				Recorded.next(200, (HeaderViewEvents.switchViewStyleClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -75,7 +75,7 @@ class SpeciesPresenterTests: XCTestCase {
 				Recorded.next(200, (SpeciesEvents.loadSpecies(familyId: 0)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -87,7 +87,7 @@ class SpeciesPresenterTests: XCTestCase {
 			observer.events[1].value.element is SpeciesViewStates)
 		let viewState = observer.events[1].value.element as! SpeciesViewStates
 		switch viewState {
-			case .ShowSpecies(let species):
+			case .ShowSpecies(let species, _):
 				XCTAssert(species.count == 9)//test json data
 			default:
 				XCTFail()
@@ -105,7 +105,7 @@ class SpeciesPresenterTests: XCTestCase {
 				Recorded.next(200, (SpeciesEvents.specieClicked(id: 1)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -135,7 +135,7 @@ class SpeciesPresenterTests: XCTestCase {
 				Recorded.next(200, (HeaderViewEvents.initState(currentArrange: .list)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -185,7 +185,7 @@ class SpeciesPresenterTests: XCTestCase {
 //				Recorded.next(1000, (FamiliesEvents.addPhotosForPrintClicked(familyId: 8)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)

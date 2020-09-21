@@ -62,7 +62,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.emitter = emitter
 		self.showingStep = showingStep
-		LabelName.text = "fotografos: \(photo.author)"
+		LabelName.text = "\(photo.author)"
 		photoId = photo.id
 		ImageButterfly.image = UIImage(named: "ThumbnailsBig/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
@@ -106,8 +106,10 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
 			case .photos:
 				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
-			case .none:
+			case .photosToPrint:
 				print("not implemented yet")
+			case .none:
+				print("nothing")
 			}
 			
 		}

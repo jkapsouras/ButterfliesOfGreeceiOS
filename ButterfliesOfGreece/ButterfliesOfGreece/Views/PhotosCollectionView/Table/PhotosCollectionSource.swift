@@ -14,6 +14,7 @@ enum ShowingStep{
 	case families
 	case species
 	case photos
+	case photosToPrint
 }
 
 class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate{
@@ -30,7 +31,8 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 			return families.count
 		case .species:
 			return species.count
-		case .photos:
+		case .photos,
+			 .photosToPrint:
 			return photos.count
 		}
 	}
@@ -42,7 +44,8 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		case .species:
 			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
-		case .photos:
+		case .photos,
+			 .photosToPrint:
 			cell.update(photo: (photos[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		}
 		
@@ -69,6 +72,8 @@ class PhotosCollectionSource : NSObject, UICollectionViewDataSource, UICollectio
 			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
 		case .photos:
 			emitter.onNext(PhotosEvents.photoClicked(id: photos[indexPath.row].id))
+		case .photosToPrint:
+			break
 		}
 	}
 	

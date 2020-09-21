@@ -124,7 +124,7 @@ class MenuViewController: BaseController<MenuPresenter> {
 	}
     
     override func InitializeComponents() -> Array<UiComponent> {
-        menuComponent = MenuComponent(field: ButtonField)
+		menuComponent = MenuComponent(field: ButtonField, contribute: ButtonContribute, about: ButtonAbout, introduction: ButtonIntroduction, endangered: ButtonEndangered, legal: ButtonLegal, recognition: ButtonRecognition)
         return [menuComponent!]
     }
 }

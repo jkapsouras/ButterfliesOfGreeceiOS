@@ -23,9 +23,9 @@ class SpeciesTableComponent : UiComponent
     public func renderViewState(viewState: ViewState) {
 		if let state = viewState as? SpeciesViewStates{
 			switch state {
-			case SpeciesViewStates.ShowSpecies(let data):
+			case SpeciesViewStates.ShowSpecies(let data, let fromSearch):
 				print("number of species: \(data.count)")
-				photosTableView.ShowSpecies(species: data)
+				photosTableView.ShowSpecies(species: data, fromSearch: fromSearch)
 			case SpeciesViewStates.SwitchViewStyle(let arrange):
 				if(arrange == .grid){
 					photosTableView.Hide()

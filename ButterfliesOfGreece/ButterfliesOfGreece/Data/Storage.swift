@@ -20,9 +20,18 @@ struct Storage {
 	static var familyId:Int?
 	static var specieId:Int?
 	static var photoId:Int?
+	static var pdfArrange:PdfArrange?
 	
 	mutating func species(familyId:Int) -> [Specie]{
 		return families.filter{$0.id == familyId}.flatMap{$0.species}
+	}
+	
+	func getPdfArrange() -> PdfArrange{
+		return Storage.pdfArrange ?? PdfArrange.onePerPage
+	}
+	
+	func setPdfArrange(pdfArrange:PdfArrange) -> Observable<Bool> {
+		return Observable.from(optional: Storage.pdfArrange = pdfArrange).map({ _ in return true})
 	}
 	
 	mutating func photos(specieId:Int) -> [ButterflyPhoto]{
@@ -68,6 +77,19 @@ struct Storage {
 	mutating func changeArrange(){
 		Storage.currentArrange = Storage.currentArrange.changeArrange()
 	}
+	
+	mutating func getAllPhotos() -> Observable<[ButterflyPhoto]>{
+		return Observable.from(optional: families.flatMap{$0.species}.flatMap{$0.photos})
+	}
+	
+	mutating func getAllSpecies() -> [Specie]{
+		return families.flatMap{$0.species}
+	}
+	
+	mutating func searchSpeciesBy(term:String) -> [Specie]{
+		return getAllSpecies().filter{specie in
+			specie.name.lowercased().contains(term.lowercased())}
+	}
 }
 
 extension Storage{
@@ -82,9 +104,12 @@ extension Storage{
 		}
 		let data = json!.data(using: .utf8)
 		let decoder = JSONDecoder()
-		let families = try? decoder.decode([Family].self, from: data!)
+		var families = try? decoder.decode([Family].self, from: data!)
 		guard families != nil else{
 			return [Family]()
+		}
+		families = families!.compactMap{family in
+			Family(id: family.id, name: family.name, photo: family.photo, species: family.species.compactMap{specie in Specie(id: specie.id, familyId: family.id, name: specie.name, imageTitle: specie.imageTitle, photos: specie.photos.compactMap{photo in ButterflyPhoto(id: photo.id, source: photo.source, title: photo.title, author: photo.author, genre: photo.genre, identified: photo.identified, familyId: family.id, specieId: specie.id, specieName: specie.name)})})
 		}
 		return families!
 	}

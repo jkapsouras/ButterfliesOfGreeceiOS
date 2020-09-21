@@ -46,7 +46,7 @@ class FamiliesPresenterTests: XCTestCase {
 				Recorded.next(200, (HeaderViewEvents.switchViewStyleClicked) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -74,7 +74,7 @@ class FamiliesPresenterTests: XCTestCase {
 				Recorded.next(200, (FamiliesEvents.loadFamilies) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -104,7 +104,7 @@ class FamiliesPresenterTests: XCTestCase {
 				Recorded.next(200, (FamiliesEvents.familyClicked(id: 1)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -134,7 +134,7 @@ class FamiliesPresenterTests: XCTestCase {
 				Recorded.next(200, (HeaderViewEvents.initState(currentArrange: .list)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)
@@ -184,7 +184,7 @@ class FamiliesPresenterTests: XCTestCase {
 				Recorded.next(1000, (FamiliesEvents.addPhotosForPrintClicked(familyId: 8)) as UiEvent)
 			])
 			.bind(onNext: {event in self.presenter?.HandleEvent(uiEvents: event)})
-			.disposed(by: presenter!.disposeBag)
+			.disposed(by: presenter!.disposeBag!)
 		
 		presenter.state.bind(to: observer)
 			.disposed(by: disposeBag)

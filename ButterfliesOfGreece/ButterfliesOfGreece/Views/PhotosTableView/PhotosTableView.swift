@@ -105,9 +105,10 @@ class PhotosTableView: UIView {
 		TablePhotos.reloadData()
 	}
 	
-	func ShowSpecies(species: [Specie]){
+	func ShowSpecies(species: [Specie], fromSearch: Bool){
 		source.setSpecies(species: species)
 		source.setShowingStep(showingStep: .species)
+		source.setFromSearch(fromSearch: fromSearch)
 		TablePhotos.separatorStyle = .none
 		TablePhotos.dataSource = source
 		TablePhotos.delegate = source
@@ -117,6 +118,15 @@ class PhotosTableView: UIView {
 	func ShowPhotos(photos: [ButterflyPhoto]){
 		source.setPhotos(photos: photos)
 		source.setShowingStep(showingStep: .photos)
+		TablePhotos.separatorStyle = .none
+		TablePhotos.dataSource = source
+		TablePhotos.delegate = source
+		TablePhotos.reloadData()
+	}
+	
+	func ShowPhotosToPrint(photos: [ButterflyPhoto]){
+		source.setPhotos(photos: photos)
+		source.setShowingStep(showingStep: .photosToPrint)
 		TablePhotos.separatorStyle = .none
 		TablePhotos.dataSource = source
 		TablePhotos.delegate = source

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VtT-vO-Rpk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="Zkw-Qb-my5">
+            <objects>
+                <viewController restorationIdentifier="SearchViewController" storyboardIdentifier="SearchViewController" id="VtT-vO-Rpk" customClass="SearchViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y9P-TO-g3k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="si7-c3-Egw" customClass="PhotosTableView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="52" width="414" height="810"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E7C-fv-G5W" firstAttribute="bottom" secondItem="si7-c3-Egw" secondAttribute="bottom" id="5nP-bM-Ep5"/>
+                            <constraint firstItem="E7C-fv-G5W" firstAttribute="trailing" secondItem="si7-c3-Egw" secondAttribute="trailing" id="E8E-BT-aeP"/>
+                            <constraint firstItem="si7-c3-Egw" firstAttribute="top" secondItem="E7C-fv-G5W" secondAttribute="top" constant="8" id="aEa-Rs-Qj5"/>
+                            <constraint firstItem="si7-c3-Egw" firstAttribute="leading" secondItem="E7C-fv-G5W" secondAttribute="leading" id="hrV-3Z-Y6v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E7C-fv-G5W"/>
+                    </view>
+                    <connections>
+                        <outlet property="ViewResults" destination="si7-c3-Egw" id="aPY-tj-rkO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TfS-yQ-5eV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165" y="78"/>
+        </scene>
+    </scenes>
+</document>

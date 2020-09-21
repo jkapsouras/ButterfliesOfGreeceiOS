@@ -18,6 +18,7 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 	let emitter = PublishSubject<UiEvent>()
 	var emitterObs:Observable<UiEvent> {get {return emitter.asObservable()}}
 	var showingStep = ShowingStep.families
+	var fromSearch = false
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.Key, for: indexPath) as! PhotosTableViewCell
@@ -25,8 +26,9 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 		case .families:
 			cell.update(family: (families[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		case .species:
-			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep)
-		case .photos:
+			cell.update(specie: (species[indexPath.row]), emitter: emitter, showingStep: showingStep, fromSearch: fromSearch)
+		case .photos,
+			 .photosToPrint:
 			cell.update(photo: (photos[indexPath.row]), emitter: emitter, showingStep: showingStep)
 		}
 		return cell
@@ -49,8 +51,14 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 		case .families:
 			emitter.onNext(FamiliesEvents.familyClicked(id: families[indexPath.row].id))
 		case .species:
-			emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
-		case .photos:
+			if(fromSearch){
+				emitter.onNext(SearchEvents.specieClicked(specie: species[indexPath.row]))
+			}
+			else{
+				emitter.onNext(SpeciesEvents.specieClicked(id: species[indexPath.row].id))
+			}
+		case .photos,
+			 .photosToPrint:
 			emitter.onNext(PhotosEvents.photoClicked(id: photos[indexPath.row].id))
 		}
 	}
@@ -61,7 +69,8 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 			return families.count
 		case .species:
 			return species.count
-		case .photos:
+		case .photos,
+			 .photosToPrint:
 			return photos.count
 		}
 	}
@@ -80,6 +89,10 @@ class PhotosTableSource : NSObject, UITableViewDataSource, UITableViewDelegate
 	
 	func setShowingStep(showingStep:ShowingStep){
 		self.showingStep = showingStep
+	}
+	
+	func setFromSearch(fromSearch: Bool){
+		self.fromSearch = fromSearch
 	}
 }
 

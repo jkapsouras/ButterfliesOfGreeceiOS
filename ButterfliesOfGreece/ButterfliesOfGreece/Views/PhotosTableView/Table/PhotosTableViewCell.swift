@@ -22,6 +22,7 @@ class PhotosTableViewCell: UITableViewCell {
 	var familyId:Int?
 	var specieId:Int?
 	var photoId:Int?
+	var photo:ButterflyPhoto?
 	var showingStep:ShowingStep?
 	
 	override func awakeFromNib() {
@@ -46,7 +47,7 @@ class PhotosTableViewCell: UITableViewCell {
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
 	}
 	
-	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
+	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep, fromSearch: Bool){
 		self.showingStep = showingStep
 		self.emitter = emitter
 		LabelName.text = specie.name
@@ -56,18 +57,20 @@ class PhotosTableViewCell: UITableViewCell {
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
 		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+		ImageAdd.alpha = fromSearch ? 0 : 1
 	}
 	
 	func update(photo: ButterflyPhoto, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep){
 		self.showingStep = showingStep
 		self.emitter = emitter
-		LabelName.text = "fotografos: \(photo.author)"
+		LabelName.text = "\(Translations.Photographer): \(photo.author)"
 		photoId = photo.id
+		self.photo = photo
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(photo.source)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{
 			ImageButterfly.image = #imageLiteral(resourceName: "default")
 		}
-		ImageAdd.image = #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate)
+		ImageAdd.image = showingStep == ShowingStep.photos ?  #imageLiteral(resourceName: "plusIcon").withRenderingMode(.alwaysTemplate) : #imageLiteral(resourceName: "minusIcon").withRenderingMode(.alwaysTemplate)
 	}
 	
 	func prepareView(){
@@ -104,6 +107,10 @@ class PhotosTableViewCell: UITableViewCell {
 				emitter.onNext(SpeciesEvents.addPhotosForPrintClicked(specieId: specieId ?? -1))
 			case .photos:
 				emitter.onNext(PhotosEvents.addPhotoForPrintClicked(photoId: photoId ?? -1))
+			case .photosToPrint:
+				if let photo = photo{
+					emitter.onNext(PrintToPdfEvents.delete(photo: photo))
+				}
 			case .none:
 				print("do nothing")
 			}

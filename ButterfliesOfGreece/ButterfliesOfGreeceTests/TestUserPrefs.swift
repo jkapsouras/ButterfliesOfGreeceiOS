@@ -33,6 +33,7 @@ class MockUserDefaults:UserDefaults{
 }
 
 class MockCacheManager:CacheManagerProtocol{
+	var contributionItems: String = "contributionItems"
 	var photosToPrint: String = "photosToPrint"
 	var _prefs: UserDefaults
 	
@@ -54,5 +55,19 @@ class MockCacheManager:CacheManagerProtocol{
 		return Observable.from(optional: true)
 	}
 	
+	func saveContributionItem(item: ContributionItem) -> Observable<Bool> {
+		return Observable.from(optional: true)
+	}
 	
+	func getContributionItems() -> Observable<[ContributionItem]> {
+		return Observable.from(optional: [ContributionItem]())
+	}
+	
+	func deleteContributionItems() -> Observable<Bool> {
+		return Observable.from(optional: true)
+	}
+	
+	func delete(photo: ButterflyPhoto) -> Observable<[ButterflyPhoto]> {
+		return Observable.from(optional: [ButterflyPhoto]())
+	}
 }

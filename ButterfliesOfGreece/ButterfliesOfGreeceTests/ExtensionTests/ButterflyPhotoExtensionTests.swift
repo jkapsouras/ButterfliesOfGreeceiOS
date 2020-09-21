@@ -18,8 +18,8 @@ class ButterflyPhotoExtensionTests: XCTestCase {
 		// Put setup code here. This method is called before the invocation of each test method in the class.
 		super.setUp()
 		photos = [
-			ButterflyPhoto(id: 0, source: "001_001", title: "B1", author: "Pamperis", genre: .F, identified: true),
-			ButterflyPhoto(id: 1, source: "001_002", title: "B2", author: "Pamperis", genre: .F, identified: true)
+			ButterflyPhoto(id: 0, source: "001_001", title: "B1", author: "Pamperis", genre: .F, identified: true, familyId: 1, specieId: 1, specieName: "test"),
+			ButterflyPhoto(id: 1, source: "001_002", title: "B2", author: "Pamperis", genre: .F, identified: true, familyId: 1, specieId: 1, specieName: "test")
 		]
 	}
 	
@@ -30,8 +30,8 @@ class ButterflyPhotoExtensionTests: XCTestCase {
 	func testShouldRemoveDuplicates()
 	{
 		let tmpPhotos = [
-			ButterflyPhoto(id: 0, source: "001_001", title: "B1", author: "Pamperis", genre: .F, identified: true),
-			ButterflyPhoto(id: 1, source: "001_002", title: "B2", author: "Pamperis", genre: .F, identified: true)
+			ButterflyPhoto(id: 0, source: "001_001", title: "B1", author: "Pamperis", genre: .F, identified: true, familyId: 1, specieId: 1, specieName: "test"),
+			ButterflyPhoto(id: 1, source: "001_002", title: "B2", author: "Pamperis", genre: .F, identified: true, familyId: 1, specieId: 1, specieName: "test")
 		]
 		let finalPhotos = photos! + tmpPhotos
 		let photosWithNoDuplicates = finalPhotos.uniques

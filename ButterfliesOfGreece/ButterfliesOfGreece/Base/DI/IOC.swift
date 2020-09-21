@@ -10,6 +10,7 @@ import Foundation
 import Swinject
 import SwinjectAutoregistration
 import RxSwift
+import CoreLocation
 
 protocol IOCInjectable
 {
@@ -40,7 +41,10 @@ struct IOC:IOCInjectable
     
      static func RegisterDataSources(container: Container) {
 		container.autoregister(Storage.self, initializer: Storage.init).inObjectScope(.container)
+		container.autoregister(LocationManager.self, initializer: LocationManager.init).inObjectScope(.container)
 		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
+		container.autoregister(CLLocationManager.self, initializer: CLLocationManager.init).inObjectScope(.container)
+//		container.register(LocationProtocol.self) { _ in LocationManager(manager: CLLocationManager())}.inObjectScope(.container)
     }
     
      static func RegisterRepositories(container: Container) {
@@ -49,6 +53,7 @@ struct IOC:IOCInjectable
 		container.autoregister(PhotosRepository.self, initializer: PhotosRepository.init)
 		container.autoregister(NavigationRepository.self, initializer: NavigationRepository.init)
 		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
+		container.autoregister(ContributionRepository.self, initializer: ContributionRepository.init)
     }
     
      static func RegisterPresenters(container: Container) {
@@ -56,6 +61,12 @@ struct IOC:IOCInjectable
         container.autoregister(FamiliesPresenter.self, initializer: FamiliesPresenter.init)
 		container.autoregister(SpeciesPresenter.self, initializer: SpeciesPresenter.init)
 		container.autoregister(PhotosPresenter.self, initializer: PhotosPresenter.init)
+		container.autoregister(ModalPresenter.self, initializer: ModalPresenter.init)
+		container.autoregister(SearchPresenter.self, initializer: SearchPresenter.init)
+		container.autoregister(PrintToPdfPresenter.self, initializer: PrintToPdfPresenter.init)
+		container.autoregister(PdfPreviewPresenter.self, initializer: PdfPreviewPresenter.init)
+		container.autoregister(ContributePresenter.self, initializer: ContributePresenter.init)
+		container.autoregister(LegalPresenter.self, initializer: LegalPresenter.init)
     }
     
     public static var container: Container?

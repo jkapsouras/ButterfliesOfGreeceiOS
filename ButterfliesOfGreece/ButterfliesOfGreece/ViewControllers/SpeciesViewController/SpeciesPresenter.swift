@@ -60,7 +60,8 @@ class SpeciesPresenter:BasePresenter{
 			case .specieClicked(let specieId):
 				_ = navigationRepository
 				.selectSpecieId(specieId: specieId)
-				.subscribe(onNext: {_ in self.state.onNext(SpeciesViewStates.ToPhotos)})
+				.subscribe(onNext: {_ in
+					self.state.onNext(SpeciesViewStates.ToPhotos)})
 			case .loadSpecies(let familyId):
 				_ = Observable.zip(speciesRepository.getSelectedFamilyName(familyId: familyId).map{familyName -> HeaderState in
 					self.headerState = self.headerState.with(headerName: familyName)
@@ -72,7 +73,7 @@ class SpeciesPresenter:BasePresenter{
 				}, resultSelector: {headerState, speciesState in (headerState, speciesState)})
 					.subscribe(onNext: {data in
 						self.state.onNext(HeaderViewViewStates.setHeaderTitle(headerTitle: data.0.headerName))
-						self.state.onNext(SpeciesViewStates.ShowSpecies(species: data.1.species))})
+						self.state.onNext(SpeciesViewStates.ShowSpecies(species: data.1.species, fromSearch: false))})
 			case .addPhotosForPrintClicked(let familyId):
 				_ = photosToPrintRepository
 					.getPhotosToPrint()
@@ -100,9 +101,9 @@ class SpeciesPresenter:BasePresenter{
 				}
 					.subscribe(onNext: {headerState in self.state.onNext(SpeciesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))})
 			case .searchBarClicked:
-				print("search bar clicked")
+				state.onNext(HeaderViewViewStates.toSearch)
 			case .printPhotosClicked:
-				print("print photos clicked")
+				state.onNext(HeaderViewViewStates.toPrintPhotos)
 		}
 	}
 }

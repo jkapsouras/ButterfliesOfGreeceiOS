@@ -10,7 +10,7 @@ import Foundation
 
 class BasePresenter{
 	
-	let disposeBag:DisposeBag=DisposeBag()
+	var disposeBag:DisposeBag?
 	let backgroundThreadScheduler:BackgroundThreadProtocol
 	let mainThreadScheduler:MainThreadProtocol
 	let state:PublishSubject<ViewState> = PublishSubject()
@@ -18,6 +18,7 @@ class BasePresenter{
 	
 	init(backScheduler:BackgroundThreadProtocol,mainScheduler:MainThreadProtocol)
 	{
+		disposeBag = DisposeBag()
 		backgroundThreadScheduler=backScheduler
 		mainThreadScheduler=mainScheduler
 	}
@@ -31,11 +32,15 @@ class BasePresenter{
 	{
 		Observable.merge(events,emitter.asObservable())
 			.subscribe(onNext: { event in self.HandleEvent(uiEvents: event)})
-			.disposed(by: disposeBag)
+			.disposed(by: disposeBag!)
 		return state.asObservable().observeOn(mainThreadScheduler.scheduler)
 	}
 	
 	func setupEvents(){
 		fatalError("Must Override")
+	}
+	
+	func unSubscribe(){
+		disposeBag = nil
 	}
 }

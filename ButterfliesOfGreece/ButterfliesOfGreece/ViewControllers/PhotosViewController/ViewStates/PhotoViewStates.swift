@@ -23,3 +23,23 @@ enum PhotosViewStates:ViewState{
 		}
 	}
 }
+
+extension PhotosViewStates{
+	var toStoryboardName:String?{
+		switch self {
+		case .ToPhoto:
+			return "PageModal"
+		default:
+			return nil
+		}
+	}
+	
+	var toViewControllerName:String?{
+		switch self {
+		case .ToPhoto:
+			return "PageModalViewController"
+		default:
+			return nil
+		}
+	}
+}

@@ -111,9 +111,9 @@ class FamiliesPresenter:BasePresenter{
 				.subscribe(onNext: {headerState in self.state.onNext(FamiliesViewStates.SwitchViewStyle(currentArrange: headerState.currentArrange))})
 			
 		case .searchBarClicked:
-			print("search bar clicked")
+			state.onNext(HeaderViewViewStates.toSearch)
 		case .printPhotosClicked:
-			print("print photos clicked")
+			state.onNext(HeaderViewViewStates.toPrintPhotos)
 		}
 	}
 }

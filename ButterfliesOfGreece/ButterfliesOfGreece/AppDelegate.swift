@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		IQKeyboardManager.shared.shouldToolbarUsesTextFieldTintColor = true;
 		IQKeyboardManager.shared.toolbarDoneBarButtonItemText = Translations.Done
 		
+		let pageControl = UIPageControl.appearance()
+		pageControl.pageIndicatorTintColor = Constants.Colors.field(darkMode: true).color
+		pageControl.currentPageIndicatorTintColor = Constants.Colors.about(darkMode: true).color
+		pageControl.backgroundColor = Constants.Colors.field(darkMode: false).color
+		
 		IOC.container = IOC.RegisterElements()
 		return true
 	}

@@ -26,11 +26,15 @@ struct Constants {
 	{
 		static let notchTop = 44
 		static let appFont = "Aka-Acid-TypoGrotesk"
+		static let fontHeaderSize:CGFloat = 12
 		static let fontMenuSize:CGFloat = 14
 		static let fontPhotosSize:CGFloat = 16
 		static let titleControllerSise:CGFloat = 18
 		static let addedPhotosSize:CGFloat = 8
 	}
+	
+	static let TermsPdf = "127557_2178_2015"
+	static let FormsPdf = "135366-16"
 	
 }
 extension Constants.Colors {
@@ -44,7 +48,7 @@ extension Constants.Colors {
 			case .legal(let darkMode):
 				return (darkMode ?  UIColor(hex: "#EDB299") : UIColor(hex: "#FAF2EE"))
 			case .about(let darkMode):
-				return (darkMode ?  UIColor(hex: "#DFE48C") : UIColor(hex: "#F8F9EB"))
+				return (darkMode ?  UIColor(hex: "#ced54e") : UIColor(hex: "#F8F9EB"))
 			case .contribute(let darkMode):
 				return (darkMode ?  UIColor(hex: "#7E66A6") : UIColor(hex: "#E8E6F1"))
 			case .endangered(let darkMode):
