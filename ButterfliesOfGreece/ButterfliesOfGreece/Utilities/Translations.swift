@@ -319,6 +319,42 @@ struct Translations {
 			"introduction_recognition".Localise()
 		}
 	}
+	
+	static var LegalPopup:String {
+		get{
+			"legal_popup".Localise()
+		}
+	}
+	
+	static var Terms:String {
+		get{
+			"terms".Localise()
+		}
+	}
+	
+	static var Form:String {
+		get{
+			"form".Localise()
+		}
+	}
+	
+	static var Here:String {
+		get{
+			"here".Localise()
+		}
+	}
+	
+	static var Pdf:String {
+		get{
+			"pdf".Localise()
+		}
+	}
+	
+	static var Ministry:String {
+		get{
+			"ministry".Localise()
+		}
+	}
 
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
