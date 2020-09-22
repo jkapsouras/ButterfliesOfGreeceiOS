@@ -28,6 +28,7 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		super.viewWillAppear(animated)
 		InitViews()
 		AddFonts()
+		LocalizeViews()
 		Components = InitializeComponents()
 		
 		if(navigationController != nil && navigationController is NavigationViewController){
@@ -60,7 +61,6 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			state?.connect().disposed(by: Presenter!.disposeBag!)
 			Presenter?.setupEvents()
 		}
-		LocalizeViews()
 	}
 	
 	override public func viewDidLayoutSubviews() {
