@@ -62,7 +62,12 @@ struct NavigationManager {
 			return
 		}
 		let storyboard = UIStoryboard.init(name: currentStoryboardName, bundle: nil)
-		let vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		var vc:UIViewController
+		if #available(iOS 13.0, *) {
+			vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		} else {
+			vc = storyboard.instantiateViewController(withIdentifier: currentControllerName)
+		}
 		navigationController.present(vc, animated: true, completion: nil)
 	}
 	
@@ -112,13 +117,23 @@ struct NavigationManager {
 			return
 		}
 		let storyboard = UIStoryboard.init(name: currentStoryboardName, bundle: nil)
-		let vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		var vc:UIViewController
+		if #available(iOS 13.0, *) {
+			vc = storyboard.instantiateViewController(identifier: currentControllerName)
+		} else {
+			vc = storyboard.instantiateViewController(withIdentifier: currentControllerName)
+		}
 		navigationController.present(vc, animated: true, completion: nil)
 	}
 	
 	func navigateToController(storyboardName:String, controllerName:String){
 		let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
-		let vc = storyboard.instantiateViewController(identifier: controllerName)
+		var vc:UIViewController
+		if #available(iOS 13.0, *) {
+			vc = storyboard.instantiateViewController(identifier: controllerName)
+		} else {
+			vc = storyboard.instantiateViewController(withIdentifier: controllerName)
+		}
 		let vcType = type(of: vc)
 		let existingViewController = navigationController.viewControllers.first{$0.isKind(of: vcType)}
 		

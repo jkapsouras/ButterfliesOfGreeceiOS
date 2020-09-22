@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lk7-LZ-mtv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,13 +27,25 @@
                                             <constraint firstAttribute="width" secondItem="qld-oY-GWJ" secondAttribute="height" multiplier="1:1" id="5nB-HC-Lxv"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-8C-2w5">
+                                        <rect key="frame" x="358" y="16" width="40" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="YTW-YE-5QF"/>
+                                            <constraint firstAttribute="width" secondItem="PEv-8C-2w5" secondAttribute="height" multiplier="1:1" constant="1" id="li8-rL-k5U"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="CloseTap:" destination="Lk7-LZ-mtv" eventType="touchUpInside" id="hVe-8g-Jwk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qld-oY-GWJ" secondAttribute="trailing" id="1Oh-iZ-9lx"/>
                                     <constraint firstItem="qld-oY-GWJ" firstAttribute="centerX" secondItem="XjN-c7-zMw" secondAttribute="centerX" id="53n-ru-SLK"/>
                                     <constraint firstItem="qld-oY-GWJ" firstAttribute="leading" secondItem="XjN-c7-zMw" secondAttribute="leading" id="OQV-X1-IsS"/>
+                                    <constraint firstAttribute="trailing" secondItem="PEv-8C-2w5" secondAttribute="trailing" constant="16" id="PXm-8u-sSs"/>
                                     <constraint firstAttribute="bottom" secondItem="qld-oY-GWJ" secondAttribute="bottom" id="SRe-S7-e9z"/>
                                     <constraint firstItem="qld-oY-GWJ" firstAttribute="centerY" secondItem="XjN-c7-zMw" secondAttribute="centerY" id="cgV-ZR-S8y"/>
+                                    <constraint firstItem="PEv-8C-2w5" firstAttribute="top" secondItem="XjN-c7-zMw" secondAttribute="top" constant="16" id="lKS-XY-IQi"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZEO-Af-qnb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="H6f-Fo-OHD"/>
@@ -48,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ButtonClose" destination="PEv-8C-2w5" id="oHH-a9-gnz"/>
                         <outlet property="ConstImageBottom" destination="SRe-S7-e9z" id="dnG-0c-T3z"/>
                         <outlet property="ImagePhoto" destination="qld-oY-GWJ" id="vIP-zU-lzF"/>
                         <outlet property="ViewScroll" destination="XjN-c7-zMw" id="ytX-kc-Ddg"/>

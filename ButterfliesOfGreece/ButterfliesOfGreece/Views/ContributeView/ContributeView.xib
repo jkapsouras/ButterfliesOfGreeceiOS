@@ -341,7 +341,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="RFW-5Q-Psi"/>
                             </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                             <state key="normal" image="shareIcon"/>
                         </button>
                     </subviews>
@@ -507,8 +507,8 @@
         </view>
     </objects>
     <resources>
-        <image name="plusIcon" width="50" height="50"/>
-        <image name="shareIcon" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="plusIcon" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="shareIcon" width="341.33334350585938" height="341.33334350585938"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

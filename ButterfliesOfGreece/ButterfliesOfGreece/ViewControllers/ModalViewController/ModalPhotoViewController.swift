@@ -15,7 +15,11 @@ class ModalPhotoViewController: UIViewController {
 	@IBOutlet weak var ConstImageTop: NSLayoutConstraint!
 	@IBOutlet weak var ConstImageTrailing: NSLayoutConstraint!
 	@IBOutlet weak var ConstImageBottom: NSLayoutConstraint!
+	@IBOutlet weak var ButtonClose: UIButton!
 	
+	@IBAction func CloseTap(_ sender: UIButton) {
+		dismiss(animated: true, completion: nil)
+	}
 	var photoName: String?
 	var photoIndex: Int?
 	
@@ -28,6 +32,8 @@ class ModalPhotoViewController: UIViewController {
 		ImagePhoto.contentMode = .scaleAspectFit
 		ViewScroll.contentMode = .scaleAspectFit
 		ViewScroll.clipsToBounds = true
+		ButtonClose.setImage(UIImage(imageLiteralResourceName: "closeX").withRenderingMode(.alwaysTemplate), for: .normal)
+		ButtonClose.tintColor = Constants.Colors.field(darkMode: true).color
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
