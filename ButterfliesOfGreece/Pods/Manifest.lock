@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (3.3.2):
+    - AppCenter/Analytics (= 3.3.2)
+    - AppCenter/Crashes (= 3.3.2)
+  - AppCenter/Analytics (3.3.2):
+    - AppCenter/Core
+  - AppCenter/Core (3.3.2)
+  - AppCenter/Crashes (3.3.2):
+    - AppCenter/Core
   - IQKeyboardManagerSwift (6.5.5)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
@@ -15,6 +23,7 @@ PODS:
     - Swinject (~> 2.7)
 
 DEPENDENCIES:
+  - AppCenter
   - IQKeyboardManagerSwift
   - RxBlocking (~> 5.1.1)
   - RxCocoa (~> 5.1.1)
@@ -25,6 +34,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppCenter
     - IQKeyboardManagerSwift
     - RxBlocking
     - RxCocoa
@@ -35,6 +45,7 @@ SPEC REPOS:
     - SwinjectAutoregistration
 
 SPEC CHECKSUMS:
+  AppCenter: aba7de06e4c2184f90dc84f7866bd07f82427d69
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -44,6 +55,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: ce1646e0ef6b7d1eb859f58b45152b1c5c5ea048
+PODFILE CHECKSUM: 2fcf4517ae01a586a2945ede6621bbe53214977d
 
 COCOAPODS: 1.9.3

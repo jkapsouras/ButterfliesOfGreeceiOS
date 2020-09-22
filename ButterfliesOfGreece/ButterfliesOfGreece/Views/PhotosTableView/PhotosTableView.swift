@@ -55,8 +55,11 @@ class PhotosTableView: UIView {
 	{
 		TablePhotos.register(PhotosTableViewCell.Nib, forCellReuseIdentifier: PhotosTableViewCell.Key)
 		
-		self.backgroundColor = UIColor.red
-		TablePhotos.backgroundColor = UIColor.green
+		self.backgroundColor = Constants.Colors.appWhite.color
+		contentView?.backgroundColor = Constants.Colors.appWhite.color
+		TablePhotos.backgroundColor = UIColor.clear
+		TablePhotos.backgroundView = nil
+		TablePhotos.tableFooterView = UIView()
 	}
 	
 	func UpdateViews()

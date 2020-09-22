@@ -21,6 +21,8 @@ class PageModalViewController: BasePageViewController<ModalPresenter>{
 			return
 		}
 		butterfliesNavigation.setNavigationBarHidden(true, animated: true)
+		
+		view.backgroundColor = Constants.Colors.field(darkMode: false).color
 	}
 	
 	func setUpPagesStartingWith(index: Int, photos:[String]){

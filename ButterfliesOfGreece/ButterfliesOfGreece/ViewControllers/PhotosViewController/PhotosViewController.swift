@@ -27,6 +27,12 @@ class PhotosViewController: BaseController<PhotosPresenter> {
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		navigationController?.view.setNeedsLayout() // force update layout
+		navigationController?.view.layoutIfNeeded()
+	}
+	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		navigationController?.view.setNeedsLayout() // force update layout

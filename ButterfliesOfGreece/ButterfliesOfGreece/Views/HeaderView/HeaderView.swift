@@ -58,20 +58,23 @@ class HeaderView: UIView {
 	
 	func prepareViews()
 	{
-		self.backgroundColor = Constants.Colors.field(darkMode: false).color
+		self.backgroundColor = Constants.Colors.field(darkMode: true).color
+		contentView?.backgroundColor = Constants.Colors.field(darkMode: true).color
 		ButtonChangeViewStyle.setImage(UIImage(named: "listIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonChangeViewStyle.tintColor = Constants.Colors.field(darkMode: true).color
+		ButtonChangeViewStyle.tintColor = Constants.Colors.field(darkMode: false).color
 		ButtonChangeViewStyle.imageView?.contentMode = .scaleAspectFit
 		ButtonSearch.setImage(UIImage(named: "recognitionIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonSearch.tintColor = Constants.Colors.field(darkMode: true).color
+		ButtonSearch.tintColor = Constants.Colors.field(darkMode: false).color
 		ButtonSearch.imageView?.contentMode = .scaleAspectFit
 		ButtonAddPhotos.setImage(UIImage(named: "folderIcon", in: nil, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate), for: .normal)
-		ButtonAddPhotos.tintColor = Constants.Colors.field(darkMode: true).color
+		ButtonAddPhotos.tintColor = Constants.Colors.field(darkMode: false).color
 		ButtonAddPhotos.imageView?.contentMode = .scaleAspectFit
-		ViewNumberOfFiles.backgroundColor = Constants.Colors.field(darkMode: false).color
-		LabelNumberOfFiles.textColor = Constants.Colors.field(darkMode: true).color
-		ViewNumberOfFiles.layer.borderColor = Constants.Colors.field(darkMode: true).color.cgColor
+		ViewNumberOfFiles.backgroundColor = Constants.Colors.field(darkMode: true).color
+		LabelNumberOfFiles.textColor = Constants.Colors.field(darkMode: false).color
+		ViewNumberOfFiles.layer.borderColor = Constants.Colors.field(darkMode: false).color.cgColor
 		ViewNumberOfFiles.layer.borderWidth = 1
+		LableTitle.textColor = Constants.Colors.field(darkMode: false).color
+		
 	}
 	
 	func updateViews()

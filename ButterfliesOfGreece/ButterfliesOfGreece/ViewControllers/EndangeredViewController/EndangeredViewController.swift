@@ -33,7 +33,7 @@ class EndangeredViewController: UIViewController {
 		else{
 			pdfView = PDFView()
 			ViewPdf.addSubview(pdfView!)
-			pdfView?.topAnchor.constraint(equalTo: LabelTitle.safeAreaLayoutGuide.bottomAnchor).isActive = true
+			pdfView?.topAnchor.constraint(equalTo: ViewHeader.safeAreaLayoutGuide.bottomAnchor).isActive = true
 			pdfView?.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
 			pdfView?.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
 			pdfView?.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
