@@ -37,7 +37,24 @@ struct Constants {
 	static let FormsPdf = "135366-16"
 	static let SpeciesPdf = "species"
 	
+	struct Network{
+		static let BaseAddress:String = "http://butterfliesofgreece-env.eba-w5n3apy5.us-east-1.elasticbeanstalk.com";
+		
+		enum HttpHeaderField: String {
+			case authentication = "Authorization"
+			case contentType = "Content-Type"
+			case acceptType = "Accept"
+			case acceptEncoding = "Accept-Encoding"
+		}
+		
+		//The content type (JSON)
+		enum ContentType: String {
+			case json = "application/json"
+			case multiPart = "multipart/form-data"
+		}
+	}
 }
+
 extension Constants.Colors {
 	var color: UIColor {
 		get {

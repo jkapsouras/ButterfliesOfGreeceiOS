@@ -83,6 +83,9 @@
 		FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */; };
 		FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */; };
 		FE71B27024F1ACF3009F6BF0 /* NavigationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */; };
+		FE8498DA251B634F00DA15C6 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8498D9251B634F00DA15C6 /* ApiRouter.swift */; };
+		FE8498DE251B653A00DA15C6 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8498DD251B653A00DA15C6 /* ApiClient.swift */; };
+		FE8498E2251B658C00DA15C6 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8498E1251B658C00DA15C6 /* Predictions.swift */; };
 		FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F64C24F2A2A700414631 /* PhotosTableComponent.swift */; };
 		FE85F65124F2A2DF00414631 /* PhotosCollectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F65024F2A2DF00414631 /* PhotosCollectionComponent.swift */; };
 		FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F65224F2A2ED00414631 /* PhotosHeaderComponent.swift */; };
@@ -263,6 +266,9 @@
 		FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewEvents.swift; sourceTree = "<group>"; };
 		FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewViewStates.swift; sourceTree = "<group>"; };
 		FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRepository.swift; sourceTree = "<group>"; };
+		FE8498D9251B634F00DA15C6 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		FE8498DD251B653A00DA15C6 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		FE8498E1251B658C00DA15C6 /* Predictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
 		FE85F64C24F2A2A700414631 /* PhotosTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableComponent.swift; sourceTree = "<group>"; };
 		FE85F65024F2A2DF00414631 /* PhotosCollectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionComponent.swift; sourceTree = "<group>"; };
 		FE85F65224F2A2ED00414631 /* PhotosHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosHeaderComponent.swift; sourceTree = "<group>"; };
@@ -498,6 +504,7 @@
 				FE10425A24D5AB920075D027 /* Specie.swift */,
 				FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */,
 				FE928C9D2515F144004CBFB3 /* ContributionItem.swift */,
+				FE8498E1251B658C00DA15C6 /* Predictions.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -813,6 +820,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FE9976F8251B45F6000BFDA8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FE8498D9251B634F00DA15C6 /* ApiRouter.swift */,
+				FE8498DD251B653A00DA15C6 /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FE9D70342511EF2400FCE1F3 /* PdfPreviewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -998,6 +1014,7 @@
 		FEAB9BB224B26CFD00A5D178 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FE9976F8251B45F6000BFDA8 /* Network */,
 				FEB3520624CB13DB0040313D /* DI */,
 				FE1FBE8F24CB110B008D0EA1 /* Schedulers */,
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
@@ -1375,6 +1392,7 @@
 				0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
 				FEC470CB2517EF59002F0E2F /* LegalViewController.swift in Sources */,
+				FE8498E2251B658C00DA15C6 /* Predictions.swift in Sources */,
 				FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */,
 				FE6691E52514B36E006C377F /* ContributeView.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
@@ -1394,6 +1412,7 @@
 				FE6691EA2514E1A1006C377F /* ContributePresenter.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
+				FE8498DA251B634F00DA15C6 /* ApiRouter.swift in Sources */,
 				FE9D703A2511F77C00FCE1F3 /* PdfPreviewPresenter.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				FE6691F02514F1B3006C377F /* LocationManager.swift in Sources */,
@@ -1422,6 +1441,7 @@
 				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FEFBA09724F2472500335E77 /* PhotosPresenter.swift in Sources */,
 				FEC4709125164B6B002F0E2F /* PrintRendererExtension.swift in Sources */,
+				FE8498DE251B653A00DA15C6 /* ApiClient.swift in Sources */,
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
 				FE143994250EAEA700B53E34 /* PrintToPdfEvents.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,

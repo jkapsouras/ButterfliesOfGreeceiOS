@@ -50,6 +50,13 @@ class MenuViewController: BaseController<MenuPresenter> {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		ButtonContribute.centerVerticallyWithPadding(padding: buttonPadding)
+		
+		let api = ApiClient(baseAddress: Constants.Network.BaseAddress)
+		let image = UIImage.init(imageLiteralResourceName: "FullImages/001_001")
+		if let imageData = image.jpegData(compressionQuality: 1){
+			_ = api.Analyze(image: Avatar(avatar: imageData)).subscribe(onNext: {pr in print("done \(pr.predictions[0].butterflyClass)")}, onError: {error in print(error.localizedDescription)})
+		}
+		
 	}
     
 	override func InitViews() {
