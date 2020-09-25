@@ -16,7 +16,8 @@ class MenuPresenter:BasePresenter{
 												  .endangeredSpeciesClicked:.toEndangered,
 												  .legalClicked:.toLegal,
 												  .offlineRecognitionClicked:.toOfflineRecognition,
-												  .onlineRecognitionClicked:.toOnlineRecognition]
+												  .onlineRecognitionClicked:.toOnlineRecognition,
+												  .recognitionClicked:.toRecognition]
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol)
 	{
@@ -26,11 +27,11 @@ class MenuPresenter:BasePresenter{
 	override func HandleEvent(uiEvents uiEvent: UiEvent) {
 		switch uiEvent {
 			case let menuEvent as MenuEvent:
-				guard let certainEvent = responseMessages[menuEvent] else{
+				guard let certainState = responseMessages[menuEvent] else{
 					state.onNext(GeneralViewState.idle)
 					return
 				}
-				state.onNext(certainEvent)
+				state.onNext(certainState)
 			default:
 			state.onNext(GeneralViewState.idle)
 		}

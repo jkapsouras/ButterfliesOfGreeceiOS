@@ -398,6 +398,36 @@ struct Translations {
 		}
 	}
 	
+	static var RecognizeOnline:String {
+		get{
+			"recognize_online".Localise()
+		}
+	}
+	
+	static var RecognizeOffline:String {
+		get{
+			"recognize_offline".Localise()
+		}
+	}
+	
+	static var RecognitionTitle:String {
+		get{
+			"recognition_title".Localise()
+		}
+	}
+	
+	static var ChoosePhoto:String {
+		get{
+			"choose_photo".Localise()
+		}
+	}
+	
+	static var TakePhoto:String {
+		get{
+			"take_photo".Localise()
+		}
+	}
+
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
 		guard language != nil

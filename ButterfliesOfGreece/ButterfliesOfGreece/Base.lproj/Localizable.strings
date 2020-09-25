@@ -11,7 +11,7 @@
 "legal" = "Legal";
 "contribute" = "Contribute";
 "endangered" = "Endangered";
-"recognition" = "Butterflies identification";
+"recognition" = "Butterflies recognition";
 "done" = "Done";
 "families" = "Families";
 "photographer" = "Photographer";
@@ -69,3 +69,9 @@
 "not_allowed" = "The method is not allowed";
 "internal_server" = "Internal server error";
 "error_in_request" = "There was an error sending the image";
+"recognition_title" = "Recognition";
+"recognize_online" = "Perform online recognition";
+"recognize_offline" = "Perform offline recognition";
+"choose_photo" = "Choose from gallery";
+"take_photo" = "Take a photo";
+

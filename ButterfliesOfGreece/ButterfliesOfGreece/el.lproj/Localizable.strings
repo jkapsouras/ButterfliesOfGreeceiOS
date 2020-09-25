@@ -69,3 +69,8 @@
 "not_allowed" = "Η μέθοδος δεν επιτρέπεται";
 "internal_server" = "Σφάλμα του εξυπηρετητή";
 "error_in_request" = "Υπήρξε κάποιο σφάλμα στην αποστολή της εικόνας";
+"recognition_title" = "Αναγνώριση";
+"recognize_online" = "Online αναγνώριση";
+"recognize_offline" = "Offline αναγνώριση";
+"choose_photo" = "Διάλεξε εικόνα";
+"take_photo" = "Χρησιμοποίησε την κάμερα";

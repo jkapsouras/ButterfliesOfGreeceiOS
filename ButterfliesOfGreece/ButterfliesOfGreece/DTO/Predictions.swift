@@ -14,6 +14,10 @@ struct Avatar:Codable{
 
 struct Predictions:Codable{
 	var predictions:[Prediction]
+	
+	init(){
+		predictions = [Prediction]()
+	}
 }
 
 struct Prediction:Codable{
@@ -26,5 +30,11 @@ struct Prediction:Codable{
 		case output
 		case prob
 		
+	}
+	
+	init(){
+		self.butterflyClass = ""
+		self.output = 0
+		self.prob = 0
 	}
 }
