@@ -42,13 +42,13 @@ class RecognitionPresenter:BasePresenter{
 			case .takePhotoClicked:
 				state.onNext(RecognitionViewStates.showCamera)
 			case .onlineClicked:
-				_ = Observable.of(1).startWith(1).map{_ in self.state.onNext(RecognitionViewStates.recognitionStarted)}
+				Observable.of(1).startWith(1).map{_ in self.state.onNext(RecognitionViewStates.recognitionStarted)}
 					.flatMap{_ in self.recognitionRepository.recognize(image: Avatar(avatar: self.recognitionState.imageData!))}
 					.subscribeOn(backgroundThreadScheduler.scheduler)
 					.subscribe(onNext: {predictions in
 						self.recognitionState = self.recognitionState.with(predictions:predictions.predictions)
 						self.state.onNext(RecognitionViewStates.imageRecognized(predictions: self.recognitionState.predictions))
-					}, onError: {error in print(error.localizedDescription)})
+					}, onError: {error in print(error.localizedDescription)}).disposed(by: disposeBag!)
 			case .offlineClicked:
 				print("offline clicked")
 			case .photoChoosed(let selectedImage):
