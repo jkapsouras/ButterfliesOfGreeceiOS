@@ -13,15 +13,18 @@ enum ApiRouter: URLRequestConvertible {
 	//The endpoint name we'll call later
 	case sendImage(image:Avatar)
 	
+	func asURL() throws -> URLConvertible{
+		let url = try Constants.Network.BaseAddress.asURL()
+		let urlRequest = url.appendingPathComponent(path)
+		return urlRequest
+	}
+	
 	//MARK: - URLRequestConvertible
 	func asURLRequest() throws -> URLRequest {
 		let url = try Constants.Network.BaseAddress.asURL()
-		
 		var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-		
 		//Http method
 		urlRequest.httpMethod = method.rawValue
-		
 		// Common Headers
 		urlRequest.setValue(Constants.Network.ContentType.json.rawValue, forHTTPHeaderField: Constants.Network.HttpHeaderField.acceptType.rawValue)
 		urlRequest.setValue(Constants.Network.ContentType.multiPart.rawValue, forHTTPHeaderField: Constants.Network.HttpHeaderField.contentType.rawValue)
@@ -36,9 +39,7 @@ enum ApiRouter: URLRequestConvertible {
 			}
 		}()
 		
-//		let	encodedUrlRequest = try? JSONEncoding.default.encode(urlRequest, with: parameters)
-		
-		return  try encoding.encode(parameters, into: urlRequest)//					.encode(urlRequest, with: parameters)
+		return  try encoding.encode(parameters, into: urlRequest)
 	}
 	
 	//MARK: - HttpMethod

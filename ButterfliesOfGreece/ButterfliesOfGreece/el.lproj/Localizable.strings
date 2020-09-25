@@ -63,3 +63,9 @@
 "pdf" = "pdf";
 "ministry" = "ιστοσελίδα του Υπουργείου Περιβάλλοντος";
 "endangered_title" = "Η λίστα με τις πεταλούδες τις Ελλάδας με τα είδη που συμπεριλαμβάνονται στο: THE RED BOOK OF THREATENED ANIMALS OF GREECE (and STATUS), Numa et. al for Mediterranean butterflies, THE LAW IN GREECE, CITES, BERNE CONVENTION and 92/43 HABITAS DIRECTIVE of EU\nΜερικές από τις πεταλούδες (με κίτρινο γέμισμα στα κελιά) είναι σε καθεστώς ειδικής προστασίας στην Ελλάδα.";
+"fobidden" = "Η μέθοδος απαγορεύεται";
+"not_found" = "Η μέθοδος δεν βρέθηκε";
+"conflict" = "Υπήρξε κάποιο πρόβλημα";
+"not_allowed" = "Η μέθοδος δεν επιτρέπεται";
+"internal_server" = "Σφάλμα του εξυπηρετητή";
+"error_in_request" = "Υπήρξε κάποιο σφάλμα στην αποστολή της εικόνας";
