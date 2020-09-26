@@ -20,6 +20,7 @@ class RecognitionView: UIView {
 	@IBOutlet weak var SpinnerLoading: UIActivityIndicatorView!
 	@IBOutlet weak var ConstLabelTop: NSLayoutConstraint!
 	@IBOutlet weak var ConstLabelBottom: NSLayoutConstraint!
+	@IBOutlet weak var ButtonClose: UIButton!
 	
 	var contentView:UIView?
 	let nibName = "RecognitionView"
@@ -61,7 +62,7 @@ class RecognitionView: UIView {
 		contentView?.backgroundColor = Constants.Colors.recognition(darkMode: false).color
 		backgroundColor = Constants.Colors.recognition(darkMode: false).color
 		LabelRecognized.textColor = Constants.Colors.recognition(darkMode: true).color
-		ImageChosen.contentMode = .scaleToFill
+		ImageChosen.contentMode = .scaleAspectFill
 		ViewButtons.backgroundColor = Constants.Colors.appWhite.color.withAlphaComponent(0.5)
 		ButtonOnline.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
 		ButtonOnline.backgroundColor = Constants.Colors.recognition(darkMode: false).color
@@ -74,6 +75,12 @@ class RecognitionView: UIView {
 		SpinnerLoading.color = Constants.Colors.recognition(darkMode: true).color
 		ConstLabelTop.constant = 0
 		ConstLabelBottom.constant = 0
+		
+		ButtonClose.setImage(UIImage(imageLiteralResourceName: "closeX").withRenderingMode(.alwaysTemplate), for: .normal)
+		ButtonClose.tintColor = Constants.Colors.recognition(darkMode: true).color
+		
+		ButtonOffline.isUserInteractionEnabled = false
+		ButtonOffline.alpha = 0.5
 	}
 	
 	func updateViews(){
@@ -88,9 +95,9 @@ class RecognitionView: UIView {
 	}
 	
 	func prepareFonts(){
-		LabelRecognized.setFont(size: Constants.Fonts.fontMenuSize)
-		ButtonOnline.setFont(size: Constants.Fonts.fontMenuSize)
-		ButtonOffline.setFont(size: Constants.Fonts.fontMenuSize)
+		LabelRecognized.setFont(size: Constants.Fonts.titleControllerSise)
+		ButtonOnline.setFont(size: Constants.Fonts.titleControllerSise)
+		ButtonOffline.setFont(size: Constants.Fonts.titleControllerSise)
 	}
 	
 	func showSelectedImage(image:UIImage){
@@ -99,8 +106,8 @@ class RecognitionView: UIView {
 	
 	func imageRecognized(predictions:[Prediction]){
 		ViewButtons.alpha=0
-		LabelRecognized.text = predictions[0].butterflyClass
-		ConstLabelTop.constant = 8
+		LabelRecognized.text = "\(Translations.RecognizedFirst) \(predictions[0].butterflyClass) \(Translations.RecognizedSecond) \(predictions[0].prob)%"
+		ConstLabelTop.constant = 16
 		ConstLabelBottom.constant = 16
 	}
 	
@@ -121,6 +128,7 @@ class RecognitionView: UIView {
 	func ViewEvents() -> Observable<UiEvent>
 	{
 		return Observable.merge(ButtonOnline.rx.tap.map{_ in RecognitionEvents.onlineClicked},
-								ButtonOffline.rx.tap.map{_ in RecognitionEvents.offlineClicked})
+								ButtonOffline.rx.tap.map{_ in RecognitionEvents.offlineClicked},
+								ButtonClose.rx.tap.map{_ in RecognitionEvents.closeClicked})
 	}
 }

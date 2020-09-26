@@ -64,6 +64,10 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 					recognitionView.imageRecognized(predictions: predictions)
 				case .recognitionStarted:
 					recognitionView.showLoading()
+				case .closeRecognitionView:
+					recognitionView.hideLoading()
+					recognitionView.alpha = 0
+					recognitionView.showSelectedImage(image: UIImage())
 				default:
 					print("something else")
 			}

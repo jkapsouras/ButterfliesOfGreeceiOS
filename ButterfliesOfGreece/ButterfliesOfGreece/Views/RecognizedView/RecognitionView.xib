@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecognitionView" customModule="ButterfliesOfGreece" customModuleProvider="target">
             <connections>
+                <outlet property="ButtonClose" destination="Q7J-oJ-ox0" id="nkz-h6-nL3"/>
                 <outlet property="ButtonOffline" destination="tta-h0-NcH" id="F9k-wx-6nZ"/>
                 <outlet property="ButtonOnline" destination="Emw-sB-hzo" id="ylk-t6-Dm8"/>
                 <outlet property="ConstLabelBottom" destination="vPO-0q-MXu" id="CKB-VG-mRY"/>
@@ -28,13 +29,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPy-DE-aJO">
-                    <rect key="frame" x="16" y="825.5" width="382" height="20.5"/>
+                    <rect key="frame" x="16" y="833.5" width="382" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buR-tx-ovF">
-                    <rect key="frame" x="0.0" y="44" width="414" height="765.5"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="773.5"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-8P-1lq">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
@@ -79,20 +80,29 @@
                         <constraint firstItem="LUw-LQ-38O" firstAttribute="centerY" secondItem="Ht1-8P-1lq" secondAttribute="centerY" id="wVC-Hh-eed"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-oJ-ox0">
+                    <rect key="frame" x="358" y="60" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Zof-Ji-SWE"/>
+                        <constraint firstAttribute="width" secondItem="Q7J-oJ-ox0" secondAttribute="height" multiplier="1:1" id="ySP-ci-UDi"/>
+                    </constraints>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="buR-tx-ovF" secondAttribute="trailing" id="20K-g7-nWg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q7J-oJ-ox0" secondAttribute="trailing" constant="16" id="K4p-sT-VXd"/>
                 <constraint firstItem="SPy-DE-aJO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PvM-HJ-JlH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ht1-8P-1lq" secondAttribute="trailing" id="SXJ-aN-3vW"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ht1-8P-1lq" secondAttribute="bottom" id="Uba-RH-1DD"/>
+                <constraint firstItem="Q7J-oJ-ox0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ar7-FP-smp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SPy-DE-aJO" secondAttribute="trailing" constant="16" id="d5F-5L-BdW"/>
                 <constraint firstItem="buR-tx-ovF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dQy-jf-BWo"/>
                 <constraint firstItem="Ht1-8P-1lq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gU6-NQ-KBC"/>
                 <constraint firstItem="Ht1-8P-1lq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="h2e-wr-dQH"/>
                 <constraint firstItem="SPy-DE-aJO" firstAttribute="top" secondItem="buR-tx-ovF" secondAttribute="bottom" constant="16" id="puU-sD-NNw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SPy-DE-aJO" secondAttribute="bottom" constant="16" id="vPO-0q-MXu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SPy-DE-aJO" secondAttribute="bottom" constant="8" id="vPO-0q-MXu"/>
                 <constraint firstItem="buR-tx-ovF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zgd-5w-jpT"/>
             </constraints>
             <point key="canvasLocation" x="139" y="135"/>

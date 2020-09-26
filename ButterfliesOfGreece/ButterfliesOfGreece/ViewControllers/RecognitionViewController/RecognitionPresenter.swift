@@ -13,7 +13,7 @@ class RecognitionPresenter:BasePresenter{
 	
 	var recognitionState:RecognitionState
 	var recognitionRepository:RecognitionRepository
-	let compressionQuality:CGFloat = 1
+	let compressionQuality:CGFloat = 0.7
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
 		 recognitionRepository:RecognitionRepository){
@@ -67,6 +67,8 @@ class RecognitionPresenter:BasePresenter{
 				state.onNext(RecognitionViewStates.showRecognitionView(image: recognitionState.image!))
 			case .liveRecognition:
 				print("start camera")
+			case .closeClicked:
+				state.onNext(RecognitionViewStates.closeRecognitionView)
 		}
 	}
 }

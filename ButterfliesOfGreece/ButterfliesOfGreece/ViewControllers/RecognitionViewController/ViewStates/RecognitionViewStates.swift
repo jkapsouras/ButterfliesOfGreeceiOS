@@ -16,6 +16,7 @@ enum RecognitionViewStates : ViewState{
 	case imageRecognized(predictions:[Prediction])
 	case showRecognitionView(image:UIImage)
 	case recognitionStarted
+	case closeRecognitionView
 	
 	var isTransition: Bool{
 		return false

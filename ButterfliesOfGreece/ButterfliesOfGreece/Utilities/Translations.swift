@@ -427,6 +427,18 @@ struct Translations {
 			"take_photo".Localise()
 		}
 	}
+	
+	static var RecognizedFirst:String {
+		get{
+			"photo_recognized_first".Localise()
+		}
+	}
+	
+	static var RecognizedSecond:String {
+		get{
+			"photo_recognized_second".Localise()
+		}
+	}
 
 	static func FindLanguage(language:String? = nil)->Bundle
 	{
