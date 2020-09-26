@@ -42,7 +42,7 @@ class RecognitionPresenter:BasePresenter{
 			case .takePhotoClicked:
 				state.onNext(RecognitionViewStates.showCamera)
 			case .onlineClicked:
-				Observable.of(1).startWith(1).map{_ in self.state.onNext(RecognitionViewStates.recognitionStarted)}
+				Observable.of(1).startWith(1).take(1).map{_ in self.state.onNext(RecognitionViewStates.recognitionStarted)}
 					.flatMap{_ in self.recognitionRepository.recognize(image: Avatar(avatar: self.recognitionState.imageData!))}
 					.subscribeOn(backgroundThreadScheduler.scheduler)
 					.subscribe(onNext: {predictions in

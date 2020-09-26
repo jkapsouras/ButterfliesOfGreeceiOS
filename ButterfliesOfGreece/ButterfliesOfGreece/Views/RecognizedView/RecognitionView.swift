@@ -102,6 +102,10 @@ class RecognitionView: UIView {
 	
 	func showSelectedImage(image:UIImage){
 		ImageChosen.image = image
+		ViewButtons.alpha = 1
+		ConstLabelTop.constant = 0
+		ConstLabelBottom.constant = 0
+		LabelRecognized.text = ""
 	}
 	
 	func imageRecognized(predictions:[Prediction]){
@@ -122,7 +126,7 @@ class RecognitionView: UIView {
 		SpinnerLoading.alpha = 0
 		SpinnerLoading.stopAnimating()
 		ButtonOnline.alpha = 1
-		ButtonOffline.alpha = 1
+		ButtonOffline.alpha = 0.5
 	}
 	
 	func ViewEvents() -> Observable<UiEvent>
