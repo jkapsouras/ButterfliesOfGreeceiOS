@@ -355,6 +355,90 @@ struct Translations {
 			"ministry".Localise()
 		}
 	}
+	
+	static var EndangeredTitle:String {
+		get{
+			"endangered_title".Localise()
+		}
+	}
+	
+	static var Forbidden:String {
+		get{
+			"fobidden".Localise()
+		}
+	}
+	
+	static var NotFound:String {
+		get{
+			"not_found".Localise()
+		}
+	}
+	
+	static var NotAllowed:String {
+		get{
+			"not_allowed".Localise()
+		}
+	}
+	
+	static var Conflict:String {
+		get{
+			"conflict".Localise()
+		}
+	}
+	
+	static var InternalServer:String {
+		get{
+			"internal_server".Localise()
+		}
+	}
+	
+	static var ErrorInRequest:String {
+		get{
+			"error_in_request".Localise()
+		}
+	}
+	
+	static var RecognizeOnline:String {
+		get{
+			"recognize_online".Localise()
+		}
+	}
+	
+	static var RecognizeOffline:String {
+		get{
+			"recognize_offline".Localise()
+		}
+	}
+	
+	static var RecognitionTitle:String {
+		get{
+			"recognition_title".Localise()
+		}
+	}
+	
+	static var ChoosePhoto:String {
+		get{
+			"choose_photo".Localise()
+		}
+	}
+	
+	static var TakePhoto:String {
+		get{
+			"take_photo".Localise()
+		}
+	}
+	
+	static var RecognizedFirst:String {
+		get{
+			"photo_recognized_first".Localise()
+		}
+	}
+	
+	static var RecognizedSecond:String {
+		get{
+			"photo_recognized_second".Localise()
+		}
+	}
 
 	static func FindLanguage(language:String? = nil)->Bundle
 	{

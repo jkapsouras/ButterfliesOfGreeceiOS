@@ -35,26 +35,44 @@ struct Constants {
 	
 	static let TermsPdf = "127557_2178_2015"
 	static let FormsPdf = "135366-16"
+	static let SpeciesPdf = "species"
 	
+	struct Network{
+		static let BaseAddress:String = "http://butterfliesofgreece-env.eba-w5n3apy5.us-east-1.elasticbeanstalk.com";
+		
+		enum HttpHeaderField: String {
+			case authentication = "Authorization"
+			case contentType = "Content-Type"
+			case acceptType = "Accept"
+			case acceptEncoding = "Accept-Encoding"
+		}
+		
+		//The content type (JSON)
+		enum ContentType: String {
+			case json = "application/json"
+			case multiPart = "multipart/form-data"
+		}
+	}
 }
+
 extension Constants.Colors {
 	var color: UIColor {
 		get {
 			switch self {
 			case .field(let darkMode):
-				return (darkMode ? UIColor(hex: "#6c80bf") : UIColor(hex: "#e3e7f2"))
+				return (darkMode ? UIColor(hex: "#5e6ea2") : UIColor(hex: "#e3e7f2"))
 			case .introduction(let darkMode):
-				return (darkMode ?  UIColor(hex: "#91C6D5") : UIColor(hex: "#EBF4F6"))
+				return (darkMode ?  UIColor(hex: "#6fa4b2") : UIColor(hex: "#EBF4F6"))
 			case .legal(let darkMode):
-				return (darkMode ?  UIColor(hex: "#EDB299") : UIColor(hex: "#FAF2EE"))
+				return (darkMode ?  UIColor(hex: "#c67d6a") : UIColor(hex: "#FAF2EE"))
 			case .about(let darkMode):
-				return (darkMode ?  UIColor(hex: "#ced54e") : UIColor(hex: "#F8F9EB"))
+				return (darkMode ?  UIColor(hex: "#afab14") : UIColor(hex: "#F8F9EB"))
 			case .contribute(let darkMode):
-				return (darkMode ?  UIColor(hex: "#7E66A6") : UIColor(hex: "#E8E6F1"))
+				return (darkMode ?  UIColor(hex: "#75619e") : UIColor(hex: "#E8E6F1"))
 			case .endangered(let darkMode):
-				return (darkMode ?  UIColor(hex: "#C4787D") : UIColor(hex: "#F5EAE7"))
+				return (darkMode ?  UIColor(hex: "#b16b73") : UIColor(hex: "#F5EAE7"))
 			case .recognition(let darkMode):
-				return (darkMode ?  UIColor(hex: "#7DB283") : UIColor(hex: "#E8EEE8"))
+				return (darkMode ?  UIColor(hex: "#6b9972") : UIColor(hex: "#E8EEE8"))
 			case .appWhite:
 				return UIColor.white
 			}

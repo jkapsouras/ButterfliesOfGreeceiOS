@@ -33,6 +33,7 @@ class SearchViewController: BaseController<SearchPresenter>, UISearchBarDelegate
 		}
 		navigationItem.titleView = searchBar
 		searchBar.becomeFirstResponder()
+		view.backgroundColor = Constants.Colors.appWhite.color
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

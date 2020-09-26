@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lk7-LZ-mtv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lk7-LZ-mtv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,33 +21,48 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001_001" translatesAutoresizingMaskIntoConstraints="NO" id="qld-oY-GWJ">
-                                        <rect key="frame" x="0.0" y="242.5" width="414" height="333"/>
+                                        <rect key="frame" x="0.0" y="202" width="414" height="414"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qld-oY-GWJ" secondAttribute="height" multiplier="1:1" id="5nB-HC-Lxv"/>
+                                        </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-8C-2w5">
+                                        <rect key="frame" x="358" y="16" width="40" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="YTW-YE-5QF"/>
+                                            <constraint firstAttribute="width" secondItem="PEv-8C-2w5" secondAttribute="height" multiplier="1:1" constant="1" id="li8-rL-k5U"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="CloseTap:" destination="Lk7-LZ-mtv" eventType="touchUpInside" id="hVe-8g-Jwk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qld-oY-GWJ" firstAttribute="leading" secondItem="XjN-c7-zMw" secondAttribute="leading" id="1jT-FR-GgO"/>
+                                    <constraint firstAttribute="trailing" secondItem="qld-oY-GWJ" secondAttribute="trailing" id="1Oh-iZ-9lx"/>
                                     <constraint firstItem="qld-oY-GWJ" firstAttribute="centerX" secondItem="XjN-c7-zMw" secondAttribute="centerX" id="53n-ru-SLK"/>
-                                    <constraint firstAttribute="trailing" secondItem="qld-oY-GWJ" secondAttribute="trailing" id="LIL-uu-Miy"/>
+                                    <constraint firstItem="qld-oY-GWJ" firstAttribute="leading" secondItem="XjN-c7-zMw" secondAttribute="leading" id="OQV-X1-IsS"/>
+                                    <constraint firstAttribute="trailing" secondItem="PEv-8C-2w5" secondAttribute="trailing" constant="16" id="PXm-8u-sSs"/>
                                     <constraint firstAttribute="bottom" secondItem="qld-oY-GWJ" secondAttribute="bottom" id="SRe-S7-e9z"/>
                                     <constraint firstItem="qld-oY-GWJ" firstAttribute="centerY" secondItem="XjN-c7-zMw" secondAttribute="centerY" id="cgV-ZR-S8y"/>
+                                    <constraint firstItem="PEv-8C-2w5" firstAttribute="top" secondItem="XjN-c7-zMw" secondAttribute="top" constant="16" id="lKS-XY-IQi"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZEO-Af-qnb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="H6f-Fo-OHD"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="I9E-Yl-AL2"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="I9E-Yl-AL2" firstAttribute="bottom" secondItem="XjN-c7-zMw" secondAttribute="bottom" id="Iit-UL-gYf"/>
                             <constraint firstItem="XjN-c7-zMw" firstAttribute="top" secondItem="I9E-Yl-AL2" secondAttribute="top" id="QAL-cw-7n4"/>
                             <constraint firstItem="XjN-c7-zMw" firstAttribute="leading" secondItem="I9E-Yl-AL2" secondAttribute="leading" id="hD3-qn-Hti"/>
                             <constraint firstItem="I9E-Yl-AL2" firstAttribute="trailing" secondItem="XjN-c7-zMw" secondAttribute="trailing" id="nr2-NW-UnF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="I9E-Yl-AL2"/>
                     </view>
                     <connections>
+                        <outlet property="ButtonClose" destination="PEv-8C-2w5" id="oHH-a9-gnz"/>
                         <outlet property="ConstImageBottom" destination="SRe-S7-e9z" id="dnG-0c-T3z"/>
-                        <outlet property="ConstImageLeading" destination="1jT-FR-GgO" id="rhq-Ns-Pdt"/>
-                        <outlet property="ConstImageTrailing" destination="LIL-uu-Miy" id="F1u-O5-qoN"/>
                         <outlet property="ImagePhoto" destination="qld-oY-GWJ" id="vIP-zU-lzF"/>
                         <outlet property="ViewScroll" destination="XjN-c7-zMw" id="ytX-kc-Ddg"/>
                     </connections>
@@ -57,5 +74,11 @@
     </scenes>
     <resources>
         <image name="001_001" width="333.33334350585938" height="333.33334350585938"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

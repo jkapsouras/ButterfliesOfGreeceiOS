@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WIg-bu-RtO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WIg-bu-RtO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,29 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-9a-8mZ">
-                                <rect key="frame" x="32" y="76" width="350" height="241"/>
+                                <rect key="frame" x="16" y="76" width="382" height="241"/>
                                 <state key="normal" image="butterflyIcon">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-l9-hyj">
-                                <rect key="frame" x="32" y="333" width="167" height="112"/>
+                                <rect key="frame" x="16" y="333" width="183" height="112"/>
                                 <state key="normal" image="introIcon"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGU-tO-TNC">
-                                <rect key="frame" x="215" y="333" width="167" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGU-tO-TNC">
+                                <rect key="frame" x="215" y="333" width="183" height="112"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-bQ-tts">
-                                <rect key="frame" x="32" y="461" width="106" height="112"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-bQ-tts">
+                                <rect key="frame" x="16" y="461" width="116.5" height="112"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="-100" minY="100" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-80" maxY="0.0"/>
+                                <state key="normal" title="Button" image="contributeIcon">
+                                    <color key="titleColor" red="0.69411764710000001" green="0.0" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-TD-Gxi">
-                                <rect key="frame" x="154" y="461" width="106" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-TD-Gxi">
+                                <rect key="frame" x="148.5" y="461" width="117" height="112"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbp-ym-6TB">
-                                <rect key="frame" x="276" y="461" width="106" height="112"/>
+                                <rect key="frame" x="281.5" y="461" width="116.5" height="112"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
                                 <inset key="titleEdgeInsets" minX="-100" minY="100" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-80" maxY="0.0"/>
@@ -46,12 +53,13 @@
                                     <color key="titleColor" red="0.69411764710000001" green="0.0" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-8L-SRI">
-                                <rect key="frame" x="32" y="589" width="350" height="241"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-8L-SRI">
+                                <rect key="frame" x="16" y="589" width="382" height="241"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="atF-Sq-MZC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="d1e-8L-SRI" firstAttribute="trailing" secondItem="tbp-ym-6TB" secondAttribute="trailing" id="00S-TV-TRj"/>
                             <constraint firstItem="aGU-tO-TNC" firstAttribute="top" secondItem="2ge-l9-hyj" secondAttribute="top" id="0Gz-Bl-JF6"/>
@@ -62,8 +70,8 @@
                             <constraint firstItem="2ge-l9-hyj" firstAttribute="leading" secondItem="u3x-9a-8mZ" secondAttribute="leading" id="8NG-fd-DL7"/>
                             <constraint firstItem="aGU-tO-TNC" firstAttribute="trailing" secondItem="u3x-9a-8mZ" secondAttribute="trailing" id="CHY-XB-DbJ"/>
                             <constraint firstItem="zfX-TD-Gxi" firstAttribute="top" secondItem="Xwi-bQ-tts" secondAttribute="top" id="DHm-qr-NQQ"/>
-                            <constraint firstItem="atF-Sq-MZC" firstAttribute="trailing" secondItem="u3x-9a-8mZ" secondAttribute="trailing" constant="32" id="Ja9-5B-GAe"/>
-                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="leading" secondItem="atF-Sq-MZC" secondAttribute="leading" constant="32" id="KAT-ec-Y2v"/>
+                            <constraint firstItem="atF-Sq-MZC" firstAttribute="trailing" secondItem="u3x-9a-8mZ" secondAttribute="trailing" constant="16" id="Ja9-5B-GAe"/>
+                            <constraint firstItem="u3x-9a-8mZ" firstAttribute="leading" secondItem="atF-Sq-MZC" secondAttribute="leading" constant="16" id="KAT-ec-Y2v"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="leading" secondItem="zfX-TD-Gxi" secondAttribute="trailing" constant="16" id="LaP-wm-n3b"/>
                             <constraint firstItem="d1e-8L-SRI" firstAttribute="leading" secondItem="Xwi-bQ-tts" secondAttribute="leading" id="R5u-8T-9Gc"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="top" secondItem="zfX-TD-Gxi" secondAttribute="top" id="Rp5-KW-BKK"/>
@@ -82,7 +90,6 @@
                             <constraint firstItem="d1e-8L-SRI" firstAttribute="top" secondItem="zfX-TD-Gxi" secondAttribute="bottom" constant="16" id="njY-u9-jj6"/>
                             <constraint firstItem="tbp-ym-6TB" firstAttribute="trailing" secondItem="aGU-tO-TNC" secondAttribute="trailing" id="oKh-sG-BSw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="atF-Sq-MZC"/>
                     </view>
                     <connections>
                         <outlet property="ButtonAbout" destination="zfX-TD-Gxi" id="w7d-rW-vgM"/>
@@ -101,7 +108,14 @@
     </scenes>
     <resources>
         <image name="butterflyIcon" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="contributeIcon" width="85.333335876464844" height="85.333335876464844"/>
         <image name="endangeredIcon" width="85.333335876464844" height="85.333335876464844"/>
         <image name="introIcon" width="85.333335876464844" height="85.333335876464844"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

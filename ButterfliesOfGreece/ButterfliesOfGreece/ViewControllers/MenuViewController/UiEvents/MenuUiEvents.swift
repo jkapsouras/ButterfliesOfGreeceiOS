@@ -17,4 +17,5 @@ enum MenuEvent:UiEvent{
 	case endangeredSpeciesClicked
 	case onlineRecognitionClicked
 	case offlineRecognitionClicked
+	case recognitionClicked
 }

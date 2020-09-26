@@ -44,6 +44,7 @@ struct IOC:IOCInjectable
 		container.autoregister(LocationManager.self, initializer: LocationManager.init).inObjectScope(.container)
 		container.register(CacheManagerProtocol.self) { _ in CacheManager(userDefaults: UserDefaults.standard)}.inObjectScope(.container)
 		container.autoregister(CLLocationManager.self, initializer: CLLocationManager.init).inObjectScope(.container)
+		container.register(ApiClient.self) { _ in ApiClient(baseAddress: Constants.Network.BaseAddress) }.inObjectScope(.container)
 //		container.register(LocationProtocol.self) { _ in LocationManager(manager: CLLocationManager())}.inObjectScope(.container)
     }
     
@@ -54,6 +55,7 @@ struct IOC:IOCInjectable
 		container.autoregister(NavigationRepository.self, initializer: NavigationRepository.init)
 		container.autoregister(PhotosToPrintRepository.self, initializer: PhotosToPrintRepository.init)
 		container.autoregister(ContributionRepository.self, initializer: ContributionRepository.init)
+		container.autoregister(RecognitionRepository.self, initializer: RecognitionRepository.init)
     }
     
      static func RegisterPresenters(container: Container) {
@@ -67,6 +69,7 @@ struct IOC:IOCInjectable
 		container.autoregister(PdfPreviewPresenter.self, initializer: PdfPreviewPresenter.init)
 		container.autoregister(ContributePresenter.self, initializer: ContributePresenter.init)
 		container.autoregister(LegalPresenter.self, initializer: LegalPresenter.init)
+		container.autoregister(RecognitionPresenter.self, initializer: RecognitionPresenter.init)
     }
     
     public static var container: Container?

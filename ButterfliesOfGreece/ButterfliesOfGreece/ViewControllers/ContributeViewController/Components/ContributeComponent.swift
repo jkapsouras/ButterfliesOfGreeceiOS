@@ -39,6 +39,7 @@ class ContributeComponent : UiComponent
 			parentView.addSubview(pdfView)
 		}
 		pdfView.alpha = 0
+		pdfView.backgroundColor = Constants.Colors.contribute(darkMode: false).color
 		// You will need to configure the target action for the button itself, not the bar button itemr
 		
 		// Create a bar button item using the info button as its custom view

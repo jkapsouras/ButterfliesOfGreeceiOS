@@ -28,6 +28,7 @@ class MenuViewController: BaseController<MenuPresenter> {
 		title = ""
     }
 	
+	
 	override func viewWillLayoutSubviews() {
 		ButtonEndangered.centerVerticallyWithPadding(padding: buttonPadding)
 		ButtonField.centerVerticallyWithPadding(padding: buttonPadding)
@@ -35,6 +36,7 @@ class MenuViewController: BaseController<MenuPresenter> {
 		ButtonAbout.centerVerticallyWithPadding(padding: buttonPadding)
 		ButtonLegal.centerVerticallyWithPadding(padding: buttonPadding)
 		ButtonContribute.centerVerticallyWithPadding(padding: buttonPadding)
+		
 		ButtonRecognition.centerVerticallyWithPadding(padding: buttonPadding)
 		
 		ButtonField.layer.cornerRadius = 16
@@ -44,6 +46,10 @@ class MenuViewController: BaseController<MenuPresenter> {
 		ButtonContribute.layer.cornerRadius = 16
 		ButtonEndangered.layer.cornerRadius = 16
 		ButtonRecognition.layer.cornerRadius = 16
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		ButtonContribute.centerVerticallyWithPadding(padding: buttonPadding)
 	}
     
 	override func InitViews() {
@@ -103,6 +109,8 @@ class MenuViewController: BaseController<MenuPresenter> {
 		ButtonRecognition.setImage(#imageLiteral(resourceName: "recognitionIcon").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonRecognition.tintColor = Constants.Colors.recognition(darkMode: true).color
 		ButtonRecognition.imageView?.contentMode = .scaleAspectFit
+		
+		view.backgroundColor = UIColor.white
     }
     
     override func LocalizeViews() {

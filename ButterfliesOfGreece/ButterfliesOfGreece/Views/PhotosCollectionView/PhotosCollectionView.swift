@@ -59,15 +59,14 @@ class PhotosCollectionView: UIView {
 		CollectionPhotos.register(PhotosCollectionViewCell.Nib, forCellWithReuseIdentifier: PhotosCollectionViewCell.Key)
 		
 		self.backgroundColor = Constants.Colors.appWhite.color
+		contentView?.backgroundColor = Constants.Colors.appWhite.color
 		CollectionPhotos.backgroundColor = Constants.Colors.appWhite.color
-		
-		
 	}
 	
 	func updateViews()
 	{
 		let layout = CollectionPhotos.collectionViewLayout as! UICollectionViewFlowLayout
-		let dimenWidth = (CollectionPhotos.bounds.width/2 - 24)
+		let dimenWidth = (UIScreen.main.bounds.width/2 - 24)
 		layout.itemSize = CGSize(width: dimenWidth, height: dimenWidth + 80)
 		CollectionPhotos.reloadData()
 	}

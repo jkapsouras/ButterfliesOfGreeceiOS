@@ -17,10 +17,12 @@ class PdfPreviewComponent : UiComponent
 	let navigationItem:UINavigationItem
 	let uiEvents: Observable<UiEvent>
 	let emitter:PublishSubject<UiEvent> = PublishSubject()
+	let loadingView:UIActivityIndicatorView
 	
-	init(controller:PdfPreviewViewController, view:UIView, navigationItem:UINavigationItem) {
+	init(controller:PdfPreviewViewController, loadingView:UIActivityIndicatorView, view:UIView, navigationItem:UINavigationItem) {
 		self.navigationItem = navigationItem
 		self.controller = controller
+		self.loadingView = loadingView
 		if let pdf = view.subviews.first(where: {v in v is PDFView}){
 			pdfView = pdf as! PDFView
 		}
@@ -28,9 +30,12 @@ class PdfPreviewComponent : UiComponent
 			pdfView = PDFView(frame: view.bounds)
 			view.addSubview(pdfView)
 		}
+		pdfView.backgroundColor = Constants.Colors.field(darkMode: false).color
 		uiEvents = emitter.asObservable()
 		let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
 		self.navigationItem.setRightBarButton(share, animated: true)
+		view.bringSubviewToFront(loadingView)
+		loadingView.alpha=1
 	}
 	
 	@objc func shareTapped(){
@@ -43,6 +48,7 @@ class PdfPreviewComponent : UiComponent
 			case .showPdf(let data):
 				pdfView.document = PDFDocument(data: data)
 				pdfView.autoScales = true
+				loadingView.alpha=0
 			case .showShareDialog(let data):
 				let vc = UIActivityViewController(
 					activityItems: [data],

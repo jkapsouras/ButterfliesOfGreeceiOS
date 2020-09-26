@@ -28,6 +28,7 @@ class BaseController<P> : UIViewController where P : BasePresenter
 		super.viewWillAppear(animated)
 		InitViews()
 		AddFonts()
+		LocalizeViews()
 		Components = InitializeComponents()
 		
 		if(navigationController != nil && navigationController is NavigationViewController){
@@ -60,7 +61,6 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			state?.connect().disposed(by: Presenter!.disposeBag!)
 			Presenter?.setupEvents()
 		}
-		LocalizeViews()
 	}
 	
 	override public func viewDidLayoutSubviews() {
@@ -69,7 +69,9 @@ class BaseController<P> : UIViewController where P : BasePresenter
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
-		unSubscribe()
+		if(presentedViewController == nil || !(presentedViewController is UIImagePickerController)){
+			unSubscribe()
+		}
 	}
 	
 	func TransitionStateReceived(viewState:ViewState)->()
@@ -79,24 +81,24 @@ class BaseController<P> : UIViewController where P : BasePresenter
 			return
 		}
 		switch viewState {
-		case let menuTransition as MenuViewState:
-			navigationManager!.MenuTransition(menuTransition: menuTransition)
-		case let familiesTransition as FamiliesViewStates:
-			navigationManager!.FamilyTransition(familyTransition: familiesTransition)
-		case let speciesTransition as SpeciesViewStates:
-			navigationManager!.SpecieTransition(specieTransition: speciesTransition)
-		case let photosTransition as PhotosViewStates:
-			navigationManager!.PhotosTransition(photosTransitions: photosTransition)
-		case let headerTransition as HeaderViewViewStates:
-			navigationManager!.HeaderTransition(headerTransition: headerTransition)
-		case let searchTransition as SearchViewStates:
-			navigationManager!.searchTransition(searchTransition: searchTransition)
-		case let printToPdfTransition as PrintToPdfViewStates:
-			navigationManager!.printToPdfTransition(pdfTransition: printToPdfTransition)
-		case let contributeTransition as ContributeViewStates:
-			navigationManager!.contributeTransition(contributeTransitions: contributeTransition)
-		default:
-			print("default")
+			case let menuTransition as MenuViewState:
+				navigationManager!.MenuTransition(menuTransition: menuTransition)
+			case let familiesTransition as FamiliesViewStates:
+				navigationManager!.FamilyTransition(familyTransition: familiesTransition)
+			case let speciesTransition as SpeciesViewStates:
+				navigationManager!.SpecieTransition(specieTransition: speciesTransition)
+			case let photosTransition as PhotosViewStates:
+				navigationManager!.PhotosTransition(photosTransitions: photosTransition)
+			case let headerTransition as HeaderViewViewStates:
+				navigationManager!.HeaderTransition(headerTransition: headerTransition)
+			case let searchTransition as SearchViewStates:
+				navigationManager!.searchTransition(searchTransition: searchTransition)
+			case let printToPdfTransition as PrintToPdfViewStates:
+				navigationManager!.printToPdfTransition(pdfTransition: printToPdfTransition)
+			case let contributeTransition as ContributeViewStates:
+				navigationManager!.contributeTransition(contributeTransitions: contributeTransition)
+			default:
+				print("default")
 		}
 	}
 	

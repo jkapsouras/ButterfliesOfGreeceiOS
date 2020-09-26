@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recognition View Controller-->
+        <scene sceneID="QfH-Ya-U0e">
+            <objects>
+                <viewController storyboardIdentifier="RecognitionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMV-f1-aZz" customClass="RecognitionViewController" customModule="ButterfliesOfGreece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Trx-MR-jBB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgk-A9-TgC">
+                                <rect key="frame" x="32" y="76" width="350" height="360.5"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyW-QG-XQg">
+                                <rect key="frame" x="32" y="469.5" width="350" height="360.5"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvS-td-JVn">
+                                <rect key="frame" x="0.0" y="452.5" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="LDs-tx-bti"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpA-K2-oy8" customClass="RecognitionView" customModule="ButterfliesOfGreece" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2KX-uf-Imn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gyW-QG-XQg" firstAttribute="leading" secondItem="mgk-A9-TgC" secondAttribute="leading" id="0xP-cy-CV1"/>
+                            <constraint firstItem="2KX-uf-Imn" firstAttribute="trailing" secondItem="mgk-A9-TgC" secondAttribute="trailing" constant="32" id="7Pk-2U-o6F"/>
+                            <constraint firstItem="BvS-td-JVn" firstAttribute="width" secondItem="Trx-MR-jBB" secondAttribute="width" id="9GA-bp-F9o"/>
+                            <constraint firstItem="2KX-uf-Imn" firstAttribute="trailing" secondItem="SpA-K2-oy8" secondAttribute="trailing" id="Aly-Jc-JqV"/>
+                            <constraint firstItem="gyW-QG-XQg" firstAttribute="trailing" secondItem="mgk-A9-TgC" secondAttribute="trailing" id="Ana-xB-fAU"/>
+                            <constraint firstItem="BvS-td-JVn" firstAttribute="centerX" secondItem="2KX-uf-Imn" secondAttribute="centerX" id="Ay1-5D-7Ph"/>
+                            <constraint firstItem="SpA-K2-oy8" firstAttribute="top" secondItem="2KX-uf-Imn" secondAttribute="top" id="BAj-9E-ynt"/>
+                            <constraint firstItem="2KX-uf-Imn" firstAttribute="bottom" secondItem="SpA-K2-oy8" secondAttribute="bottom" id="Xpv-Ah-2fL"/>
+                            <constraint firstItem="BvS-td-JVn" firstAttribute="centerY" secondItem="2KX-uf-Imn" secondAttribute="centerY" id="aU7-0j-XFf"/>
+                            <constraint firstItem="mgk-A9-TgC" firstAttribute="leading" secondItem="2KX-uf-Imn" secondAttribute="leading" constant="32" id="eGi-aw-HIs"/>
+                            <constraint firstItem="gyW-QG-XQg" firstAttribute="top" secondItem="BvS-td-JVn" secondAttribute="bottom" constant="16" id="nSZ-kn-JcY"/>
+                            <constraint firstItem="mgk-A9-TgC" firstAttribute="top" secondItem="2KX-uf-Imn" secondAttribute="top" constant="32" id="sJ1-39-BDz"/>
+                            <constraint firstItem="SpA-K2-oy8" firstAttribute="leading" secondItem="2KX-uf-Imn" secondAttribute="leading" id="xH8-b1-bc0"/>
+                            <constraint firstItem="BvS-td-JVn" firstAttribute="top" secondItem="mgk-A9-TgC" secondAttribute="bottom" constant="16" id="yKk-cQ-C3u"/>
+                            <constraint firstItem="2KX-uf-Imn" firstAttribute="bottom" secondItem="gyW-QG-XQg" secondAttribute="bottom" constant="32" id="zzT-el-EVi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonChoose" destination="mgk-A9-TgC" id="o53-tK-SA5"/>
+                        <outlet property="ButtonTake" destination="gyW-QG-XQg" id="pZF-ia-ypa"/>
+                        <outlet property="ViewRecognition" destination="SpA-K2-oy8" id="OsN-jh-STN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kuc-LM-Fd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

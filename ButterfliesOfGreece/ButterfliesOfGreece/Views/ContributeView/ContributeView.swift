@@ -124,6 +124,8 @@ class ContributeView: UIView {
 	}
 	
 	func prepareViews(){
+		backgroundColor = Constants.Colors.contribute(darkMode: false).color
+		contentView?.backgroundColor = Constants.Colors.contribute(darkMode: false).color
 		ViewTop.backgroundColor = Constants.Colors.contribute(darkMode: true).color
 		LabelTitle.textColor = Constants.Colors.contribute(darkMode: false).color
 		LabelName.textColor = Constants.Colors.contribute(darkMode: true).color
@@ -137,17 +139,18 @@ class ContributeView: UIView {
 		LabelNameSpecie.textColor = Constants.Colors.contribute(darkMode: true).color
 		LabelComments.textColor = Constants.Colors.contribute(darkMode: true).color
 		
-		TextName.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextDate.textColor = Constants.Colors.contribute(darkMode: false).color
-		LabelDateText.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextAltitude.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextPlace.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextLongitude.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextLatitude.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextStage.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextGenusSpecie.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextNameSpecie.textColor = Constants.Colors.contribute(darkMode: false).color
-		TextComments.textColor = Constants.Colors.contribute(darkMode: false).color
+		TextName.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextDate.textColor = Constants.Colors.contribute(darkMode: true).color
+		LabelDateText.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextAltitude.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextPlace.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextLongitude.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextLatitude.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextStage.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextGenusSpecie.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextNameSpecie.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextComments.textColor = Constants.Colors.contribute(darkMode: true).color
+		TextComments.backgroundColor = Constants.Colors.contribute(darkMode: false).color
 		
 		ButtonAdd.setTitle("", for: .normal)
 		ButtonAdd.setImage(UIImage(named: "plusIcon", in: nil, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
