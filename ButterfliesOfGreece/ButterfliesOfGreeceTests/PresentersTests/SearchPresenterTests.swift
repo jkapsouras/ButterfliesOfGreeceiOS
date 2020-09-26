@@ -82,7 +82,7 @@ class SearchPresenterTests: XCTestCase {
 			observer.events.first?.value.element is SearchViewStates)
 		let viewState = observer.events.first?.value.element as! SearchViewStates
 		switch viewState {
-		case .ToSpecie:
+		case .ToPhotosOfSpecie:
 			XCTAssert(Storage.specieId == 1)//test json data
 		default:
 			XCTFail()

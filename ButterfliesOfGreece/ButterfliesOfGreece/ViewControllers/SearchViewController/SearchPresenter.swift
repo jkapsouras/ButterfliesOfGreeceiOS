@@ -50,9 +50,11 @@ class SearchPresenter:BasePresenter{
 					{result in self.state.onNext(SearchViewStates.ShowResult(result: result, fromSearch: true))})
 		case .specieClicked(let specie):
 			_ = navigationRepository.selectSpecieId(specieId: specie.id)
-				.map{_ in self.navigationRepository.selectFamilyId(familyId: specie.familyId ?? 0)}
+				.map{_ in
+					_ = self.navigationRepository.selectSpecieId(specieId: specie.id)
+					_ = self.navigationRepository.selectFamilyId(familyId: specie.familyId ?? 0)}
 				.subscribe(onNext: {_ in
-					self.state.onNext(SearchViewStates.ToSpecie)})
+					self.state.onNext(SearchViewStates.ToPhotosOfSpecie)})
 		}
 	}
 }

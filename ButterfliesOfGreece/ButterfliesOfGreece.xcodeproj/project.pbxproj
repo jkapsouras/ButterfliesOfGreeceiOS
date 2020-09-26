@@ -14,6 +14,18 @@
 		0A25982F24EDBD55003893FA /* SpeciesViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */; };
 		0A25983124EDBDDB003893FA /* SpeciesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983024EDBDDB003893FA /* SpeciesRepository.swift */; };
 		0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */; };
+		0A67B365251DD7A300D5F67A /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B363251DD7A300D5F67A /* ApiRouter.swift */; };
+		0A67B366251DD7A300D5F67A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B364251DD7A300D5F67A /* ApiClient.swift */; };
+		0A67B37B251DE77E00D5F67A /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B37A251DE77E00D5F67A /* ApiError.swift */; };
+		0A67B380251E040F00D5F67A /* Recognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A67B37F251E040F00D5F67A /* Recognition.storyboard */; };
+		0A67B384251E041B00D5F67A /* RecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B383251E041B00D5F67A /* RecognitionViewController.swift */; };
+		0A67B38B251E101E00D5F67A /* RecognitionViewEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67B38A251E101E00D5F67A /* RecognitionViewEvents.swift */; };
+		0A705D20251E145900B29D2B /* RecognitionViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A705D1F251E145900B29D2B /* RecognitionViewStates.swift */; };
+		0A705D24251E1DFA00B29D2B /* RecognitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A705D23251E1DFA00B29D2B /* RecognitionState.swift */; };
+		0A705D28251E1EC500B29D2B /* RecognitionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A705D27251E1EC500B29D2B /* RecognitionRepository.swift */; };
+		0A705D2C251E247C00B29D2B /* RecognitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A705D2B251E247C00B29D2B /* RecognitionPresenter.swift */; };
+		0A705D33251E2B3D00B29D2B /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A705D32251E2B3D00B29D2B /* RecognitionView.swift */; };
+		0A705D39251E2B5000B29D2B /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A705D38251E2B5000B29D2B /* RecognitionView.xib */; };
 		0A7351DE24EE681100E2712D /* Species.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7351DD24EE681100E2712D /* Species.storyboard */; };
 		0A7351E024EE68C600E2712D /* SpeciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351DF24EE68C600E2712D /* SpeciesViewController.swift */; };
 		0A7351E324EEA29400E2712D /* SpeciesTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351E224EEA29400E2712D /* SpeciesTableComponent.swift */; };
@@ -21,6 +33,7 @@
 		0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7351E624EEA2B400E2712D /* SpeciesHeaderComponent.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
+		0AF7D67F251E8425001759E6 /* ImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7D67E251E8425001759E6 /* ImageComponent.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE10425124D4B7230075D027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425024D4B7230075D027 /* Constants.swift */; };
@@ -83,6 +96,7 @@
 		FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */; };
 		FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */; };
 		FE71B27024F1ACF3009F6BF0 /* NavigationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */; };
+		FE8498E2251B658C00DA15C6 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8498E1251B658C00DA15C6 /* Predictions.swift */; };
 		FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F64C24F2A2A700414631 /* PhotosTableComponent.swift */; };
 		FE85F65124F2A2DF00414631 /* PhotosCollectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F65024F2A2DF00414631 /* PhotosCollectionComponent.swift */; };
 		FE85F65324F2A2ED00414631 /* PhotosHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85F65224F2A2ED00414631 /* PhotosHeaderComponent.swift */; };
@@ -190,6 +204,18 @@
 		0A25982E24EDBD55003893FA /* SpeciesViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewStates.swift; sourceTree = "<group>"; };
 		0A25983024EDBDDB003893FA /* SpeciesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRepository.swift; sourceTree = "<group>"; };
 		0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenterTests.swift; sourceTree = "<group>"; };
+		0A67B363251DD7A300D5F67A /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		0A67B364251DD7A300D5F67A /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		0A67B37A251DE77E00D5F67A /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		0A67B37F251E040F00D5F67A /* Recognition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recognition.storyboard; sourceTree = "<group>"; };
+		0A67B383251E041B00D5F67A /* RecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionViewController.swift; sourceTree = "<group>"; };
+		0A67B38A251E101E00D5F67A /* RecognitionViewEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionViewEvents.swift; sourceTree = "<group>"; };
+		0A705D1F251E145900B29D2B /* RecognitionViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionViewStates.swift; sourceTree = "<group>"; };
+		0A705D23251E1DFA00B29D2B /* RecognitionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionState.swift; sourceTree = "<group>"; };
+		0A705D27251E1EC500B29D2B /* RecognitionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionRepository.swift; sourceTree = "<group>"; };
+		0A705D2B251E247C00B29D2B /* RecognitionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionPresenter.swift; sourceTree = "<group>"; };
+		0A705D32251E2B3D00B29D2B /* RecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
+		0A705D38251E2B5000B29D2B /* RecognitionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
 		0A7351DD24EE681100E2712D /* Species.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Species.storyboard; sourceTree = "<group>"; };
 		0A7351DF24EE68C600E2712D /* SpeciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewController.swift; sourceTree = "<group>"; };
 		0A7351E224EEA29400E2712D /* SpeciesTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableComponent.swift; sourceTree = "<group>"; };
@@ -197,6 +223,7 @@
 		0A7351E624EEA2B400E2712D /* SpeciesHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesHeaderComponent.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
+		0AF7D67E251E8425001759E6 /* ImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComponent.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.release.xcconfig"; sourceTree = "<group>"; };
 		62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButterfliesOfGreeceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +290,7 @@
 		FE6952E824E59B6400A844A2 /* HeaderViewEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewEvents.swift; sourceTree = "<group>"; };
 		FE6952EB24E5C5A900A844A2 /* HeaderViewViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewViewStates.swift; sourceTree = "<group>"; };
 		FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRepository.swift; sourceTree = "<group>"; };
+		FE8498E1251B658C00DA15C6 /* Predictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
 		FE85F64C24F2A2A700414631 /* PhotosTableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableComponent.swift; sourceTree = "<group>"; };
 		FE85F65024F2A2DF00414631 /* PhotosCollectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionComponent.swift; sourceTree = "<group>"; };
 		FE85F65224F2A2ED00414631 /* PhotosHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosHeaderComponent.swift; sourceTree = "<group>"; };
@@ -432,6 +460,53 @@
 			path = ViewState;
 			sourceTree = "<group>";
 		};
+		0A67B37E251E03F400D5F67A /* RecognitionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A67B389251E100900D5F67A /* ViewStates */,
+				0A67B388251E0FFF00D5F67A /* UiEvents */,
+				0A67B387251E0FF800D5F67A /* Component */,
+				0A67B37F251E040F00D5F67A /* Recognition.storyboard */,
+				0A67B383251E041B00D5F67A /* RecognitionViewController.swift */,
+				0A705D23251E1DFA00B29D2B /* RecognitionState.swift */,
+				0A705D2B251E247C00B29D2B /* RecognitionPresenter.swift */,
+			);
+			path = RecognitionViewController;
+			sourceTree = "<group>";
+		};
+		0A67B387251E0FF800D5F67A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0AF7D67E251E8425001759E6 /* ImageComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		0A67B388251E0FFF00D5F67A /* UiEvents */ = {
+			isa = PBXGroup;
+			children = (
+				0A67B38A251E101E00D5F67A /* RecognitionViewEvents.swift */,
+			);
+			path = UiEvents;
+			sourceTree = "<group>";
+		};
+		0A67B389251E100900D5F67A /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				0A705D1F251E145900B29D2B /* RecognitionViewStates.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		0A705D31251E2AAA00B29D2B /* RecognizedView */ = {
+			isa = PBXGroup;
+			children = (
+				0A705D32251E2B3D00B29D2B /* RecognitionView.swift */,
+				0A705D38251E2B5000B29D2B /* RecognitionView.xib */,
+			);
+			path = RecognizedView;
+			sourceTree = "<group>";
+		};
 		0A7351E124EE694700E2712D /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +573,7 @@
 				FE10425A24D5AB920075D027 /* Specie.swift */,
 				FE10425C24D5ABD20075D027 /* ButterflyPhoto.swift */,
 				FE928C9D2515F144004CBFB3 /* ContributionItem.swift */,
+				FE8498E1251B658C00DA15C6 /* Predictions.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -708,6 +784,7 @@
 		FE5327BB24E30CE600BA4AF5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A67B37E251E03F400D5F67A /* RecognitionViewController */,
 				FE2FAA25251887BA0017931D /* EndangeredViewController */,
 				FEC470C52517EF2D002F0E2F /* LegalViewController */,
 				FEC470B82517AE3A002F0E2F /* IntroductionViewController */,
@@ -730,6 +807,7 @@
 		FE5327BC24E30D2D00BA4AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A705D31251E2AAA00B29D2B /* RecognizedView */,
 				FE6691E12514B345006C377F /* ContributeView */,
 				FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */,
 				FE1341AE24E32A6E0076EF14 /* HeaderView */,
@@ -813,6 +891,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FE9976F8251B45F6000BFDA8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0A67B364251DD7A300D5F67A /* ApiClient.swift */,
+				0A67B363251DD7A300D5F67A /* ApiRouter.swift */,
+				0A67B37A251DE77E00D5F67A /* ApiError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FE9D70342511EF2400FCE1F3 /* PdfPreviewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +948,7 @@
 				FE71B26F24F1ACF3009F6BF0 /* NavigationRepository.swift */,
 				FEFBA09824F2479500335E77 /* PhotosRepository.swift */,
 				FEC4708C25163730002F0E2F /* ContributionRepository.swift */,
+				0A705D27251E1EC500B29D2B /* RecognitionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -998,6 +1087,7 @@
 		FEAB9BB224B26CFD00A5D178 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FE9976F8251B45F6000BFDA8 /* Network */,
 				FEB3520624CB13DB0040313D /* DI */,
 				FE1FBE8F24CB110B008D0EA1 /* Schedulers */,
 				FEAB9BB324B26D3700A5D178 /* BasePresenter.swift */,
@@ -1259,6 +1349,7 @@
 				FE8DADA924E5759C009F92F6 /* data.json in Resources */,
 				FEAB9BA324B2033F00A5D178 /* Menu.storyboard in Resources */,
 				FE2FAA3725188D800017931D /* species.pdf in Resources */,
+				0A67B380251E040F00D5F67A /* Recognition.storyboard in Resources */,
 				FE1341B224E32A9C0076EF14 /* HeaderView.xib in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
@@ -1269,6 +1360,7 @@
 				FE9D70362511EF3600FCE1F3 /* PdfPreview.storyboard in Resources */,
 				FE6691DE2514B2EE006C377F /* Contribute.storyboard in Resources */,
 				FE6691E32514B359006C377F /* ContributeView.xib in Resources */,
+				0A705D39251E2B5000B29D2B /* RecognitionView.xib in Resources */,
 				0A7351DE24EE681100E2712D /* Species.storyboard in Resources */,
 				FEFBA0A124F29B5F00335E77 /* Photos.storyboard in Resources */,
 				FEA57F3924DD8B8300A66871 /* Families.storyboard in Resources */,
@@ -1367,14 +1459,18 @@
 				FEFBA09524F245CE00335E77 /* PhotosState.swift in Sources */,
 				FEC470D82517F962002F0E2F /* LegalViewStates.swift in Sources */,
 				FEA57F3B24DD8BAE00A66871 /* FamiliesViewController.swift in Sources */,
+				0A705D24251E1DFA00B29D2B /* RecognitionState.swift in Sources */,
 				0A25982724EDBC5D003893FA /* SpeciesPresenter.swift in Sources */,
+				0AF7D67F251E8425001759E6 /* ImageComponent.swift in Sources */,
 				FE9D70402511FEE500FCE1F3 /* PdfPreviewEvents.swift in Sources */,
 				FEA23DCB2503C65500776D19 /* SearchViewStates.swift in Sources */,
 				FEB3521024CB19620040313D /* BaseViewController.swift in Sources */,
 				FE10425124D4B7230075D027 /* Constants.swift in Sources */,
+				0A67B366251DD7A300D5F67A /* ApiClient.swift in Sources */,
 				0A7351E724EEA2B400E2712D /* SpeciesHeaderComponent.swift in Sources */,
 				FE5327BA24E1DDE900BA4AF5 /* FamiliesTableComponent.swift in Sources */,
 				FEC470CB2517EF59002F0E2F /* LegalViewController.swift in Sources */,
+				FE8498E2251B658C00DA15C6 /* Predictions.swift in Sources */,
 				FE23263B250D1A62009C8075 /* SearchResultComponent.swift in Sources */,
 				FE6691E52514B36E006C377F /* ContributeView.swift in Sources */,
 				FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */,
@@ -1391,8 +1487,10 @@
 				FEA3D15224F6FE3F004B7F7A /* ModalViewStates.swift in Sources */,
 				FE1341B424E32B340076EF14 /* FamiliesCollectionComponent.swift in Sources */,
 				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
+				0A705D2C251E247C00B29D2B /* RecognitionPresenter.swift in Sources */,
 				FE6691EA2514E1A1006C377F /* ContributePresenter.swift in Sources */,
 				FE10425D24D5ABD20075D027 /* ButterflyPhoto.swift in Sources */,
+				0A67B384251E041B00D5F67A /* RecognitionViewController.swift in Sources */,
 				FEA1CB6424E869360038DD9C /* FamiliesRepository.swift in Sources */,
 				FE9D703A2511F77C00FCE1F3 /* PdfPreviewPresenter.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
@@ -1408,8 +1506,10 @@
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FE6952E924E59B6500A844A2 /* HeaderViewEvents.swift in Sources */,
 				FE71B27024F1ACF3009F6BF0 /* NavigationRepository.swift in Sources */,
+				0A705D28251E1EC500B29D2B /* RecognitionRepository.swift in Sources */,
 				FEA3D14F24F6FE16004B7F7A /* ModalEvents.swift in Sources */,
 				FE1341B024E32A8F0076EF14 /* HeaderView.swift in Sources */,
+				0A67B365251DD7A300D5F67A /* ApiRouter.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEB3521424CB20210040313D /* MenuPresenter.swift in Sources */,
 				FE6952EC24E5C5A900A844A2 /* HeaderViewViewStates.swift in Sources */,
@@ -1422,10 +1522,13 @@
 				FEEEEEDF24D6F02800C9655B /* NavigationViewController.swift in Sources */,
 				FEFBA09724F2472500335E77 /* PhotosPresenter.swift in Sources */,
 				FEC4709125164B6B002F0E2F /* PrintRendererExtension.swift in Sources */,
+				0A67B37B251DE77E00D5F67A /* ApiError.swift in Sources */,
+				0A67B38B251E101E00D5F67A /* RecognitionViewEvents.swift in Sources */,
 				FE5327B024E02AD000BA4AF5 /* ImageExtensions.swift in Sources */,
 				FE143994250EAEA700B53E34 /* PrintToPdfEvents.swift in Sources */,
 				FE389B4224CF699A00F47717 /* FamiliesEvents.swift in Sources */,
 				FE8B040C24CB2AD6002F180F /* MenuComponent.swift in Sources */,
+				0A705D33251E2B3D00B29D2B /* RecognitionView.swift in Sources */,
 				FEC4708D25163730002F0E2F /* ContributionRepository.swift in Sources */,
 				FE23263D250D25D0009C8075 /* SearchHeaderComponent.swift in Sources */,
 				FE85F64D24F2A2A700414631 /* PhotosTableComponent.swift in Sources */,
@@ -1473,6 +1576,7 @@
 				FEC470D22517F912002F0E2F /* LegalEvents.swift in Sources */,
 				FE9D70382511EF6700FCE1F3 /* PdfPreviewViewController.swift in Sources */,
 				FE928C9A2515F133004CBFB3 /* ContributeState.swift in Sources */,
+				0A705D20251E145900B29D2B /* RecognitionViewStates.swift in Sources */,
 				FEAB9B8224B2027000A5D178 /* SceneDelegate.swift in Sources */,
 				0A25982924EDBC67003893FA /* SpeciesState.swift in Sources */,
 				FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */,

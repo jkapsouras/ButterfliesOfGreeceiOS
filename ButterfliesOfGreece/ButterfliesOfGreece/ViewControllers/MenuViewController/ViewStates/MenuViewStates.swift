@@ -17,18 +17,20 @@ enum MenuViewState:ViewState {
 	case toContribute
 	case toOnlineRecognition
 	case toOfflineRecognition
+	case toRecognition
 	
 	var isTransition:Bool{
 		switch self {
-		case .toField,
-			 .toIntroduction,
-			 .toEndangered,
-			 .toLegal,
-			 .toAbout,
-			 .toContribute,
-			 .toOnlineRecognition,
-			 .toOfflineRecognition:
-			return true
+			case .toField,
+				 .toIntroduction,
+				 .toEndangered,
+				 .toLegal,
+				 .toAbout,
+				 .toContribute,
+				 .toOnlineRecognition,
+				 .toOfflineRecognition,
+				 .toRecognition:
+				return true
 		}
 	}
 }
@@ -36,39 +38,43 @@ enum MenuViewState:ViewState {
 extension MenuViewState{
 	var toStoryboardName:String?{
 		switch self {
-		case .toField:
-			return "Families"
-		case .toContribute:
-			return "Contribute"
-		case .toAbout:
-			return "About"
-		case .toIntroduction:
-			return "Introduction"
-		case .toEndangered:
-			return "Endangered"
-		case .toLegal:
-			return "Legal"
-		default:
-			return nil
+			case .toField:
+				return "Families"
+			case .toContribute:
+				return "Contribute"
+			case .toAbout:
+				return "About"
+			case .toIntroduction:
+				return "Introduction"
+			case .toEndangered:
+				return "Endangered"
+			case .toLegal:
+				return "Legal"
+			case .toRecognition:
+			return "Recognition"
+			default:
+				return nil
 		}
 	}
 	
 	var toViewControllerName:String?{
 		switch self {
-		case .toField:
-			return "FamiliesViewController"
-		case .toContribute:
-			return "ContributeViewController"
-		case .toAbout:
-			return "AboutViewController"
-		case .toIntroduction:
-			return "IntroductionViewController"
-		case .toEndangered:
-			return "EndangeredViewController"
-		case .toLegal:
-			return "LegalViewController"
-		default:
-			return nil
+			case .toField:
+				return "FamiliesViewController"
+			case .toContribute:
+				return "ContributeViewController"
+			case .toAbout:
+				return "AboutViewController"
+			case .toIntroduction:
+				return "IntroductionViewController"
+			case .toEndangered:
+				return "EndangeredViewController"
+			case .toLegal:
+				return "LegalViewController"
+			case .toRecognition:
+				return "RecognitionViewController"
+			default:
+				return nil
 		}
 	}
 }

@@ -12,6 +12,7 @@ target 'ButterfliesOfGreece' do
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
   pod 'AppCenter'
+  pod 'Alamofire', '~> 5.2'
 end
 
 target 'ButterfliesOfGreeceTests' do

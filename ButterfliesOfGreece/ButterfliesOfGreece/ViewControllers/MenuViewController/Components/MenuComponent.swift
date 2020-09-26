@@ -14,7 +14,7 @@ import UIKit
 class MenuComponent : UiComponent
 {
 	var uiEvents: Observable<UiEvent>
-    let FieldButton:UIButton
+	let FieldButton:UIButton
 	let ContributeButton:UIButton
 	let AboutButton:UIButton
 	let IntroductionButton:UIButton
@@ -23,31 +23,33 @@ class MenuComponent : UiComponent
 	let RecognitionButton:UIButton
 	
 	init(field:UIButton, contribute:UIButton, about:UIButton, introduction:UIButton, endangered:UIButton, legal:UIButton, recognition:UIButton) {
-        FieldButton=field
+		FieldButton=field
 		ContributeButton=contribute
 		AboutButton = about
 		IntroductionButton = introduction
 		EndangeredButton = endangered
 		LegalButton = legal
 		RecognitionButton = recognition
-        
+		
 		let events = Observable.merge(FieldButton.rx.tap.map{tap in
-			MenuEvent.fieldClicked as UiEvent},
-										ContributeButton.rx.tap.map{tap in
+										MenuEvent.fieldClicked as UiEvent},
+									  ContributeButton.rx.tap.map{tap in
 										MenuEvent.contributeClicked as UiEvent},
-										AboutButton.rx.tap.map{tap in
+									  AboutButton.rx.tap.map{tap in
 										MenuEvent.aboutClicked as UiEvent},
-										IntroductionButton.rx.tap.map{tap in
+									  IntroductionButton.rx.tap.map{tap in
 										MenuEvent.introductionClicked as UiEvent},
-										EndangeredButton.rx.tap.map{tap in
+									  EndangeredButton.rx.tap.map{tap in
 										MenuEvent.endangeredSpeciesClicked as UiEvent},
-										LegalButton.rx.tap.map{tap in
-										MenuEvent.legalClicked as UiEvent})
-        
-        uiEvents = events
-    }
-    
-    public func renderViewState(viewState: ViewState) {
-        
-    }
+									  LegalButton.rx.tap.map{tap in
+										MenuEvent.legalClicked as UiEvent},
+									  RecognitionButton.rx.tap.map{tap in
+										MenuEvent.recognitionClicked
+									  })
+		
+		uiEvents = events
+	}
+	
+	public func renderViewState(viewState: ViewState) {}
 }
+		

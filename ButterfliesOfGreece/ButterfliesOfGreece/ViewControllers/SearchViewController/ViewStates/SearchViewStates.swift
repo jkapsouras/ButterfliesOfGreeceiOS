@@ -10,11 +10,11 @@ import Foundation
 
 enum SearchViewStates:ViewState{
 	case ShowResult(result:[Specie], fromSearch: Bool)
-	case ToSpecie
+	case ToPhotosOfSpecie
 	
 	var isTransition: Bool{
 		switch self {
-			case .ToSpecie:
+			case .ToPhotosOfSpecie:
 				return true
 			case .ShowResult:
 				return false
@@ -25,8 +25,8 @@ enum SearchViewStates:ViewState{
 extension SearchViewStates{
 	var toStoryboardName:String?{
 		switch self {
-		case .ToSpecie:
-			return "Species"
+		case .ToPhotosOfSpecie:
+			return "Photos"
 		default:
 			return nil
 		}
@@ -34,8 +34,8 @@ extension SearchViewStates{
 	
 	var toViewControllerName:String?{
 		switch self {
-		case .ToSpecie:
-			return "SpeciesViewController"
+		case .ToPhotosOfSpecie:
+			return "PhotosViewController"
 		default:
 			return nil
 		}
