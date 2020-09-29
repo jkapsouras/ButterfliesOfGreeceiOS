@@ -79,8 +79,8 @@ class RecognitionView: UIView {
 		ButtonClose.setImage(UIImage(imageLiteralResourceName: "closeX").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonClose.tintColor = Constants.Colors.recognition(darkMode: true).color
 		
-		ButtonOffline.isUserInteractionEnabled = false
-		ButtonOffline.alpha = 0.5
+//		ButtonOffline.isUserInteractionEnabled = false
+//		ButtonOffline.alpha = 0.5
 	}
 	
 	func updateViews(){
@@ -126,7 +126,7 @@ class RecognitionView: UIView {
 		SpinnerLoading.alpha = 0
 		SpinnerLoading.stopAnimating()
 		ButtonOnline.alpha = 1
-		ButtonOffline.alpha = 0.5
+		ButtonOffline.alpha = 1
 	}
 	
 	func ViewEvents() -> Observable<UiEvent>

@@ -14,6 +14,8 @@ class RecognitionPresenter:BasePresenter{
 	var recognitionState:RecognitionState
 	var recognitionRepository:RecognitionRepository
 	let compressionQuality:CGFloat = 0.7
+	private var modelDataHandler: ModelDataHandler? =
+		ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo)
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
 		 recognitionRepository:RecognitionRepository){
@@ -50,7 +52,21 @@ class RecognitionPresenter:BasePresenter{
 						self.state.onNext(RecognitionViewStates.imageRecognized(predictions: self.recognitionState.predictions))
 					}, onError: {error in print(error.localizedDescription)}).disposed(by: disposeBag!)
 			case .offlineClicked:
-				print("offline clicked")
+				let image = recognitionState.image
+				guard let buffer = CVImageBuffer.buffer(from: image!) else {
+					return
+				}
+				Observable.of(1).startWith(1).take(1).map{_ in
+					self.modelDataHandler?.runModel(onFrame: buffer)}
+					.subscribeOn(backgroundThreadScheduler.scheduler)
+					.map{result -> RecognitionState in
+						self.recognitionState = self.recognitionState.with(predictions: result?.to().predictions ?? [Prediction]())
+						return self.recognitionState
+					}
+					.subscribe(onNext: {state in
+						self.state.onNext(RecognitionViewStates.imageRecognized(predictions: self.recognitionState.predictions))
+					}, onError: {error in print(error.localizedDescription)})
+					.disposed(by: disposeBag!)
 			case .photoChoosed(let selectedImage):
 				guard let imageData = selectedImage.jpegData(compressionQuality: compressionQuality) else{
 					print("data did not creted")

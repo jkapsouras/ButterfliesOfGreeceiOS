@@ -13,6 +13,7 @@ target 'ButterfliesOfGreece' do
   pod 'SwinjectAutoregistration'
   pod 'AppCenter'
   pod 'Alamofire', '~> 5.2'
+  pod 'TensorFlowLiteSwift'
 end
 
 target 'ButterfliesOfGreeceTests' do
