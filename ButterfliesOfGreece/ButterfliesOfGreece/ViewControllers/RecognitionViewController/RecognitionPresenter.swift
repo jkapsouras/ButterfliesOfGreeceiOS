@@ -15,7 +15,7 @@ class RecognitionPresenter:BasePresenter{
 	var recognitionRepository:RecognitionRepository
 	let compressionQuality:CGFloat = 0.7
 	private var modelDataHandler: ModelDataHandler? =
-		ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo)
+		ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo, threadCount: 2)
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
 		 recognitionRepository:RecognitionRepository){
@@ -81,10 +81,33 @@ class RecognitionPresenter:BasePresenter{
 				}
 				recognitionState = recognitionState.with(image: selectedImage, imageData: imageData)
 				state.onNext(RecognitionViewStates.showRecognitionView(image: recognitionState.image!))
-			case .liveRecognition:
-				print("start camera")
+			case .liveRecognitionClicked:
+				state.onNext(RecognitionViewStates.showLiveRecognitionView)
 			case .closeClicked:
 				state.onNext(RecognitionViewStates.closeRecognitionView)
+			case .liveImageTaken(let image):
+				Observable.of(1).startWith(1).take(1)
+					.map{result -> RecognitionState in
+						self.recognitionState = self.recognitionState.with(image: image)
+						return self.recognitionState
+					}
+					.subscribeOn(backgroundThreadScheduler.scheduler)
+					.map{state -> Result? in
+						let image = state.image
+						guard let buffer = CVImageBuffer.buffer(from: image!) else {
+							return nil
+						}
+						return self.modelDataHandler?.runModel(onFrame: buffer)}
+					.map{result -> RecognitionState in
+						self.recognitionState = self.recognitionState.with(predictions: result?.to().predictions ?? [Prediction]())
+						return self.recognitionState
+					}
+					.subscribe(onNext: {state in
+						self.state.onNext(RecognitionViewStates.liveImageRecognized(predictions: state.predictions))
+					}, onError: {error in print(error.localizedDescription)})
+					.disposed(by: disposeBag!)
+			case .closeLiveClicked:
+				state.onNext(RecognitionViewStates.closeLiveRecognitionView)
 		}
 	}
 }

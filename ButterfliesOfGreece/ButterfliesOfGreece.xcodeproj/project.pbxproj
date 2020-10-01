@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2333952524BDBE00A6CA92 /* AVFoundationImpementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */; };
+		0A2333992524BE6100A6CA92 /* LiveSession.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2333982524BE6100A6CA92 /* LiveSession.xib */; };
+		0A23339D2524BE7A00A6CA92 /* LiveSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23339C2524BE7A00A6CA92 /* LiveSession.swift */; };
 		0A240333251FA146002665A1 /* RecognitionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24032C251FA146002665A1 /* RecognitionRepository.swift */; };
 		0A240334251FA146002665A1 /* FamiliesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24032D251FA146002665A1 /* FamiliesRepository.swift */; };
 		0A240335251FA146002665A1 /* ContributionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24032E251FA146002665A1 /* ContributionRepository.swift */; };
@@ -203,6 +206,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationImpementation.swift; sourceTree = "<group>"; };
+		0A2333982524BE6100A6CA92 /* LiveSession.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveSession.xib; sourceTree = "<group>"; };
+		0A23339C2524BE7A00A6CA92 /* LiveSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSession.swift; sourceTree = "<group>"; };
 		0A24032C251FA146002665A1 /* RecognitionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionRepository.swift; sourceTree = "<group>"; };
 		0A24032D251FA146002665A1 /* FamiliesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamiliesRepository.swift; sourceTree = "<group>"; };
 		0A24032E251FA146002665A1 /* ContributionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionRepository.swift; sourceTree = "<group>"; };
@@ -420,6 +426,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2333932524BDA100A6CA92 /* LiveSessionView */ = {
+			isa = PBXGroup;
+			children = (
+				0A2333982524BE6100A6CA92 /* LiveSession.xib */,
+				0A23339C2524BE7A00A6CA92 /* LiveSession.swift */,
+			);
+			path = LiveSessionView;
+			sourceTree = "<group>";
+		};
 		0A240350251FA184002665A1 /* UiEvents */ = {
 			isa = PBXGroup;
 			children = (
@@ -1112,6 +1127,7 @@
 		FE5327BC24E30D2D00BA4AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A2333932524BDA100A6CA92 /* LiveSessionView */,
 				0A705D31251E2AAA00B29D2B /* RecognizedView */,
 				FE6691E12514B345006C377F /* ContributeView */,
 				FE14399A250EB69F00B53E34 /* HeaderPrintToPdfView */,
@@ -1249,6 +1265,7 @@
 				FED640E6251150D000D07FA9 /* PickerDataModel.swift */,
 				FEC4709025164B6B002F0E2F /* PrintRendererExtension.swift */,
 				0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */,
+				0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1361,6 +1378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2333992524BE6100A6CA92 /* LiveSession.xib in Resources */,
 				0A24045A251FA1BE002665A1 /* PdfPreview.storyboard in Resources */,
 				0A240440251FA1BE002665A1 /* PrintToPdf.storyboard in Resources */,
 				0A240408251FA1BE002665A1 /* About.storyboard in Resources */,
@@ -1522,6 +1540,7 @@
 				0A24043E251FA1BE002665A1 /* PhotosToPrintHeaderComponent.swift in Sources */,
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				0A24044A251FA1BE002665A1 /* RecognitionViewStates.swift in Sources */,
+				0A23339D2524BE7A00A6CA92 /* LiveSession.swift in Sources */,
 				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
 				0A240463251FA1BE002665A1 /* LegalViewController.swift in Sources */,
 				0A24042B251FA1BE002665A1 /* PhotosHeaderComponent.swift in Sources */,
@@ -1551,6 +1570,7 @@
 				0A240425251FA1BE002665A1 /* SpeciesViewController.swift in Sources */,
 				FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */,
 				0A24043C251FA1BE002665A1 /* PrintToPdfState.swift in Sources */,
+				0A2333952524BDBE00A6CA92 /* AVFoundationImpementation.swift in Sources */,
 				0A240459251FA1BE002665A1 /* MenuViewController.swift in Sources */,
 				0A240336251FA146002665A1 /* NavigationRepository.swift in Sources */,
 				0A24041D251FA1BE002665A1 /* InfoModalViewController.swift in Sources */,

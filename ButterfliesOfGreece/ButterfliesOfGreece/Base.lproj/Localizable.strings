@@ -76,3 +76,4 @@
 "take_photo" = "Take a photo";
 "photo_recognized_first" = "The above butterfly recognized to belong in specie";
 "photo_recognized_second" = "with probability";
+"live_recognition" = "Live recognition";
