@@ -1,4 +1,1 @@
 *.jpg filter=lfs diff=lfs merge=lfs -text
-*.pt filter=lfs diff=lfs merge=lfs -text
-ButterfliesOfGreece/Pods/LibTorch/install/lib/libtorch_cpu.a filter=lfs diff=lfs merge=lfs -text
-Pods/LibTorch/install/lib/libtorch_cpu.a filter=lfs diff=lfs merge=lfs -text
