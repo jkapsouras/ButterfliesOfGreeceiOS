@@ -16,7 +16,4 @@ App center master branch status: ![Swift](https://build.appcenter.ms/v0.1/apps/3
 - Introduction
 - Endangered
 - Online recognition
-
-# Implementation needed
-
 - Offline recognition
