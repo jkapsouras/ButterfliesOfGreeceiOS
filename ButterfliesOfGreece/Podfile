@@ -14,6 +14,7 @@ target 'ButterfliesOfGreece' do
   pod 'AppCenter'
   pod 'Alamofire', '~> 5.2'
   pod 'TensorFlowLiteSwift'
+  pod 'LibTorch', '~> 1.6.0'
 end
 
 target 'ButterfliesOfGreeceTests' do

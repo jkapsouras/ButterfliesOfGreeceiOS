@@ -199,8 +199,8 @@ class IntroductionViewController: BaseController<MenuPresenter> {
 			view.layoutIfNeeded()
 		}
 		
-		let fixedWidthIdentity = TextLegal.frame.size.width
-		let newSizeIdentity = TextLegal.sizeThatFits(CGSize(width: fixedWidthIdentity, height: CGFloat.greatestFiniteMagnitude))
+		let fixedWidthIdentity = TextIdentify.frame.size.width
+		let newSizeIdentity = TextIdentify.sizeThatFits(CGSize(width: fixedWidthIdentity, height: CGFloat.greatestFiniteMagnitude))
 		if (newSizeIdentity.height != ConstHeightIdentify.constant)
 		{
 			ConstHeightIdentify.constant = newSizeIdentity.height

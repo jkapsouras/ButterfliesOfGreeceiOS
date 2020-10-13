@@ -110,7 +110,7 @@ class RecognitionView: UIView {
 	
 	func imageRecognized(predictions:[Prediction]){
 		ViewButtons.alpha=0
-		LabelRecognized.text = "\(Translations.RecognizedFirst) \(predictions[0].butterflyClass) \(Translations.RecognizedSecond) \(predictions[0].prob)%"
+		LabelRecognized.text = "\(Translations.RecognizedFirst) \(predictions[0].butterflyClass)"//" \(Translations.RecognizedSecond) \(predictions[0].prob)%"
 		ConstLabelTop.constant = 16
 		ConstLabelBottom.constant = 16
 	}

@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		IOC.container = IOC.RegisterElements()
 		return true
 	}
+	
 
 	// MARK: UISceneSession Lifecycle
 

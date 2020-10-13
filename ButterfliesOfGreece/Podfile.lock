@@ -9,6 +9,11 @@ PODS:
   - AppCenter/Crashes (3.3.4):
     - AppCenter/Core
   - IQKeyboardManagerSwift (6.5.6)
+  - LibTorch (1.6.1):
+    - LibTorch/Core (= 1.6.1)
+  - LibTorch/Core (1.6.1):
+    - LibTorch/Torch
+  - LibTorch/Torch (1.6.1)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
   - RxCocoa (5.1.1):
@@ -34,6 +39,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AppCenter
   - IQKeyboardManagerSwift
+  - LibTorch (~> 1.6.0)
   - RxBlocking (~> 5.1.1)
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
@@ -47,6 +53,7 @@ SPEC REPOS:
     - Alamofire
     - AppCenter
     - IQKeyboardManagerSwift
+    - LibTorch
     - RxBlocking
     - RxCocoa
     - RxRelay
@@ -61,6 +68,7 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AppCenter: 0487be185c038ed2ecc5ed38219af1dcd280af23
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  LibTorch: 32a83630ab5b4505f205c7e332975a2d3d6e0c55
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -71,6 +79,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteC: 51f50caf5777f740a70e2c1a5dbdc149e7aeb50b
   TensorFlowLiteSwift: fb152cc1eec36b25b03a23c07f5d58113170af58
 
-PODFILE CHECKSUM: ce91a4788b98f31c4501f8ecb64da563d1bcc111
+PODFILE CHECKSUM: 02f592f833860afc0a460cbfceaf6e29de055b94
 
 COCOAPODS: 1.9.3

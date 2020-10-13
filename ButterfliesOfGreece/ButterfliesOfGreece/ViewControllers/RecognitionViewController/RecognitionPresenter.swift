@@ -14,8 +14,9 @@ class RecognitionPresenter:BasePresenter{
 	var recognitionState:RecognitionState
 	var recognitionRepository:RecognitionRepository
 	let compressionQuality:CGFloat = 0.7
-	private var modelDataHandler: ModelDataHandler? =
-		ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo, threadCount: 2)
+	private var modelDataHandler: ModelDataHandler = ModelDataHandler()
+	var processing = false
+		
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
 		 recognitionRepository:RecognitionRepository){
@@ -53,14 +54,29 @@ class RecognitionPresenter:BasePresenter{
 					}, onError: {error in print(error.localizedDescription)}).disposed(by: disposeBag!)
 			case .offlineClicked:
 				let image = recognitionState.image
-				guard let buffer = CVImageBuffer.buffer(from: image!) else {
+				let resizedImage = image!.resized(to: CGSize(width: 224, height: 224))
+				guard var pixelBuffer = resizedImage.normalized() else {
 					return
 				}
-				Observable.of(1).startWith(1).take(1).map{_ in
-					self.modelDataHandler?.runModel(onFrame: buffer)}
-					.subscribeOn(backgroundThreadScheduler.scheduler)
+				Observable.of(1).subscribeOn(backgroundThreadScheduler.scheduler)
+					.startWith(1).take(1).map{_ -> [NSNumber]? in
+					let outputs = self.modelDataHandler.module.predict(image: UnsafeMutableRawPointer(&pixelBuffer))
+					return outputs
+					
+				}
 					.map{result -> RecognitionState in
-						self.recognitionState = self.recognitionState.with(predictions: result?.to().predictions ?? [Prediction]())
+						let labels = self.modelDataHandler.labels
+						let zippedResults = zip(labels.indices, result!)
+						let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
+						
+						var predictions:[Prediction] = [Prediction]()
+						var text = ""
+						for result in sortedResults {
+							print("\(labels[result.0]) \(result.1) ")
+							text += "\u{2022} \(labels[result.0]) \n\n"
+							predictions.append(Prediction(butterflyClass: labels[result.0], output: result.1.doubleValue, prob: result.1.doubleValue))
+						}
+						self.recognitionState = self.recognitionState.with(predictions: predictions)
 						return self.recognitionState
 					}
 					.subscribe(onNext: {state in
@@ -87,24 +103,42 @@ class RecognitionPresenter:BasePresenter{
 				state.onNext(RecognitionViewStates.closeRecognitionView)
 			case .liveImageTaken(let image):
 				Observable.of(1).startWith(1).take(1)
+					.filter({_ in !self.processing})
 					.map{result -> RecognitionState in
 						self.recognitionState = self.recognitionState.with(image: image)
 						return self.recognitionState
 					}
 					.subscribeOn(backgroundThreadScheduler.scheduler)
-					.map{state -> Result? in
+					.map{state -> [NSNumber]? in
 						let image = state.image
-						guard let buffer = CVImageBuffer.buffer(from: image!) else {
+						let resizedImage = image!.resized(to: CGSize(width: 224, height: 224))
+						guard var pixelBuffer = resizedImage.normalized() else {
 							return nil
 						}
-						return self.modelDataHandler?.runModel(onFrame: buffer)}
-					.map{result -> RecognitionState in
-						self.recognitionState = self.recognitionState.with(predictions: result?.to().predictions ?? [Prediction]())
-						return self.recognitionState
-					}
+						self.processing = true
+						print("start processing")
+						return self.modelDataHandler.module.predict(image: UnsafeMutableRawPointer(&pixelBuffer))}
+							.map{result -> RecognitionState in
+								print("end processing")
+								self.processing=false
+								let labels = self.modelDataHandler.labels
+								let zippedResults = zip(labels.indices, result!)
+								let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
+								
+								var predictions:[Prediction] = [Prediction]()
+								var text = ""
+								for result in sortedResults {
+									print("\(labels[result.0]) \(result.1) ")
+									text += "\u{2022} \(labels[result.0]) \n\n"
+									predictions.append(Prediction(butterflyClass: labels[result.0], output: result.1.doubleValue, prob: result.1.doubleValue))
+								}
+								self.recognitionState = self.recognitionState.with(predictions: predictions)
+								return self.recognitionState
+							}
 					.subscribe(onNext: {state in
 						self.state.onNext(RecognitionViewStates.liveImageRecognized(predictions: state.predictions))
-					}, onError: {error in print(error.localizedDescription)})
+					}, onError: {error in
+						print(error.localizedDescription)})
 					.disposed(by: disposeBag!)
 			case .closeLiveClicked:
 				state.onNext(RecognitionViewStates.closeLiveRecognitionView)
