@@ -18,6 +18,10 @@ struct Predictions:Codable{
 	init(){
 		predictions = [Prediction]()
 	}
+	
+	init(predictions:[Prediction]){
+		self.predictions = predictions
+	}
 }
 
 struct Prediction:Codable{
@@ -30,6 +34,12 @@ struct Prediction:Codable{
 		case output
 		case prob
 		
+	}
+	
+	init(butterflyClass: String, output: Double, prob: Double) {
+		self.butterflyClass = butterflyClass
+		self.output = output
+		self.prob = prob
 	}
 	
 	init(){

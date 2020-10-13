@@ -12,11 +12,13 @@ import UIKit
 enum RecognitionViewStates : ViewState{
 	case showGallery
 	case showCamera
-	case showVideo
 	case imageRecognized(predictions:[Prediction])
+	case liveImageRecognized(predictions:[Prediction])
 	case showRecognitionView(image:UIImage)
 	case recognitionStarted
 	case closeRecognitionView
+	case showLiveRecognitionView
+	case closeLiveRecognitionView
 	
 	var isTransition: Bool{
 		return false

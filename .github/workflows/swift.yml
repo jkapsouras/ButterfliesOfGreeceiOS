@@ -15,6 +15,11 @@ jobs:
     - uses: actions/checkout@v2
       with:
         lfs: 'true'
+    - name: Install Dependencies
+      run: |
+        cd ButterfliesOfGreece
+        pod install --repo-update
+      shell: bash
     - name: Build in folder
       run: xcodebuild -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme 'ButterfliesOfGreece' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
     - name: Run tests
