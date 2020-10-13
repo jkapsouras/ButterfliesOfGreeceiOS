@@ -11,7 +11,9 @@ import UIKit
 class RecognitionViewController: BaseController<RecognitionPresenter> {
 	@IBOutlet weak var ButtonChoose: UIButton!
 	@IBOutlet weak var ButtonTake: UIButton!
+	@IBOutlet weak var ButtonLive: UIButton!
 	@IBOutlet weak var ViewRecognition: RecognitionView!
+	@IBOutlet weak var ViewLiveSession: LiveSession!
 	
 	var imageComponent:ImageComponent?
 	
@@ -46,12 +48,18 @@ class RecognitionViewController: BaseController<RecognitionPresenter> {
 		butterfliesNavigation.setNavigationBarHidden(false, animated: true)
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+	}
+	
 	override func viewWillLayoutSubviews() {
 		ButtonChoose.centerVerticallyWithPadding(padding: buttonPadding)
 		ButtonTake.centerVerticallyWithPadding(padding: buttonPadding)
+		ButtonLive.centerVerticallyWithPadding(padding: buttonPadding)
 		
 		ButtonChoose.layer.cornerRadius = 16
 		ButtonTake.layer.cornerRadius = 16
+		ButtonLive.layer.cornerRadius = 16
 		
 		ViewRecognition.updateViews()
 	}
@@ -65,12 +73,16 @@ class RecognitionViewController: BaseController<RecognitionPresenter> {
 		ButtonChoose.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
 		ButtonTake.layer.borderWidth=4
 		ButtonTake.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
+		ButtonLive.layer.borderWidth=4
+		ButtonLive.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
 		
 		ButtonChoose.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
 		ButtonTake.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
+		ButtonLive.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
 		
 		ButtonChoose.backgroundColor = Constants.Colors.recognition(darkMode: false).color
 		ButtonTake.backgroundColor = Constants.Colors.recognition(darkMode: false).color
+		ButtonLive.backgroundColor = Constants.Colors.recognition(darkMode: false).color
 		
 		ButtonChoose.setImage(UIImage(imageLiteralResourceName: "imageIcon").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonChoose.tintColor = Constants.Colors.recognition(darkMode: true).color
@@ -78,6 +90,9 @@ class RecognitionViewController: BaseController<RecognitionPresenter> {
 		ButtonTake.setImage(UIImage(imageLiteralResourceName: "cameraIcon").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonTake.tintColor = Constants.Colors.recognition(darkMode: true).color
 		ButtonTake.imageView?.contentMode = .scaleAspectFit
+		ButtonLive.setImage(UIImage(imageLiteralResourceName: "videoIcon").withRenderingMode(.alwaysTemplate), for: .normal)
+		ButtonLive.tintColor = Constants.Colors.recognition(darkMode: true).color
+		ButtonLive.imageView?.contentMode = .scaleAspectFit
 		
 		view.backgroundColor = UIColor.white
 	}
@@ -85,13 +100,15 @@ class RecognitionViewController: BaseController<RecognitionPresenter> {
 	override func LocalizeViews() {
 		ButtonChoose.setTitle(Translations.ChoosePhoto, for: .normal)
 		ButtonTake.setTitle(Translations.TakePhoto, for: .normal)
+		ButtonLive.setTitle(Translations.LiveRecognition, for: .normal)
 		
 		ButtonChoose.setFont(size: Constants.Fonts.fontMenuSize)
 		ButtonTake.setFont(size: Constants.Fonts.fontMenuSize)
+		ButtonLive.setFont(size: Constants.Fonts.fontMenuSize)
 	}
     
 	override func InitializeComponents() -> Array<UiComponent> {
-		imageComponent = ImageComponent(chooseButton: ButtonChoose, takeButton: ButtonTake, recognitionView: ViewRecognition, owner: self)
+		imageComponent = ImageComponent(chooseButton: ButtonChoose, takeButton: ButtonTake, liveButton: ButtonLive, recognitionView: ViewRecognition, liveView: ViewLiveSession, owner: self)
 		return [imageComponent!]
 	}
 

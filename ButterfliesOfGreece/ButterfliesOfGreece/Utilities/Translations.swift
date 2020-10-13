@@ -439,6 +439,12 @@ struct Translations {
 			"photo_recognized_second".Localise()
 		}
 	}
+	
+	static var LiveRecognition:String {
+		get{
+			"live_recognition".Localise()
+		}
+	}
 
 	static func FindLanguage(language:String? = nil)->Bundle
 	{

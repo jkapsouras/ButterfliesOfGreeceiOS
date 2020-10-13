@@ -15,20 +15,26 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 	let recognitionView:RecognitionView
 	let chooseButton:UIButton
 	let takeButton:UIButton
+	let liveButton:UIButton
 	let owner:UIViewController
 	let emitter:PublishSubject<UiEvent> = PublishSubject<UiEvent>()
 	let uiEvents: Observable<UiEvent>
 	let imagePicker:UIImagePickerController
+	let liveView:LiveSession
 	
-	init(chooseButton:UIButton, takeButton:UIButton, recognitionView:RecognitionView, owner:UIViewController) {
+	init(chooseButton:UIButton, takeButton:UIButton, liveButton:UIButton, recognitionView:RecognitionView, liveView:LiveSession, owner:UIViewController) {
 		self.owner = owner
 		self.recognitionView = recognitionView
 		self.chooseButton = chooseButton
 		self.takeButton = takeButton
+		self.liveButton = liveButton
+		self.liveView = liveView
 		
 		uiEvents = Observable.merge(chooseButton.rx.tap.map{_ in RecognitionEvents.choosePhotoClicked},
 									takeButton.rx.tap.map{_ in RecognitionEvents.takePhotoClicked},
-									recognitionView.ViewEvents(),
+									liveButton.rx.tap.map{_ in RecognitionEvents.liveRecognitionClicked},
+									recognitionView.UiEvents,
+									liveView.UiEvents,
 									emitter.asObservable())
 		
 		imagePicker =  UIImagePickerController()
@@ -68,8 +74,15 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 					recognitionView.hideLoading()
 					recognitionView.alpha = 0
 					recognitionView.showSelectedImage(image: UIImage())
-				default:
-					print("something else")
+				case .showLiveRecognitionView:
+					liveView.alpha = 1
+					liveView.setupSession()
+				case .liveImageRecognized(let predictions):
+					let string = predictions[0].butterflyClass
+					liveView.setTextToSession(text: string)
+				case .closeLiveRecognitionView:
+					liveView.stopSession()
+					liveView.alpha = 0
 			}
 		}
 		if let state = viewState as? GeneralViewState{
