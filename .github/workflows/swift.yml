@@ -25,7 +25,7 @@ jobs:
     - uses: ty0x2333/cocoapods-action@master
       with:
         workspace: ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace
-        scheme: ButterfliesOfGreece, ButterfliesOfGreeceTests
+        scheme: ButterfliesOfGreece
         lint: false 
         additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
         additional_lint_params: --private
