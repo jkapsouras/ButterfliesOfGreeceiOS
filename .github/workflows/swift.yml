@@ -26,9 +26,8 @@ jobs:
       with:
         workspace: ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace
         scheme: ButterfliesOfGreece
+        additional_build_params: -destination 'platform=iOS Simulator,id=761CB82C-2702-47C8-B912-02836EC02359'
         lint: false 
-        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
-        additional_lint_params: --private
     - name: Build in folder
       run: xcodebuild -workspace 'ButterfliesOfGreece/ButterfliesOfGreece.xcworkspace' -scheme 'ButterfliesOfGreece' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
     - name: Run tests
