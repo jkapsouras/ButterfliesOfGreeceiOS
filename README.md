@@ -1,7 +1,7 @@
 # ButterfliesOfGreeceiOS
 Upgrading Butterflies of Greece to native (Swift)
 
-# https://apps.apple.com/us/app/butterflies-of-greece/id1147721185?l=el#?platform=iphone
+https://apps.apple.com/us/app/butterflies-of-greece/id1147721185?l=el#?platform=iphone
 
 Github Action Status: ![Swift](https://github.com/jkapsouras/ButterfliesOfGreeceiOS/workflows/Swift/badge.svg?branch=develop)
 
