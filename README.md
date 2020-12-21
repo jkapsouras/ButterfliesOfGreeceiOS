@@ -19,3 +19,9 @@ App center master branch status: ![Swift](https://build.appcenter.ms/v0.1/apps/3
 - Endangered
 - Online recognition
 - Offline recognition
+
+
+Feel free to check and use the source code (I have to find time to write down the architecture used to implement the app)
+### BUT
+**Photographs included in this project are under copyright of Mr. Lazaros N. Pamperis. If you want to use these photographs, please contact Mr. Pamperis at pamperis@otenet.gr**
+You can find a lot more about Butterflies of Greece at Mr. Pamperis' website: **http://www.pamperis.gr/index/Welcome.html**
