@@ -38,6 +38,7 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 									emitter.asObservable())
 		
 		imagePicker =  UIImagePickerController()
+		imagePicker.allowsEditing = true
 		super.init()
 		
 		imagePicker.delegate = self
@@ -45,7 +46,7 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		imagePicker.dismiss(animated: true, completion: nil)
-		guard let selectedImage = info[.originalImage] as? UIImage else {
+		guard let selectedImage = info[.editedImage] as? UIImage else {
 			print("Image not found!")
 			return
 		}
@@ -60,7 +61,6 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 					owner.present(imagePicker, animated: true, completion: nil)
 				case .showCamera:
 					imagePicker.sourceType = .camera
-					imagePicker.allowsEditing = false
 					owner.present(imagePicker, animated: true, completion: nil)
 				case .showRecognitionView(let image):
 					recognitionView.alpha = 1
