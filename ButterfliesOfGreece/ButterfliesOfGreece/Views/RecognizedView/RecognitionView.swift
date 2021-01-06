@@ -21,7 +21,10 @@ class RecognitionView: UIView {
 	@IBOutlet weak var ConstLabelTop: NSLayoutConstraint!
 	@IBOutlet weak var ConstLabelBottom: NSLayoutConstraint!
 	@IBOutlet weak var ButtonClose: UIButton!
+	@IBOutlet weak var ConstButtonHeight: NSLayoutConstraint!
+	@IBOutlet weak var ConstButtonBottom: NSLayoutConstraint!
 	
+	@IBOutlet weak var ButtonSave: UIButton!
 	var contentView:UIView?
 	let nibName = "RecognitionView"
 	var UiEvents: Observable<UiEvent>{get
@@ -72,9 +75,15 @@ class RecognitionView: UIView {
 		ButtonOffline.backgroundColor = Constants.Colors.recognition(darkMode: false).color
 		ButtonOffline.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
 		ButtonOffline.layer.borderWidth = 2
+		ButtonSave.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
+		ButtonSave.backgroundColor = Constants.Colors.recognition(darkMode: false).color
+		ButtonSave.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
+		ButtonSave.layer.borderWidth = 2
 		SpinnerLoading.color = Constants.Colors.recognition(darkMode: true).color
 		ConstLabelTop.constant = 0
 		ConstLabelBottom.constant = 0
+		ConstButtonHeight.constant = 0
+		ConstButtonBottom.constant = 0
 		
 		ButtonClose.setImage(UIImage(imageLiteralResourceName: "closeX").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonClose.tintColor = Constants.Colors.recognition(darkMode: true).color
@@ -86,18 +95,21 @@ class RecognitionView: UIView {
 	func updateViews(){
 		ButtonOnline.layer.cornerRadius = ButtonOnline.frame.height/2
 		ButtonOffline.layer.cornerRadius = ButtonOffline.frame.height/2
+		ButtonSave.layer.cornerRadius = ButtonOffline.frame.height/2
 	}
 	
 	func prepareTexts(){
 		LabelRecognized.text = ""
 		ButtonOnline.setTitle(Translations.RecognizeOnline, for: .normal)
 		ButtonOffline.setTitle(Translations.RecognizeOffline, for: .normal)
+		ButtonSave.setTitle(Translations.Save, for: .normal)
 	}
 	
 	func prepareFonts(){
 		LabelRecognized.setFont(size: Constants.Fonts.titleControllerSise)
 		ButtonOnline.setFont(size: Constants.Fonts.titleControllerSise)
 		ButtonOffline.setFont(size: Constants.Fonts.titleControllerSise)
+		ButtonSave.setFont(size: Constants.Fonts.titleControllerSise)
 	}
 	
 	func showSelectedImage(image:UIImage){
@@ -105,6 +117,8 @@ class RecognitionView: UIView {
 		ViewButtons.alpha = 1
 		ConstLabelTop.constant = 0
 		ConstLabelBottom.constant = 0
+		ConstButtonBottom.constant = 0
+		ConstButtonHeight.constant = 0
 		LabelRecognized.text = ""
 	}
 	
@@ -113,6 +127,8 @@ class RecognitionView: UIView {
 		LabelRecognized.text = "\(Translations.RecognizedFirst) \(predictions[0].butterflyClass)"//" \(Translations.RecognizedSecond) \(predictions[0].prob)%"
 		ConstLabelTop.constant = 16
 		ConstLabelBottom.constant = 16
+		ConstButtonBottom.constant = 16
+		ConstButtonHeight.constant = 40
 	}
 	
 	func showLoading(){
@@ -120,6 +136,7 @@ class RecognitionView: UIView {
 		SpinnerLoading.startAnimating()
 		ButtonOnline.alpha = 0
 		ButtonOffline.alpha = 0
+		ButtonSave.alpha = 0
 	}
 	
 	func hideLoading(){
@@ -127,12 +144,14 @@ class RecognitionView: UIView {
 		SpinnerLoading.stopAnimating()
 		ButtonOnline.alpha = 1
 		ButtonOffline.alpha = 1
+		ButtonSave.alpha = 1
 	}
 	
 	func ViewEvents() -> Observable<UiEvent>
 	{
 		return Observable.merge(ButtonOnline.rx.tap.map{_ in RecognitionEvents.onlineClicked},
 								ButtonOffline.rx.tap.map{_ in RecognitionEvents.offlineClicked},
-								ButtonClose.rx.tap.map{_ in RecognitionEvents.closeClicked})
+								ButtonClose.rx.tap.map{_ in RecognitionEvents.closeClicked},
+								ButtonSave.rx.tap.map{_ in RecognitionEvents.saveImage})
 	}
 }

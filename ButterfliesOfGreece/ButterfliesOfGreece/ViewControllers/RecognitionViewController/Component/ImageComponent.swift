@@ -9,9 +9,21 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Photos
 
-class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver
 {
+	func photoLibraryDidChange(_ changeInstance: PHChange) {
+		
+	}
+	
+	var assetCollection: PHAssetCollection!
+	var albumFound : Bool = false
+	var photosAsset: PHFetchResult<PHAsset>!
+	var assetThumbnailSize:CGSize!
+	var collection: PHAssetCollection!
+	var assetCollectionPlaceholder: PHObjectPlaceholder!
+	
 	let recognitionView:RecognitionView
 	let chooseButton:UIButton
 	let takeButton:UIButton
@@ -42,6 +54,60 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 		super.init()
 		
 		imagePicker.delegate = self
+		
+	}
+	
+	func createAlbumAndSaveImage(imageToSave: UIImage, name: String) {
+		//Get PHFetch Options
+		let fetchOptions = PHFetchOptions()
+		fetchOptions.predicate = NSPredicate(format: "title = %@", name)
+		let collection : PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
+		//Check return value - If found, then get the first album out
+		if let _: AnyObject = collection.firstObject {
+			self.albumFound = true
+			assetCollection = collection.firstObject as! PHAssetCollection
+			saveImage(image: imageToSave)
+		} else {
+			//If not found - Then create a new album
+			PHPhotoLibrary.shared().performChanges({
+				let createAlbumRequest : PHAssetCollectionChangeRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: name)
+				self.assetCollectionPlaceholder = createAlbumRequest.placeholderForCreatedAssetCollection
+			}, completionHandler: { success, error in
+				self.albumFound = success
+				
+				if (success) {
+					let collectionFetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [self.assetCollectionPlaceholder.localIdentifier], options: nil)
+					print(collectionFetchResult)
+					self.assetCollection = collectionFetchResult.firstObject as! PHAssetCollection
+					self.saveImage(image: imageToSave)
+				}
+			})
+		}
+	}
+	
+	func saveImage(image: UIImage){
+		PHPhotoLibrary.shared().performChanges({
+			let assetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+			let assetPlaceholder = assetRequest.placeholderForCreatedAsset
+			self.photosAsset = PHAsset.fetchAssets(in: self.assetCollection, options: nil)
+			let albumChangeRequest = PHAssetCollectionChangeRequest(for: self.assetCollection, assets: self.photosAsset)
+			albumChangeRequest!.addAssets([assetPlaceholder!] as NSFastEnumeration)
+		}, completionHandler: { success, error in
+			if let error = error {
+				// we got back an error!
+				DispatchQueue.main.async {
+					let ac = UIAlertController(title: Translations.SaveError, message: error.localizedDescription, preferredStyle: .alert)
+				ac.addAction(UIAlertAction(title:  Translations.Ok, style: .default))
+				self.owner.present(ac, animated: true)
+				}
+			} else {
+				DispatchQueue.main.async {
+					let ac = UIAlertController(title: Translations.Saved, message: Translations.SavedMessage, preferredStyle: .alert)
+					ac.addAction(UIAlertAction(title: Translations.Ok, style: .default))
+				self.owner.present(ac, animated: true)
+				}
+			}
+		})
 	}
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -83,6 +149,10 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 				case .closeLiveRecognitionView:
 					liveView.stopSession()
 					liveView.alpha = 0
+				case .imageSaved(let image, let name):
+					print("image saved")
+//					UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+					createAlbumAndSaveImage(imageToSave: image, name: name)
 			}
 		}
 		if let state = viewState as? GeneralViewState{

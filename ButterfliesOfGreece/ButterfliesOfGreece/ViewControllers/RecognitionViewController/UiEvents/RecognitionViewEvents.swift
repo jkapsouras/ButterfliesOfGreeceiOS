@@ -20,4 +20,5 @@ enum RecognitionEvents : UiEvent {
 	case closeClicked
 	case closeLiveClicked
 	case liveImageTaken(image:UIImage)
+	case saveImage
 }
