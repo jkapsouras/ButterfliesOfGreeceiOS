@@ -19,6 +19,7 @@ enum RecognitionViewStates : ViewState{
 	case closeRecognitionView
 	case showLiveRecognitionView
 	case closeLiveRecognitionView
+	case imageSaved(image:UIImage, name: String)
 	
 	var isTransition: Bool{
 		return false
