@@ -445,6 +445,30 @@ struct Translations {
 			"live_recognition".Localise()
 		}
 	}
+	
+	static var Save:String {
+		get{
+			"save".Localise()
+		}
+	}
+	
+	static var Saved:String {
+		get{
+			"saved".Localise()
+		}
+	}
+	
+	static var SavedMessage:String {
+		get{
+			"saved_message".Localise()
+		}
+	}
+	
+	static var SaveError:String {
+		get{
+			"save_error".Localise()
+		}
+	}
 
 	static func FindLanguage(language:String? = nil)->Bundle
 	{

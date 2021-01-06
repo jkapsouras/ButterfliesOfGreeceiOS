@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,10 @@
                 <outlet property="ButtonClose" destination="Q7J-oJ-ox0" id="nkz-h6-nL3"/>
                 <outlet property="ButtonOffline" destination="tta-h0-NcH" id="F9k-wx-6nZ"/>
                 <outlet property="ButtonOnline" destination="Emw-sB-hzo" id="ylk-t6-Dm8"/>
-                <outlet property="ConstLabelBottom" destination="vPO-0q-MXu" id="CKB-VG-mRY"/>
+                <outlet property="ButtonSave" destination="tLh-h5-ftb" id="jTq-24-F1j"/>
+                <outlet property="ConstButtonBottom" destination="gYs-UL-1Kq" id="P9S-dy-Cy2"/>
+                <outlet property="ConstButtonHeight" destination="nNp-CB-H90" id="u7L-F3-B65"/>
+                <outlet property="ConstLabelBottom" destination="7da-0h-Df8" id="HeT-6e-Cvf"/>
                 <outlet property="ConstLabelTop" destination="puU-sD-NNw" id="NrP-mh-d7j"/>
                 <outlet property="ImageChosen" destination="buR-tx-ovF" id="PKc-cM-UJR"/>
                 <outlet property="LabelRecognized" destination="SPy-DE-aJO" id="TKI-jd-VR7"/>
@@ -29,13 +32,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPy-DE-aJO">
-                    <rect key="frame" x="16" y="833.5" width="382" height="20.5"/>
+                    <rect key="frame" x="16" y="769.5" width="382" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLh-h5-ftb">
+                    <rect key="frame" x="191" y="806" width="32" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nNp-CB-H90"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buR-tx-ovF">
-                    <rect key="frame" x="0.0" y="44" width="414" height="773.5"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="709.5"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-8P-1lq">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
@@ -92,6 +102,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="buR-tx-ovF" secondAttribute="trailing" id="20K-g7-nWg"/>
+                <constraint firstItem="tLh-h5-ftb" firstAttribute="top" secondItem="SPy-DE-aJO" secondAttribute="bottom" constant="16" id="7da-0h-Df8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q7J-oJ-ox0" secondAttribute="trailing" constant="16" id="K4p-sT-VXd"/>
                 <constraint firstItem="SPy-DE-aJO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PvM-HJ-JlH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ht1-8P-1lq" secondAttribute="trailing" id="SXJ-aN-3vW"/>
@@ -100,12 +111,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SPy-DE-aJO" secondAttribute="trailing" constant="16" id="d5F-5L-BdW"/>
                 <constraint firstItem="buR-tx-ovF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dQy-jf-BWo"/>
                 <constraint firstItem="Ht1-8P-1lq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gU6-NQ-KBC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tLh-h5-ftb" secondAttribute="bottom" constant="16" id="gYs-UL-1Kq"/>
                 <constraint firstItem="Ht1-8P-1lq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="h2e-wr-dQH"/>
                 <constraint firstItem="SPy-DE-aJO" firstAttribute="top" secondItem="buR-tx-ovF" secondAttribute="bottom" constant="16" id="puU-sD-NNw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SPy-DE-aJO" secondAttribute="bottom" constant="8" id="vPO-0q-MXu"/>
+                <constraint firstItem="tLh-h5-ftb" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="uHP-Pm-sVJ"/>
                 <constraint firstItem="buR-tx-ovF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zgd-5w-jpT"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="135"/>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </view>
     </objects>
     <resources>
