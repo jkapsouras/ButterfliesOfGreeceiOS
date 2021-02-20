@@ -38,6 +38,7 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 									emitter.asObservable())
 		
 		imagePicker =  UIImagePickerController()
+		imagePicker.allowsEditing = true
 		super.init()
 		
 		imagePicker.delegate = self
