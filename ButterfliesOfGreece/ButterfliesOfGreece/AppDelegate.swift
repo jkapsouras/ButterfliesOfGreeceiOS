@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		MSAppCenter.start("7e373fe2-791f-4620-9efa-5a165d945886", withServices:[
-		  MSAnalytics.self,
-		  MSCrashes.self
-		])
+		AppCenter.start(withAppSecret: "7e373fe2-791f-4620-9efa-5a165d945886", services: [
+			Analytics.self,
+		 Crashes.self
+	   ]) 
 		
 		IQKeyboardManager.shared.enable = true;
 		IQKeyboardManager.shared.enableAutoToolbar = true;

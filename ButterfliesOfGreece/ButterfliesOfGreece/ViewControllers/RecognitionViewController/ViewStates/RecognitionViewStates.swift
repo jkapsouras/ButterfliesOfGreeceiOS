@@ -13,7 +13,7 @@ enum RecognitionViewStates : ViewState{
 	case showGallery
 	case showCamera
 	case imageRecognized(predictions:[Prediction])
-	case liveImageRecognized(predictions:[Prediction])
+	case liveImageRecognized(predictions:[Prediction], inferences:[DetectionInference], imageSize:CGSize)
 	case showRecognitionView(image:UIImage)
 	case recognitionStarted
 	case closeRecognitionView

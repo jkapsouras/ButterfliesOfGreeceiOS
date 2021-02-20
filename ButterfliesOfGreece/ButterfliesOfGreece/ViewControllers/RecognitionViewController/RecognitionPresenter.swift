@@ -22,7 +22,7 @@ class RecognitionPresenter:BasePresenter{
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
 		 recognitionRepository:RecognitionRepository){
 		self.recognitionRepository = recognitionRepository
-		recognitionState = RecognitionState(image: nil, imageData: nil, imagePixelBuffer: nil, predictions: [Prediction]())
+		recognitionState = RecognitionState(image: nil, imageData: nil, imagePixelBuffer: nil, predictions: [Prediction](), inferences: [DetectionInference]())
 		detectionModelDataHandler = DetectionModelDataHandler(modelFileInfo: MobileNetSSD.modelInfo, labelsFileInfo: MobileNetSSD.labelsInfo, threadCount: 2)
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
@@ -144,11 +144,14 @@ class RecognitionPresenter:BasePresenter{
 //									text += "\u{2022} \(labels[result.0]) \n\n"
 									predictions.append(Prediction(butterflyClass: r.className, output: 0, prob: 0))
 								}
-								self.recognitionState = self.recognitionState.with(predictions: predictions)
+								self.recognitionState = self.recognitionState.with(predictions: predictions, inferences: result!.inferences)
 								return self.recognitionState
 							}
 					.subscribe(onNext: {state in
-						self.state.onNext(RecognitionViewStates.liveImageRecognized(predictions: state.predictions))
+						let width = CVPixelBufferGetWidth(state.imagePixelBuffer!)
+						let height = CVPixelBufferGetHeight(state.imagePixelBuffer!)
+						let size = CGSize(width: width, height: height)
+						self.state.onNext(RecognitionViewStates.liveImageRecognized(predictions: state.predictions, inferences: state.inferences, imageSize: size))
 					}, onError: {error in
 						print(error.localizedDescription)})
 					.disposed(by: disposeBag!)
