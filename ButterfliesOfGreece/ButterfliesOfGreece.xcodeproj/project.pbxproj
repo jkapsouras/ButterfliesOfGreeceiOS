@@ -152,13 +152,15 @@
 		0A574C4525227B7500A8B5BC /* CVPixelBufferExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */; };
 		0A574C49252310DE00A8B5BC /* Inference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C48252310DE00A8B5BC /* Inference.swift */; };
 		0A574C4F2523111D00A8B5BC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4E2523111D00A8B5BC /* Result.swift */; };
+		0A71AF2525370FFA00BE2320 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2325370FFA00BE2320 /* model.pt */; };
+		0A71AF2625370FFA00BE2320 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2425370FFA00BE2320 /* words.txt */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
 		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
 		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
 		0AD465FA2530FBBF00DA8E0F /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AD465F82530FBBD00DA8E0F /* words.txt */; };
-		0AD465FB2530FBBF00DA8E0F /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0AD465F92530FBBF00DA8E0F /* model.pt */; };
+		0AF153D525A6324B00BD0D30 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0AF153CF25A62C8000BD0D30 /* model.pt */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE10425124D4B7230075D027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425024D4B7230075D027 /* Constants.swift */; };
@@ -354,6 +356,8 @@
 		0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtensions.swift; sourceTree = "<group>"; };
 		0A574C48252310DE00A8B5BC /* Inference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inference.swift; sourceTree = "<group>"; };
 		0A574C4E2523111D00A8B5BC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0A71AF2325370FFA00BE2320 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
+		0A71AF2425370FFA00BE2320 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
@@ -361,7 +365,7 @@
 		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		0AD465F02530F86500DA8E0F /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
 		0AD465F82530FBBD00DA8E0F /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
-		0AD465F92530FBBF00DA8E0F /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
+		0AF153CF25A62C8000BD0D30 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.pt; path = ../../../../../ButterfliesOfGreeceAndroid/app/src/main/assets/model.pt; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.release.xcconfig"; sourceTree = "<group>"; };
 		62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButterfliesOfGreeceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -978,22 +982,22 @@
 			path = ExtensionTests;
 			sourceTree = "<group>";
 		};
-		0A574C352522788D00A8B5BC /* TensorModel */ = {
-			isa = PBXGroup;
-			children = (
-				0AD465F92530FBBF00DA8E0F /* model.pt */,
-				0AD465F82530FBBD00DA8E0F /* words.txt */,
-			);
-			path = TensorModel;
-			sourceTree = "<group>";
-		};
 		0A705D31251E2AAA00B29D2B /* RecognizedView */ = {
 			isa = PBXGroup;
 			children = (
-				0A24033D251FA156002665A1 /* RecognitionView.swift */,
-				0A24033C251FA156002665A1 /* RecognitionView.xib */,
+				0AF153CF25A62C8000BD0D30 /* model.pt */,
+				0AD465F82530FBBD00DA8E0F /* words.txt */,
 			);
 			path = RecognizedView;
+			sourceTree = "<group>";
+		};
+		0A71AF2225370FFA00BE2320 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0A71AF2325370FFA00BE2320 /* model.pt */,
+				0A71AF2425370FFA00BE2320 /* words.txt */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		0AC7BAFD24CF012E000908B9 /* Events */ = {
@@ -1045,7 +1049,7 @@
 		FE10425424D5A6130075D027 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0A574C352522788D00A8B5BC /* TensorModel */,
+				0A71AF2225370FFA00BE2320 /* model */,
 				0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */,
 				0A240489251FA21C002665A1 /* 135366-16.pdf */,
 				0A24048A251FA21C002665A1 /* data.json */,
@@ -1398,6 +1402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF153D525A6324B00BD0D30 /* model.pt in Resources */,
 				0A2333992524BE6100A6CA92 /* LiveSession.xib in Resources */,
 				0A24045A251FA1BE002665A1 /* PdfPreview.storyboard in Resources */,
 				0A240440251FA1BE002665A1 /* PrintToPdf.storyboard in Resources */,
@@ -1407,6 +1412,7 @@
 				0A24040E251FA1BE002665A1 /* Contribute.storyboard in Resources */,
 				0A240490251FA21D002665A1 /* data.json in Resources */,
 				0A24041E251FA1BE002665A1 /* InfoModal.storyboard in Resources */,
+				0A71AF2525370FFA00BE2320 /* model.pt in Resources */,
 				0A240431251FA1BE002665A1 /* Families.storyboard in Resources */,
 				0A240374251FA1AB002665A1 /* PhotosTableViewCell.xib in Resources */,
 				0A24041B251FA1BE002665A1 /* Navigation.storyboard in Resources */,
@@ -1414,12 +1420,12 @@
 				0A240419251FA1BE002665A1 /* Introduction.storyboard in Resources */,
 				0A240344251FA166002665A1 /* ContributeView.xib in Resources */,
 				0A24033E251FA156002665A1 /* RecognitionView.xib in Resources */,
-				0AD465FB2530FBBF00DA8E0F /* model.pt in Resources */,
 				0A24042E251FA1BE002665A1 /* Photos.storyboard in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				0A240368251FA19A002665A1 /* PhotosCollectionView.xib in Resources */,
 				0A240455251FA1BE002665A1 /* Menu.storyboard in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
+				0A71AF2625370FFA00BE2320 /* words.txt in Resources */,
 				0A24048F251FA21D002665A1 /* 135366-16.pdf in Resources */,
 				0A24048C251FA21D002665A1 /* 127557_2178_2015.pdf in Resources */,
 				0A240418251FA1BE002665A1 /* PageModal.storyboard in Resources */,
@@ -1431,7 +1437,6 @@
 				0A240461251FA1BE002665A1 /* Legal.storyboard in Resources */,
 				0A240427251FA1BE002665A1 /* Species.storyboard in Resources */,
 				0A24034C251FA172002665A1 /* HeaderPrintToPdfView.xib in Resources */,
-				0AD465FA2530FBBF00DA8E0F /* words.txt in Resources */,
 				0A24044B251FA1BE002665A1 /* Recognition.storyboard in Resources */,
 				0A24044D251FA1BE002665A1 /* Search.storyboard in Resources */,
 			);
@@ -1836,6 +1841,7 @@
 				DEVELOPMENT_TEAM = DUS7984ZVP;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ButterfliesOfGreece/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1862,6 +1868,7 @@
 				DEVELOPMENT_TEAM = DUS7984ZVP;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ButterfliesOfGreece/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

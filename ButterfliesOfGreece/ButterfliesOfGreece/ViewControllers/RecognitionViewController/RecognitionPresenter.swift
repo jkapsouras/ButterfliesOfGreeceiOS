@@ -142,6 +142,10 @@ class RecognitionPresenter:BasePresenter{
 					.disposed(by: disposeBag!)
 			case .closeLiveClicked:
 				state.onNext(RecognitionViewStates.closeLiveRecognitionView)
+			case .saveImage:
+				if let image = recognitionState.image{
+					state.onNext(RecognitionViewStates.imageSaved(image: image, name: recognitionState.predictions[0].butterflyClass))
+				}
 		}
 	}
 }

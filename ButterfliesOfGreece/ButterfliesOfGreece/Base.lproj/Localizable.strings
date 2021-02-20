@@ -101,3 +101,7 @@ It is recommended that users, before resorting to the Application, first search 
 "photo_recognized_first" = "The above butterfly recognized to belong in specie";
 "photo_recognized_second" = "with probability";
 "live_recognition" = "Live recognition";
+"save" = "Save photo";
+"saved" = "Photo saved";
+"saved_message" = "Your photo has been saved to your phone";
+"save_error" = "Save error";
