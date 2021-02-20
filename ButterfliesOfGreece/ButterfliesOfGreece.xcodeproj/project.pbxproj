@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A10749825E1A0D200883FD0 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10749725E1A0D200883FD0 /* OverlayView.swift */; };
 		0A2333952524BDBE00A6CA92 /* AVFoundationImpementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */; };
 		0A2333992524BE6100A6CA92 /* LiveSession.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2333982524BE6100A6CA92 /* LiveSession.xib */; };
 		0A23339D2524BE7A00A6CA92 /* LiveSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23339C2524BE7A00A6CA92 /* LiveSession.swift */; };
@@ -150,6 +151,7 @@
 		0A574C4525227B7500A8B5BC /* CVPixelBufferExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */; };
 		0A574C49252310DE00A8B5BC /* Inference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C48252310DE00A8B5BC /* Inference.swift */; };
 		0A574C4F2523111D00A8B5BC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4E2523111D00A8B5BC /* Result.swift */; };
+		0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */; };
 		0A71AF2525370FFA00BE2320 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2325370FFA00BE2320 /* model.pt */; };
 		0A71AF2625370FFA00BE2320 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2425370FFA00BE2320 /* words.txt */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
@@ -157,6 +159,8 @@
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
 		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
 		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
+		0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FC25E03EF0003D0C4F /* detect.tflite */; };
+		0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FB25E03EEF003D0C4F /* labelmap.txt */; };
 		0AF1540625A6351700BD0D30 /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1540425A6351700BD0D30 /* RecognitionView.xib */; };
 		0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1540525A6351700BD0D30 /* RecognitionView.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
@@ -209,6 +213,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A10749725E1A0D200883FD0 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationImpementation.swift; sourceTree = "<group>"; };
 		0A2333982524BE6100A6CA92 /* LiveSession.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveSession.xib; sourceTree = "<group>"; };
 		0A23339C2524BE7A00A6CA92 /* LiveSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSession.swift; sourceTree = "<group>"; };
@@ -352,6 +357,7 @@
 		0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtensions.swift; sourceTree = "<group>"; };
 		0A574C48252310DE00A8B5BC /* Inference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inference.swift; sourceTree = "<group>"; };
 		0A574C4E2523111D00A8B5BC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
 		0A71AF2325370FFA00BE2320 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
 		0A71AF2425370FFA00BE2320 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
@@ -360,6 +366,8 @@
 		0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		0AD465F02530F86500DA8E0F /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		0AEE86FB25E03EEF003D0C4F /* labelmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
+		0AEE86FC25E03EF0003D0C4F /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
 		0AF1540125A634E900BD0D30 /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0AF1540425A6351700BD0D30 /* RecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
 		0AF1540525A6351700BD0D30 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
@@ -984,6 +992,7 @@
 			children = (
 				0AF1540525A6351700BD0D30 /* RecognitionView.swift */,
 				0AF1540425A6351700BD0D30 /* RecognitionView.xib */,
+				0A10749725E1A0D200883FD0 /* OverlayView.swift */,
 			);
 			path = RecognizedView;
 			sourceTree = "<group>";
@@ -1023,6 +1032,15 @@
 			path = Torch;
 			sourceTree = "<group>";
 		};
+		0AEE86FA25E03ECD003D0C4F /* detectionModel */ = {
+			isa = PBXGroup;
+			children = (
+				0AEE86FC25E03EF0003D0C4F /* detect.tflite */,
+				0AEE86FB25E03EEF003D0C4F /* labelmap.txt */,
+			);
+			path = detectionModel;
+			sourceTree = "<group>";
+		};
 		0AF153FE25A634A500BD0D30 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -1053,6 +1071,7 @@
 		FE10425424D5A6130075D027 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0AEE86FA25E03ECD003D0C4F /* detectionModel */,
 				0AF1540125A634E900BD0D30 /* species.pdf */,
 				0A71AF2225370FFA00BE2320 /* model */,
 				0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */,
@@ -1217,6 +1236,7 @@
 				FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */,
 				FE6691EF2514F1B3006C377F /* LocationManager.swift */,
 				0A574C4025227AEB00A8B5BC /* RecognizeManager.swift */,
+				0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1414,6 +1434,7 @@
 				0A240440251FA1BE002665A1 /* PrintToPdf.storyboard in Resources */,
 				0A240408251FA1BE002665A1 /* About.storyboard in Resources */,
 				0A240444251FA1BE002665A1 /* Endangered.storyboard in Resources */,
+				0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */,
 				0A240364251FA19A002665A1 /* PhotosCollectionViewCell.xib in Resources */,
 				0A24040E251FA1BE002665A1 /* Contribute.storyboard in Resources */,
 				0A240490251FA21D002665A1 /* data.json in Resources */,
@@ -1441,6 +1462,7 @@
 				0A24048D251FA21D002665A1 /* species.pdf in Resources */,
 				0A240461251FA1BE002665A1 /* Legal.storyboard in Resources */,
 				0A240427251FA1BE002665A1 /* Species.storyboard in Resources */,
+				0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */,
 				0A24034C251FA172002665A1 /* HeaderPrintToPdfView.xib in Resources */,
 				0A24044B251FA1BE002665A1 /* Recognition.storyboard in Resources */,
 				0A24044D251FA1BE002665A1 /* Search.storyboard in Resources */,
@@ -1572,6 +1594,7 @@
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				0A24044A251FA1BE002665A1 /* RecognitionViewStates.swift in Sources */,
 				0A23339D2524BE7A00A6CA92 /* LiveSession.swift in Sources */,
+				0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */,
 				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
 				0A240463251FA1BE002665A1 /* LegalViewController.swift in Sources */,
 				0A24042B251FA1BE002665A1 /* PhotosHeaderComponent.swift in Sources */,
@@ -1593,6 +1616,7 @@
 				0A240413251FA1BE002665A1 /* ModalPresenter.swift in Sources */,
 				0A240337251FA146002665A1 /* SpeciesRepository.swift in Sources */,
 				0A24041F251FA1BE002665A1 /* SpeciesState.swift in Sources */,
+				0A10749825E1A0D200883FD0 /* OverlayView.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */,

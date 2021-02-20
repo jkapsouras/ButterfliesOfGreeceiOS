@@ -15,13 +15,15 @@ class RecognitionPresenter:BasePresenter{
 	var recognitionRepository:RecognitionRepository
 	let compressionQuality:CGFloat = 0.7
 	private var modelDataHandler: ModelDataHandler = ModelDataHandler()
+	private var detectionModelDataHandler: DetectionModelDataHandler?
 	var processing = false
 		
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
 		 recognitionRepository:RecognitionRepository){
 		self.recognitionRepository = recognitionRepository
-		recognitionState = RecognitionState(image: nil, imageData: nil, predictions: [Prediction]())
+		recognitionState = RecognitionState(image: nil, imageData: nil, imagePixelBuffer: nil, predictions: [Prediction]())
+		detectionModelDataHandler = DetectionModelDataHandler(modelFileInfo: MobileNetSSD.modelInfo, labelsFileInfo: MobileNetSSD.labelsInfo, threadCount: 2)
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
 	}
 	
@@ -101,36 +103,46 @@ class RecognitionPresenter:BasePresenter{
 				state.onNext(RecognitionViewStates.showLiveRecognitionView)
 			case .closeClicked:
 				state.onNext(RecognitionViewStates.closeRecognitionView)
-			case .liveImageTaken(let image):
+			case .liveImageTaken(let image, let imagePixelBuffer):
 				Observable.of(1).startWith(1).take(1)
 					.filter({_ in !self.processing})
 					.map{result -> RecognitionState in
-						self.recognitionState = self.recognitionState.with(image: image)
+						self.recognitionState = self.recognitionState.with(image: image, imagePixelBuffer: imagePixelBuffer)
 						return self.recognitionState
 					}
 					.subscribeOn(backgroundThreadScheduler.scheduler)
-					.map{state -> [NSNumber]? in
+					.map{state -> DetectionResult? in
 						let image = state.image
+						let imagePixelBuffer = state.imagePixelBuffer
 						let resizedImage = image!.resized(to: CGSize(width: 224, height: 224))
 						guard var pixelBuffer = resizedImage.normalized() else {
 							return nil
 						}
 						self.processing = true
 						print("start processing")
-						return self.modelDataHandler.module.predict(image: UnsafeMutableRawPointer(&pixelBuffer))}
+						let result = self.detectionModelDataHandler?.runModel(onFrame: imagePixelBuffer!)
+//						if(result?.inferences.count ?? 0 > 0)
+//						{
+//							print("There is a result: \(result?.inferences[0].className)")
+//						}
+						return result} //self.modelDataHandler.module.predict(image: UnsafeMutableRawPointer(&pixelBuffer))}
 							.map{result -> RecognitionState in
 								print("end processing")
 								self.processing=false
-								let labels = self.modelDataHandler.labels
-								let zippedResults = zip(labels.indices, result!)
-								let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
+//								let labels = self.modelDataHandler.labels
+//								let zippedResults = zip(labels.indices, result!)
+//								let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
 								
 								var predictions:[Prediction] = [Prediction]()
 								var text = ""
-								for result in sortedResults {
-									print("\(labels[result.0]) \(result.1) ")
-									text += "\u{2022} \(labels[result.0]) \n\n"
-									predictions.append(Prediction(butterflyClass: labels[result.0], output: result.1.doubleValue, prob: result.1.doubleValue))
+								if(result?.inferences.count ?? 0 == 0)
+								{
+									return self.recognitionState
+								}
+								for r in result!.inferences {
+//									print("\(labels[result.0]) \(result.1) ")
+//									text += "\u{2022} \(labels[result.0]) \n\n"
+									predictions.append(Prediction(butterflyClass: r.className, output: 0, prob: 0))
 								}
 								self.recognitionState = self.recognitionState.with(predictions: predictions)
 								return self.recognitionState

@@ -68,8 +68,8 @@ class LiveSession: UIView {
 		cameraSession?.stopSession()
 	}
 	
-	func setImage(image:UIImage){
-		emitter.onNext(RecognitionEvents.liveImageTaken(image: image))
+	func setImage(image:UIImage, imagePixelBuffer: CVPixelBuffer?){
+		emitter.onNext(RecognitionEvents.liveImageTaken(image: image, imagePixelBuffer: imagePixelBuffer))
 	}
 	
 	func setTextToSession(text:String){
