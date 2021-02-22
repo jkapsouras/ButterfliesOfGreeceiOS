@@ -150,7 +150,7 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 					}
 					let string = predictions[0].butterflyClass
 					liveView.setTextToSession(text: string)
-					recognitionView.drawAfterPerformingCalculations(onInferences: inferences, withImageSize: size)
+					liveView.drawAfterPerformingCalculations(onInferences: inferences, withImageSize: size)
 				case .closeLiveRecognitionView:
 					liveView.stopSession()
 					liveView.alpha = 0

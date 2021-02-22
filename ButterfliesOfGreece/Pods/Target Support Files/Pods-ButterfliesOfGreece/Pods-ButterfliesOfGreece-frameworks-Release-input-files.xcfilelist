@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-frameworks.sh
-${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework

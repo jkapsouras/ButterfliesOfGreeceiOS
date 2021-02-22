@@ -37,7 +37,9 @@ namespace QuantizedCPUType {
   Tensor clamp(const Tensor & self, c10::optional<Scalar> min, c10::optional<Scalar> max);
   Tensor _empty_affine_quantized(IntArrayRef size, const TensorOptions & options, double scale, int64_t zero_point, c10::optional<MemoryFormat> memory_format);
   Tensor _empty_per_channel_affine_quantized(IntArrayRef size, const Tensor & scales, const Tensor & zero_points, int64_t axis, const TensorOptions & options, c10::optional<MemoryFormat> memory_format);
+  Tensor & resize_(Tensor & self, IntArrayRef size, c10::optional<MemoryFormat> memory_format);
   Tensor empty_quantized(IntArrayRef size, const Tensor & qtensor);
+  Tensor quantized_max_pool1d(const Tensor & self, IntArrayRef kernel_size, IntArrayRef stride, IntArrayRef padding, IntArrayRef dilation, bool ceil_mode);
   Tensor quantized_max_pool2d(const Tensor & self, IntArrayRef kernel_size, IntArrayRef stride, IntArrayRef padding, IntArrayRef dilation, bool ceil_mode);
   Tensor mean(const Tensor & self, c10::optional<ScalarType> dtype);
   Tensor mean_dim(const Tensor & self, IntArrayRef dim, bool keepdim, c10::optional<ScalarType> dtype);
@@ -101,9 +103,14 @@ namespace QuantizedCPUType {
   Tensor leaky_relu(const Tensor & self, Scalar negative_slope);
   Tensor & leaky_relu_(Tensor & self, Scalar negative_slope);
   Tensor _adaptive_avg_pool2d(const Tensor & self, IntArrayRef output_size);
+  Tensor & adaptive_avg_pool3d_out_out(Tensor & out, const Tensor & self, IntArrayRef output_size);
+  Tensor adaptive_avg_pool3d(const Tensor & self, IntArrayRef output_size);
   Tensor avg_pool2d(const Tensor & self, IntArrayRef kernel_size, IntArrayRef stride, IntArrayRef padding, bool ceil_mode, bool count_include_pad, c10::optional<int64_t> divisor_override);
   Tensor avg_pool3d(const Tensor & self, IntArrayRef kernel_size, IntArrayRef stride, IntArrayRef padding, bool ceil_mode, bool count_include_pad, c10::optional<int64_t> divisor_override);
   Tensor reflection_pad1d(const Tensor & self, IntArrayRef padding);
+  Tensor upsample_bilinear2d_vec(const Tensor & input, c10::optional<IntArrayRef> output_size, bool align_corners, c10::optional<ArrayRef<double>> scale_factors);
+  Tensor upsample_nearest2d_vec(const Tensor & input, c10::optional<IntArrayRef> output_size, c10::optional<ArrayRef<double>> scale_factors);
+  Tensor upsample_nearest3d_vec(const Tensor & input, c10::optional<IntArrayRef> output_size, c10::optional<ArrayRef<double>> scale_factors);
   Tensor upsample_bilinear2d(const Tensor & self, IntArrayRef output_size, bool align_corners, c10::optional<double> scales_h, c10::optional<double> scales_w);
   Tensor upsample_nearest2d(const Tensor & self, IntArrayRef output_size, c10::optional<double> scales_h, c10::optional<double> scales_w);
   Tensor upsample_nearest3d(const Tensor & self, IntArrayRef output_size, c10::optional<double> scales_d, c10::optional<double> scales_h, c10::optional<double> scales_w);

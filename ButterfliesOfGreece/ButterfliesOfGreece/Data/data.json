@@ -560,6 +560,8 @@
         "id": 9,
         "name": "Pontia chloridice",
         "imgtitle": "019_003",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
             "id": 0,
@@ -1174,6 +1176,8 @@
         "id": 2,
         "name": "Satyrium ledereri",
         "imgtitle": "041_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
             "id": 0,
@@ -1367,6 +1371,8 @@
         "id": 10,
         "name": "Lycaena dispar",
         "imgtitle": "049_001",
+		"endangered": true,
+		"endangered_text": "A3c VU",
         "photos": [
           {
             "id": 0,
@@ -1927,6 +1933,8 @@
         "id": 30,
         "name": "Turanana taygetica",
         "imgtitle": "069_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(i,ii,iii) CR",
         "photos": [
           {
             "id": 0,
@@ -2250,6 +2258,8 @@
         "id": 45,
         "name": "Kretania eurypilus",
         "imgtitle": "084_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
             "id": 0,
@@ -2265,6 +2275,8 @@
         "id": 46,
         "name": "Agriades dardanus",
         "imgtitle": "085_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
             "id": 0,
@@ -2452,6 +2464,8 @@
         "id": 53,
         "name": "Polyommatus iphigenia",
         "imgtitle": "092_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
 
@@ -2578,6 +2592,8 @@
         "id": 59,
         "name": "Polyommatus orphicus",
         "imgtitle": "097_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) CR",
         "photos": [
           {
 
@@ -2802,6 +2818,8 @@
         "id": 69,
         "name": "Polyommatus eros",
         "imgtitle": "107_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
             "id": 0,
@@ -2980,6 +2998,8 @@
         "id": 4,
         "name": "Limenitis populi",
         "imgtitle": "115_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
         "photos": [
           {
             "id": 0,
@@ -3003,6 +3023,8 @@
         "id": 5,
         "name": "Limenitis camilla",
         "imgtitle": "116_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
         "photos": [
           {
             "id": 0,
@@ -3065,6 +3087,8 @@
         "id": 7,
         "name": "Neptis sappho",
         "imgtitle": "118_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
         "photos": [
           {
             "id": 0,
@@ -3088,6 +3112,8 @@
         "id": 8,
         "name": "Neptis rivularis",
         "imgtitle": "119_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
         "photos": [
           {
             "id": 0,
@@ -3112,6 +3138,8 @@
         "id": 9,
         "name": "Nymphalis xanthomelas",
         "imgtitle": "120_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
         "photos": [
           {
             "id": 0,
@@ -4018,6 +4046,8 @@
       "id": 8,
       "name": "Hipparchia christenseni",
       "imgtitle": "160_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii) VU",
       "photos": [
         {
           "id": 0,
@@ -4094,6 +4124,8 @@
       "id": 14,
       "name": "Pseudochazara tisiphone",
       "imgtitle": "166_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
       "photos": [
         {
           "id": 0,
@@ -4133,6 +4165,8 @@
       "id": 15,
       "name": "Pseudochazara orestes",
       "imgtitle": "167_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii) EN",
       "photos": [
         {
           "id": 0,
@@ -4148,6 +4182,8 @@
       "id": 16,
       "name": "Pseudochazara amymone",
       "imgtitle": "168_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
       "photos": [
         {
           "id": 0,
@@ -4178,6 +4214,8 @@
       "id": 18,
       "name": "Pseudochazara geyeri",
       "imgtitle": "170_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
       "photos": [
         {
           "id": 0,
@@ -4262,6 +4300,8 @@
       "id": 22,
       "name": "Minois dryas",
       "imgtitle": "173_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
       "photos": [
         {
           "id": 0,
@@ -4353,6 +4393,8 @@
       "id": 27,
       "name": "Erebia aethiops",
       "imgtitle": "178_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
       "photos": [
         {
           "id": 0,
@@ -4399,6 +4441,8 @@
       "id": 29,
       "name": "Erebia epiphron",
       "imgtitle": "180_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
       "photos": [
         {
           "id": 0,
@@ -4461,6 +4505,8 @@
       "id": 31,
       "name": "Erebia neleus",
       "imgtitle": "182_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) CR",
       "photos": [
         {
           "id": 0,
@@ -4484,6 +4530,8 @@
       "id": 32,
       "name": "Erebia oeme",
       "imgtitle": "183_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii,iv)+2ab(ii,iii,iv) VU",
       "photos": [
         {
           "id": 0,
@@ -4507,6 +4555,8 @@
       "id": 33,
       "name": "Erebia rhodopensis",
       "imgtitle": "184_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
       "photos": [
         {
           "id": 0,
@@ -4707,6 +4757,8 @@
       "id": 41,
       "name": "Maniola megala",
       "imgtitle": "192_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
       "photos": [
         {
           "id": 0,
@@ -4930,6 +4982,8 @@
       "id": 52,
       "name": "Coenonympha glycerion",
       "imgtitle": "202_001",
+	  "endangered": true,
+	  "endangered_text": "B1ab(ii,iii,iv)+2ab(ii,iii,iv) VU",
       "photos": [
         {
           "id": 0,
@@ -5331,29 +5385,6 @@
         ]
       },
       {
-        "id": 11,
-        "name": "Muschampia proto",
-        "imgtitle": "220_001",
-        "photos": [
-          {
-            "id": 0,
-            "src": "220_001",
-            "title": "G2",
-            "author": "Pamperis",
-            "genre": "F",
-            "iden": true
-          },
-          {
-            "id": 1,
-            "src": "220_002",
-            "title": "G2",
-            "author": "Pamperis",
-            "genre": "F",
-            "iden": true
-          }
-        ]
-      },
-      {
         "id": 12,
         "name": "Carcharodus alceae",
         "imgtitle": "221_001",
@@ -5519,6 +5550,8 @@
         "id": 19,
         "name": "Carterocephalus palaemon",
         "imgtitle": "228_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) VU",
         "photos": [
           {
             "id": 0,
@@ -5662,6 +5695,8 @@
         "id": 28,
         "name": "Pelopidas thrax",
         "imgtitle": "237_001",
+		"endangered": true,
+		"endangered_text": "B1ab(ii,iii)+2ab(ii,iii) EN",
         "photos": [
           {
             "id": 0,
@@ -5672,6 +5707,36 @@
             "iden": true
           }
         ]
-      }
+      },
+	  {
+		  "id": 29,
+		  "name": "Muschampia alta",
+		  "imgtitle": "240_001",
+		  "photos": [
+			  {
+				  "id": 0,
+				  "src": "240_001",
+				  "title": "G2",
+				  "author": "Pamperis",
+				  "genre": "F",
+				  "iden": true
+			  }
+		  ]
+	  },
+	  {
+		  "id": 30,
+		  "name": "Muschampia proteides",
+		  "imgtitle": "241_001",
+		  "photos": [
+			  {
+				  "id": 0,
+				  "src": "241_001",
+				  "title": "G2",
+				  "author": "Pamperis",
+				  "genre": "F",
+				  "iden": true
+			  }
+		  ]
+	  },
     ]
 } ]

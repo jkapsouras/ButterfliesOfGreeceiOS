@@ -13,15 +13,18 @@ class RecognitionPresenter:BasePresenter{
 	
 	var recognitionState:RecognitionState
 	var recognitionRepository:RecognitionRepository
-	let compressionQuality:CGFloat = 0.7
+	var speciesRepository:SpeciesRepository
+	let compressionQuality:CGFloat = 1
 	private var modelDataHandler: ModelDataHandler = ModelDataHandler()
 	private var detectionModelDataHandler: DetectionModelDataHandler?
 	var processing = false
 		
 	
 	init(mainThread:MainThreadProtocol,backgroundThread:BackgroundThreadProtocol,
-		 recognitionRepository:RecognitionRepository){
+		 recognitionRepository:RecognitionRepository,
+		 speciesRepository:SpeciesRepository){
 		self.recognitionRepository = recognitionRepository
+		self.speciesRepository = speciesRepository
 		recognitionState = RecognitionState(image: nil, imageData: nil, imagePixelBuffer: nil, predictions: [Prediction](), inferences: [DetectionInference]())
 		detectionModelDataHandler = DetectionModelDataHandler(modelFileInfo: MobileNetSSD.modelInfo, labelsFileInfo: MobileNetSSD.labelsInfo, threadCount: 2)
 		super.init(backScheduler: backgroundThread, mainScheduler: mainThread)
@@ -56,7 +59,7 @@ class RecognitionPresenter:BasePresenter{
 					}, onError: {error in print(error.localizedDescription)}).disposed(by: disposeBag!)
 			case .offlineClicked:
 				let image = recognitionState.image
-				let resizedImage = image!.resized(to: CGSize(width: 224, height: 224))
+				let resizedImage = image!.resize(to: CGSize(width: 1000, height: 1000))
 				guard var pixelBuffer = resizedImage.normalized() else {
 					return
 				}
@@ -86,14 +89,14 @@ class RecognitionPresenter:BasePresenter{
 					}, onError: {error in print(error.localizedDescription)})
 					.disposed(by: disposeBag!)
 			case .photoChoosed(let selectedImage):
-				guard let imageData = selectedImage.jpegData(compressionQuality: compressionQuality) else{
+				guard let imageData = selectedImage.pngData()else{ // .jpegData(compressionQuality: compressionQuality) else{
 					print("data did not creted")
 					return
 				}
 				recognitionState = recognitionState.with(image: selectedImage, imageData: imageData)
 				state.onNext(RecognitionViewStates.showRecognitionView(image: recognitionState.image!))
 			case .photoTaken(let selectedImage):
-				guard let imageData = selectedImage.jpegData(compressionQuality: compressionQuality) else{
+				guard let imageData = selectedImage.pngData()else{// .jpegData(compressionQuality: compressionQuality) else{
 					print("data did not creted")
 					return
 				}
@@ -104,7 +107,7 @@ class RecognitionPresenter:BasePresenter{
 			case .closeClicked:
 				state.onNext(RecognitionViewStates.closeRecognitionView)
 			case .liveImageTaken(let image, let imagePixelBuffer):
-				Observable.of(1).startWith(1).take(1)
+			let obs1 = Observable.of(1).startWith(1).take(1)
 					.filter({_ in !self.processing})
 					.map{result -> RecognitionState in
 						self.recognitionState = self.recognitionState.with(image: image, imagePixelBuffer: imagePixelBuffer)
@@ -112,12 +115,12 @@ class RecognitionPresenter:BasePresenter{
 					}
 					.subscribeOn(backgroundThreadScheduler.scheduler)
 					.map{state -> DetectionResult? in
-						let image = state.image
-						let imagePixelBuffer = state.imagePixelBuffer
-						let resizedImage = image!.resized(to: CGSize(width: 224, height: 224))
-						guard var pixelBuffer = resizedImage.normalized() else {
-							return nil
-						}
+//						let image = state.image
+//						let imagePixelBuffer = state.imagePixelBuffer
+//						let resizedImage = image!.resized(to: CGSize(width: 224, height: 224))
+//						guard var pixelBuffer = resizedImage.normalized() else {
+//							return nil
+//						}
 						self.processing = true
 						print("start processing")
 						let result = self.detectionModelDataHandler?.runModel(onFrame: imagePixelBuffer!)
@@ -126,7 +129,11 @@ class RecognitionPresenter:BasePresenter{
 //							print("There is a result: \(result?.inferences[0].className)")
 //						}
 						return result} //self.modelDataHandler.module.predict(image: UnsafeMutableRawPointer(&pixelBuffer))}
-							.map{result -> RecognitionState in
+					
+				Observable.zip(obs1, speciesRepository.getAllSpecies(),
+							   resultSelector: { result, species in (result,species)})
+							.map{zip -> RecognitionState in
+								var infs = zip.0
 								print("end processing")
 								self.processing=false
 //								let labels = self.modelDataHandler.labels
@@ -134,23 +141,31 @@ class RecognitionPresenter:BasePresenter{
 //								let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
 								
 								var predictions:[Prediction] = [Prediction]()
-								var text = ""
-								if(result?.inferences.count ?? 0 == 0)
+//								var text = ""
+								if(zip.0?.inferences.count ?? 0 == 0)
 								{
 									return self.recognitionState
 								}
-								for r in result!.inferences {
-//									print("\(labels[result.0]) \(result.1) ")
-//									text += "\u{2022} \(labels[result.0]) \n\n"
+								for  r in infs!.inferences {
 									predictions.append(Prediction(butterflyClass: r.className, output: 0, prob: 0))
 								}
-								self.recognitionState = self.recognitionState.with(predictions: predictions, inferences: result!.inferences)
+								var specie:Specie?
+								let objIndex = zip.0!.inferences.firstIndex(where: {r in
+									specie = zip.1.first{s in s.name.lowercased() == r.className.lowercased()}
+									return (specie != nil && specie!.isEndangered != nil && (specie?.isEndangered == true))
+								});
+								if let i = objIndex
+								{
+									infs!.inferences[i].className = "\(infs!.inferences[i].className)\n\(specie!.endangeredText!)"
+								}
+								self.recognitionState = self.recognitionState.with(predictions: predictions, inferences: infs!.inferences)
 								return self.recognitionState
 							}
 					.subscribe(onNext: {state in
 						let width = CVPixelBufferGetWidth(state.imagePixelBuffer!)
 						let height = CVPixelBufferGetHeight(state.imagePixelBuffer!)
 						let size = CGSize(width: width, height: height)
+						print(state.inferences[0].className)
 						self.state.onNext(RecognitionViewStates.liveImageRecognized(predictions: state.predictions, inferences: state.inferences, imageSize: size))
 					}, onError: {error in
 						print(error.localizedDescription)})

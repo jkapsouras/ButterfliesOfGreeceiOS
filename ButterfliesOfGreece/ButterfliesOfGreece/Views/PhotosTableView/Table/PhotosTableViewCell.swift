@@ -50,7 +50,7 @@ class PhotosTableViewCell: UITableViewCell {
 	func update(specie: Specie, emitter:PublishSubject<UiEvent>, showingStep:ShowingStep, fromSearch: Bool){
 		self.showingStep = showingStep
 		self.emitter = emitter
-		LabelName.text = specie.name
+		LabelName.text = "\(specie.name)"//" \(specie.endangeredText)"
 		specieId = specie.id
 		ImageButterfly.image = UIImage(named: "Thumbnails/\(specie.imageTitle)", in: nil, compatibleWith: nil)
 		if  ImageButterfly.image == nil{

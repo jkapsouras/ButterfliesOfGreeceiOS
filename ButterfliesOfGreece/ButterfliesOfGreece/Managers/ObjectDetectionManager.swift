@@ -20,15 +20,15 @@ import Accelerate
 /// Stores results for a particular frame that was successfully run through the `Interpreter`.
 struct DetectionResult {
 	let inferenceTime: Double
-	let inferences: [DetectionInference]
+	var inferences: [DetectionInference]
 }
 
 /// Stores one formatted inference.
 struct DetectionInference {
 	let confidence: Float
-	let className: String
+	var className: String
 	let rect: CGRect
-	let displayColor: UIColor
+	var displayColor: UIColor
 }
 
 /// Information about a model file or labels file.
@@ -72,7 +72,6 @@ class DetectionModelDataHandler: NSObject {
 	private let rgbPixelChannels = 3
 	private let colorStrideValue = 10
 	private let colors = [
-		UIColor.red,
 		UIColor(displayP3Red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0),
 		UIColor.green,
 		UIColor.orange,

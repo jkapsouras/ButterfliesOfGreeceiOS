@@ -152,8 +152,8 @@
 		0A574C49252310DE00A8B5BC /* Inference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C48252310DE00A8B5BC /* Inference.swift */; };
 		0A574C4F2523111D00A8B5BC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4E2523111D00A8B5BC /* Result.swift */; };
 		0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */; };
-		0A71AF2525370FFA00BE2320 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2325370FFA00BE2320 /* model.pt */; };
 		0A71AF2625370FFA00BE2320 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2425370FFA00BE2320 /* words.txt */; };
+		0A8319C325E437720092D48E /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A8319C225E4376B0092D48E /* model.pt */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
@@ -358,8 +358,8 @@
 		0A574C48252310DE00A8B5BC /* Inference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inference.swift; sourceTree = "<group>"; };
 		0A574C4E2523111D00A8B5BC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
-		0A71AF2325370FFA00BE2320 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
 		0A71AF2425370FFA00BE2320 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		0A8319C225E4376B0092D48E /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
@@ -1000,7 +1000,7 @@
 		0A71AF2225370FFA00BE2320 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0A71AF2325370FFA00BE2320 /* model.pt */,
+				0A8319C225E4376B0092D48E /* model.pt */,
 				0A71AF2425370FFA00BE2320 /* words.txt */,
 			);
 			path = model;
@@ -1349,7 +1349,6 @@
 			buildConfigurationList = FEAB9B9B24B2027800A5D178 /* Build configuration list for PBXNativeTarget "ButterfliesOfGreece" */;
 			buildPhases = (
 				8BFBB0F31DB9497A1699C094 /* [CP] Check Pods Manifest.lock */,
-				7338EAB4ABA0016E96F38188 /* [CP] Prepare Artifacts */,
 				FEAB9B7824B2027000A5D178 /* Sources */,
 				FEAB9B7924B2027000A5D178 /* Frameworks */,
 				FEAB9B7A24B2027000A5D178 /* Resources */,
@@ -1440,13 +1439,13 @@
 				0A24040E251FA1BE002665A1 /* Contribute.storyboard in Resources */,
 				0A240490251FA21D002665A1 /* data.json in Resources */,
 				0A24041E251FA1BE002665A1 /* InfoModal.storyboard in Resources */,
-				0A71AF2525370FFA00BE2320 /* model.pt in Resources */,
 				0A240431251FA1BE002665A1 /* Families.storyboard in Resources */,
 				0A240374251FA1AB002665A1 /* PhotosTableViewCell.xib in Resources */,
 				0A24041B251FA1BE002665A1 /* Navigation.storyboard in Resources */,
 				0A24048E251FA21D002665A1 /* ACTypoGrotesk.ttf in Resources */,
 				0A240419251FA1BE002665A1 /* Introduction.storyboard in Resources */,
 				0A240344251FA166002665A1 /* ContributeView.xib in Resources */,
+				0A8319C325E437720092D48E /* model.pt in Resources */,
 				0A24042E251FA1BE002665A1 /* Photos.storyboard in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				0A240368251FA19A002665A1 /* PhotosCollectionView.xib in Resources */,
@@ -1480,23 +1479,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7338EAB4ABA0016E96F38188 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8BFBB0F31DB9497A1699C094 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

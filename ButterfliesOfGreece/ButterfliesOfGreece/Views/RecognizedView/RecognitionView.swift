@@ -23,10 +23,8 @@ class RecognitionView: UIView {
 	@IBOutlet weak var ButtonClose: UIButton!
 	@IBOutlet weak var ConstButtonHeight: NSLayoutConstraint!
 	@IBOutlet weak var ConstButtonBottom: NSLayoutConstraint!
-	@IBOutlet weak var ViewOverlay: OverlayView!
 	
-	private let displayFont = UIFont.systemFont(ofSize: 14.0, weight: .medium)
-	private let edgeOffset: CGFloat = 2.0
+	
 	
 	@IBOutlet weak var ButtonSave: UIButton!
 	var contentView:UIView?
@@ -159,57 +157,5 @@ class RecognitionView: UIView {
 								ButtonSave.rx.tap.map{_ in RecognitionEvents.saveImage})
 	}
 	
-	func drawAfterPerformingCalculations(onInferences inferences: [DetectionInference], withImageSize imageSize:CGSize) {
-		
-		ViewOverlay.objectOverlays = []
-		ViewOverlay.setNeedsDisplay()
-		
-		guard !inferences.isEmpty else {
-			return
-		}
-		
-		var objectOverlays: [ObjectOverlay] = []
-		
-		for inference in inferences {
-			
-			// Translates bounding box rect to current view.
-			var convertedRect = inference.rect.applying(CGAffineTransform(scaleX: ViewOverlay.bounds.size.width / imageSize.width, y: ViewOverlay.bounds.size.height / imageSize.height))
-			
-			if convertedRect.origin.x < 0 {
-				convertedRect.origin.x = self.edgeOffset
-			}
-			
-			if convertedRect.origin.y < 0 {
-				convertedRect.origin.y = self.edgeOffset
-			}
-			
-			if convertedRect.maxY > ViewOverlay.bounds.maxY {
-				convertedRect.size.height = ViewOverlay.bounds.maxY - convertedRect.origin.y - self.edgeOffset
-			}
-			
-			if convertedRect.maxX > ViewOverlay.bounds.maxX {
-				convertedRect.size.width = ViewOverlay.bounds.maxX - convertedRect.origin.x - self.edgeOffset
-			}
-			
-			let confidenceValue = Int(inference.confidence * 100.0)
-			let string = "\(inference.className)  (\(confidenceValue)%)"
-			
-			let size = string.size(usingFont: self.displayFont)
-			
-			let objectOverlay = ObjectOverlay(name: string, borderRect: convertedRect, nameStringSize: size, color: inference.displayColor, font: self.displayFont)
-			
-			objectOverlays.append(objectOverlay)
-		}
-		
-		// Hands off drawing to the OverlayView
-		draw(objectOverlays: objectOverlays)
-	}
 	
-	/** Calls methods to update overlay view with detected bounding boxes and class names.
-	*/
-	func draw(objectOverlays: [ObjectOverlay]) {
-		
-		ViewOverlay.objectOverlays = objectOverlays
-		ViewOverlay.setNeedsDisplay()
-	}
 }
