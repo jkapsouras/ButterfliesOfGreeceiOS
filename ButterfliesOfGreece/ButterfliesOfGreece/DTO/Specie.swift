@@ -14,11 +14,15 @@ struct Specie:Codable {
 	var name:String
 	var imageTitle:String
 	var photos:[ButterflyPhoto]
+	var isEndangered:Bool?
+	var endangeredText:String?
 	
 	enum CodingKeys: String, CodingKey {
 		case id
 		case name
 		case imageTitle = "imgtitle"
 		case photos
+		case isEndangered = "endangered"
+		case endangeredText = "endangered_text"
 	}
 }

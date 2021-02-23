@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A10749825E1A0D200883FD0 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10749725E1A0D200883FD0 /* OverlayView.swift */; };
 		0A2333952524BDBE00A6CA92 /* AVFoundationImpementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */; };
 		0A2333992524BE6100A6CA92 /* LiveSession.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2333982524BE6100A6CA92 /* LiveSession.xib */; };
 		0A23339D2524BE7A00A6CA92 /* LiveSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23339C2524BE7A00A6CA92 /* LiveSession.swift */; };
@@ -17,8 +18,6 @@
 		0A240337251FA146002665A1 /* SpeciesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A240330251FA146002665A1 /* SpeciesRepository.swift */; };
 		0A240338251FA146002665A1 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A240331251FA146002665A1 /* PhotosRepository.swift */; };
 		0A240339251FA146002665A1 /* PhotosToPrintRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A240332251FA146002665A1 /* PhotosToPrintRepository.swift */; };
-		0A24033E251FA156002665A1 /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A24033C251FA156002665A1 /* RecognitionView.xib */; };
-		0A24033F251FA156002665A1 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24033D251FA156002665A1 /* RecognitionView.swift */; };
 		0A240344251FA166002665A1 /* ContributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A240342251FA166002665A1 /* ContributeView.xib */; };
 		0A240345251FA166002665A1 /* ContributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A240343251FA166002665A1 /* ContributeView.swift */; };
 		0A24034C251FA172002665A1 /* HeaderPrintToPdfView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A24034A251FA172002665A1 /* HeaderPrintToPdfView.xib */; };
@@ -148,19 +147,22 @@
 		0A2404B7251FA325002665A1 /* FamiliesTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2404B3251FA325002665A1 /* FamiliesTableComponent.swift */; };
 		0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */; };
 		0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */; };
+		0A4E25B525E4E92600D774ED /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E259E25E4E83900D774ED /* model.pt */; };
+		0A4E25B925E4EB3C00D774ED /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E25B825E4EB3700D774ED /* words.txt */; };
 		0A574C4125227AEB00A8B5BC /* RecognizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4025227AEB00A8B5BC /* RecognizeManager.swift */; };
 		0A574C4525227B7500A8B5BC /* CVPixelBufferExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */; };
 		0A574C49252310DE00A8B5BC /* Inference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C48252310DE00A8B5BC /* Inference.swift */; };
 		0A574C4F2523111D00A8B5BC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4E2523111D00A8B5BC /* Result.swift */; };
-		0A71AF2525370FFA00BE2320 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2325370FFA00BE2320 /* model.pt */; };
-		0A71AF2625370FFA00BE2320 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2425370FFA00BE2320 /* words.txt */; };
+		0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
 		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
 		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
-		0AD465FA2530FBBF00DA8E0F /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AD465F82530FBBD00DA8E0F /* words.txt */; };
-		0AF153D525A6324B00BD0D30 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0AF153CF25A62C8000BD0D30 /* model.pt */; };
+		0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FC25E03EF0003D0C4F /* detect.tflite */; };
+		0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FB25E03EEF003D0C4F /* labelmap.txt */; };
+		0AF1540625A6351700BD0D30 /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1540425A6351700BD0D30 /* RecognitionView.xib */; };
+		0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1540525A6351700BD0D30 /* RecognitionView.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
 		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE10425124D4B7230075D027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425024D4B7230075D027 /* Constants.swift */; };
@@ -211,6 +213,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A10749725E1A0D200883FD0 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		0A2333942524BDBE00A6CA92 /* AVFoundationImpementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationImpementation.swift; sourceTree = "<group>"; };
 		0A2333982524BE6100A6CA92 /* LiveSession.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveSession.xib; sourceTree = "<group>"; };
 		0A23339C2524BE7A00A6CA92 /* LiveSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSession.swift; sourceTree = "<group>"; };
@@ -221,8 +224,6 @@
 		0A240330251FA146002665A1 /* SpeciesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesRepository.swift; sourceTree = "<group>"; };
 		0A240331251FA146002665A1 /* PhotosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
 		0A240332251FA146002665A1 /* PhotosToPrintRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosToPrintRepository.swift; sourceTree = "<group>"; };
-		0A24033C251FA156002665A1 /* RecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
-		0A24033D251FA156002665A1 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
 		0A240342251FA166002665A1 /* ContributeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContributeView.xib; sourceTree = "<group>"; };
 		0A240343251FA166002665A1 /* ContributeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributeView.swift; sourceTree = "<group>"; };
 		0A24034A251FA172002665A1 /* HeaderPrintToPdfView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderPrintToPdfView.xib; sourceTree = "<group>"; };
@@ -352,20 +353,24 @@
 		0A2404B3251FA325002665A1 /* FamiliesTableComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamiliesTableComponent.swift; sourceTree = "<group>"; };
 		0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoExtensionTests.swift; sourceTree = "<group>"; };
 		0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenterTests.swift; sourceTree = "<group>"; };
+		0A4E259E25E4E83900D774ED /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
+		0A4E25B825E4EB3700D774ED /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		0A574C4025227AEB00A8B5BC /* RecognizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeManager.swift; sourceTree = "<group>"; };
 		0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtensions.swift; sourceTree = "<group>"; };
 		0A574C48252310DE00A8B5BC /* Inference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inference.swift; sourceTree = "<group>"; };
 		0A574C4E2523111D00A8B5BC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		0A71AF2325370FFA00BE2320 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
-		0A71AF2425370FFA00BE2320 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
 		0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		0AD465F02530F86500DA8E0F /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
-		0AD465F82530FBBD00DA8E0F /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
-		0AF153CF25A62C8000BD0D30 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.pt; path = ../../../../../ButterfliesOfGreeceAndroid/app/src/main/assets/model.pt; sourceTree = "<group>"; };
+		0AEE86FB25E03EEF003D0C4F /* labelmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
+		0AEE86FC25E03EF0003D0C4F /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
+		0AF1540125A634E900BD0D30 /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
+		0AF1540425A6351700BD0D30 /* RecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
+		0AF1540525A6351700BD0D30 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6076E8437DA77554B6B536 /* Pods-ButterfliesOfGreece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.release.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.release.xcconfig"; sourceTree = "<group>"; };
 		62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButterfliesOfGreeceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -985,8 +990,9 @@
 		0A705D31251E2AAA00B29D2B /* RecognizedView */ = {
 			isa = PBXGroup;
 			children = (
-				0AF153CF25A62C8000BD0D30 /* model.pt */,
-				0AD465F82530FBBD00DA8E0F /* words.txt */,
+				0AF1540525A6351700BD0D30 /* RecognitionView.swift */,
+				0AF1540425A6351700BD0D30 /* RecognitionView.xib */,
+				0A10749725E1A0D200883FD0 /* OverlayView.swift */,
 			);
 			path = RecognizedView;
 			sourceTree = "<group>";
@@ -994,8 +1000,8 @@
 		0A71AF2225370FFA00BE2320 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0A71AF2325370FFA00BE2320 /* model.pt */,
-				0A71AF2425370FFA00BE2320 /* words.txt */,
+				0A4E25B825E4EB3700D774ED /* words.txt */,
+				0A4E259E25E4E83900D774ED /* model.pt */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1026,6 +1032,22 @@
 			path = Torch;
 			sourceTree = "<group>";
 		};
+		0AEE86FA25E03ECD003D0C4F /* detectionModel */ = {
+			isa = PBXGroup;
+			children = (
+				0AEE86FC25E03EF0003D0C4F /* detect.tflite */,
+				0AEE86FB25E03EEF003D0C4F /* labelmap.txt */,
+			);
+			path = detectionModel;
+			sourceTree = "<group>";
+		};
+		0AF153FE25A634A500BD0D30 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		809AF22E013484F40A66D5A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1049,6 +1071,8 @@
 		FE10425424D5A6130075D027 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0AEE86FA25E03ECD003D0C4F /* detectionModel */,
+				0AF1540125A634E900BD0D30 /* species.pdf */,
 				0A71AF2225370FFA00BE2320 /* model */,
 				0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */,
 				0A240489251FA21C002665A1 /* 135366-16.pdf */,
@@ -1212,6 +1236,7 @@
 				FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */,
 				FE6691EF2514F1B3006C377F /* LocationManager.swift */,
 				0A574C4025227AEB00A8B5BC /* RecognizeManager.swift */,
+				0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1224,6 +1249,7 @@
 				FEAB9B7D24B2027000A5D178 /* Products */,
 				C98AD50B5ADE41BADF4A7E43 /* Pods */,
 				809AF22E013484F40A66D5A4 /* Frameworks */,
+				0AF153FE25A634A500BD0D30 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1402,30 +1428,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AF153D525A6324B00BD0D30 /* model.pt in Resources */,
+				0AF1540625A6351700BD0D30 /* RecognitionView.xib in Resources */,
 				0A2333992524BE6100A6CA92 /* LiveSession.xib in Resources */,
 				0A24045A251FA1BE002665A1 /* PdfPreview.storyboard in Resources */,
 				0A240440251FA1BE002665A1 /* PrintToPdf.storyboard in Resources */,
 				0A240408251FA1BE002665A1 /* About.storyboard in Resources */,
 				0A240444251FA1BE002665A1 /* Endangered.storyboard in Resources */,
+				0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */,
 				0A240364251FA19A002665A1 /* PhotosCollectionViewCell.xib in Resources */,
 				0A24040E251FA1BE002665A1 /* Contribute.storyboard in Resources */,
 				0A240490251FA21D002665A1 /* data.json in Resources */,
 				0A24041E251FA1BE002665A1 /* InfoModal.storyboard in Resources */,
-				0A71AF2525370FFA00BE2320 /* model.pt in Resources */,
 				0A240431251FA1BE002665A1 /* Families.storyboard in Resources */,
 				0A240374251FA1AB002665A1 /* PhotosTableViewCell.xib in Resources */,
 				0A24041B251FA1BE002665A1 /* Navigation.storyboard in Resources */,
 				0A24048E251FA21D002665A1 /* ACTypoGrotesk.ttf in Resources */,
 				0A240419251FA1BE002665A1 /* Introduction.storyboard in Resources */,
 				0A240344251FA166002665A1 /* ContributeView.xib in Resources */,
-				0A24033E251FA156002665A1 /* RecognitionView.xib in Resources */,
+				0A4E25B525E4E92600D774ED /* model.pt in Resources */,
 				0A24042E251FA1BE002665A1 /* Photos.storyboard in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				0A240368251FA19A002665A1 /* PhotosCollectionView.xib in Resources */,
+				0A4E25B925E4EB3C00D774ED /* words.txt in Resources */,
 				0A240455251FA1BE002665A1 /* Menu.storyboard in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
-				0A71AF2625370FFA00BE2320 /* words.txt in Resources */,
 				0A24048F251FA21D002665A1 /* 135366-16.pdf in Resources */,
 				0A24048C251FA21D002665A1 /* 127557_2178_2015.pdf in Resources */,
 				0A240418251FA1BE002665A1 /* PageModal.storyboard in Resources */,
@@ -1436,6 +1462,7 @@
 				0A24048D251FA21D002665A1 /* species.pdf in Resources */,
 				0A240461251FA1BE002665A1 /* Legal.storyboard in Resources */,
 				0A240427251FA1BE002665A1 /* Species.storyboard in Resources */,
+				0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */,
 				0A24034C251FA172002665A1 /* HeaderPrintToPdfView.xib in Resources */,
 				0A24044B251FA1BE002665A1 /* Recognition.storyboard in Resources */,
 				0A24044D251FA1BE002665A1 /* Search.storyboard in Resources */,
@@ -1567,13 +1594,13 @@
 				FE1FBE9124CB1121008D0EA1 /* BackgroundThreadScheduler.swift in Sources */,
 				0A24044A251FA1BE002665A1 /* RecognitionViewStates.swift in Sources */,
 				0A23339D2524BE7A00A6CA92 /* LiveSession.swift in Sources */,
+				0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */,
 				FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */,
 				0A240463251FA1BE002665A1 /* LegalViewController.swift in Sources */,
 				0A24042B251FA1BE002665A1 /* PhotosHeaderComponent.swift in Sources */,
 				0A240453251FA1BE002665A1 /* SearchState.swift in Sources */,
 				0A240441251FA1BE002665A1 /* PrintToPdfViewController.swift in Sources */,
 				0A240421251FA1BE002665A1 /* SpeciesHeaderComponent.swift in Sources */,
-				0A24033F251FA156002665A1 /* RecognitionView.swift in Sources */,
 				FEAB9BB424B26D3700A5D178 /* BasePresenter.swift in Sources */,
 				0A240367251FA19A002665A1 /* PhotosCollectionView.swift in Sources */,
 				0A24040F251FA1BE002665A1 /* ContributeViewStates.swift in Sources */,
@@ -1589,6 +1616,7 @@
 				0A240413251FA1BE002665A1 /* ModalPresenter.swift in Sources */,
 				0A240337251FA146002665A1 /* SpeciesRepository.swift in Sources */,
 				0A24041F251FA1BE002665A1 /* SpeciesState.swift in Sources */,
+				0A10749825E1A0D200883FD0 /* OverlayView.swift in Sources */,
 				FEB3520824CB13ED0040313D /* IOC.swift in Sources */,
 				FEAB9BB124B2099200A5D178 /* Translations.swift in Sources */,
 				FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */,
@@ -1630,6 +1658,7 @@
 				0A240448251FA1BE002665A1 /* RecognitionViewEvents.swift in Sources */,
 				0A240414251FA1BE002665A1 /* ModalPhotoComponent.swift in Sources */,
 				0A240410251FA1BE002665A1 /* ContributeViewController.swift in Sources */,
+				0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */,
 				0A240473251FA1F0002665A1 /* ContributionItem.swift in Sources */,
 				0A24040D251FA1BE002665A1 /* ContributeComponent.swift in Sources */,
 				0A2404B7251FA325002665A1 /* FamiliesTableComponent.swift in Sources */,

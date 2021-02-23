@@ -24,6 +24,8 @@ class RecognitionView: UIView {
 	@IBOutlet weak var ConstButtonHeight: NSLayoutConstraint!
 	@IBOutlet weak var ConstButtonBottom: NSLayoutConstraint!
 	
+	
+	
 	@IBOutlet weak var ButtonSave: UIButton!
 	var contentView:UIView?
 	let nibName = "RecognitionView"
@@ -154,4 +156,6 @@ class RecognitionView: UIView {
 								ButtonClose.rx.tap.map{_ in RecognitionEvents.closeClicked},
 								ButtonSave.rx.tap.map{_ in RecognitionEvents.saveImage})
 	}
+	
+	
 }

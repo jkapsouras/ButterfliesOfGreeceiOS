@@ -13,8 +13,8 @@ target 'ButterfliesOfGreece' do
   pod 'SwinjectAutoregistration'
   pod 'AppCenter'
   pod 'Alamofire', '~> 5.2'
-  pod 'TensorFlowLiteSwift'
-  pod 'LibTorch', '~> 1.6.0'
+	pod 'TensorFlowLiteSwift', '~> 0.0.0-nightly', :subspecs => ['CoreML', 'Metal']
+  pod 'LibTorch', '~> 1.7.1'
 end
 
 target 'ButterfliesOfGreeceTests' do
