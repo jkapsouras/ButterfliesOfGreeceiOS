@@ -64,7 +64,7 @@ class LiveSession: UIView {
 
 	func setupSession(){
 		cameraSession?.setupSession()
-		cameraSession?.addText()
+//		cameraSession?.addText()
 		cameraSession?.startSession()
 	}
 	
