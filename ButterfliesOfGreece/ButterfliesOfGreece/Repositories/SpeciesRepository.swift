@@ -16,6 +16,10 @@ struct SpeciesRepository {
 		self.storage = storage
 	}
 	
+	mutating func getAllSpecies() -> Observable<[Specie]>{
+		return Observable.from(optional: storage.species())
+	}
+	
 	mutating func getSpeciesOfFamily(familyId:Int) -> Observable<[Specie]>{
 		return Observable.from(optional: storage.species(familyId: familyId))
 	}

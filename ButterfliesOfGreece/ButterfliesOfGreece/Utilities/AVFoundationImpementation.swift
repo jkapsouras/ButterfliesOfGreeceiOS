@@ -72,11 +72,13 @@ class AVFoundationImplementation: NSObject{
 			self.videoOutput = AVCaptureVideoDataOutput()
 			self.videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer"))
 			videoOutput.alwaysDiscardsLateVideoFrames = true
+			videoOutput.videoSettings = [ String(kCVPixelBufferPixelFormatTypeKey) : kCMPixelFormat_32BGRA]
 			// always make sure the AVCaptureSession can accept the selected output
 			if captureSession.canAddOutput(self.videoOutput) {
 				
 				// add the output to the current session
 				captureSession.addOutput(self.videoOutput)
+				videoOutput.connection(with: .video)?.videoOrientation = .portrait
 			}
 		}
 		captureSession.commitConfiguration()
@@ -144,6 +146,13 @@ class AVFoundationImplementation: NSObject{
 extension AVFoundationImplementation: AVCaptureVideoDataOutputSampleBufferDelegate {
 	
 	func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+		
+		let pixelBuffer: CVPixelBuffer? = CMSampleBufferGetImageBuffer(sampleBuffer)
+		
+		guard let imagePixelBuffer = pixelBuffer else {
+			return
+		}
+		
 		guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return  }
 		let ciImage = CIImage(cvPixelBuffer: imageBuffer)
 		
@@ -156,7 +165,7 @@ extension AVFoundationImplementation: AVCaptureVideoDataOutputSampleBufferDelega
 		frameCount += 1
 		if frameCount == 25{
 			frameCount = 0
-			ownerSession.setImage(image: image)
+			ownerSession.setImage(image: image, imagePixelBuffer: imagePixelBuffer)
 		}
 	}
 	

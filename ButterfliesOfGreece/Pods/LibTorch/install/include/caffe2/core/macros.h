@@ -9,7 +9,7 @@
 // as a track point for bugs, until we find a proper versioning cycle.
 
 #define CAFFE2_VERSION_MAJOR 1
-#define CAFFE2_VERSION_MINOR 6
+#define CAFFE2_VERSION_MINOR 7
 #define CAFFE2_VERSION_PATCH 0
 
 static_assert(
@@ -79,5 +79,4 @@ static_assert(
   {"USE_MKLDNN", ""}, \
   {"USE_NVTX", ""}, \
   {"USE_TRT", ""}, \
-  {"USE_STATIC_DISPATCH", "ON"},   \
 }

@@ -19,6 +19,6 @@ enum RecognitionEvents : UiEvent {
 	case liveRecognitionClicked
 	case closeClicked
 	case closeLiveClicked
-	case liveImageTaken(image:UIImage)
+	case liveImageTaken(image:UIImage, imagePixelBuffer: CVPixelBuffer?)
 	case saveImage
 }
