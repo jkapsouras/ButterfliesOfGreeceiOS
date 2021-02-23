@@ -147,13 +147,13 @@
 		0A2404B7251FA325002665A1 /* FamiliesTableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2404B3251FA325002665A1 /* FamiliesTableComponent.swift */; };
 		0A25982424ED957D003893FA /* ButterflyPhotoExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */; };
 		0A25983324EDC176003893FA /* SpeciesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */; };
+		0A4E25B525E4E92600D774ED /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E259E25E4E83900D774ED /* model.pt */; };
+		0A4E25B925E4EB3C00D774ED /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E25B825E4EB3700D774ED /* words.txt */; };
 		0A574C4125227AEB00A8B5BC /* RecognizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4025227AEB00A8B5BC /* RecognizeManager.swift */; };
 		0A574C4525227B7500A8B5BC /* CVPixelBufferExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */; };
 		0A574C49252310DE00A8B5BC /* Inference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C48252310DE00A8B5BC /* Inference.swift */; };
 		0A574C4F2523111D00A8B5BC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A574C4E2523111D00A8B5BC /* Result.swift */; };
 		0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */; };
-		0A71AF2625370FFA00BE2320 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A71AF2425370FFA00BE2320 /* words.txt */; };
-		0A8319C325E437720092D48E /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A8319C225E4376B0092D48E /* model.pt */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
@@ -353,13 +353,13 @@
 		0A2404B3251FA325002665A1 /* FamiliesTableComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamiliesTableComponent.swift; sourceTree = "<group>"; };
 		0A25982324ED957D003893FA /* ButterflyPhotoExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoExtensionTests.swift; sourceTree = "<group>"; };
 		0A25983224EDC176003893FA /* SpeciesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPresenterTests.swift; sourceTree = "<group>"; };
+		0A4E259E25E4E83900D774ED /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
+		0A4E25B825E4EB3700D774ED /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		0A574C4025227AEB00A8B5BC /* RecognizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeManager.swift; sourceTree = "<group>"; };
 		0A574C4425227B7500A8B5BC /* CVPixelBufferExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtensions.swift; sourceTree = "<group>"; };
 		0A574C48252310DE00A8B5BC /* Inference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inference.swift; sourceTree = "<group>"; };
 		0A574C4E2523111D00A8B5BC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
-		0A71AF2425370FFA00BE2320 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
-		0A8319C225E4376B0092D48E /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
@@ -1000,8 +1000,8 @@
 		0A71AF2225370FFA00BE2320 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0A8319C225E4376B0092D48E /* model.pt */,
-				0A71AF2425370FFA00BE2320 /* words.txt */,
+				0A4E25B825E4EB3700D774ED /* words.txt */,
+				0A4E259E25E4E83900D774ED /* model.pt */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1445,13 +1445,13 @@
 				0A24048E251FA21D002665A1 /* ACTypoGrotesk.ttf in Resources */,
 				0A240419251FA1BE002665A1 /* Introduction.storyboard in Resources */,
 				0A240344251FA166002665A1 /* ContributeView.xib in Resources */,
-				0A8319C325E437720092D48E /* model.pt in Resources */,
+				0A4E25B525E4E92600D774ED /* model.pt in Resources */,
 				0A24042E251FA1BE002665A1 /* Photos.storyboard in Resources */,
 				FEAB9BAA24B2069200A5D178 /* Localizable.strings in Resources */,
 				0A240368251FA19A002665A1 /* PhotosCollectionView.xib in Resources */,
+				0A4E25B925E4EB3C00D774ED /* words.txt in Resources */,
 				0A240455251FA1BE002665A1 /* Menu.storyboard in Resources */,
 				FEAB9B8C24B2027800A5D178 /* LaunchScreen.storyboard in Resources */,
-				0A71AF2625370FFA00BE2320 /* words.txt in Resources */,
 				0A24048F251FA21D002665A1 /* 135366-16.pdf in Resources */,
 				0A24048C251FA21D002665A1 /* 127557_2178_2015.pdf in Resources */,
 				0A240418251FA1BE002665A1 /* PageModal.storyboard in Resources */,

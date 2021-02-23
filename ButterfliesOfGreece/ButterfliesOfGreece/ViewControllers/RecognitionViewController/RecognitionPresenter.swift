@@ -59,7 +59,7 @@ class RecognitionPresenter:BasePresenter{
 					}, onError: {error in print(error.localizedDescription)}).disposed(by: disposeBag!)
 			case .offlineClicked:
 				let image = recognitionState.image
-				let resizedImage = image!.resize(to: CGSize(width: 1000, height: 1000))
+				let resizedImage = image!.resize(to: CGSize(width: 224, height: 224))
 				guard var pixelBuffer = resizedImage.normalized() else {
 					return
 				}
