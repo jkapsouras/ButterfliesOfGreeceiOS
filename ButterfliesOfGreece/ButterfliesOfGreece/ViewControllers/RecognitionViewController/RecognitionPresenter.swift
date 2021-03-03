@@ -165,7 +165,7 @@ class RecognitionPresenter:BasePresenter{
 						let width = CVPixelBufferGetWidth(state.imagePixelBuffer!)
 						let height = CVPixelBufferGetHeight(state.imagePixelBuffer!)
 						let size = CGSize(width: width, height: height)
-						print(state.inferences[0].className)
+						//print(state.inferences[0].className)
 						self.state.onNext(RecognitionViewStates.liveImageRecognized(predictions: state.predictions, inferences: state.inferences, imageSize: size))
 					}, onError: {error in
 						print(error.localizedDescription)})
