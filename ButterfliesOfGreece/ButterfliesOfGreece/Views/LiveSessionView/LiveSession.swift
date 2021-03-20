@@ -12,6 +12,7 @@ import RxSwift
 class LiveSession: UIView {
 	@IBOutlet weak var ButtonClose: UIButton!
 	@IBOutlet weak var ViewOverlay: OverlayView!
+	@IBOutlet weak var ButtonSaveImage: UIButton!
 	
 	private let displayFont = UIFont.systemFont(ofSize: 14.0, weight: .medium)
 	private let edgeOffset: CGFloat = 2.0
@@ -23,7 +24,8 @@ class LiveSession: UIView {
 	var UiEvents: Observable<UiEvent>{get
 		{
 		return Observable.merge(emitter.asObservable(),
-								ButtonClose.rx.tap.map{_ in RecognitionEvents.closeLiveClicked})
+								ButtonClose.rx.tap.map{_ in RecognitionEvents.closeLiveClicked},
+								ButtonSaveImage.rx.tap.map{_ in RecognitionEvents.saveImage})
 		}
 	}
 	
@@ -60,6 +62,14 @@ class LiveSession: UIView {
 	func prepareViews(){
 		ButtonClose.setImage(UIImage(imageLiteralResourceName: "closeX").withRenderingMode(.alwaysTemplate), for: .normal)
 		ButtonClose.tintColor = Constants.Colors.recognition(darkMode: true).color
+		
+		ButtonSaveImage.setTitleColor(Constants.Colors.recognition(darkMode: true).color, for: .normal)
+		ButtonSaveImage.backgroundColor = Constants.Colors.recognition(darkMode: false).color
+		ButtonSaveImage.layer.borderColor = Constants.Colors.recognition(darkMode: true).color.cgColor
+		ButtonSaveImage.layer.borderWidth = 2
+		ButtonSaveImage.layer.cornerRadius = ButtonSaveImage.frame.height/2
+		ButtonSaveImage.setTitle(Translations.Save, for: .normal)
+		ButtonSaveImage.setFont(size: Constants.Fonts.titleControllerSise)
 	}
 
 	func setupSession(){
@@ -76,8 +86,18 @@ class LiveSession: UIView {
 		emitter.onNext(RecognitionEvents.liveImageTaken(image: image, imagePixelBuffer: imagePixelBuffer))
 	}
 	
-	func setTextToSession(text:String){
-		cameraSession?.setText(text: text)
+	func showSaveButton(){
+		ButtonSaveImage.alpha = 1
+	}
+	
+	func hideSaveButton(){
+		ButtonSaveImage.alpha = 0
+	}
+	
+	func ClearDraws(){
+		bringSubviewToFront(ViewOverlay)
+		ViewOverlay.objectOverlays = []
+		ViewOverlay.setNeedsDisplay()
 	}
 	
 	func drawAfterPerformingCalculations(onInferences inferences: [DetectionInference], withImageSize imageSize:CGSize) {

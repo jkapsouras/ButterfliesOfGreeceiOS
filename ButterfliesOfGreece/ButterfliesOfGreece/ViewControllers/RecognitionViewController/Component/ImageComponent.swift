@@ -144,13 +144,22 @@ class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, U
 					liveView.alpha = 1
 					liveView.setupSession()
 				case .liveImageRecognized(let predictions, let inferences, let size):
-					if(predictions.count==0)
-					{
-						return 
-					}
+//					if(predictions.count==0)
+//					{
+//						liveView.hideSaveButton()
+//						liveView.ClearDraws()
+//						return 
+//					}
 //					let string = predictions[0].butterflyClass
-//					liveView.setTextToSession(text: string)
-					liveView.drawAfterPerformingCalculations(onInferences: inferences, withImageSize: size)
+					let max = inferences.max { a, b in a.confidence > b.confidence }
+					if(inferences.isEmpty || (max?.confidence ?? 0) < 0.5){
+						liveView.hideSaveButton()
+						liveView.ClearDraws()
+					}
+					else{
+						liveView.showSaveButton()
+						liveView.drawAfterPerformingCalculations(onInferences: inferences, withImageSize: size)
+					}
 				case .closeLiveRecognitionView:
 					liveView.stopSession()
 					liveView.alpha = 0

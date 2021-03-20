@@ -144,7 +144,7 @@ class RecognitionPresenter:BasePresenter{
 //								var text = ""
 								if(zip.0?.inferences.count ?? 0 == 0)
 								{
-									return self.recognitionState
+									return self.recognitionState.with(predictions: [Prediction](), inferences: [DetectionInference]())
 								}
 								for  r in infs!.inferences {
 									predictions.append(Prediction(butterflyClass: r.className, output: 0, prob: 0))
@@ -157,6 +157,7 @@ class RecognitionPresenter:BasePresenter{
 								if let i = objIndex
 								{
 									infs!.inferences[i].className = "\(infs!.inferences[i].className)\n\(specie!.endangeredText!)"
+									infs!.inferences[i].displayColor = UIColor.red
 								}
 								self.recognitionState = self.recognitionState.with(predictions: predictions, inferences: infs!.inferences)
 								return self.recognitionState
@@ -174,7 +175,7 @@ class RecognitionPresenter:BasePresenter{
 				state.onNext(RecognitionViewStates.closeLiveRecognitionView)
 			case .saveImage:
 				if let image = recognitionState.image{
-					state.onNext(RecognitionViewStates.imageSaved(image: image, name: recognitionState.predictions[0].butterflyClass))
+						state.onNext(RecognitionViewStates.imageSaved(image: image, name: recognitionState.predictions[0].butterflyClass))
 				}
 		}
 	}

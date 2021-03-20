@@ -134,7 +134,6 @@
 		0A240472251FA1F0002665A1 /* ButterflyPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24046D251FA1F0002665A1 /* ButterflyPhoto.swift */; };
 		0A240473251FA1F0002665A1 /* ContributionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A24046E251FA1F0002665A1 /* ContributionItem.swift */; };
 		0A24048C251FA21D002665A1 /* 127557_2178_2015.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */; };
-		0A24048D251FA21D002665A1 /* species.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0A240486251FA21C002665A1 /* species.pdf */; };
 		0A24048E251FA21D002665A1 /* ACTypoGrotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A240488251FA21C002665A1 /* ACTypoGrotesk.ttf */; };
 		0A24048F251FA21D002665A1 /* 135366-16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0A240489251FA21C002665A1 /* 135366-16.pdf */; };
 		0A240490251FA21D002665A1 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A24048A251FA21C002665A1 /* data.json */; };
@@ -156,6 +155,7 @@
 		0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
+		0ACAFCA92606153F007E637D /* species.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAFCA82606153F007E637D /* species.pdf */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
 		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
 		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
@@ -340,7 +340,6 @@
 		0A24046D251FA1F0002665A1 /* ButterflyPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButterflyPhoto.swift; sourceTree = "<group>"; };
 		0A24046E251FA1F0002665A1 /* ContributionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionItem.swift; sourceTree = "<group>"; };
 		0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 127557_2178_2015.pdf; sourceTree = "<group>"; };
-		0A240486251FA21C002665A1 /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0A240488251FA21C002665A1 /* ACTypoGrotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ACTypoGrotesk.ttf; sourceTree = "<group>"; };
 		0A240489251FA21C002665A1 /* 135366-16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "135366-16.pdf"; sourceTree = "<group>"; };
 		0A24048A251FA21C002665A1 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -362,13 +361,13 @@
 		0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
+		0ACAFCA82606153F007E637D /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
 		0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		0AD465F02530F86500DA8E0F /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
 		0AEE86FB25E03EEF003D0C4F /* labelmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		0AEE86FC25E03EF0003D0C4F /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
-		0AF1540125A634E900BD0D30 /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0AF1540425A6351700BD0D30 /* RecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
 		0AF1540525A6351700BD0D30 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
 		0BB0DAA865F5B9DD6E51EFDD /* Pods-ButterfliesOfGreece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterfliesOfGreece.debug.xcconfig"; path = "Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1071,14 +1070,13 @@
 		FE10425424D5A6130075D027 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0ACAFCA82606153F007E637D /* species.pdf */,
 				0AEE86FA25E03ECD003D0C4F /* detectionModel */,
-				0AF1540125A634E900BD0D30 /* species.pdf */,
 				0A71AF2225370FFA00BE2320 /* model */,
 				0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */,
 				0A240489251FA21C002665A1 /* 135366-16.pdf */,
 				0A24048A251FA21C002665A1 /* data.json */,
 				0A240487251FA21C002665A1 /* Fonts */,
-				0A240486251FA21C002665A1 /* species.pdf */,
 				0A24048B251FA21D002665A1 /* Storage.swift */,
 			);
 			path = Data;
@@ -1437,6 +1435,7 @@
 				0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */,
 				0A240364251FA19A002665A1 /* PhotosCollectionViewCell.xib in Resources */,
 				0A24040E251FA1BE002665A1 /* Contribute.storyboard in Resources */,
+				0ACAFCA92606153F007E637D /* species.pdf in Resources */,
 				0A240490251FA21D002665A1 /* data.json in Resources */,
 				0A24041E251FA1BE002665A1 /* InfoModal.storyboard in Resources */,
 				0A240431251FA1BE002665A1 /* Families.storyboard in Resources */,
@@ -1459,7 +1458,6 @@
 				FEAB9B8924B2027800A5D178 /* Assets.xcassets in Resources */,
 				0A240358251FA185002665A1 /* HeaderView.xib in Resources */,
 				0A240417251FA1BE002665A1 /* ModalPhoto.storyboard in Resources */,
-				0A24048D251FA21D002665A1 /* species.pdf in Resources */,
 				0A240461251FA1BE002665A1 /* Legal.storyboard in Resources */,
 				0A240427251FA1BE002665A1 /* Species.storyboard in Resources */,
 				0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */,

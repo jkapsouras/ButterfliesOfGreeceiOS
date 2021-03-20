@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveSession" customModule="ButterfliesOfGreece" customModuleProvider="target">
             <connections>
                 <outlet property="ButtonClose" destination="LcE-c7-mZk" id="RXB-6N-w6F"/>
+                <outlet property="ButtonSaveImage" destination="BhV-eh-x1F" id="a0r-0T-M7q"/>
                 <outlet property="ViewOverlay" destination="g3l-YM-vnQ" id="uhC-ms-gCe"/>
             </connections>
         </placeholder>
@@ -24,6 +25,14 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhV-eh-x1F">
+                    <rect key="frame" x="168" y="806" width="78" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cAg-qw-Z8M"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-c7-mZk">
                     <rect key="frame" x="358" y="60" width="40" height="40"/>
                     <constraints>
@@ -36,9 +45,11 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g3l-YM-vnQ" secondAttribute="trailing" id="3UP-2F-fW3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BhV-eh-x1F" secondAttribute="bottom" constant="16" id="7eF-HI-GsR"/>
                 <constraint firstItem="g3l-YM-vnQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AuC-Fy-Fbh"/>
                 <constraint firstItem="LcE-c7-mZk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Ehr-0X-UT3"/>
                 <constraint firstItem="g3l-YM-vnQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="INX-Ez-Rcx"/>
+                <constraint firstItem="BhV-eh-x1F" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YaB-Es-EVf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g3l-YM-vnQ" secondAttribute="bottom" id="rX7-p3-0tL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LcE-c7-mZk" secondAttribute="trailing" constant="16" id="uuc-2d-1Nc"/>
             </constraints>
