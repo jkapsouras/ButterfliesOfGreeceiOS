@@ -11,7 +11,7 @@ import Foundation
 
 class ModelDataHandler {
 	lazy var labels: [String] = {
-		if let filePath = Bundle.main.path(forResource: "words", ofType: "txt"),
+		if let filePath = Bundle.main.path(forResource: "labels_pt_last", ofType: "txt"),
 		   let labels = try? String(contentsOfFile: filePath) {
 			return labels.components(separatedBy: .newlines)
 		} else {
@@ -20,7 +20,7 @@ class ModelDataHandler {
 	}()
 	
 	lazy var module: TorchModule = {
-		if let filePath = Bundle.main.path(forResource: "model", ofType: "pt"),
+		if let filePath = Bundle.main.path(forResource: "model-3", ofType: "pt"),
 		   let module = TorchModule(fileAtPath: filePath) {
 			return module
 		} else {

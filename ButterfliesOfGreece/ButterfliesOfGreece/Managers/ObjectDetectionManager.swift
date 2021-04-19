@@ -72,15 +72,15 @@ class DetectionModelDataHandler: NSObject {
 	private let rgbPixelChannels = 3
 	private let colorStrideValue = 10
 	private let colors = [
-		UIColor(displayP3Red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0),
-		UIColor.green,
-		UIColor.orange,
+//		UIColor(displayP3Red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0),
+//		UIColor.green,
+//		UIColor.orange,
 		UIColor.blue,
-		UIColor.purple,
-		UIColor.magenta,
-		UIColor.yellow,
-		UIColor.cyan,
-		UIColor.brown
+//		UIColor.purple,
+//		UIColor.magenta,
+//		UIColor.yellow,
+//		UIColor.cyan,
+//		UIColor.brown
 	]
 	
 	// MARK: - Initialization
@@ -339,7 +339,7 @@ class DetectionModelDataHandler: NSObject {
 			colorToAssign = modifiedColor
 		}
 		
-		return colorToAssign
+		return baseColor //colorToAssign
 	}
 }
 
