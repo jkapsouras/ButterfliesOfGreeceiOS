@@ -249,7 +249,7 @@ class DetectionModelDataHandler: NSObject {
 		}
 		do {
 			let contents = try String(contentsOf: fileURL, encoding: .utf8)
-			labels = contents.components(separatedBy: .newlines)
+			labels = contents.components(separatedBy: "\r\n")
 		} catch {
 			fatalError("Labels file named \(filename).\(fileExtension) cannot be read. Please add a " +
 						"valid labels file and try again.")

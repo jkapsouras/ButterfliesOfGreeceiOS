@@ -166,7 +166,7 @@ class FamiliesPresenterTests: XCTestCase {
 	func testShouldGetCorrectNumberOfAddedPhotos()
 	{
 		let observer = scheduler.createObserver(ViewState.self)
-		let photosPerFamily = [23,72,2,2,2,156,84,101,48]
+		let photosPerFamily = [23,72,2,2,2,156,84,100,48]
 		
 		presenter.headerState = presenter.headerState.with(arrange: .grid, photos: nil)
 		

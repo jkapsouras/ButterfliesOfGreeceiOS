@@ -153,6 +153,7 @@
 		0A58DBED25DF9E1400AF1A02 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */; };
 		0A5FBB542628DAB700DCFCD4 /* labels_pt_last.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FBB522628DAA800DCFCD4 /* labels_pt_last.txt */; };
 		0A86FBD1262D5A7500D0F534 /* model-3.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A86FBD0262D5A7500D0F534 /* model-3.pt */; };
+		0A86FBDF262E20B500D0F534 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A86FBDE262E20AF00D0F534 /* labelmap.txt */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
 		0ACAFCA92606153F007E637D /* species.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAFCA82606153F007E637D /* species.pdf */; };
@@ -160,7 +161,6 @@
 		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
 		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
 		0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FC25E03EF0003D0C4F /* detect.tflite */; };
-		0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FB25E03EEF003D0C4F /* labelmap.txt */; };
 		0AF1540625A6351700BD0D30 /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1540425A6351700BD0D30 /* RecognitionView.xib */; };
 		0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1540525A6351700BD0D30 /* RecognitionView.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
@@ -359,6 +359,7 @@
 		0A58DBEC25DF9E1400AF1A02 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
 		0A5FBB522628DAA800DCFCD4 /* labels_pt_last.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_pt_last.txt; sourceTree = "<group>"; };
 		0A86FBD0262D5A7500D0F534 /* model-3.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "model-3.pt"; sourceTree = "<group>"; };
+		0A86FBDE262E20AF00D0F534 /* labelmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		0ACAFCA82606153F007E637D /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
@@ -366,7 +367,6 @@
 		0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		0AD465F02530F86500DA8E0F /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
-		0AEE86FB25E03EEF003D0C4F /* labelmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
 		0AEE86FC25E03EF0003D0C4F /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
 		0AF1540425A6351700BD0D30 /* RecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
 		0AF1540525A6351700BD0D30 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
@@ -1034,8 +1034,8 @@
 		0AEE86FA25E03ECD003D0C4F /* detectionModel */ = {
 			isa = PBXGroup;
 			children = (
+				0A86FBDE262E20AF00D0F534 /* labelmap.txt */,
 				0AEE86FC25E03EF0003D0C4F /* detect.tflite */,
-				0AEE86FB25E03EEF003D0C4F /* labelmap.txt */,
 			);
 			path = detectionModel;
 			sourceTree = "<group>";
@@ -1460,7 +1460,7 @@
 				0A240417251FA1BE002665A1 /* ModalPhoto.storyboard in Resources */,
 				0A240461251FA1BE002665A1 /* Legal.storyboard in Resources */,
 				0A240427251FA1BE002665A1 /* Species.storyboard in Resources */,
-				0AEE870025E03EFB003D0C4F /* labelmap.txt in Resources */,
+				0A86FBDF262E20B500D0F534 /* labelmap.txt in Resources */,
 				0A24034C251FA172002665A1 /* HeaderPrintToPdfView.xib in Resources */,
 				0A24044B251FA1BE002665A1 /* Recognition.storyboard in Resources */,
 				0A24044D251FA1BE002665A1 /* Search.storyboard in Resources */,
