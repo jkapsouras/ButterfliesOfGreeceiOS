@@ -30,7 +30,7 @@ class StorageTests: XCTestCase {
 		var storage = Storage()
 		let families = storage.families;
 		let photos = families.flatMap{$0.species}.flatMap{$0.photos}
-		assert(photos.count == 490)
+		assert(photos.count == 489)
 	}
 	
 	func testShouldGetAllSpeciesFromSearchTerm(){
