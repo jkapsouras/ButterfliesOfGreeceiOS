@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow access to photo library if you want to save your recognized photos</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allow access to photo library if you want to save your recognized photos</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -19,9 +15,9 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>18</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -45,6 +41,10 @@
 	<string>Use camera</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>You can send information about butterflies you spot on the field from this page. Your location is needed only if you have observations and want to share them with the author of this app. Your location is only used to autofill the form, then you complete the form with other data like the family and the specie of the butterfly you spotted. Your observations (with your location) can be stored in your device and whenever you want, you can export them as a pdf file and send them to the author via e-mail. You can attach in this mail your butterfly photos related to the form data. Your location is not used in any other way other than filling the form.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Allow access to photo library if you want to save your recognized photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow access to photo library if you want to save your recognized photos</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ACTypoGrotesk.ttf</string>
