@@ -154,9 +154,9 @@
 		0A5FBB542628DAB700DCFCD4 /* labels_pt_last.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FBB522628DAA800DCFCD4 /* labels_pt_last.txt */; };
 		0A86FBD1262D5A7500D0F534 /* model-3.pt in Resources */ = {isa = PBXBuildFile; fileRef = 0A86FBD0262D5A7500D0F534 /* model-3.pt */; };
 		0A86FBDF262E20B500D0F534 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A86FBDE262E20AF00D0F534 /* labelmap.txt */; };
+		0AA1EFF0292FAD37000739F6 /* species.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1EFEF292FAD37000739F6 /* species.pdf */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
-		0ACAFCA92606153F007E637D /* species.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAFCA82606153F007E637D /* species.pdf */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
 		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
 		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
@@ -360,9 +360,9 @@
 		0A5FBB522628DAA800DCFCD4 /* labels_pt_last.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_pt_last.txt; sourceTree = "<group>"; };
 		0A86FBD0262D5A7500D0F534 /* model-3.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "model-3.pt"; sourceTree = "<group>"; };
 		0A86FBDE262E20AF00D0F534 /* labelmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
+		0AA1EFEF292FAD37000739F6 /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
-		0ACAFCA82606153F007E637D /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
 		0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
@@ -1070,7 +1070,7 @@
 		FE10425424D5A6130075D027 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0ACAFCA82606153F007E637D /* species.pdf */,
+				0AA1EFEF292FAD37000739F6 /* species.pdf */,
 				0AEE86FA25E03ECD003D0C4F /* detectionModel */,
 				0A71AF2225370FFA00BE2320 /* model */,
 				0A240485251FA21C002665A1 /* 127557_2178_2015.pdf */,
@@ -1435,8 +1435,8 @@
 				0A240444251FA1BE002665A1 /* Endangered.storyboard in Resources */,
 				0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */,
 				0A240364251FA19A002665A1 /* PhotosCollectionViewCell.xib in Resources */,
+				0AA1EFF0292FAD37000739F6 /* species.pdf in Resources */,
 				0A24040E251FA1BE002665A1 /* Contribute.storyboard in Resources */,
-				0ACAFCA92606153F007E637D /* species.pdf in Resources */,
 				0A86FBD1262D5A7500D0F534 /* model-3.pt in Resources */,
 				0A240490251FA21D002665A1 /* data.json in Resources */,
 				0A24041E251FA1BE002665A1 /* InfoModal.storyboard in Resources */,
