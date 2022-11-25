@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Uninstalling all CocoaPods versions"
-sudo gem uninstall cocoapods --all --executables
+sudo gem uninstall cocoapods --all
 
 COCOAPODS_VER=`sed -n -e 's/^COCOAPODS: \([0-9.]*\)/\1/p' Podfile.lock`
 
