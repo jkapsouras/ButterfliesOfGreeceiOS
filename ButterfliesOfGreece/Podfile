@@ -8,7 +8,7 @@ target 'ButterfliesOfGreece' do
   # Pods for ButterfliesOfGreece
   pod 'RxSwift', '~> 5.1.1'
   pod 'RxCocoa', '~> 5.1.1'
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
   pod 'AppCenter'
