@@ -1,7 +1,7 @@
 //
 //  IQKeyboardManagerConstants.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
-// Copyright (c) 2013-20 Iftekhar Qurashi.
+// Copyright (c) 2013-16 Iftekhar Qurashi.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,9 +21,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 import Foundation
 
-// MARK: IQAutoToolbarManageBehaviour
+///-----------------------------------
+/// MARK: IQAutoToolbarManageBehaviour
+///-----------------------------------
 
 /**
 `IQAutoToolbarBySubviews`
@@ -35,8 +38,7 @@ Creates Toolbar according to tag property of TextField's.
 `IQAutoToolbarByPosition`
 Creates Toolbar according to the y,x position of textField in it's superview coordinate.
 */
-@available(iOSApplicationExtension, unavailable)
-@objc public enum IQAutoToolbarManageBehaviour: Int {
+@objc public enum IQAutoToolbarManageBehaviour : Int {
     case bySubviews
     case byTag
     case byPosition
@@ -52,9 +54,8 @@ Creates Toolbar according to the y,x position of textField in it's superview coo
  `IQPreviousNextDisplayModeAlwaysShow`
  Always show nextPrevious buttons, if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
  */
-@available(iOSApplicationExtension, unavailable)
-@objc public enum IQPreviousNextDisplayMode: Int {
-    case `default`
+@objc public enum IQPreviousNextDisplayMode : Int {
+    case Default
     case alwaysHide
     case alwaysShow
 }
@@ -69,19 +70,20 @@ Creates Toolbar according to the y,x position of textField in it's superview coo
  `IQEnableModeDisabled`
  setting is disabled.
  */
-@available(iOSApplicationExtension, unavailable)
-@objc public enum IQEnableMode: Int {
-    case `default`
+@objc public enum IQEnableMode : Int {
+    case Default
     case enabled
     case disabled
 }
 
 /*
+ 
  /---------------------------------------------------------------------------------------------------\
  \---------------------------------------------------------------------------------------------------/
  |                                   iOS Notification Mechanism                                    |
  /---------------------------------------------------------------------------------------------------\
  \---------------------------------------------------------------------------------------------------/
+ 
  
  ------------------------------------------------------------
  When UITextField become first responder
@@ -108,9 +110,9 @@ Creates Toolbar according to the y,x position of textField in it's superview coo
  ------------------------------------------------------------
  When switching focus from UITextView to another UITextView
  ------------------------------------------------------------
- - UITextViewTextDidEndEditingNotification: (UITextView1)
+ - UITextViewTextDidEndEditingNotification : (UITextView1)
  - UIKeyboardWillShowNotification
- - UITextViewTextDidBeginEditingNotification: (UITextView2)
+ - UITextViewTextDidBeginEditingNotification : (UITextView2)
  - UIKeyboardDidShowNotification
  
  ------------------------------------------------------------

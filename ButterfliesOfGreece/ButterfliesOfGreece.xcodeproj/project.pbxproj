@@ -157,9 +157,8 @@
 		0AA1EFF0292FAD37000739F6 /* species.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1EFEF292FAD37000739F6 /* species.pdf */; };
 		0AC7BAFF24CF01CE000908B9 /* UiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */; };
 		0AC7BB0224CF0251000908B9 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7BB0124CF0251000908B9 /* ViewStates.swift */; };
+		0ACAC6142930CF3F00C206AC /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAC6122930CF3D00C206AC /* TorchModule.mm */; };
 		0AD465D22530F69300DA8E0F /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */; };
-		0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465EC2530F80200DA8E0F /* TorchModule.h */; };
-		0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AD465F02530F86500DA8E0F /* TorchModule.mm */; };
 		0AEE86FD25E03EF4003D0C4F /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE86FC25E03EF0003D0C4F /* detect.tflite */; };
 		0AF1540625A6351700BD0D30 /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1540425A6351700BD0D30 /* RecognitionView.xib */; };
 		0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1540525A6351700BD0D30 /* RecognitionView.swift */; };
@@ -363,10 +362,10 @@
 		0AA1EFEF292FAD37000739F6 /* species.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = species.pdf; sourceTree = "<group>"; };
 		0AC7BAFE24CF01CE000908B9 /* UiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiEvents.swift; sourceTree = "<group>"; };
 		0AC7BB0124CF0251000908B9 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
+		0ACAC6112930CF3C00C206AC /* TorchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
+		0ACAC6122930CF3D00C206AC /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		0ACAC6132930CF3E00C206AC /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
-		0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButterfliesOfGreece-Bridging-Header.h"; sourceTree = "<group>"; };
-		0AD465EC2530F80200DA8E0F /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
-		0AD465F02530F86500DA8E0F /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
 		0AEE86FC25E03EF0003D0C4F /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
 		0AF1540425A6351700BD0D30 /* RecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecognitionView.xib; sourceTree = "<group>"; };
 		0AF1540525A6351700BD0D30 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
@@ -1021,12 +1020,12 @@
 			path = States;
 			sourceTree = "<group>";
 		};
-		0AD465EA2530F7CE00DA8E0F /* Torch */ = {
+		0ACAC6102930CF1700C206AC /* Torch */ = {
 			isa = PBXGroup;
 			children = (
-				0AD465EC2530F80200DA8E0F /* TorchModule.h */,
-				0AD465EB2530F80200DA8E0F /* ButterfliesOfGreece-Bridging-Header.h */,
-				0AD465F02530F86500DA8E0F /* TorchModule.mm */,
+				0ACAC6132930CF3E00C206AC /* ButterfliesOfGreece-Bridging-Header.h */,
+				0ACAC6112930CF3C00C206AC /* TorchModule.h */,
+				0ACAC6122930CF3D00C206AC /* TorchModule.mm */,
 			);
 			path = Torch;
 			sourceTree = "<group>";
@@ -1227,7 +1226,7 @@
 		FEA57F3C24DD8E2600A66871 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0AD465EA2530F7CE00DA8E0F /* Torch */,
+				0ACAC6102930CF1700C206AC /* Torch */,
 				0AD465D12530F69300DA8E0F /* UIImage+Helper.swift */,
 				FE861B7224E6BE1F003DA5ED /* CacheManager.swift */,
 				FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */,
@@ -1573,7 +1572,6 @@
 				0A240491251FA21D002665A1 /* Storage.swift in Sources */,
 				0A574C49252310DE00A8B5BC /* Inference.swift in Sources */,
 				0A24045E251FA1BE002665A1 /* PdfPreviewEvents.swift in Sources */,
-				0AD465F12530F86500DA8E0F /* TorchModule.mm in Sources */,
 				0A24045B251FA1BE002665A1 /* PdfPreviewPresenter.swift in Sources */,
 				0A240451251FA1BE002665A1 /* SearchHeaderComponent.swift in Sources */,
 				0A240457251FA1BE002665A1 /* MenuComponent.swift in Sources */,
@@ -1608,7 +1606,6 @@
 				FE5327B524E03B9200BA4AF5 /* FonstExtensions.swift in Sources */,
 				FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */,
 				0A240443251FA1BE002665A1 /* EndangeredViewController.swift in Sources */,
-				0AD465ED2530F80200DA8E0F /* TorchModule.h in Sources */,
 				0A240411251FA1BE002665A1 /* ModalPhotoViewController.swift in Sources */,
 				0A240432251FA1BE002665A1 /* FamiliesPresenter.swift in Sources */,
 				0A240413251FA1BE002665A1 /* ModalPresenter.swift in Sources */,
@@ -1657,6 +1654,7 @@
 				0A240414251FA1BE002665A1 /* ModalPhotoComponent.swift in Sources */,
 				0A240410251FA1BE002665A1 /* ContributeViewController.swift in Sources */,
 				0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */,
+				0ACAC6142930CF3F00C206AC /* TorchModule.mm in Sources */,
 				0A240473251FA1F0002665A1 /* ContributionItem.swift in Sources */,
 				0A24040D251FA1BE002665A1 /* ContributeComponent.swift in Sources */,
 				0A2404B7251FA325002665A1 /* FamiliesTableComponent.swift in Sources */,
@@ -1791,7 +1789,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1846,7 +1844,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
