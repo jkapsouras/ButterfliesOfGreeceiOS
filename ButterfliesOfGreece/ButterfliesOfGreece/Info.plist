@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Use camera</string>
+	<string>Allow access to camera if you want to take photos of butterflies or if you want to live capture butterflies in order to use the app to recognize their specie.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>You can send information about butterflies you spot on the field from this page. Your location is needed only if you have observations and want to share them with the author of this app. Your location is only used to autofill the form, then you complete the form with other data like the family and the specie of the butterfly you spotted. Your observations (with your location) can be stored in your device and whenever you want, you can export them as a pdf file and send them to the author via e-mail. You can attach in this mail your butterfly photos related to the form data. Your location is not used in any other way other than filling the form.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
