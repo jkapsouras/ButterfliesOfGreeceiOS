@@ -28,10 +28,10 @@ Brintesia circe
 Cacyreus marshalli
 Callophrys rubi
 Carcharodus alceae
+Muschampia orientalis floccifera complex
+Muschampia lavatherae
 Carcharodus orientalis floccifera complex
-Carcharodus lavatherae
-Carcharodus orientalis floccifera complex
-Carcharodus stauderi
+Muschampia stauderi
 Carterocephalus palaemon
 Celastrina argiolus
 Charaxes jasius
@@ -131,7 +131,7 @@ Melitaea ornata
 Melitaea phoebe
 Melitaea trivia
 Minois dryas
-Muschampia cribrellum
+Favria cribrellum
 Muschampia alta proteides complex
 Muschampia tessellum
 Neolysandra coelestina

@@ -28,7 +28,7 @@
 		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>butterfliesofgreece-env.eba-w5n3apy5.us-east-1.elasticbeanstalk.com</key>
+			<key>butterflyapi.in</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>

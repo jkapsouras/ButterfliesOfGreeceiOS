@@ -38,7 +38,7 @@ struct Constants {
 	static let SpeciesPdf = "species"
 	
 	struct Network{
-		static let BaseAddress:String = "http://butterfliesofgreece-env.eba-w5n3apy5.us-east-1.elasticbeanstalk.com";
+		static let BaseAddress:String = "http://butterflyapi.in";
 		
 		enum HttpHeaderField: String {
 			case authentication = "Authorization"
