@@ -52,6 +52,18 @@ class LiveSession: UIView {
 		self.addSubview(contentView!)
 		
 		cameraSession = AVFoundationImplementation(owner: contentView!, ownerSession: self)
+		if let has = cameraSession?.rearCamera?.isFocusModeSupported(.continuousAutoFocus){
+			if has{
+				try! cameraSession?.rearCamera?.lockForConfiguration()
+				cameraSession?.rearCamera?.focusMode = .continuousAutoFocus
+				cameraSession?.rearCamera?.unlockForConfiguration()
+			}
+			else{
+				try! cameraSession?.rearCamera?.lockForConfiguration()
+				cameraSession?.rearCamera?.focusMode = .autoFocus
+				cameraSession?.rearCamera?.unlockForConfiguration()
+			}
+		}
 	}
 	
 	func loadViewFromNib() -> UIView? {

@@ -46,7 +46,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AppCenter
-  - IQKeyboardManagerSwift (= 6.3.0)
+  - IQKeyboardManagerSwift
   - LibTorch (~> 1.7.1)
   - RxBlocking (~> 5.1.1)
   - RxCocoa (~> 5.1.1)
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteC: d9dbe42362100816928e97326e986c399c673e4e
   TensorFlowLiteSwift: b33e3b2d925ce8be4384209c877a300606ddc87d
 
-PODFILE CHECKSUM: 373f1b294ba13991da3369654c99dbca482f370d
+PODFILE CHECKSUM: d57c6b6ac2ee8c4679fe0c9be22eb57cd3dc3168
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.15.2
