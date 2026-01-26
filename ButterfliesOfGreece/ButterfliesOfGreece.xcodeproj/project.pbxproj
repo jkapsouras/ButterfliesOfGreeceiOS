@@ -163,7 +163,6 @@
 		0AF1540625A6351700BD0D30 /* RecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1540425A6351700BD0D30 /* RecognitionView.xib */; };
 		0AF1540725A6351700BD0D30 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1540525A6351700BD0D30 /* RecognitionView.swift */; };
 		9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */; };
-		CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */; };
 		FE10425124D4B7230075D027 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425024D4B7230075D027 /* Constants.swift */; };
 		FE10425324D4B7ED0075D027 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10425224D4B7ED0075D027 /* ColorsExtension.swift */; };
 		FE14398C250E76E200B53E34 /* PrintPhotosToPdfPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14398B250E76E200B53E34 /* PrintPhotosToPdfPresenterTests.swift */; };
@@ -178,7 +177,11 @@
 		FE6691F02514F1B3006C377F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6691EF2514F1B3006C377F /* LocationManager.swift */; };
 		FE861B7324E6BE1F003DA5ED /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE861B7224E6BE1F003DA5ED /* CacheManager.swift */; };
 		FE861B7524E6D02E003DA5ED /* TestUserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE861B7424E6D02E003DA5ED /* TestUserPrefs.swift */; };
+		FE91B57B2F2764C3007324FA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE91B57A2F2764C3007324FA /* IQKeyboardManagerSwift */; };
+		FE91B5952F276515007324FA /* IQKeyboardToolbarManager in Frameworks */ = {isa = PBXBuildFile; productRef = FE91B5942F276515007324FA /* IQKeyboardToolbarManager */; };
 		FE9D70312511E3CE00FCE1F3 /* PdfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D70302511E3CE00FCE1F3 /* PdfManager.swift */; };
+		FEA308CF2F2767130095B756 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FEA308CE2F2767130095B756 /* Swinject */; };
+		FEA308D22F27672A0095B756 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FEA308D12F27672A0095B756 /* SwinjectAutoregistration */; };
 		FEA3D15624F703AB004B7F7A /* ModalPresentersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D15524F703AB004B7F7A /* ModalPresentersTests.swift */; };
 		FEA57F3E24DD8E3500A66871 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA57F3D24DD8E3500A66871 /* NavigationManager.swift */; };
 		FEAB9B8024B2027000A5D178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB9B7F24B2027000A5D178 /* AppDelegate.swift */; };
@@ -196,6 +199,12 @@
 		FEB3521D24CB22F30040313D /* MenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */; };
 		FEC4709125164B6B002F0E2F /* PrintRendererExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4709025164B6B002F0E2F /* PrintRendererExtension.swift */; };
 		FED640E7251150D000D07FA9 /* PickerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED640E6251150D000D07FA9 /* PickerDataModel.swift */; };
+		FEDCD9E72F27664C006BBA7E /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = FEDCD9E62F27664C006BBA7E /* RxBlocking */; };
+		FEDCD9E92F27664C006BBA7E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FEDCD9E82F27664C006BBA7E /* RxCocoa */; };
+		FEDCD9EB2F27664C006BBA7E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FEDCD9EA2F27664C006BBA7E /* RxRelay */; };
+		FEDCD9ED2F27664C006BBA7E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FEDCD9EC2F27664C006BBA7E /* RxSwift */; };
+		FEDCD9EF2F27664C006BBA7E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = FEDCD9EE2F27664C006BBA7E /* RxTest */; };
+		FEDDA2232F27645A006CE69D /* Pods_ButterfliesOfGreece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDDA2222F27645A006CE69D /* Pods_ButterfliesOfGreece.framework */; };
 		FEE1D6E224F78392000C0A15 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */; };
 		FEF2855624EABC610043D28A /* ButterflyPhotoArraysExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */; };
 		FEFBA09B24F296E600335E77 /* PhotosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */; };
@@ -415,6 +424,8 @@
 		FEB3521C24CB22F30040313D /* MenuPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenterTests.swift; sourceTree = "<group>"; };
 		FEC4709025164B6B002F0E2F /* PrintRendererExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintRendererExtension.swift; sourceTree = "<group>"; };
 		FED640E6251150D000D07FA9 /* PickerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataModel.swift; sourceTree = "<group>"; };
+		FEDDA21E2F276421006CE69D /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDDA2222F27645A006CE69D /* Pods_ButterfliesOfGreece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ButterfliesOfGreece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE1D6E124F78392000C0A15 /* BasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		FEF2855524EABC610043D28A /* ButterflyPhotoArraysExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyPhotoArraysExtensions.swift; sourceTree = "<group>"; };
 		FEFBA09A24F296E600335E77 /* PhotosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenterTests.swift; sourceTree = "<group>"; };
@@ -425,7 +436,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFC3C409C37A2FC6E05D147D /* Pods_ButterfliesOfGreece.framework in Frameworks */,
+				FEDCD9ED2F27664C006BBA7E /* RxSwift in Frameworks */,
+				FEDCD9EB2F27664C006BBA7E /* RxRelay in Frameworks */,
+				FEA308CF2F2767130095B756 /* Swinject in Frameworks */,
+				FEA308D22F27672A0095B756 /* SwinjectAutoregistration in Frameworks */,
+				FE91B5952F276515007324FA /* IQKeyboardToolbarManager in Frameworks */,
+				FEDDA2232F27645A006CE69D /* Pods_ButterfliesOfGreece.framework in Frameworks */,
+				FEDCD9E92F27664C006BBA7E /* RxCocoa in Frameworks */,
+				FE91B57B2F2764C3007324FA /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +452,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9547548019A5D17BEEC94846 /* libPods-ButterfliesOfGreeceTests.a in Frameworks */,
+				FEDCD9EF2F27664C006BBA7E /* RxTest in Frameworks */,
+				FEDCD9E72F27664C006BBA7E /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1049,6 +1069,8 @@
 		809AF22E013484F40A66D5A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEDDA2222F27645A006CE69D /* Pods_ButterfliesOfGreece.framework */,
+				FEDDA21E2F276421006CE69D /* IQKeyboardManagerSwift.framework */,
 				A5F0C8F7E4985A676B8CE1D8 /* Pods_ButterfliesOfGreece.framework */,
 				62873FDF24A63BF08ACE5A39 /* libPods-ButterfliesOfGreeceTests.a */,
 			);
@@ -1410,6 +1432,13 @@
 				el,
 			);
 			mainGroup = FEAB9B7324B2027000A5D178;
+			packageReferences = (
+				FE91B5792F2764C3007324FA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				FE91B5932F276515007324FA /* XCRemoteSwiftPackageReference "IQKeyboardToolbarManager" */,
+				FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FEA308CD2F2767130095B756 /* XCRemoteSwiftPackageReference "Swinject" */,
+				FEA308D02F27672A0095B756 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = FEAB9B7D24B2027000A5D178 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1528,9 +1557,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ButterfliesOfGreece/Pods-ButterfliesOfGreece-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1867,7 +1900,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DUS7984ZVP;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ButterfliesOfGreece/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1891,14 +1924,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DUS7984ZVP;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DUS7984ZVP;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ButterfliesOfGreece/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1907,7 +1940,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sansoft.butterfliesofgreece;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = ButterfliesDistributionProfile;
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ButterfliesDistributionProfile;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ButterfliesDevelopmentProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "ButterfliesOfGreece/Managers/Torch/ButterfliesOfGreece-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2000,6 +2033,97 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE91B5792F2764C3007324FA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.2;
+			};
+		};
+		FE91B5932F276515007324FA /* XCRemoteSwiftPackageReference "IQKeyboardToolbarManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardToolbarManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+		FEA308CD2F2767130095B756 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+		FEA308D02F27672A0095B756 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE91B57A2F2764C3007324FA /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE91B5792F2764C3007324FA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		FE91B5942F276515007324FA /* IQKeyboardToolbarManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE91B5932F276515007324FA /* XCRemoteSwiftPackageReference "IQKeyboardToolbarManager" */;
+			productName = IQKeyboardToolbarManager;
+		};
+		FEA308CE2F2767130095B756 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEA308CD2F2767130095B756 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		FEA308D12F27672A0095B756 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEA308D02F27672A0095B756 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		FEDCD9E62F27664C006BBA7E /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		FEDCD9E82F27664C006BBA7E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FEDCD9EA2F27664C006BBA7E /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FEDCD9EC2F27664C006BBA7E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		FEDCD9EE2F27664C006BBA7E /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEDCD9E52F27664C006BBA7E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEAB9B7424B2027000A5D178 /* Project object */;
 }

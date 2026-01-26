@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Photos
+import UIKit
 
 class ImageComponent : NSObject, UiComponent, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver
 {

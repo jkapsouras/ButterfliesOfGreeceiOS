@@ -8,6 +8,8 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import IQKeyboardToolbarManager
+import IQKeyboardToolbar
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
@@ -23,13 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		AppCenter.start(withAppSecret: "7e373fe2-791f-4620-9efa-5a165d945886", services: [
 			Analytics.self,
 		 Crashes.self
-	   ]) 
+	   ])
 		
-		IQKeyboardManager.shared.enable = true;
-		IQKeyboardManager.shared.enableAutoToolbar = true;
-		IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
-		IQKeyboardManager.shared.shouldToolbarUsesTextFieldTintColor = true;
-		IQKeyboardManager.shared.toolbarDoneBarButtonItemText = Translations.Done
+		IQKeyboardToolbarManager.shared.isEnabled = true
+		IQKeyboardManager.shared.isEnabled = true
+		
+		IQKeyboardToolbarManager.shared.isEnabled = true;
+		IQKeyboardToolbarManager.shared.toolbarConfiguration.previousNextDisplayMode = .alwaysShow
+		IQKeyboardToolbarManager.shared.toolbarConfiguration.useTextInputViewTintColor = true;
+		IQKeyboardToolbarManager.shared.toolbarConfiguration.doneBarButtonConfiguration = IQBarButtonItemConfiguration(title: Translations.Done);
 		
 		let pageControl = UIPageControl.appearance()
 		pageControl.pageIndicatorTintColor = Constants.Colors.field(darkMode: true).color
